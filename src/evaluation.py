@@ -45,7 +45,7 @@ class TestData():
 
     def __init__(self, path) -> None:
         with open(path, 'r') as f:
-            self.candidates = json.load(f)[:2]
+            self.candidates = json.load(f)
 
         self.encoder = Encoder()
         self.tensors = torch.load("./axioms.pt")
