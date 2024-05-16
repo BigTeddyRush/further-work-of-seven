@@ -139,6 +139,10 @@ def translate_ontology(ontology: dict[str,str]) -> dict[str,str]:
 
 if __name__ == "__main__":
     from tstp_util import read_tstp
+    import time
+
+    print("Translation Adimen-SUMO (./adimen.sumo.tstp)")
+    start = time.perf_counter()
 
     ontology = read_tstp("./adimen.sumo.tstp")
 
@@ -146,3 +150,7 @@ if __name__ == "__main__":
 
     with open("./translations.json", 'w') as file:
         json.dump(translation, file, indent=2)
+        
+    end = time.perf_counter()
+    print(f"Done in {end - start:0.2f} seconds")
+    print("Translated axioms in './translations.json'")

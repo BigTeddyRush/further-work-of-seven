@@ -2,25 +2,6 @@ import subprocess, re, os
 from enum import Enum
 
 """
-gf500_gu_R04_F100_L20000 = GSinE(CountFormulas, nohypos, 5.000000, 9223372036854775807, 4, 20000, 1.000000)
-gf120_gu_RUU_F100_L00500 = GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2147483647, 500, 1.000000)
-gf120_gu_R02_F100_L20000 = GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000)
-gf150_gu_RUU_F100_L20000 = GSinE(CountFormulas, nohypos, 1.500000, 9223372036854775807, 2147483647, 20000, 1.000000)
-gf120_gu_RUU_F100_L00100 = GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2147483647, 100, 1.000000)
-gf200_gu_R03_F100_L20000 = GSinE(CountFormulas, nohypos, 2.000000, 9223372036854775807, 3, 20000, 1.000000)
-gf600_gu_R05_F100_L20000 = GSinE(CountFormulas, nohypos, 6.000000, 9223372036854775807, 5, 20000, 1.000000)
-gf200_gu_RUU_F100_L20000 = GSinE(CountFormulas, nohypos, 2.000000, 9223372036854775807, 2147483647, 20000, 1.000000)
-gf120_gu_RUU_F100_L01000 = GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2147483647, 1000, 1.000000)
-gf500_h_gu_R04_F100_L20000 = GSinE(CountFormulas, hypos, 5.000000, 9223372036854775807, 4, 20000, 1.000000)
-gf120_h_gu_RUU_F100_L00500 = GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2147483647, 500, 1.000000)
-gf120_h_gu_R02_F100_L20000 = GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000)
-gf150_h_gu_RUU_F100_L20000 = GSinE(CountFormulas, hypos, 1.500000, 9223372036854775807, 2147483647, 20000, 1.000000)
-gf120_h_gu_RUU_F100_L00100 = GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2147483647, 100, 1.000000)
-gf200_h_gu_R03_F100_L20000 = GSinE(CountFormulas, hypos, 2.000000, 9223372036854775807, 3, 20000, 1.000000)
-gf600_h_gu_R05_F100_L20000 = GSinE(CountFormulas, hypos, 6.000000, 9223372036854775807, 5, 20000, 1.000000)
-gf200_h_gu_RUU_F100_L20000 = GSinE(CountFormulas, hypos, 2.000000, 9223372036854775807, 2147483647, 20000, 1.000000)
-gf120_h_gu_RUU_F100_L01000 = GSinE(CountFormulas, hypos, 1.200000, 9223372036854775807, 2147483647, 1000, 1.000000)
-
 GSinE(<g-measure>, hypos|nohypos, <benvolvence>, <generosity>, <rec-depth>, <set-size>, <set-fraction> [,addnosymb|ignorenosymb])
 
 benevolence: is a floating point value that determines how much more general a function symbol in a clause or formula is allowed to be relative to the least general one to be still considered for the D-relation.
@@ -28,13 +9,6 @@ benevolence: is a floating point value that determines how much more general a f
 rec-depth: determines the maximal number of iterations of the selection algorithm.
 
 set-size: gives an absolute upper bound for the number of clauses and formulas selected.
-
-gf500_gu_R04_F100_L20000 = GSinE(CountFormulas, nohypos, 5.000000, 9223372036854775807, 4, 20000, 1.000000)
-gf120_gu_R02_F100_L20000 = GSinE(CountFormulas, nohypos, 1.200000, 9223372036854775807, 2, 20000, 1.000000)
-gf150_gu_RUU_F100_L20000 = GSinE(CountFormulas, nohypos, 1.500000, 9223372036854775807, 2147483647, 20000, 1.000000)
-gf200_gu_R03_F100_L20000 = GSinE(CountFormulas, nohypos, 2.000000, 9223372036854775807, 3, 20000, 1.000000)
-gf600_gu_R05_F100_L20000 = GSinE(CountFormulas, nohypos, 6.000000, 9223372036854775807, 5, 20000, 1.000000)
-gf200_gu_RUU_F100_L20000 = GSinE(CountFormulas, nohypos, 2.000000, 9223372036854775807, 2147483647, 20000, 1.000000)
 """
 
 def create_sine_filter(benevolence: float, rec_depth: int) -> str:

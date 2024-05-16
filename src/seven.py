@@ -101,6 +101,13 @@ def prepare_ontology(src_path: str, dst_path: str):
     torch.save(tensors, dst_path)
 
 if __name__ == "__main__":
+    import time
+    print("Encoding Adimen-SUMO (./adimen.sumo.tstp)")
+    start = time.perf_counter()
     prepare_ontology("./adimen.sumo.tstp", "./axioms.pt")
+    end = time.perf_counter()
+    print(f"Done in {end - start:0.2f} seconds")
+    print("Encoded axioms in './adimen.sumo.tstp'")
+
 
 

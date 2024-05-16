@@ -1,10 +1,8 @@
-import json, glob, random, torch, typing, argparse
+import json, glob, random, torch, argparse
 
 from operator import countOf
 from seven import *
 from eprover import *
-
-from statistics import mean
 
 #=========================================================================================
 # candidates
@@ -47,7 +45,7 @@ class TestData():
 
     def __init__(self, path) -> None:
         with open(path, 'r') as f:
-            self.candidates = json.load(f)
+            self.candidates = json.load(f)[:2]
 
         self.encoder = Encoder()
         self.tensors = torch.load("./axioms.pt")
@@ -340,25 +338,6 @@ def evaluate(src: str, count: int = None):
 
         write_results(results, f"./results/{src}_{name}.json")
 
-def count_thresholds(src: str, t: float, output_name: str):
-    data = TestData(f"./{src}_candidates.json")
-
-    results = dict()
-    for c in data.candidates:
-        name, conjecture = read_tstp_single(c)
-
-        encoded_conjecture = data.encoder.encode_axiom(conjecture)
-        selection = select_t(encoded_conjecture, data.tensors, t)
-
-        results[name] = len(selection)
-
-    print(f"Max: {max(results.values())}")
-    print(f"Min: {min(results.values())}")
-    print(f"Avg: {mean(results.values())}")
-
-    with open(f"./{output_name}.json", 'w') as file:
-        json.dump(results, file, indent=2, default=str)
-
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
 
@@ -396,19 +375,14 @@ def count_selected(src: str, name: str, b: float, k: int):
         results[n] = counts
     write_results(results, f"./results/counts/{src}_{name}.json")
 
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--src', default="whitebox")
     parser.add_argument('--select')
     args = parser.parse_args()
 
-    #evaluate(args.src, args.select)
-    #count_thresholds(args.src, 0.4, "thresholds_04")
-    #count_thresholds(args.src, 0.6, "thresholds_06")
-    #count_thresholds(args.src, 0.8, "thresholds_08")
+    evaluate(args.src, args.select)
 
-    #count_selected(args.src, "b60_k05", b=6.0, k=5)
-    #count_selected(args.src, "b20_k03", b=2.0, k=3)
+    count_selected(args.src, "b60_k05", b=6.0, k=5)
+    count_selected(args.src, "b20_k03", b=2.0, k=3)
     count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
