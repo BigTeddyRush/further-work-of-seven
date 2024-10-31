@@ -1,5 +1,8 @@
 import json, glob, random, torch, argparse
 
+import torchvision
+torchvision.disable_beta_transforms_warning()
+
 from operator import countOf
 from seven import *
 from eprover import *
@@ -336,7 +339,8 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/{src}_{name}.json")
+        file_path = f"./results_jb/{src}_{name}.json"
+        write_results(results, file_path)
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
@@ -375,6 +379,13 @@ def count_selected(src: str, name: str, b: float, k: int):
         results[n] = counts
     write_results(results, f"./results/counts/{src}_{name}.json")
 
+"""
+if __name__ == "__main__":
+    data = TestData("./candidates.json")
+    results = test_sine(data, b=1.2, k=2)
+    for result in results:
+        print(result)
+"""
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--src', default="whitebox")
@@ -382,7 +393,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     evaluate(args.src, args.select)
-
+    """
     count_selected(args.src, "b60_k05", b=6.0, k=5)
     count_selected(args.src, "b20_k03", b=2.0, k=3)
     count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
+    """
+    
