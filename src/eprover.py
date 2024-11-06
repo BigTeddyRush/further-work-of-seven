@@ -40,9 +40,6 @@ def run_eprover(base: str|list[str], problem: str, args: list[str] = []) -> tupl
     with subprocess.Popen(cmd, stdout=subprocess.PIPE) as process:
         output = process.stdout.read()
 
-    if b"Proof found" in output:
-        return ProverResult.PROOF_FOUND, output
-
     if b"status Theorem" in output:
         return ProverResult.PROOF_FOUND, output
 
