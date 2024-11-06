@@ -30,7 +30,9 @@ class Encoder():
 # SeVEn selection
 #=========================================================================================
 def cosine_sim(a, b):
-    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+    a_np = a.cpu().numpy()
+    b_np = b.cpu().numpy()
+    return np.dot(a_np, b_np) / (np.linalg.norm(a_np) * np.linalg.norm(b_np))
 
 def select(conjecture: torch.Tensor, tensors: EncOntology, n: int) -> dict[str,float]:
     distances = {name: cosine_sim(conjecture, axiom) for name, axiom in tensors.items()}
