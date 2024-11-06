@@ -1,0 +1,257 @@
+{
+  "whitebox_seven_n100.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_seven_n200.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_seven_n300.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_seven_n400.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_seven_n50.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 99
+  },
+  "whitebox_seven_n500.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_seven_t04.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_seven_t06.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 99
+  },
+  "whitebox_seven_t08.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 99
+  },
+  "whitebox_sine_b12_k02.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_sine_b15_kUU.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_sine_b20_k03.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 99
+  },
+  "whitebox_sine_b20_kUU.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 99
+  },
+  "whitebox_sine_b50_k04.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_sine_b60_k05.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 99
+  },
+  "whitebox_union_n100_b20_k03.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 100
+  },
+  "whitebox_union_n100_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 101
+  },
+  "whitebox_union_n100_b60_k05.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_union_n120_b20_k03.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 100
+  },
+  "whitebox_union_n120_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 101
+  },
+  "whitebox_union_n120_b60_k05.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_union_n140_b20_k03.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 100
+  },
+  "whitebox_union_n140_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 101
+  },
+  "whitebox_union_n140_b60_k05.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_union_n160_b20_k03.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 100
+  },
+  "whitebox_union_n160_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 101
+  },
+  "whitebox_union_n160_b60_k05.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_union_n180_b20_k03.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 100
+  },
+  "whitebox_union_n180_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 101
+  },
+  "whitebox_union_n180_b60_k05.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_union_n20_b20_k03.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 99
+  },
+  "whitebox_union_n20_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 101
+  },
+  "whitebox_union_n20_b60_k05.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_union_n40_b20_k03.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 99
+  },
+  "whitebox_union_n40_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 101
+  },
+  "whitebox_union_n40_b60_k05.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 99
+  },
+  "whitebox_union_n60_b20_k03.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 100
+  },
+  "whitebox_union_n60_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 101
+  },
+  "whitebox_union_n60_b60_k05.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 99
+  },
+  "whitebox_union_n80_b20_k03.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 100
+  },
+  "whitebox_union_n80_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 101
+  },
+  "whitebox_union_n80_b60_k05.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 98
+  },
+  "whitebox_union_t04_b20_k03.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 98
+  },
+  "whitebox_union_t04_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 101
+  },
+  "whitebox_union_t04_b60_k05.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 99
+  },
+  "whitebox_union_t06_b20_k03.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 99
+  },
+  "whitebox_union_t06_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 100
+  },
+  "whitebox_union_t06_b60_k05.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 99
+  },
+  "whitebox_union_t08_b20_k03.json": {
+    "min":       41,
+    "max":      794,
+    "mean": 99
+  },
+  "whitebox_union_t08_b20_kUU.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 100
+  },
+  "whitebox_union_t08_b60_k05.json": {
+    "min":       41,
+    "max":      447,
+    "mean": 101
+  }
+}

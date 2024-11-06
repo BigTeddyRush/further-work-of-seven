@@ -1,0 +1,710 @@
+{
+  "whitebox_seven_n100.json": 
+{
+  "negatedAndTest": 2,
+  "repeated(negatedForallTest)": 1,
+  "negatedAntecedentImpliesTest": 5,
+  "negatedConsequentImpliesTest": 6,
+  "repeated(negatedExistsTest)": 1,
+  "consequentImpliesTest": 1,
+  "repeated(negatedAndTest)": 1
+}
+,
+  "whitebox_seven_n200.json": 
+{
+  "negatedAndTest": 4,
+  "repeated(negatedForallTest)": 1,
+  "negatedAntecedentImpliesTest": 5,
+  "repeated(negatedAndTest)": 9,
+  "negatedConsequentImpliesTest": 10,
+  "repeated(negatedConsequentImpliesTest)": 5,
+  "repeated(negatedOrTest)": 3,
+  "repeated(negatedExistsTest)": 1,
+  "consequentImpliesTest": 2,
+  "repeated(andTest)": 1
+}
+,
+  "whitebox_seven_n300.json": 
+{
+  "negatedAndTest": 4,
+  "repeated(negatedForallTest)": 1,
+  "repeated(negatedAndTest)": 9,
+  "negatedConsequentImpliesTest": 10,
+  "repeated(negatedConsequentImpliesTest)": 5,
+  "repeated(negatedOrTest)": 3,
+  "negatedAntecedentImpliesTest": 5,
+  "repeated(negatedExistsTest)": 1,
+  "consequentImpliesTest": 2,
+  "repeated(andTest)": 1
+}
+,
+  "whitebox_seven_n400.json": 
+{
+  "negatedAndTest": 5,
+  "repeated(negatedForallTest)": 1,
+  "antecedentImpliesTest": 1,
+  "repeated(negatedAndTest)": 9,
+  "negatedConsequentImpliesTest": 10,
+  "repeated(negatedConsequentImpliesTest)": 5,
+  "repeated(negatedOrTest)": 3,
+  "negatedAntecedentImpliesTest": 4,
+  "repeated(negatedExistsTest)": 1,
+  "consequentImpliesTest": 2,
+  "repeated(andTest)": 1
+}
+,
+  "whitebox_seven_n50.json": 
+{
+  "negatedAndTest": 1,
+  "repeated(negatedForallTest)": 1,
+  "consequentImpliesTest": 1,
+  "negatedAntecedentImpliesTest": 1,
+  "negatedConsequentImpliesTest": 1,
+  "repeated(negatedAndTest)": 1
+}
+,
+  "whitebox_seven_n500.json": 
+{
+  "negatedAndTest": 5,
+  "repeated(negatedForallTest)": 1,
+  "antecedentImpliesTest": 2,
+  "repeated(negatedAndTest)": 9,
+  "negatedConsequentImpliesTest": 10,
+  "repeated(negatedConsequentImpliesTest)": 5,
+  "repeated(negatedOrTest)": 3,
+  "negatedAntecedentImpliesTest": 3,
+  "repeated(negatedExistsTest)": 1,
+  "consequentImpliesTest": 2,
+  "repeated(andTest)": 1
+}
+,
+  "whitebox_seven_t04.json": 
+{
+  "negatedAndTest": 3,
+  "repeated(negatedForallTest)": 1,
+  "repeated(negatedAndTest)": 3,
+  "negatedAntecedentImpliesTest": 3,
+  "negatedConsequentImpliesTest": 6,
+  "repeated(negatedExistsTest)": 1,
+  "consequentImpliesTest": 2,
+  "repeated(andTest)": 1
+}
+,
+  "whitebox_seven_t06.json": 
+{
+  "negatedAndTest": 1,
+  "repeated(negatedForallTest)": 1
+}
+,
+  "whitebox_seven_t08.json": 
+{
+  "negatedAndTest": 1,
+  "repeated(negatedForallTest)": 1
+}
+,
+  "whitebox_sine_b12_k02.json": 
+{
+  "negatedAndTest": 1,
+  "repeated(negatedForallTest)": 1,
+  "consequentImpliesTest": 1,
+  "repeated(existsTest)": 1,
+  "antecedentImpliesTest": 1,
+  "negatedAntecedentImpliesTest": 1,
+  "negatedConsequentImpliesTest": 2,
+  "repeated(negatedAndTest)": 1
+}
+,
+  "whitebox_sine_b15_kUU.json": 
+{
+  "negatedAndTest": 1,
+  "repeated(negatedForallTest)": 1,
+  "consequentImpliesTest": 1,
+  "repeated(existsTest)": 1,
+  "antecedentImpliesTest": 1,
+  "negatedConsequentImpliesTest": 4,
+  "andTest": 1,
+  "negatedAntecedentImpliesTest": 1,
+  "repeated(negatedAndTest)": 1
+}
+,
+  "whitebox_sine_b20_k03.json": 
+{
+  "negatedAndTest": 2,
+  "repeated(negatedForallTest)": 1,
+  "negatedAntecedentImpliesTest": 7,
+  "andTest": 3,
+  "repeated(consequentImpliesTest)": 1,
+  "consequentImpliesTest": 1,
+  "repeated(existsTest)": 1,
+  "antecedentImpliesTest": 1,
+  "negatedConsequentImpliesTest": 6,
+  "repeated(andTest)": 2,
+  "repeated(negatedExistsTest)": 1,
+  "repeated(negatedAndTest)": 1
+}
+,
+  "whitebox_sine_b20_kUU.json": 
+{
+  "negatedAndTest": 3,
+  "repeated(negatedForallTest)": 1,
+  "negatedAntecedentImpliesTest": 14,
+  "negatedConsequentImpliesTest": 1,
+  "repeated(negatedExistsTest)": 1,
+  "antecedentImpliesTest": 1,
+  "andTest": 3,
+  "repeated(andTest)": 3,
+  "repeated(negatedAntecedentImpliesTest)": 1,
+  "consequentImpliesTest": 2,
+  "repeated(existsTest)": 2,
+  "repeated(negatedAndTest)": 1
+}
+,
+  "whitebox_sine_b50_k04.json": 
+{
+  "negatedAndTest": 1,
+  "repeated(negatedForallTest)": 1,
+  "negatedConsequentImpliesTest": 3,
+  "repeated(negatedExistsTest)": 6,
+  "repeated(consequentImpliesTest)": 2,
+  "repeated(negatedConsequentImpliesTest)": 1,
+  "negatedAntecedentImpliesTest": 1,
+  "consequentImpliesTest": 1
+}
+,
+  "whitebox_sine_b60_k05.json": 
+{
+  "negatedAndTest": 3,
+  "repeated(negatedForallTest)": 1,
+  "negatedAntecedentImpliesTest": 18,
+  "negatedConsequentImpliesTest": 1,
+  "repeated(negatedExistsTest)": 1,
+  "repeated(negatedAntecedentImpliesTest)": 2,
+  "antecedentImpliesTest": 1,
+  "andTest": 3,
+  "repeated(andTest)": 6,
+  "consequentImpliesTest": 3,
+  "repeated(existsTest)": 2,
+  "repeated(negatedAndTest)": 1
+}
+,
+  "whitebox_union_n100_b20_k03.json": 
+{
+  "andTest": 41,
+  "repeated(andTest)": 64,
+  "consequentImpliesTest": 16,
+  "repeated(existsTest)": 13,
+  "negatedAntecedentImpliesTest": 39,
+  "repeated(consequentImpliesTest)": 3,
+  "negatedConsequentImpliesTest": 4,
+  "antecedentImpliesTest": 2,
+  "repeated(negatedAntecedentImpliesTest)": 6,
+  "repeated(negatedExistsTest)": 3,
+  "repeated(negatedConsequentImpliesTest)": 2,
+  "orTest": 3,
+  "negatedAndTest": 1
+}
+,
+  "whitebox_union_n100_b20_kUU.json": 
+{
+  "andTest": 69,
+  "repeated(andTest)": 335,
+  "consequentImpliesTest": 32,
+  "repeated(existsTest)": 25,
+  "negatedAntecedentImpliesTest": 53,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 13,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 14,
+  "repeated(negatedAndTest)": 3,
+  "antecedentImpliesTest": 1
+}
+,
+  "whitebox_union_n100_b60_k05.json": 
+{
+  "consequentImpliesTest": 2,
+  "negatedAntecedentImpliesTest": 2,
+  "andTest": 1,
+  "repeated(negatedAntecedentImpliesTest)": 1,
+  "repeated(existsTest)": 1
+}
+,
+  "whitebox_union_n120_b20_k03.json": 
+{
+  "andTest": 48,
+  "repeated(andTest)": 111,
+  "consequentImpliesTest": 20,
+  "repeated(existsTest)": 15,
+  "negatedAntecedentImpliesTest": 38,
+  "repeated(consequentImpliesTest)": 4,
+  "negatedConsequentImpliesTest": 3,
+  "antecedentImpliesTest": 2,
+  "repeated(negatedAntecedentImpliesTest)": 7,
+  "repeated(negatedExistsTest)": 4,
+  "repeated(negatedConsequentImpliesTest)": 2,
+  "orTest": 3,
+  "negatedAndTest": 1
+}
+,
+  "whitebox_union_n120_b20_kUU.json": 
+{
+  "andTest": 71,
+  "repeated(andTest)": 335,
+  "consequentImpliesTest": 32,
+  "repeated(existsTest)": 25,
+  "negatedAntecedentImpliesTest": 52,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 13,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 14,
+  "repeated(negatedAndTest)": 3,
+  "antecedentImpliesTest": 1
+}
+,
+  "whitebox_union_n120_b60_k05.json": 
+{
+  "consequentImpliesTest": 2,
+  "negatedAntecedentImpliesTest": 2,
+  "andTest": 1,
+  "repeated(negatedAntecedentImpliesTest)": 1,
+  "repeated(existsTest)": 1
+}
+,
+  "whitebox_union_n140_b20_k03.json": 
+{
+  "andTest": 48,
+  "repeated(andTest)": 110,
+  "repeated(consequentImpliesTest)": 5,
+  "consequentImpliesTest": 22,
+  "repeated(existsTest)": 18,
+  "negatedAntecedentImpliesTest": 41,
+  "negatedConsequentImpliesTest": 2,
+  "antecedentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 7,
+  "orTest": 3
+}
+,
+  "whitebox_union_n140_b20_kUU.json": 
+{
+  "andTest": 72,
+  "repeated(andTest)": 335,
+  "consequentImpliesTest": 32,
+  "repeated(existsTest)": 25,
+  "negatedAntecedentImpliesTest": 51,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 13,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 14,
+  "antecedentImpliesTest": 2,
+  "repeated(negatedAndTest)": 3
+}
+,
+  "whitebox_union_n140_b60_k05.json": 
+{
+  "consequentImpliesTest": 3,
+  "negatedAntecedentImpliesTest": 2,
+  "repeated(existsTest)": 2,
+  "andTest": 1,
+  "repeated(negatedAntecedentImpliesTest)": 1
+}
+,
+  "whitebox_union_n160_b20_k03.json": 
+{
+  "andTest": 46,
+  "repeated(andTest)": 108,
+  "negatedAndTest": 2,
+  "consequentImpliesTest": 24,
+  "repeated(existsTest)": 18,
+  "negatedAntecedentImpliesTest": 41,
+  "repeated(consequentImpliesTest)": 4,
+  "negatedConsequentImpliesTest": 2,
+  "antecedentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 7,
+  "orTest": 2
+}
+,
+  "whitebox_union_n160_b20_kUU.json": 
+{
+  "andTest": 73,
+  "repeated(andTest)": 335,
+  "consequentImpliesTest": 33,
+  "repeated(existsTest)": 26,
+  "negatedAntecedentImpliesTest": 53,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 13,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 14,
+  "antecedentImpliesTest": 2,
+  "repeated(negatedAndTest)": 3
+}
+,
+  "whitebox_union_n160_b60_k05.json": 
+{
+  "consequentImpliesTest": 2,
+  "negatedAntecedentImpliesTest": 2,
+  "andTest": 1,
+  "repeated(negatedAntecedentImpliesTest)": 1,
+  "repeated(existsTest)": 1
+}
+,
+  "whitebox_union_n180_b20_k03.json": 
+{
+  "andTest": 45,
+  "repeated(andTest)": 121,
+  "negatedAndTest": 3,
+  "consequentImpliesTest": 24,
+  "repeated(existsTest)": 18,
+  "negatedAntecedentImpliesTest": 40,
+  "repeated(consequentImpliesTest)": 7,
+  "negatedConsequentImpliesTest": 2,
+  "antecedentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 8,
+  "orTest": 3,
+  "repeated(negatedExistsTest)": 2,
+  "repeated(negatedAndTest)": 2,
+  "repeated(orTest)": 1
+}
+,
+  "whitebox_union_n180_b20_kUU.json": 
+{
+  "andTest": 73,
+  "repeated(andTest)": 335,
+  "consequentImpliesTest": 33,
+  "repeated(existsTest)": 26,
+  "negatedAntecedentImpliesTest": 52,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 13,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 14,
+  "antecedentImpliesTest": 2,
+  "repeated(negatedAndTest)": 3
+}
+,
+  "whitebox_union_n180_b60_k05.json": 
+{
+  "consequentImpliesTest": 2,
+  "negatedAntecedentImpliesTest": 2,
+  "andTest": 1,
+  "repeated(negatedAntecedentImpliesTest)": 1,
+  "repeated(existsTest)": 1
+}
+,
+  "whitebox_union_n20_b20_k03.json": 
+{
+  "andTest": 19,
+  "repeated(andTest)": 47,
+  "consequentImpliesTest": 4,
+  "repeated(existsTest)": 1,
+  "negatedAntecedentImpliesTest": 19,
+  "repeated(consequentImpliesTest)": 4,
+  "negatedConsequentImpliesTest": 6,
+  "repeated(antecedentImpliesTest)": 1,
+  "antecedentImpliesTest": 2,
+  "repeated(negatedExistsTest)": 3,
+  "repeated(negatedAntecedentImpliesTest)": 5,
+  "orTest": 1,
+  "repeated(negatedAndTest)": 1
+}
+,
+  "whitebox_union_n20_b20_kUU.json": 
+{
+  "andTest": 64,
+  "repeated(andTest)": 324,
+  "consequentImpliesTest": 32,
+  "repeated(existsTest)": 26,
+  "negatedAntecedentImpliesTest": 50,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 13,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 4,
+  "repeated(negatedAntecedentImpliesTest)": 14,
+  "repeated(negatedExistsTest)": 1,
+  "repeated(negatedAndTest)": 3,
+  "antecedentImpliesTest": 1
+}
+,
+  "whitebox_union_n20_b60_k05.json": 
+{
+  "negatedAntecedentImpliesTest": 6,
+  "andTest": 6,
+  "repeated(andTest)": 5,
+  "consequentImpliesTest": 2,
+  "repeated(negatedAntecedentImpliesTest)": 3,
+  "antecedentImpliesTest": 1,
+  "repeated(existsTest)": 1
+}
+,
+  "whitebox_union_n40_b20_k03.json": 
+{
+  "andTest": 18,
+  "repeated(andTest)": 43,
+  "consequentImpliesTest": 9,
+  "repeated(existsTest)": 4,
+  "negatedAntecedentImpliesTest": 25,
+  "repeated(consequentImpliesTest)": 3,
+  "antecedentImpliesTest": 2,
+  "negatedConsequentImpliesTest": 3,
+  "repeated(negatedExistsTest)": 2,
+  "repeated(negatedAntecedentImpliesTest)": 5,
+  "orTest": 2
+}
+,
+  "whitebox_union_n40_b20_kUU.json": 
+{
+  "andTest": 64,
+  "repeated(andTest)": 271,
+  "consequentImpliesTest": 33,
+  "repeated(existsTest)": 26,
+  "negatedAntecedentImpliesTest": 49,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 11,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 4,
+  "repeated(negatedAntecedentImpliesTest)": 14,
+  "repeated(negatedExistsTest)": 1,
+  "repeated(negatedAndTest)": 3,
+  "antecedentImpliesTest": 1
+}
+,
+  "whitebox_union_n40_b60_k05.json": 
+{
+  "negatedAntecedentImpliesTest": 2,
+  "consequentImpliesTest": 2,
+  "andTest": 1,
+  "repeated(negatedAntecedentImpliesTest)": 1,
+  "repeated(existsTest)": 1
+}
+,
+  "whitebox_union_n60_b20_k03.json": 
+{
+  "andTest": 27,
+  "repeated(andTest)": 52,
+  "consequentImpliesTest": 13,
+  "repeated(existsTest)": 9,
+  "negatedAntecedentImpliesTest": 29,
+  "repeated(consequentImpliesTest)": 5,
+  "antecedentImpliesTest": 2,
+  "negatedConsequentImpliesTest": 4,
+  "repeated(negatedExistsTest)": 4,
+  "repeated(negatedConsequentImpliesTest)": 2,
+  "repeated(negatedAntecedentImpliesTest)": 6,
+  "orTest": 2
+}
+,
+  "whitebox_union_n60_b20_kUU.json": 
+{
+  "andTest": 68,
+  "repeated(andTest)": 325,
+  "consequentImpliesTest": 32,
+  "repeated(existsTest)": 26,
+  "negatedAntecedentImpliesTest": 51,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 13,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 14,
+  "repeated(negatedAndTest)": 3,
+  "antecedentImpliesTest": 1
+}
+,
+  "whitebox_union_n60_b60_k05.json": 
+{
+  "negatedAntecedentImpliesTest": 3,
+  "consequentImpliesTest": 2,
+  "andTest": 2,
+  "repeated(negatedAntecedentImpliesTest)": 2,
+  "repeated(andTest)": 4,
+  "repeated(existsTest)": 1
+}
+,
+  "whitebox_union_n80_b20_k03.json": 
+{
+  "andTest": 36,
+  "repeated(andTest)": 57,
+  "consequentImpliesTest": 16,
+  "repeated(existsTest)": 13,
+  "negatedAntecedentImpliesTest": 36,
+  "repeated(consequentImpliesTest)": 5,
+  "negatedConsequentImpliesTest": 4,
+  "antecedentImpliesTest": 2,
+  "repeated(negatedAntecedentImpliesTest)": 7,
+  "repeated(negatedExistsTest)": 3,
+  "repeated(negatedConsequentImpliesTest)": 2,
+  "orTest": 2
+}
+,
+  "whitebox_union_n80_b20_kUU.json": 
+{
+  "andTest": 68,
+  "repeated(andTest)": 329,
+  "consequentImpliesTest": 32,
+  "repeated(existsTest)": 26,
+  "negatedAntecedentImpliesTest": 50,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 13,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 14,
+  "repeated(negatedAndTest)": 3,
+  "antecedentImpliesTest": 1
+}
+,
+  "whitebox_union_n80_b60_k05.json": 
+{
+  "consequentImpliesTest": 2,
+  "negatedAntecedentImpliesTest": 2,
+  "andTest": 1,
+  "repeated(negatedAntecedentImpliesTest)": 1,
+  "repeated(existsTest)": 1
+}
+,
+  "whitebox_union_t04_b20_k03.json": 
+{
+  "andTest": 23,
+  "repeated(andTest)": 144,
+  "consequentImpliesTest": 16,
+  "repeated(existsTest)": 14,
+  "negatedAntecedentImpliesTest": 29,
+  "repeated(consequentImpliesTest)": 13,
+  "negatedConsequentImpliesTest": 2,
+  "repeated(negatedAntecedentImpliesTest)": 6,
+  "antecedentImpliesTest": 2,
+  "orTest": 3,
+  "repeated(orTest)": 1,
+  "repeated(negatedAndTest)": 2
+}
+,
+  "whitebox_union_t04_b20_kUU.json": 
+{
+  "andTest": 67,
+  "repeated(andTest)": 322,
+  "consequentImpliesTest": 31,
+  "repeated(existsTest)": 26,
+  "negatedAntecedentImpliesTest": 46,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 12,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 14,
+  "antecedentImpliesTest": 2,
+  "repeated(negatedAndTest)": 3
+}
+,
+  "whitebox_union_t04_b60_k05.json": 
+{
+  "negatedAntecedentImpliesTest": 3,
+  "andTest": 2,
+  "consequentImpliesTest": 2,
+  "repeated(negatedAntecedentImpliesTest)": 1,
+  "repeated(existsTest)": 1
+}
+,
+  "whitebox_union_t06_b20_k03.json": 
+{
+  "negatedAntecedentImpliesTest": 15,
+  "repeated(consequentImpliesTest)": 4,
+  "andTest": 5,
+  "negatedConsequentImpliesTest": 6,
+  "repeated(antecedentImpliesTest)": 1,
+  "consequentImpliesTest": 2,
+  "repeated(existsTest)": 1,
+  "antecedentImpliesTest": 2,
+  "repeated(andTest)": 31,
+  "repeated(negatedExistsTest)": 3,
+  "repeated(negatedAntecedentImpliesTest)": 4,
+  "orTest": 1,
+  "repeated(negatedAndTest)": 1
+}
+,
+  "whitebox_union_t06_b20_kUU.json": 
+{
+  "andTest": 61,
+  "repeated(andTest)": 324,
+  "consequentImpliesTest": 31,
+  "repeated(existsTest)": 26,
+  "negatedAntecedentImpliesTest": 46,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 13,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 4,
+  "repeated(negatedAntecedentImpliesTest)": 13,
+  "repeated(negatedExistsTest)": 1,
+  "repeated(negatedAndTest)": 3,
+  "antecedentImpliesTest": 1
+}
+,
+  "whitebox_union_t06_b60_k05.json": 
+{
+  "andTest": 41,
+  "repeated(andTest)": 161,
+  "negatedAntecedentImpliesTest": 17,
+  "consequentImpliesTest": 15,
+  "repeated(existsTest)": 13,
+  "repeated(orTest)": 2,
+  "orTest": 1,
+  "negatedConsequentImpliesTest": 2,
+  "repeated(negatedAntecedentImpliesTest)": 4,
+  "repeated(negatedExistsTest)": 1,
+  "repeated(consequentImpliesTest)": 6,
+  "repeated(negatedAndTest)": 1
+}
+,
+  "whitebox_union_t08_b20_k03.json": 
+{
+  "negatedAndTest": 2,
+  "repeated(negatedForallTest)": 1,
+  "negatedAntecedentImpliesTest": 11,
+  "repeated(consequentImpliesTest)": 3,
+  "andTest": 5,
+  "consequentImpliesTest": 1,
+  "repeated(existsTest)": 1,
+  "antecedentImpliesTest": 1,
+  "negatedConsequentImpliesTest": 5,
+  "repeated(andTest)": 2,
+  "repeated(negatedExistsTest)": 2,
+  "repeated(forallTest)": 1,
+  "repeated(negatedAntecedentImpliesTest)": 1
+}
+,
+  "whitebox_union_t08_b20_kUU.json": 
+{
+  "andTest": 56,
+  "repeated(andTest)": 164,
+  "negatedAndTest": 1,
+  "repeated(negatedForallTest)": 1,
+  "consequentImpliesTest": 33,
+  "repeated(existsTest)": 26,
+  "negatedAntecedentImpliesTest": 47,
+  "repeated(orTest)": 5,
+  "repeated(consequentImpliesTest)": 6,
+  "orTest": 3,
+  "negatedConsequentImpliesTest": 4,
+  "antecedentImpliesTest": 2,
+  "repeated(negatedAntecedentImpliesTest)": 7,
+  "repeated(negatedExistsTest)": 1,
+  "repeated(negatedAndTest)": 2
+}
+,
+  "whitebox_union_t08_b60_k05.json": 
+{
+  "andTest": 64,
+  "repeated(andTest)": 327,
+  "repeated(consequentImpliesTest)": 14,
+  "negatedAndTest": 2,
+  "repeated(negatedForallTest)": 1,
+  "consequentImpliesTest": 23,
+  "repeated(existsTest)": 21,
+  "negatedAntecedentImpliesTest": 39,
+  "repeated(orTest)": 5,
+  "negatedConsequentImpliesTest": 3,
+  "repeated(negatedAntecedentImpliesTest)": 13,
+  "antecedentImpliesTest": 1,
+  "orTest": 2,
+  "repeated(negatedAndTest)": 4
+}
+
+}
