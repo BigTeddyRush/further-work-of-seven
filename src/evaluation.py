@@ -7,6 +7,9 @@ from operator import countOf
 from seven import *
 from eprover import *
 
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 #=========================================================================================
 # candidates
 #=========================================================================================

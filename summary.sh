@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Output file
-output_file="summary.json"
+output_file="evaluation_jb/summary.json"
 
 # Initialize the output JSON string
 echo "{" > "$output_file"
 
 # Iterate over each JSON file in the results directory
-for json_file in ./results/*.json; do
+for json_file in ./results_jb/*.json; do
     # Extract the filename without the path
     file_name=$(basename "$json_file")
 
