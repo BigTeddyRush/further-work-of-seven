@@ -14,6 +14,10 @@ set-size: gives an absolute upper bound for the number of clauses and formulas s
 def create_sine_filter(benevolence: float, rec_depth: int) -> str:
     return f"GSinE(CountFormulas,nohypos,{benevolence},9223372036854775807,{rec_depth},20000,1.0)"
 
+def create_fix_sine_filter():
+    # return filter according to --auto mode
+    return f"GSinE(CountFormulas,nohypos,6.0,9223372036854775807, 5,20000,1.0)"
+
 class ProverResult(Enum):
     ERROR = 0
     COUNTER_SATISFIABLE = 1
