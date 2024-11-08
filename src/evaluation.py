@@ -209,7 +209,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/{src}_{name}.json")
+        write_results(results, f"./results/auto_without_union_{src}_{name}.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
@@ -246,7 +246,7 @@ def count_selected(src: str, name: str, b: float, k: int):
             print(f"(n{n}|{i}) {c}: {len(axioms)}")
 
         results[n] = counts
-    write_results(results, f"./results/counts/auto_without_union_{src}_{name}.json")
+    write_results(results, f"./results/counts/{src}_{name}.json")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -256,6 +256,6 @@ if __name__ == "__main__":
 
     evaluate(args.src, args.select)
 
-    count_selected(args.src, "b60_k05", b=6.0, k=5)
-    count_selected(args.src, "b20_k03", b=2.0, k=3)
-    count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
+    #count_selected(args.src, "b60_k05", b=6.0, k=5)
+    #count_selected(args.src, "b20_k03", b=2.0, k=3)
+    #count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
