@@ -1,0 +1,10 @@
+{
+  "auto_mode_no_union_n160_b20_k03.json": { "ProverResult.TIME_OUT": 690, "ProverResult.PROOF_FOUND": 310 },
+  "auto_mode_union_n160_b20_k03.json": { "ProverResult.TIME_OUT": 603, "ProverResult.PROOF_FOUND": 395, "ProverResult.GAVE_UP": 2 },
+  "filter_after_union_n160_b20_k03.json": { "ProverResult.TIME_OUT": 860, "ProverResult.PROOF_FOUND": 139, "ProverResult.GAVE_UP": 1 },
+  "union_n160_b20_k03_satauto.json": { "ProverResult.PROOF_FOUND": 412, "ProverResult.TIME_OUT": 588 },
+  "union_n160_b4.json": { "ProverResult.PROOF_FOUND": 167, "ProverResult.TIME_OUT": 833 },
+  "union_n160_b4_satauto.json": { "ProverResult.PROOF_FOUND": 430, "ProverResult.TIME_OUT": 570 },
+  "union_n160_b5.json": { "ProverResult.PROOF_FOUND": 58, "ProverResult.TIME_OUT": 942 },
+  "whitebox_union_n160_b20_k03.json": { "ProverResult.PROOF_FOUND": 120, "ProverResult.TIME_OUT": 880 }
+}
