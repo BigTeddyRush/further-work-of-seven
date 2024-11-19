@@ -4,6 +4,8 @@ from operator import countOf
 from seven import *
 from eprover import *
 
+import time
+
 #=========================================================================================
 # candidates
 #=========================================================================================
@@ -76,9 +78,16 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
         #selection_path = union_select(c, data.encoder, data.tensors, data.ontology, filter=filter_path, **kwargs)
 
         print(f"Test {i}: {c}")
+        
+        start_time = time.time()  # Start timer
         result = run_eprover("./adimen.sumo.tstp", c)
-        print("    ->", result)
-
+        end_time = time.time()  # End timer
+        
+        execution_time = end_time - start_time  # Calculate elapsed time
+        print("    ->", result, f"(Time taken: {execution_time:.4f} seconds)")
+        print(type(result))
+        result += tuple([execution_time])
+        
         results[c] = result
 
     return results
@@ -168,19 +177,7 @@ tests_union = {
     'union_n160_b20_k03': {
         'type': 'union',
         'args': { 'n': 160, 'b': 2.0, 'k': 3 }
-    },
-    'union_n180_b20_k03': {
-        'type': 'union',
-        'args': { 'n': 180, 'b': 2.0, 'k': 3 }
-    },
-    'union_n160_b60_k05': {
-        'type': 'union',
-        'args': { 'n': 160, 'b': 6.0, 'k': 5 }
-    },
-    'union_n180_b60_k05': {
-        'type': 'union',
-        'args': { 'n': 180, 'b': 6.0, 'k': 5 }
-    },
+    }
 
 }
 
@@ -206,7 +203,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/auto_{src}_{name}.json")
+        write_results(results, f"./results/auto_{src}_{name}_timer.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
