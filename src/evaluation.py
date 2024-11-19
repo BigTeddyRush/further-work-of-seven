@@ -4,6 +4,8 @@ from operator import countOf
 from seven import *
 from eprover import *
 
+import time
+
 #=========================================================================================
 # candidates
 #=========================================================================================
@@ -76,8 +78,14 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
         selection_path = union_select(c, data.encoder, data.tensors, data.ontology, filter=filter_path, **kwargs)
 
         print(f"Test {i}: {c}")
+        
+        start_time = time.time()  # Start timer
         result = run_eprover(selection_path, c)
-        print("    ->", result)
+        end_time = time.time()  # End timer
+        
+        execution_time = end_time - start_time  # Calculate elapsed time
+        print("    ->", result, f"(Time taken: {execution_time:.4f} seconds)")
+        result += tuple([execution_time])
 
         results[c] = result
 
@@ -168,10 +176,6 @@ tests_union = {
     'union_n160_b20_k03': {
         'type': 'union',
         'args': { 'n': 160, 'b': 2.0, 'k': 3 }
-    }, 
-    'union_n160_b20_kUU': {
-        'type': 'union',
-        'args': { 'n': 160, 'b': 2.0, 'k': 2147483647 }
     }
 }
 
@@ -197,7 +201,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/{src}_{name}_satauto.json")
+        write_results(results, f"./results/{src}_{name}_satauto_timer.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
@@ -244,6 +248,6 @@ if __name__ == "__main__":
 
     evaluate(args.src, args.select)
 
-    count_selected(args.src, "b60_k05", b=6.0, k=5)
-    count_selected(args.src, "b20_k03", b=2.0, k=3)
-    count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
+    #count_selected(args.src, "b60_k05", b=6.0, k=5)
+    #count_selected(args.src, "b20_k03", b=2.0, k=3)
+    #count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
