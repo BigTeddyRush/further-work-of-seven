@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Output file for variable counts grouped by JSON file
-variable_counts_output_file="evaluation/variable_counts_grouped_proof_found.json"
+variable_counts_output_file="evaluation/variable_counts_grouped_proof_found_timer.json"
 
 # Initialize the output JSON string
 echo "{" > "$variable_counts_output_file"
@@ -25,7 +25,7 @@ count_variables() {
 }
 
 # Iterate over each JSON file in the 'results' directory
-for json_file in ./results/*.json; do
+for json_file in ./result_timer/*.json; do
     # Extract the filename without its path
     file_name=$(basename "$json_file")
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Output file for character counts excluding spaces
-output_file="evaluation/character_counts_grouped_proof_found.json"
+output_file="evaluation/character_counts_grouped_proof_found_timer.json"
 
 # Initialize the output JSON string
 echo "{" > "$output_file"
@@ -20,7 +20,7 @@ count_characters() {
 }
 
 # Iterate over each JSON file in the 'results' directory
-for json_file in ./results/*.json; do
+for json_file in ./result_timer/*.json; do
     # Extract the filename without its path
     file_name=$(basename "$json_file")
 

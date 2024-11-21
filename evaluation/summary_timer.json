@@ -1,0 +1,5 @@
+{
+  "auto_whitebox_n160_b20_k03_timer.json": { "ProverResult.TIME_OUT": 691, "ProverResult.PROOF_FOUND": 309 },
+  "auto_whitebox_union_n160_b20_k03_timer.json": { "ProverResult.TIME_OUT": 607, "ProverResult.PROOF_FOUND": 391, "ProverResult.GAVE_UP": 2 },
+  "whitebox_union_n160_b20_k03_satauto_timer.json": { "ProverResult.PROOF_FOUND": 402, "ProverResult.TIME_OUT": 598 }
+}
