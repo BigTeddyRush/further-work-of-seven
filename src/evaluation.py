@@ -203,7 +203,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/auto_{src}_{name}_timer.json")
+        write_results(results, f"./results/auto_{src}_{name}_timer_3.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
