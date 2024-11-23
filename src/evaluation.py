@@ -174,9 +174,9 @@ tests_seven = {
 
 tests_union = {
     
-    'union_n160_b20_k03': {
+    'union_n160_b20_kUU': {
         'type': 'union',
-        'args': { 'n': 160, 'b': 2.0, 'k': 3 }
+        'args': { 'n': 160, 'b': 2.0, 'k': 2147483647 }
     }
 }
 
@@ -202,7 +202,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/auto_{src}_{name}_timer_2.json")
+        write_results(results, f"./results/auto_{src}_{name}_timer.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
