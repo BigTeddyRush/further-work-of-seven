@@ -174,9 +174,9 @@ tests_seven = {
 
 tests_union = {
     
-    'union_n160_b20_kUU': {
+    'union_n160_b30_kUU': {
         'type': 'union',
-        'args': { 'n': 160, 'b': 2.0, 'k': 2147483647 }
+        'args': { 'n': 160, 'b': 3.0, 'k': 2147483647 }
     }
 }
 
