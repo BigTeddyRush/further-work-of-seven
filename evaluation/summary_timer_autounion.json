@@ -1,5 +1,5 @@
 {
-  "auto_whitebox_union_n160_b20_k03.json": { "ProverResult.TIME_OUT": 603, "ProverResult.PROOF_FOUND": 395, "ProverResult.GAVE_UP": 2 },
+  "auto_whitebox_union_n160_b20_k03_timer.json": { "ProverResult.TIME_OUT": 607, "ProverResult.PROOF_FOUND": 391, "ProverResult.GAVE_UP": 2 },
   "auto_whitebox_union_n160_b20_kUU_timer.json": { "ProverResult.PROOF_FOUND": 461, "ProverResult.TIME_OUT": 536, "ProverResult.GAVE_UP": 3 },
   "auto_whitebox_union_n160_b30_kUU_timer.json": { "ProverResult.PROOF_FOUND": 389, "ProverResult.TIME_OUT": 608, "ProverResult.GAVE_UP": 3 }
 }
