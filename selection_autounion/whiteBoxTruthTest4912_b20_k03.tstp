@@ -1,0 +1,1366 @@
+fof(miloA1249, axiom,  ![X675]:(p__d__instance(X675,c__GeopoliticalArea)=>(p__d__instance(X675,c__CityDistrict)<=>?[X643]:(p__d__instance(X643,c__City)&p__geopoliticalSubdivision(X675,X643))))).
+fof(schemaBinaryRelationA118, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__GeopoliticalArea)&p__d__instance(X1033,c__GeopoliticalArea))=>(p__d__holds3(c__geopoliticalSubdivision,X1033,X1034)<=>p__geopoliticalSubdivision(X1033,X1034)))).
+fof(typeA116, axiom,  ![X1038, X1039]:(p__geopoliticalSubdivision(X1038,X1039)=>(p__d__instance(X1039,c__GeopoliticalArea)&p__d__instance(X1038,c__GeopoliticalArea)))).
+fof(predefinitionsA12, axiom,  ![X1, X2, X3]:((p__d__instance(X1,X2)&p__d__subclass(X2,X3))=>p__d__instance(X1,X3))).
+fof(mergeA2882, axiom,  p__d__subclass(c__City,c__GeopoliticalArea)).
+fof(mergeA2883, axiom,  p__d__subclass(c__City,c__LandArea)).
+fof(mergeA2851, axiom,  p__d__subclass(c__GeopoliticalArea,c__GeographicArea)).
+fof(mergeA2852, axiom,  p__d__subclass(c__GeopoliticalArea,c__Agent)).
+fof(miloA1248, axiom,  p__d__subclass(c__CityDistrict,c__GeopoliticalArea)).
+fof(predefinitionsA7, axiom,  ![X1]:p__d__subclass(X1,X1)).
+fof(predefinitionsA8, axiom,  ![X1, X2, X3]:((p__d__subclass(X1,X2)&p__d__subclass(X2,X3))=>p__d__subclass(X1,X3))).
+fof(predefinitionsA9, axiom,  ![X1, X2]:((p__d__subclass(X1,X2)&p__d__subclass(X2,X1))=>X1=X2)).
+fof(mergeA2841, axiom,  p__d__subclass(c__GeographicArea,c__Region)).
+fof(mergeA2842, axiom,  p__d__partition3(c__GeographicArea,c__WaterArea,c__LandArea)).
+fof(mergeA2862, axiom,  p__d__subclass(c__WaterArea,c__GeographicArea)).
+fof(mergeA2867, axiom,  p__d__subclass(c__LandArea,c__GeographicArea)).
+fof(typeA115, axiom,  ![X1038, X1039]:(p__geographicSubregion(X1038,X1039)=>(p__d__instance(X1039,c__GeographicArea)&p__d__instance(X1038,c__GeographicArea)))).
+fof(miloA3827, axiom,  ![X277]:(p__d__instance(X277,c__Neighborhood)=>?[X265]:(p__d__instance(X265,c__GeographicArea)&p__geographicSubregion(X277,X265)))).
+fof(miloA3843, axiom,  ![X643, X277, X265]:(((((p__d__instance(X643,c__City)&p__d__instance(X277,c__PostalPlace))&p__postCity(X277,X643))&p__geographicSubregion(X643,X265))&p__d__instance(X265,c__StateOrProvince))=>p__postDistrict(X277,X265))).
+fof(miloA3858, axiom,  ![X265]:(p__d__instance(X265,c__PostcodeArea)=>?[X994]:(p__d__instance(X994,c__GeographicArea)&p__geographicSubregion(X265,X994)))).
+fof(miloA3826, axiom,  p__d__subclass(c__Neighborhood,c__GeographicArea)).
+fof(miloA3833, axiom,  ![X277, X994]:((p__d__instance(X994,c__Neighborhood)&p__d__instance(X277,c__PostalPlace))=>(((p__located(X277,X994)&p__d__instance(X277,c__PostalPlace))&p__d__instance(X994,c__Neighborhood))<=>p__postNeighborhood(X277,X994)))).
+fof(miloA3834, axiom,  ![X995, X277, X643]:(((((p__d__instance(X995,c__Neighborhood)&p__d__instance(X277,c__PostalPlace))&p__postNeighborhood(X277,X995))&p__geographicSubregion(X995,X643))&p__d__instance(X643,c__City))=>p__postCity(X277,X643))).
+fof(miloA3835, axiom,  ![X995, X277, X349]:(((((p__d__instance(X995,c__Neighborhood)&p__d__instance(X277,c__PostalPlace))&p__postNeighborhood(X277,X995))&p__geographicSubregion(X995,X349))&p__d__instance(X349,c__StateOrProvince))=>p__postDistrict(X277,X349))).
+fof(typeA154, axiom,  ![X1038, X1039]:(p__postNeighborhood(X1038,X1039)=>(p__d__instance(X1039,c__Neighborhood)&p__d__instance(X1038,c__PostalPlace)))).
+fof(typeA34, axiom,  ![X1038, X1039]:(p__patient(X1038,X1039)=>p__d__instance(X1038,c__Process))).
+fof(miloA1897, axiom,  p__d__subclass(c__PoliticalRevolution,c__PoliticalProcess)).
+fof(miloA1898, axiom,  p__d__subclass(c__PoliticalRevolution,c__ViolentContest)).
+fof(miloA1899, axiom,  ![X73, X464]:((p__d__instance(X73,c__PoliticalRevolution)&p__patient(X73,X464))=>p__d__instance(X464,c__GeopoliticalArea))).
+fof(miloA3850, axiom,  ![X277, X994]:((p__d__instance(X994,c__StateOrProvince)&p__d__instance(X277,c__PostalPlace))=>(((p__located(X277,X994)&p__d__instance(X277,c__PostalPlace))&p__d__instance(X994,c__StateOrProvince))<=>p__postDistrict(X277,X994)))).
+fof(miloA3866, axiom,  ![X265, X277, X994]:(((((p__d__instance(X265,c__PostcodeArea)&p__d__instance(X277,c__PostalPlace))&p__postPostcodeArea(X277,X265))&p__geographicSubregion(X265,X994))&p__d__instance(X994,c__StateOrProvince))=>p__postDistrict(X277,X994))).
+fof(typeA156, axiom,  ![X1038, X1039]:(p__postDistrict(X1038,X1039)=>(p__d__instance(X1039,c__StateOrProvince)&p__d__instance(X1038,c__PostalPlace)))).
+fof(mergeA2879, axiom,  p__d__subclass(c__StateOrProvince,c__GeopoliticalArea)).
+fof(mergeA2880, axiom,  p__d__subclass(c__StateOrProvince,c__LandArea)).
+fof(mergeA2881, axiom,  ![X349]:(p__d__instance(X349,c__StateOrProvince)=>?[X393]:(p__d__instance(X393,c__Nation)&p__properPart(X349,X393)))).
+fof(miloA3803, axiom,  p__d__subclass(c__PostalPlace,c__StationaryArtifact)).
+fof(mergeA255, axiom,  ![X58]:(p__d__instance(X58,c__Region)=>?[X36]:(p__d__instance(X36,c__Physical)&p__located(X36,X58)))).
+fof(mergeA996, axiom,  ![X39, X40, X101]:(((((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__d__instance(X101,c__Object))&p__located(X39,X40))&p__part(X101,X39))=>p__located(X101,X40))).
+fof(typeA222, axiom,  ![X1038, X1039]:(p__located(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Physical)))).
+fof(miloA3841, axiom,  ![X277, X644]:(((p__d__instance(X644,c__GeopoliticalArea)&p__d__instance(X277,c__PostalPlace))&p__postCountry(X277,X644))=>(p__d__instance(X644,c__Nation)|p__d__instance(X644,c__DependencyOrSpecialSovereigntyArea)))).
+fof(miloA3842, axiom,  ![X277, X994]:((p__d__instance(X994,c__GeopoliticalArea)&p__d__instance(X277,c__PostalPlace))=>(((p__located(X277,X994)&p__d__instance(X277,c__PostalPlace))&(p__d__instance(X994,c__Nation)|p__d__instance(X994,c__DependencyOrSpecialSovereigntyArea)))<=>p__postCountry(X277,X994)))).
+fof(miloA3844, axiom,  ![X643, X277, X265]:((((((p__d__instance(X643,c__City)&p__d__instance(X277,c__PostalPlace))&p__d__instance(X265,c__GeopoliticalArea))&p__postCity(X277,X643))&p__geographicSubregion(X643,X265))&(p__d__instance(X265,c__Nation)|p__d__instance(X265,c__DependencyOrSpecialSovereigntyArea)))=>p__postCountry(X277,X265))).
+fof(schemaBinaryRelationA157, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__GeopoliticalArea)&p__d__instance(X1033,c__PostalPlace))=>(p__d__holds3(c__postCountry,X1033,X1034)<=>p__postCountry(X1033,X1034)))).
+fof(typeA155, axiom,  ![X1038, X1039]:(p__postCountry(X1038,X1039)=>(p__d__instance(X1039,c__GeopoliticalArea)&p__d__instance(X1038,c__PostalPlace)))).
+fof(miloA1233, axiom,  p__d__subclass(c__DependencyOrSpecialSovereigntyArea,c__GeopoliticalArea)).
+fof(mergeA2877, axiom,  p__d__subclass(c__Nation,c__GeopoliticalArea)).
+fof(mergeA2878, axiom,  p__d__subclass(c__Nation,c__LandArea)).
+fof(miloA3856, axiom,  ![X277, X994]:((p__d__instance(X994,c__City)&p__d__instance(X277,c__PostalPlace))=>(((p__located(X277,X994)&p__d__instance(X277,c__PostalPlace))&p__d__instance(X994,c__City))<=>p__postCity(X277,X994)))).
+fof(miloA3865, axiom,  ![X265, X277, X643]:(((((p__d__instance(X265,c__PostcodeArea)&p__d__instance(X277,c__PostalPlace))&p__postPostcodeArea(X277,X265))&p__geographicSubregion(X265,X643))&p__d__instance(X643,c__City))=>p__postCity(X277,X643))).
+fof(typeA157, axiom,  ![X1038, X1039]:(p__postCity(X1038,X1039)=>(p__d__instance(X1039,c__City)&p__d__instance(X1038,c__PostalPlace)))).
+fof(mergeA2884, axiom,  p__d__subclass(c__County,c__GeopoliticalArea)).
+fof(mergeA2885, axiom,  p__d__subclass(c__County,c__LandArea)).
+fof(mergeA2886, axiom,  ![X349]:(p__d__instance(X349,c__County)=>?[X393]:(p__d__instance(X393,c__StateOrProvince)&p__properPart(X349,X393)))).
+fof(schemaBinaryRelationA294, axiom,  ![X1033, X1034]:(p__d__instance(X1033,c__GeopoliticalArea)=>(p__d__holds3(c__ResidentFn,X1033,X1034)<=>p__ResidentFn(X1033,X1034)))).
+fof(typeA292, axiom,  ![X1038, X1039]:(p__ResidentFn(X1038,X1039)=>p__d__instance(X1038,c__GeopoliticalArea))).
+fof(mergeA2857, axiom,  p__d__instance(c__geopoliticalSubdivision,c__AsymmetricRelation)).
+fof(mergeA2858, axiom,  p__d__instance(c__geopoliticalSubdivision,c__TransitiveRelation)).
+fof(mergeA2859, axiom,  p__subrelation(c__geopoliticalSubdivision,c__geographicSubregion)).
+fof(mergeA254, axiom,  p__d__subclass(c__Region,c__Object)).
+fof(mergeA2252, axiom,  p__d__subclass(c__Hole,c__Region)).
+fof(mergeA2506, axiom,  ![X280, X281]:(((p__d__instance(X280,c__Object)&p__d__instance(X281,c__Translocation))&p__origin(X281,X280))=>?[X282, X283]:((((p__d__instance(X283,c__Process)&p__d__instance(X282,c__Region))&~(X280=X282))&p__subProcess(X283,X281))&p__located(X283,X282)))).
+fof(schemaBinaryRelationA405, axiom,  ![X1033, X1034]:(p__d__instance(X1033,c__GeopoliticalArea)=>(p__d__holds3(c__CitizenryFn,X1033,X1034)<=>p__CitizenryFn(X1033,X1034)))).
+fof(typeA402, axiom,  ![X1038, X1039]:(p__CitizenryFn(X1038,X1039)=>p__d__instance(X1038,c__GeopoliticalArea))).
+fof(mergeA312, axiom,  p__d__subclass(c__Agent,c__Object)).
+fof(mergeA313, axiom,  ![X66]:(p__d__instance(X66,c__Agent)=>?[X64]:(p__d__instance(X64,c__Process)&p__agent(X64,X66)))).
+fof(typeA30, axiom,  ![X1038, X1039]:(p__agent(X1038,X1039)=>(p__d__instance(X1039,c__Agent)&p__d__instance(X1038,c__Process)))).
+fof(miloA3864, axiom,  ![X277, X265]:((p__d__instance(X265,c__PostcodeArea)&p__d__instance(X277,c__PostalPlace))=>(((p__located(X277,X265)&p__d__instance(X277,c__PostalPlace))&p__d__instance(X265,c__PostcodeArea))<=>p__postPostcodeArea(X277,X265)))).
+fof(typeA158, axiom,  ![X1038, X1039]:(p__postPostcodeArea(X1038,X1039)=>(p__d__instance(X1039,c__PostcodeArea)&p__d__instance(X1038,c__PostalPlace)))).
+fof(schemaBinaryRelationA156, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Neighborhood)&p__d__instance(X1033,c__PostalPlace))=>(p__d__holds3(c__postNeighborhood,X1033,X1034)<=>p__postNeighborhood(X1033,X1034)))).
+fof(mergeA3157, axiom,  ![X459]:(p__d__instance(X459,c__PermanentResidence)=>?[X348]:(p__d__instance(X348,c__Human)&p__home(X348,X459)))).
+fof(miloA1003, axiom,  ![X348, X158]:(((p__d__instance(X348,c__Human)&p__d__instance(X158,c__ApartmentUnit))&p__home(X348,X158))=>~(p__possesses(X348,X158)))).
+fof(miloA1014, axiom,  ![X348, X158]:(((((p__d__instance(X348,c__Human)&p__d__instance(X158,c__SingleFamilyResidence))&p__home(X348,X158))&p__possesses(X348,X158))&~(p__d__instance(X158,c__Building)))=>p__d__instance(X158,c__CondominiumUnit))).
+fof(typeA452, axiom,  ![X1038, X1039]:(p__home(X1038,X1039)=>(p__d__instance(X1039,c__PermanentResidence)&p__d__instance(X1038,c__Human)))).
+fof(mergeA258, axiom,  ![X59]:(p__d__instance(X59,c__Collection)=>?[X27]:(p__d__instance(X27,c__SelfConnectedObject)&p__member(X27,X59)))).
+fof(mergeA3347, axiom,  ![X228, X66]:(((p__d__instance(X66,c__SelfConnectedObject)&p__d__instance(X228,c__Organization))&p__member(X66,X228))=>p__d__instance(X66,c__Agent))).
+fof(typeA65, axiom,  ![X1038, X1039]:(p__member(X1038,X1039)=>(p__d__instance(X1039,c__Collection)&p__d__instance(X1038,c__SelfConnectedObject)))).
+fof(miloA1239, axiom,  ![X348, X265]:((((p__d__instance(X265,c__GeopoliticalArea)&p__d__instance(X265,c__PermanentResidence))&p__d__instance(X348,c__Human))&p__member(X348,f__ResidentFn1(X265)))=>p__home(X348,X265))).
+fof(miloA1247, axiom,  ![X265, X672, X673]:((((p__d__instance(X265,c__GeopoliticalArea)&p__d__instance(X673,c__Quantity))&p__d__instance(X672,c__Quantity))&f__PerCapitaFn2(X673,X265)=X672)=>?[X674]:((p__d__instance(X674,c__Number)&X674=f__CardinalityFn1(f__ResidentFn1(X265)))&X672=f__DivisionFn2(X673,X674)))).
+fof(mergeA2979, axiom,  p__d__subclass(c__Human,c__CognitiveAgent)).
+fof(mergeA3156, axiom,  p__d__subclass(c__PermanentResidence,c__Residence)).
+fof(schemaBinaryRelationA284, axiom,  ![X1033, X1034]:(p__d__instance(X1033,c__GeopoliticalArea)=>(p__d__holds3(c__GovernmentFn,X1033,X1034)<=>p__GovernmentFn(X1033,X1034)))).
+fof(typeA282, axiom,  ![X1038, X1039]:(p__GovernmentFn(X1038,X1039)=>p__d__instance(X1038,c__GeopoliticalArea))).
+fof(mergeA2853, axiom,  ![X265, X348]:(((p__d__instance(X348,c__Human)&p__d__instance(X265,c__GeopoliticalArea))&p__leader(f__GovernmentFn1(X265),X348))=>p__leader(X265,X348))).
+fof(mergeA2854, axiom,  ![X265, X348]:(((p__d__instance(X348,c__Human)&p__d__instance(X265,c__GeopoliticalArea))&p__leader(X265,X348))=>p__leader(f__GovernmentFn1(X265),X348))).
+fof(schemaBinaryRelationA68, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Human)&p__d__instance(X1033,c__Agent))=>(p__d__holds3(c__leader,X1033,X1034)<=>p__leader(X1033,X1034)))).
+fof(typeA67, axiom,  ![X1038, X1039]:(p__leader(X1038,X1039)=>(p__d__instance(X1039,c__Human)&p__d__instance(X1038,c__Agent)))).
+fof(miloA1303, axiom,  ![X679, X680]:(((p__d__instance(X680,c__MilitaryUnit)&p__d__instance(X679,c__MilitaryUnit))&p__hostileForces(X679,X680))=>?[X380, X351, X352]:((((((p__d__instance(X351,c__GeopoliticalArea)&p__d__instance(X352,c__GeopoliticalArea))&p__d__instance(X380,c__War))&p__contestParticipant(X380,X351))&p__contestParticipant(X380,X352))&p__subOrganization(X679,f__GovernmentFn1(X351)))&p__subOrganization(X680,f__GovernmentFn1(X352))))).
+fof(typeA433, axiom,  ![X1038, X1039]:(p__contestParticipant(X1038,X1039)=>(p__d__instance(X1039,c__Agent)&p__d__instance(X1038,c__Contest)))).
+fof(miloA2868, axiom,  p__d__subclass(c__CivilWar,c__War)).
+fof(miloA2869, axiom,  ![X366]:(p__d__instance(X366,c__CivilWar)=>?[X926]:(p__d__instance(X926,c__Nation)&![X66]:((p__d__instance(X66,c__GeopoliticalArea)&p__contestParticipant(X366,X66))=>p__geopoliticalSubdivision(X66,X926))))).
+fof(typeA5, axiom,  ![X1038, X1039]:(p__part(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Object)))).
+fof(mergeA3146, axiom,  p__d__subclass(c__Building,c__StationaryArtifact)).
+fof(mergeA3149, axiom,  p__d__disjoint(c__Room,c__Building)).
+fof(mergeA3150, axiom,  ![X458]:(p__d__instance(X458,c__Room)=>?[X340]:(p__d__instance(X340,c__Building)&p__properPart(X458,X340)))).
+fof(miloA971, axiom,  ![X642, X643, X644, X277, X66]:((((((p__d__instance(X644,c__Nation)&p__d__instance(X643,c__City))&p__d__instance(X642,c__Roadway))&p__d__instance(X277,c__PostalPlace))&p__d__instance(X66,c__Agent))&f__StreetAddressFn4(X277,X642,X643,X644)=X66)=>p__postContactSite(X277,X66))).
+fof(miloA972, axiom,  ![X642, X643, X644, X66, X277]:((((((p__d__instance(X644,c__Nation)&p__d__instance(X643,c__City))&p__d__instance(X642,c__Roadway))&p__d__instance(X277,c__StationaryArtifact))&p__d__instance(X66,c__Agent))&f__StreetAddressFn4(X277,X642,X643,X644)=X66)=>?[X456]:(p__d__instance(X456,c__Building)&p__part(X277,X456)))).
+fof(mergeA3144, axiom,  p__d__subclass(c__StationaryArtifact,c__Artifact)).
+fof(mergeA1183, axiom,  ![X23]:(p__d__instance(X23,c__RationalNumber)=>?[X115, X116]:((p__d__instance(X115,c__Integer)&p__d__instance(X116,c__Integer))&X23=f__DivisionFn2(X115,X116)))).
+fof(mergeA2141, axiom,  ![X199]:(p__d__instance(X199,c__Week)=>f__CardinalityFn1(f__TemporalCompositionFn2(X199,c__Day))=c__7)).
+fof(mergeA2143, axiom,  ![X209]:(p__d__instance(X209,c__Hour)=>f__CardinalityFn1(f__TemporalCompositionFn2(X209,c__Minute))=c__60)).
+fof(mergeA354, axiom,  p__d__subclass(c__Number,c__Quantity)).
+fof(mergeA386, axiom,  p__d__subclass(c__RealNumber,c__Number)).
+fof(mergeA561, axiom,  p__d__subclass(c__PhysicalQuantity,c__Quantity)).
+fof(miloA2421, axiom,  ![X72, X7]:(((p__d__instance(X7,c__SetOrClass)&p__d__instance(X72,c__EconomicRelation))&p__domain(X72,c__1,X7))=>p__d__subclass(X7,c__GeopoliticalArea))).
+fof(schemaTernaryRelationA41, axiom,  ![X1033, X1034, X1035]:(((p__d__instance(X1035,c__SetOrClass)&p__d__instance(X1034,c__PositiveInteger))&p__d__instance(X1033,c__Relation))=>(p__d__holds4(c__domain,X1033,X1034,X1035)<=>p__domain(X1033,X1034,X1035)))).
+fof(typeA516, axiom,  ![X1038, X1039, X1040]:(p__domain(X1038,X1039,X1040)=>((p__d__instance(X1040,c__SetOrClass)&p__d__instance(X1039,c__PositiveInteger))&p__d__instance(X1038,c__Relation)))).
+fof(mergeA412, axiom,  p__d__instance(c__1,c__PositiveInteger)).
+fof(miloA2420, axiom,  p__d__subclass(c__EconomicRelation,c__BinaryRelation)).
+fof(mergeA208, axiom,  ![X40, X39]:((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))=>(p__properPart(X39,X40)<=>(p__part(X39,X40)&~(p__part(X40,X39)))))).
+fof(mergeA2260, axiom,  ![X224]:(p__d__instance(X224,c__Hole)=>?[X225]:(p__d__instance(X225,c__Object)&p__properPart(X225,X224)))).
+fof(mergeA2268, axiom,  ![X224, X225]:(((p__d__instance(X225,c__Object)&p__d__instance(X224,c__Hole))&p__properPart(X225,X224))=>?[X27]:((p__d__instance(X27,c__Object)&p__meetsSpatially(X224,X27))&~(p__meetsSpatially(X225,X27))))).
+fof(mergeA3035, axiom,  ![X415, X244]:(((p__d__instance(X244,c__Object)&p__d__instance(X415,c__AnimalAnatomicalStructure))&p__properPart(X415,X244))=>p__d__instance(X244,c__Animal))).
+fof(typeA63, axiom,  ![X1038, X1039]:(p__properPart(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Object)))).
+fof(mergeA182, axiom,  p__d__subclass(c__SelfConnectedObject,c__Object)).
+fof(mergeA3345, axiom,  p__d__subclass(c__Organization,c__Agent)).
+fof(mergeA2748, axiom,  p__d__subclass(c__War,c__ViolentContest)).
+fof(mergeA2749, axiom,  ![X366]:(p__d__instance(X366,c__War)=>?[X367]:(p__d__instance(X367,c__Battle)&p__subProcess(X367,X366)))).
+fof(mergeA2750, axiom,  ![X366, X66]:((((p__d__instance(X66,c__Agent)&p__d__instance(X66,c__Collection))&p__d__instance(X366,c__War))&p__agent(X366,X66))=>(p__d__instance(X66,c__GeopoliticalArea)|(p__d__instance(X66,c__Organization)&![X62]:((p__d__instance(X62,c__SelfConnectedObject)&p__member(X62,X66))=>p__d__instance(X62,c__GeopoliticalArea)))))).
+fof(mergeA2752, axiom,  ![X367]:(p__d__instance(X367,c__Battle)=>?[X366]:(p__d__instance(X366,c__War)&p__subProcess(X367,X366)))).
+fof(mergeA256, axiom,  p__d__subclass(c__Collection,c__Object)).
+fof(mergeA257, axiom,  p__d__disjoint(c__Collection,c__SelfConnectedObject)).
+fof(mergeA2169, axiom,  ![X59, X39, X40]:((((((p__d__instance(X59,c__Collection)&p__d__instance(X39,c__SelfConnectedObject))&p__d__instance(X40,c__SelfConnectedObject))&p__member(X39,X59))&p__member(X40,X59))&~(X39=X40))=>~(p__overlapsSpatially(X39,X40)))).
+fof(schemaTernaryRelationA36, axiom,  ![X1033, X1034, X1035]:((p__d__instance(X1034,c__GeopoliticalArea)&p__d__instance(X1033,c__Quantity))=>(p__d__holds4(c__PerCapitaFn,X1033,X1034,X1035)<=>p__PerCapitaFn(X1033,X1034,X1035)))).
+fof(typeA511, axiom,  ![X1038, X1039, X1040]:(p__PerCapitaFn(X1038,X1039,X1040)=>(p__d__instance(X1039,c__GeopoliticalArea)&p__d__instance(X1038,c__Quantity)))).
+fof(miloA1231, axiom,  p__d__subclass(c__IndependentState,c__GeopoliticalArea)).
+fof(miloA1232, axiom,  p__d__subclass(c__IndependentState,c__Nation)).
+fof(miloA1234, axiom,  p__d__disjoint(c__IndependentState,c__DependencyOrSpecialSovereigntyArea)).
+fof(miloA3845, axiom,  p__d__instance(c__postDistrict,c__AsymmetricRelation)).
+fof(miloA3846, axiom,  p__d__instance(c__postDistrict,c__BinaryPredicate)).
+fof(miloA3849, axiom,  p__subrelation(c__postDistrict,c__located)).
+fof(schemaBinaryRelationA158, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__StateOrProvince)&p__d__instance(X1033,c__PostalPlace))=>(p__d__holds3(c__postDistrict,X1033,X1034)<=>p__postDistrict(X1033,X1034)))).
+fof(mergeA179, axiom,  p__d__partition3(c__Physical,c__Object,c__Process)).
+fof(mergeA567, axiom,  p__d__partition3(c__TimePosition,c__TimeInterval,c__TimePoint)).
+fof(mergeA2980, axiom,  p__d__partition3(c__Human,c__Man,c__Woman)).
+fof(miloA1397, axiom,  p__d__partition3(c__Region,c__GeographicArea,c__SpaceRegion)).
+fof(miloA1398, axiom,  p__d__subclass(c__AtmosphericRegion,c__SpaceRegion)).
+fof(miloA1405, axiom,  p__d__subclass(c__SpaceRegion,c__Region)).
+fof(miloA1406, axiom,  p__d__disjoint(c__SpaceRegion,c__GeographicArea)).
+fof(mergeA2868, axiom,  ![X388]:(p__d__instance(X388,c__LandArea)=>?[X389]:((p__d__instance(X389,c__Object)&p__part(X388,X389))&(p__d__instance(X389,c__Continent)|p__d__instance(X389,c__Island))))).
+fof(mergeA2873, axiom,  p__d__subclass(c__Island,c__LandArea)).
+fof(mergeA2874, axiom,  ![X391]:(p__d__instance(X391,c__Island)=>![X265, X211, X212]:(~(p__d__instance(X265,c__Object))|~(p__d__instance(X211,c__Object))|~(p__d__instance(X212,c__Object))|~(p__d__instance(X265,c__LandArea))|~(p__part(X211,X391))|~(p__part(X212,X265))|p__part(X391,X265)|p__part(X265,X391)|~(p__meetsSpatially(X211,X212))))).
+fof(mergeA2875, axiom,  ![X392, X265]:(((p__d__instance(X392,c__Island)&p__d__instance(X265,c__GeographicArea))&p__meetsSpatially(X392,X265))=>~(p__d__instance(X265,c__LandArea)))).
+fof(mergeA2876, axiom,  ![X392]:(p__d__instance(X392,c__Island)=>?[X267]:(p__d__instance(X267,c__WaterArea)&p__meetsSpatially(X392,X267)))).
+fof(mergeA2871, axiom,  p__d__subclass(c__Continent,c__LandArea)).
+fof(mergeA2872, axiom,  f__CardinalityFn1(c__Continent)=c__7).
+fof(miloA1413, axiom,  p__d__instance(c__Outside,c__PositionalAttribute)).
+fof(miloA1414, axiom,  p__contraryAttribute2(c__Inside,c__Outside)).
+fof(miloA1415, axiom,  ![X27, X58]:(((p__d__instance(X58,c__Object)&p__d__instance(X27,c__Object))&p__orientation(X27,X58,c__Outside))=>p__d__instance(X58,c__Region))).
+fof(miloA1417, axiom,  ![X27, X58]:((p__d__instance(X58,c__Object)&p__d__instance(X27,c__Object))=>(p__orientation(X27,X58,c__Outside)<=>~(p__partlyLocated(X27,X58))))).
+fof(miloA1418, axiom,  ![X27, X58]:(((p__d__instance(X58,c__Object)&p__d__instance(X27,c__Object))&p__part(X27,X58))=>~(p__orientation(X27,X58,c__Outside)))).
+fof(miloA1636, axiom,  ![X1]:(p__d__instance(X1,c__Exoskeleton)=>?[X464]:((p__d__instance(X464,c__Animal)&p__part(X1,X464))&![X41]:(~(p__d__instance(X41,c__Object))|~(p__properPart(X41,X464))|~(p__orientation(X41,X1,c__Outside)))))).
+fof(miloA1262, axiom,  p__d__subclass(c__CityBlock,c__LandArea)).
+fof(miloA1263, axiom,  ![X541]:(p__d__instance(X541,c__CityBlock)=>?[X171]:(p__d__instance(X171,c__City)&p__part(X541,X171)))).
+fof(schemaBinaryRelationA460, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__GeopoliticalArea)&p__d__instance(X1033,c__Organization))=>(p__d__holds3(c__headquartersOfOrganization,X1033,X1034)<=>p__headquartersOfOrganization(X1033,X1034)))).
+fof(typeA457, axiom,  ![X1038, X1039]:(p__headquartersOfOrganization(X1038,X1039)=>(p__d__instance(X1039,c__GeopoliticalArea)&p__d__instance(X1038,c__Organization)))).
+fof(mergeA2843, axiom,  p__d__subclass(c__LocalizablePlace,c__GeographicArea)).
+fof(miloA3804, axiom,  p__d__subclass(c__PostalPlace,c__LocalizablePlace)).
+fof(miloA3857, axiom,  p__d__subclass(c__PostcodeArea,c__LocalizablePlace)).
+fof(mergeA273, axiom,  ![X27]:(p__d__instance(X27,c__ContentBearingPhysical)=>?[X35]:p__represents(X27,X35))).
+fof(mergeA2720, axiom,  ![X345]:(p__d__instance(X345,c__LinguisticCommunication)=>?[X27]:((p__represents(X345,X27)&p__d__instance(X27,c__LinguisticExpression))&p__patient(X345,X27)))).
+fof(miloA1844, axiom,  p__d__subclass(c__Map,c__Icon)).
+fof(miloA1845, axiom,  ![X149]:(p__d__instance(X149,c__Map)=>?[X464]:(p__d__instance(X464,c__GeographicArea)&p__represents(X149,X464)))).
+fof(miloA1411, axiom,  p__d__instance(c__Inside,c__PositionalAttribute)).
+fof(miloA1416, axiom,  ![X27, X58]:(((p__d__instance(X58,c__Object)&p__d__instance(X27,c__Object))&p__orientation(X27,X58,c__Inside))=>p__d__instance(X58,c__Region))).
+fof(miloA1420, axiom,  ![X711]:(p__d__instance(X711,c__Outdoors)=>![X456]:(~(p__d__instance(X456,c__Object))|~(p__d__instance(X456,c__Building))|~(p__orientation(X711,X456,c__Inside))))).
+fof(miloA1423, axiom,  ![X712]:(p__d__instance(X712,c__Indoors)=>?[X456]:(p__d__instance(X456,c__Building)&p__orientation(X712,X456,c__Inside)))).
+fof(mergeA2382, axiom,  p__d__subclass(c__PoliticalProcess,c__OrganizationalProcess)).
+fof(mergeA2383, axiom,  ![X64]:(p__d__instance(X64,c__PoliticalProcess)=>?[X250]:(((p__d__instance(X250,c__SelfConnectedObject)&p__d__instance(X250,c__Agent))&(p__d__instance(X250,c__Government)|?[X251]:(p__d__instance(X251,c__Government)&p__member(X250,X251))))&(p__agent(X64,X250)|p__patient(X64,X250))))).
+fof(mergeA2366, axiom,  p__d__subclass(c__Election,c__OrganizationalProcess)).
+fof(mergeA2575, axiom,  ![X310]:(p__d__instance(X310,c__Voting)=>?[X311]:(p__d__instance(X311,c__Election)&p__subProcess(X310,X311)))).
+fof(mergeA2855, axiom,  ![X66, X255]:(((p__d__instance(X255,c__Election)&p__agent(X255,X66))&p__d__instance(X66,c__GeopoliticalArea))=>p__d__instance(X255,c__PoliticalProcess))).
+fof(miloA3289, axiom,  p__d__subclass(c__Road,c__Region)).
+fof(miloA3290, axiom,  p__d__subclass(c__Road,c__Roadway)).
+fof(schemaBinaryRelationA155, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Agent)&p__d__instance(X1033,c__PostalPlace))=>(p__d__holds3(c__postContactSite,X1033,X1034)<=>p__postContactSite(X1033,X1034)))).
+fof(typeA153, axiom,  ![X1038, X1039]:(p__postContactSite(X1038,X1039)=>(p__d__instance(X1039,c__Agent)&p__d__instance(X1038,c__PostalPlace)))).
+fof(miloA1236, axiom,  p__d__instance(c__ResidentFn,c__UnaryFunction)).
+fof(miloA1240, axiom,  p__subrelation(c__CitizenryFn,c__ResidentFn)).
+fof(predefinitionsA15, axiom,  ![X4, X5]:(p__d__disjoint(X4,X5)<=>![X6]:(~(p__d__instance(X6,X4))|~(p__d__instance(X6,X5))))).
+fof(mergeA2907, axiom,  p__d__disjoint(c__Organism,c__Artifact)).
+fof(mergeA181, axiom,  p__d__subclass(c__Object,c__Physical)).
+fof(mergeA324, axiom,  p__d__subclass(c__Process,c__Physical)).
+fof(typeA435, axiom,  ![X1038, X1039]:(p__instrument(X1038,X1039)=>(p__d__instance(X1039,c__Physical)&p__d__instance(X1038,c__Process)))).
+fof(miloA3369, axiom,  ![X921, X27, X38, X277]:((((((p__d__instance(X277,c__Object)&p__d__instance(X38,c__TimePosition))&p__d__instance(X921,c__Collection))&p__d__instance(X27,c__SelfConnectedObject))&p__locatedAtTime(X921,X38,X277))&p__memberAtTime(X27,X921,X38))=>p__locatedAtTime(X27,X38,X277))).
+fof(miloA3535, axiom,  ![X98, X255, X27, X38, X277]:((((((((p__d__instance(X255,c__Process)&p__d__instance(X98,c__CaseRole))&p__d__instance(X27,c__Object))&p__d__instance(X38,c__TimePosition))&p__d__instance(X277,c__Object))&p__playsRoleInEvent(X27,X98,X255))&p__time(X255,X38))&p__eventLocated(X255,X277))=>p__locatedAtTime(X27,X38,X277))).
+fof(miloA3563, axiom,  ![X277, X27, X38, X58]:((((((p__d__instance(X277,c__GeographicArea)&p__d__instance(X38,c__TimePosition))&p__d__instance(X27,c__Object))&p__d__instance(X58,c__GeographicArea))&p__locatedAtTime(X27,X38,X277))&p__geographicSubregion(X277,X58))=>p__locatedAtTime(X27,X38,X58))).
+fof(typeA552, axiom,  ![X1038, X1039, X1040]:(p__locatedAtTime(X1038,X1039,X1040)=>((p__d__instance(X1040,c__Object)&p__d__instance(X1039,c__TimePosition))&p__d__instance(X1038,c__Object)))).
+fof(mergeA568, axiom,  p__d__subclass(c__TimeInterval,c__TimePosition)).
+fof(mergeA569, axiom,  p__d__subclass(c__TimePoint,c__TimePosition)).
+fof(miloA1250, axiom,  p__d__subclass(c__Downtown,c__CityDistrict)).
+fof(mergeA3351, axiom,  p__d__subclass(c__PoliticalOrganization,c__Organization)).
+fof(mergeA3352, axiom,  ![X250]:(p__d__instance(X250,c__PoliticalOrganization)=>?[X64]:(p__d__instance(X64,c__PoliticalProcess)&p__agent(X64,X250)))).
+fof(mergeA3353, axiom,  p__d__subclass(c__MilitaryForce,c__PoliticalOrganization)).
+fof(mergeA3362, axiom,  p__d__subclass(c__Government,c__GovernmentOrganization)).
+fof(mergeA2191, axiom,  ![X77, X41, X180]:((((((p__d__instance(X77,c__SelfConnectedObject)&p__d__instance(X180,c__SelfConnectedObject))&p__d__instance(X41,c__Object))&p__bottom(X180,X77))&p__part(X41,X77))&~(p__connected(X41,X180)))=>p__orientation(X41,X180,c__Above))).
+fof(mergeA3456, axiom,  p__d__instance(c__Above,c__PositionalAttribute)).
+fof(mergeA3457, axiom,  p__d__instance(c__Above,c__AntiSymmetricPositionalAttribute)).
+fof(mergeA3458, axiom,  p__contraryAttribute2(c__Above,c__Below)).
+fof(mergeA3459, axiom,  ![X39, X40]:(((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__orientation(X39,X40,c__Above))=>~(p__connected(X39,X40)))).
+fof(mergeA3462, axiom,  ![X40, X39]:((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))=>(p__orientation(X39,X40,c__Below)<=>(p__orientation(X40,X39,c__On)|p__orientation(X40,X39,c__Above))))).
+fof(mergeA2151, axiom,  ![X39, X40]:(((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__connected(X39,X40))=>(p__meetsSpatially(X39,X40)|p__overlapsSpatially(X39,X40)))).
+fof(typeA196, axiom,  ![X1038, X1039]:(p__meetsSpatially(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Object)))).
+fof(miloA2179, axiom,  p__d__subclass(c__Balcony,c__StationaryArtifact)).
+fof(miloA2180, axiom,  ![X829]:(p__d__instance(X829,c__Balcony)=>?[X825, X830]:((((p__d__instance(X825,c__Object)&p__meetsSpatially(X825,X829))&p__d__instance(X830,c__LandArea))&p__located(X825,X830))&p__orientation(X829,X830,c__Above)))).
+fof(miloA1285, axiom,  p__d__subclass(c__CityGovernment,c__Government)).
+fof(mergeA3364, axiom,  p__d__instance(c__GovernmentFn,c__UnaryFunction)).
+fof(miloA1004, axiom,  ![X158]:(p__d__instance(X158,c__ApartmentUnit)=>?[X456]:(p__d__instance(X456,c__ApartmentBuilding)&p__part(X158,X456)))).
+fof(miloA1016, axiom,  p__d__subclass(c__ApartmentBuilding,c__ResidentialBuilding)).
+fof(miloA1017, axiom,  p__d__disjoint(c__ApartmentBuilding,c__SingleFamilyResidence)).
+fof(miloA1018, axiom,  ![X456]:(p__d__instance(X456,c__ApartmentBuilding)=>?[X648, X649]:((((p__d__instance(X648,c__ApartmentUnit)&p__d__instance(X649,c__ApartmentUnit))&p__part(X648,X456))&p__part(X649,X456))&~(X648=X649)))).
+fof(miloA1002, axiom,  p__d__subclass(c__ApartmentUnit,c__SingleFamilyResidence)).
+fof(mergeA2844, axiom,  p__d__instance(c__geographicSubregion,c__BinaryPredicate)).
+fof(mergeA2845, axiom,  p__d__instance(c__geographicSubregion,c__TransitiveRelation)).
+fof(mergeA2846, axiom,  p__d__instance(c__geographicSubregion,c__AsymmetricRelation)).
+fof(mergeA2847, axiom,  p__subrelation(c__geographicSubregion,c__properPart)).
+fof(mergeA2848, axiom,  p__subrelation(c__geographicSubregion,c__located)).
+fof(schemaBinaryRelationA117, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__GeographicArea)&p__d__instance(X1033,c__GeographicArea))=>(p__d__holds3(c__geographicSubregion,X1033,X1034)<=>p__geographicSubregion(X1033,X1034)))).
+fof(typeA15, axiom,  ![X1038, X1039]:(p__subProcess(X1038,X1039)=>(p__d__instance(X1039,c__Process)&p__d__instance(X1038,c__Process)))).
+fof(mergeA2751, axiom,  p__d__subclass(c__Battle,c__ViolentContest)).
+fof(mergeA2753, axiom,  ![X367]:(p__d__instance(X367,c__Battle)=>?[X368]:(p__d__instance(X368,c__ViolentContest)&p__subProcess(X368,X367)))).
+fof(miloA1292, axiom,  ![X541]:(p__d__instance(X541,c__Battle)=>?[X679, X680]:((((p__d__instance(X679,c__MilitaryUnit)&p__d__instance(X680,c__MilitaryUnit))&~(X679=X680))&p__agent(X541,X679))&p__agent(X541,X680)))).
+fof(schemaBinaryRelationA438, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Physical)&p__d__instance(X1033,c__Process))=>(p__d__holds3(c__instrument,X1033,X1034)<=>p__instrument(X1033,X1034)))).
+fof(miloA565, axiom,  ![X291]:(p__d__instance(X291,c__LandVehicle)=>?[X579]:(p__d__instance(X579,c__Wheel)&p__part(X579,X291)))).
+fof(miloA581, axiom,  p__d__subclass(c__LandVehicle,c__Vehicle)).
+fof(miloA586, axiom,  p__d__subclass(c__RoadVehicle,c__LandVehicle)).
+fof(miloA2562, axiom,  ![X393]:(p__d__instance(X393,c__LandTransportation)=>?[X580, X265]:(((p__d__instance(X580,c__LandVehicle)&p__d__instance(X265,c__LandArea))&p__instrument(X393,X580))&p__located(X580,X265)))).
+fof(miloA2563, axiom,  ![X291]:(p__d__instance(X291,c__LandVehicle)=>p__capability(c__LandTransportation,c__instrument,X291))).
+fof(miloA2561, axiom,  p__d__subclass(c__LandTransportation,c__Transportation)).
+fof(miloA2564, axiom,  ![X272, X84]:(((p__d__instance(X84,c__Object)&p__d__instance(X272,c__LandTransportation))&p__path(X272,X84))=>p__d__instance(X84,c__LandTransitway))).
+fof(miloA2566, axiom,  p__d__subclass(c__TransportViaRoadVehicle,c__LandTransportation)).
+fof(miloA1419, axiom,  p__d__subclass(c__Outdoors,c__Region)).
+fof(miloA1422, axiom,  p__d__disjoint(c__Indoors,c__Outdoors)).
+fof(miloA2840, axiom,  p__d__subclass(c__PoliticoEconomicAttribute,c__RelationalAttribute)).
+fof(miloA2842, axiom,  ![X495, X924]:(((p__d__instance(X924,c__Object)&p__d__instance(X495,c__PoliticoEconomicAttribute))&p__attribute(X924,X495))=>p__d__instance(X924,c__Government))).
+fof(miloA2844, axiom,  p__d__subclass(c__FormOfGovernment,c__PoliticoEconomicAttribute)).
+fof(mergeA3159, axiom,  p__d__subclass(c__ResidentialBuilding,c__Building)).
+fof(mergeA3160, axiom,  p__d__subclass(c__ResidentialBuilding,c__Residence)).
+fof(miloA1019, axiom,  p__d__subclass(c__CondominiumBuilding,c__ResidentialBuilding)).
+fof(miloA1022, axiom,  p__d__subclass(c__Dormitory,c__ResidentialBuilding)).
+fof(mergeA3151, axiom,  p__d__subclass(c__House,c__ResidentialBuilding)).
+fof(mergeA3152, axiom,  p__d__subclass(c__House,c__SingleFamilyResidence)).
+fof(mergeA3155, axiom,  ![X459]:(p__d__instance(X459,c__Residence)=>(p__d__instance(X459,c__House)|?[X456]:(p__d__instance(X456,c__ResidentialBuilding)&p__part(X459,X456))))).
+fof(mergeA3153, axiom,  p__d__subclass(c__Residence,c__StationaryArtifact)).
+fof(mergeA3154, axiom,  p__d__partition3(c__Residence,c__PermanentResidence,c__TemporaryResidence)).
+fof(mergeA3158, axiom,  p__d__subclass(c__TemporaryResidence,c__Residence)).
+fof(miloA3807, axiom,  p__d__subclass(c__Residence,c__PostalPlace)).
+fof(miloA3836, axiom,  p__d__instance(c__postCountry,c__AsymmetricRelation)).
+fof(miloA3837, axiom,  p__d__instance(c__postCountry,c__BinaryPredicate)).
+fof(miloA3840, axiom,  p__subrelation(c__postCountry,c__located)).
+fof(miloA627, axiom,  p__d__subclass(c__Seat,c__Furniture)).
+fof(miloA2201, axiom,  p__d__subclass(c__SittingArea,c__Region)).
+fof(miloA2202, axiom,  ![X265]:(p__d__instance(X265,c__SittingArea)=>?[X652]:(p__d__instance(X652,c__Seat)&p__located(X652,X265)))).
+fof(miloA1083, axiom,  p__d__subclass(c__Auditorium,c__Building)).
+fof(miloA1085, axiom,  ![X651]:(p__d__instance(X651,c__Auditorium)=>?[X283]:(p__d__instance(X283,c__PerformanceStage)&p__part(X283,X651)))).
+fof(miloA1087, axiom,  ![X652]:(p__d__instance(X652,c__AuditoriumSeat)=>?[X651]:(p__d__instance(X651,c__Auditorium)&p__part(X652,X651)))).
+fof(miloA1088, axiom,  ![X651, X652, X283, X653, X348]:(((((((((p__d__instance(X652,c__AuditoriumSeat)&p__part(X652,X651))&p__part(X283,X651))&p__d__instance(X651,c__Auditorium))&p__d__instance(X283,c__PerformanceStage))&p__located(X348,X652))&p__d__instance(X348,c__Human))&p__d__subclass(X653,c__Seeing))&![X6]:((p__d__instance(X6,c__Process)&p__d__instance(X6,X653))=>p__patient(X6,X283)))=>p__capability(X653,c__agent,X348))).
+fof(miloA2242, axiom,  ![X283]:(p__d__instance(X283,c__PerformanceStage)=>?[X651]:(p__d__instance(X651,c__Auditorium)&p__part(X283,X651)))).
+fof(miloA1086, axiom,  p__d__subclass(c__AuditoriumSeat,c__Seat)).
+fof(miloA1032, axiom,  p__d__partition3(c__PlaceOfCommerce,c__CommercialBuilding,c__CommercialUnit)).
+fof(miloA1033, axiom,  ![X650]:(p__d__instance(X650,c__PlaceOfCommerce)=>(p__d__instance(X650,c__CommercialBuilding)|?[X456]:(p__d__instance(X456,c__CommercialBuilding)&p__part(X650,X456))))).
+fof(miloA1034, axiom,  p__d__subclass(c__CommercialBuilding,c__Building)).
+fof(miloA1035, axiom,  p__d__subclass(c__CommercialBuilding,c__PlaceOfCommerce)).
+fof(miloA1031, axiom,  p__d__subclass(c__PlaceOfCommerce,c__StationaryArtifact)).
+fof(miloA3808, axiom,  p__d__subclass(c__PlaceOfCommerce,c__PostalPlace)).
+fof(miloA2240, axiom,  p__d__subclass(c__PerformanceStage,c__StationaryArtifact)).
+fof(miloA2261, axiom,  ![X843]:(p__d__instance(X843,c__Performance)=>?[X283]:(p__d__instance(X283,c__PerformanceStage)&p__eventLocated(X843,X283)))).
+fof(mergeA1005, axiom,  ![X46, X27, X101]:(((((p__d__instance(X27,c__Object)&p__d__instance(X46,c__Process))&p__d__instance(X101,c__Process))&p__eventLocated(X46,X27))&p__subProcess(X101,X46))=>p__eventLocated(X101,X27))).
+fof(miloA3594, axiom,  ![X64, X101, X37]:(((((p__d__instance(X37,c__Object)&p__d__instance(X101,c__Process))&p__d__instance(X64,c__Process))&p__eventLocated(X64,X37))&p__subProcess(X101,X64))=>p__eventLocated(X101,X37))).
+fof(typeA441, axiom,  ![X1038, X1039]:(p__eventLocated(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Process)))).
+fof(miloA2548, axiom,  ![X890]:(p__d__instance(X890,c__SpaceTransportation)=>?[X580, X58]:(((p__d__instance(X580,c__Spacecraft)&p__d__instance(X58,c__SpaceRegion))&p__instrument(X890,X580))&p__eventLocated(X890,X58)))).
+fof(miloA2549, axiom,  p__d__subclass(c__Spacecraft,c__Vehicle)).
+fof(miloA2550, axiom,  ![X580]:(p__d__instance(X580,c__Spacecraft)=>p__capability(c__SpaceTransportation,c__instrument,X580))).
+fof(miloA2547, axiom,  p__d__subclass(c__SpaceTransportation,c__Transportation)).
+fof(miloA1386, axiom,  p__d__subclass(c__Fog,c__WaterCloud)).
+fof(miloA1387, axiom,  ![X702]:(p__d__instance(X702,c__Fog)=>?[X393]:(p__d__instance(X393,c__LandArea)&p__meetsSpatially(X702,X393)))).
+fof(typeA90, axiom,  ![X1038, X1039]:(p__possesses(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Agent)))).
+fof(miloA1256, axiom,  p__d__subclass(c__PublicPark,c__Park)).
+fof(miloA1257, axiom,  ![X84]:(p__d__instance(X84,c__PublicPark)=>?[X150]:(p__d__instance(X150,c__Government)&p__possesses(X150,X84)))).
+fof(miloA1253, axiom,  p__d__subclass(c__Park,c__LandArea)).
+fof(miloA1254, axiom,  ![X676]:(p__d__instance(X676,c__Park)=>?[X251]:(p__d__instance(X251,c__Government)&p__possesses(X251,X676)))).
+fof(mergeA3360, axiom,  ![X228]:(p__d__instance(X228,c__Organization)=>(p__d__instance(X228,c__GovernmentOrganization)<=>?[X251]:(p__d__instance(X251,c__Government)&p__subOrganization(X228,X251))))).
+fof(mergeA3361, axiom,  ![X251, X228]:(((p__d__instance(X228,c__Organization)&p__subOrganization(X228,X251))&p__d__instance(X251,c__GovernmentOrganization))=>p__d__instance(X228,c__GovernmentOrganization))).
+fof(schemaBinaryRelationA15, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Organization)&p__d__instance(X1033,c__Organization))=>(p__d__holds3(c__subOrganization,X1033,X1034)<=>p__subOrganization(X1033,X1034)))).
+fof(typeA16, axiom,  ![X1038, X1039]:(p__subOrganization(X1038,X1039)=>(p__d__instance(X1039,c__Organization)&p__d__instance(X1038,c__Organization)))).
+fof(schemaBinaryRelationA209, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__MilitaryUnit)&p__d__instance(X1033,c__MilitaryUnit))=>(p__d__holds3(c__hostileForces,X1033,X1034)<=>p__hostileForces(X1033,X1034)))).
+fof(typeA207, axiom,  ![X1038, X1039]:(p__hostileForces(X1038,X1039)=>(p__d__instance(X1039,c__MilitaryUnit)&p__d__instance(X1038,c__MilitaryUnit)))).
+fof(miloA1291, axiom,  p__d__subclass(c__MilitaryUnit,c__MilitaryOrganization)).
+fof(mergeA3464, axiom,  ![X39, X40]:((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))=>(p__orientation(X39,X40,c__Adjacent)<=>(p__orientation(X39,X40,c__Near)|p__connected(X39,X40))))).
+fof(mergeA3471, axiom,  p__d__instance(c__Near,c__SymmetricPositionalAttribute)).
+fof(mergeA3472, axiom,  ![X39, X40]:(((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__orientation(X39,X40,c__Near))=>~(p__connected(X39,X40)))).
+fof(mergeA3473, axiom,  ![X40, X39]:(((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__orientation(X39,X40,c__Near))=>p__orientation(X40,X39,c__Near))).
+fof(miloA2221, axiom,  ![X213]:(p__d__instance(X213,c__Sidewalk)=>?[X642]:(p__d__instance(X642,c__Roadway)&p__orientation(X213,X642,c__Near)))).
+fof(miloA2130, axiom,  ![X171]:((p__d__instance(X171,c__SelfConnectedObject)&p__d__instance(X171,c__Curb))=>?[X215, X73]:(((p__d__instance(X215,c__SelfConnectedObject)&p__d__instance(X215,c__Sidewalk))&p__d__instance(X73,c__Roadway))&p__connects(X171,X215,X73)))).
+fof(miloA2219, axiom,  p__d__subclass(c__Sidewalk,c__StationaryArtifact)).
+fof(mergeA3463, axiom,  p__d__instance(c__Adjacent,c__SymmetricPositionalAttribute)).
+fof(miloA2156, axiom,  ![X1]:((p__d__instance(X1,c__Object)&p__attribute(X1,c__AdjoiningRoom))=>?[X458, X825, X826]:((((((((p__d__instance(X458,c__Object)&p__attribute(X458,c__AdjoiningRoom))&~(X458=X1))&p__orientation(X1,X458,c__Adjacent))&p__d__instance(X825,c__Wall))&p__part(X825,X458))&p__part(X825,X1))&p__d__instance(X826,c__Door))&p__part(X826,X825)))).
+fof(miloA3871, axiom,  ![X996, X997]:(((p__d__instance(X997,c__Roadway)&p__d__instance(X996,c__PostalPlace))&p__postStreet(X996,X997))=>p__orientation(X996,X997,c__Adjacent))).
+fof(schemaBinaryRelationA161, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Roadway)&p__d__instance(X1033,c__PostalPlace))=>(p__d__holds3(c__postStreet,X1033,X1034)<=>p__postStreet(X1033,X1034)))).
+fof(typeA159, axiom,  ![X1038, X1039]:(p__postStreet(X1038,X1039)=>(p__d__instance(X1039,c__Roadway)&p__d__instance(X1038,c__PostalPlace)))).
+fof(miloA1214, axiom,  p__d__subclass(c__Steeple,c__StationaryArtifact)).
+fof(miloA1215, axiom,  ![X671]:(p__d__instance(X671,c__Steeple)=>?[X456]:(p__d__instance(X456,c__Building)&p__part(X671,X456)))).
+fof(mergeA2451, axiom,  p__d__subclass(c__Swimming,c__BodyMotion)).
+fof(mergeA2452, axiom,  ![X264, X66]:(((p__d__instance(X66,c__Agent)&p__d__instance(X264,c__Swimming))&p__agent(X264,X66))=>?[X265]:(p__d__instance(X265,c__WaterArea)&p__located(X66,X265)))).
+fof(miloA1407, axiom,  p__d__partition3(c__SpaceRegion,c__AtmosphericRegion,c__OuterSpaceRegion)).
+fof(miloA2546, axiom,  ![X890]:(p__d__instance(X890,c__AirTransportation)=>?[X580, X58]:(((p__d__instance(X580,c__Aircraft)&p__d__instance(X58,c__AtmosphericRegion))&p__instrument(X890,X580))&p__eventLocated(X890,X58)))).
+fof(miloA2570, axiom,  p__d__subclass(c__Aircraft,c__Vehicle)).
+fof(miloA2571, axiom,  ![X580]:(p__d__instance(X580,c__Aircraft)=>p__capability(c__AirTransportation,c__instrument,X580))).
+fof(miloA2545, axiom,  p__d__subclass(c__AirTransportation,c__Transportation)).
+fof(miloA2569, axiom,  ![X878]:(p__d__instance(X878,c__FlyingAircraft)=>?[X891]:(p__d__instance(X891,c__AirTransportation)&p__subProcess(X878,X891)))).
+fof(miloA1015, axiom,  ![X158]:(p__d__instance(X158,c__CondominiumUnit)=>?[X456]:(p__d__instance(X456,c__CondominiumBuilding)&p__part(X158,X456)))).
+fof(miloA1020, axiom,  p__d__disjoint(c__CondominiumBuilding,c__SingleFamilyResidence)).
+fof(miloA1021, axiom,  ![X456]:(p__d__instance(X456,c__CondominiumBuilding)=>?[X648, X649]:((((p__d__instance(X648,c__CondominiumUnit)&p__d__instance(X649,c__CondominiumUnit))&p__part(X648,X456))&p__part(X649,X456))&~(X648=X649)))).
+fof(miloA1013, axiom,  p__d__subclass(c__CondominiumUnit,c__SingleFamilyResidence)).
+fof(miloA2386, axiom,  p__d__subclass(c__School,c__EducationalOrganization)).
+fof(miloA2214, axiom,  p__d__subclass(c__Classroom,c__Room)).
+fof(miloA2215, axiom,  ![X73]:(p__d__instance(X73,c__Classroom)=>?[X215]:(p__d__instance(X215,c__School)&p__part(X73,X215)))).
+fof(miloA1259, axiom,  ![X464]:(p__d__instance(X464,c__CultivatedLandArea)=>?[X171]:(p__d__instance(X171,c__Agriculture)&p__eventLocated(X171,X464)))).
+fof(miloA2607, axiom,  ![X272]:(p__d__instance(X272,c__Tilling)=>?[X464]:(p__d__instance(X464,c__Agriculture)&p__subProcess(X272,X464)))).
+fof(miloA3040, axiom,  p__d__subclass(c__Agriculture,c__Maintaining)).
+fof(miloA1258, axiom,  p__d__subclass(c__CultivatedLandArea,c__LandArea)).
+fof(schemaQuintaryRelationA2, axiom,  ![X1033, X1034, X1035, X1036, X1037]:((((p__d__instance(X1036,c__Nation)&p__d__instance(X1035,c__City))&p__d__instance(X1034,c__Roadway))&p__d__instance(X1033,c__StationaryArtifact))=>(p__d__holds6(c__StreetAddressFn,X1033,X1034,X1035,X1036,X1037)<=>p__StreetAddressFn(X1033,X1034,X1035,X1036,X1037)))).
+fof(typeA573, axiom,  ![X1038, X1039, X1040, X1041, X1042]:(p__StreetAddressFn(X1038,X1039,X1040,X1041,X1042)=>(((p__d__instance(X1041,c__Nation)&p__d__instance(X1040,c__City))&p__d__instance(X1039,c__Roadway))&p__d__instance(X1038,c__StationaryArtifact)))).
+fof(typeA437, axiom,  ![X1038, X1039]:(p__result(X1038,X1039)=>p__d__instance(X1038,c__Process))).
+fof(mergeA304, axiom,  ![X65]:(p__d__instance(X65,c__ConstructedLanguage)=>?[X67]:(p__d__instance(X67,c__Planning)&p__result(X67,X65)))).
+fof(mergeA2395, axiom,  p__d__subclass(c__Planning,c__IntentionalPsychologicalProcess)).
+fof(mergeA2396, axiom,  ![X255, X256]:(((p__d__instance(X255,c__Planning)&p__result(X255,X256))&p__d__instance(X256,c__ContentBearingObject))=>?[X67]:(p__d__instance(X67,c__Plan)&p__containsInformation(X256,X67)))).
+fof(mergeA3386, axiom,  ![X67, X27]:(((p__d__instance(X67,c__Plan)&p__d__instance(X27,c__ContentBearingObject))&p__containsInformation(X27,X67))=>?[X488]:(p__d__instance(X488,c__Planning)&p__result(X488,X27)))).
+fof(miloA2288, axiom,  ![X849]:(p__d__instance(X849,c__FormalMeeting)=>?[X488]:((p__d__instance(X488,c__Planning)&p__result(X488,X849))&p__earlier(f__WhenFn1(X488),f__WhenFn1(X849))))).
+fof(mergeA299, axiom,  p__d__partition3(c__HumanLanguage,c__NaturalLanguage,c__ConstructedLanguage)).
+fof(mergeA302, axiom,  p__d__subclass(c__ConstructedLanguage,c__HumanLanguage)).
+fof(mergeA303, axiom,  p__d__subclass(c__ConstructedLanguage,c__ArtificialLanguage)).
+fof(miloA2225, axiom,  p__d__subclass(c__IndustrialPlant,c__StationaryArtifact)).
+fof(miloA2226, axiom,  ![X412]:(p__d__instance(X412,c__IndustrialPlant)=>(p__d__instance(X412,c__Building)|?[X456]:(p__d__instance(X456,c__Building)&p__located(X456,X412))))).
+fof(miloA1400, axiom,  p__d__subclass(c__StreamWaterArea,c__FlowRegion)).
+fof(miloA1403, axiom,  p__d__subclass(c__FlowRegion,c__Region)).
+fof(miloA1404, axiom,  ![X706, X707]:(((p__d__instance(X707,c__Object)&p__d__instance(X706,c__FlowRegion))&p__located(X707,X706))=>p__attribute(X707,c__Fluid))).
+fof(miloA3828, axiom,  p__d__instance(c__postNeighborhood,c__BinaryPredicate)).
+fof(miloA3829, axiom,  p__d__instance(c__postNeighborhood,c__AsymmetricRelation)).
+fof(miloA3830, axiom,  p__subrelation(c__postNeighborhood,c__located)).
+fof(miloA2532, axiom,  p__d__subclass(c__WaterWave,c__LiquidMotion)).
+fof(miloA2533, axiom,  ![X764]:(p__d__instance(X764,c__WaterWave)=>?[X265]:(p__d__instance(X265,c__WaterArea)&p__eventLocated(X764,X265)))).
+fof(miloA3305, axiom,  p__d__subclass(c__EmbassyBuilding,c__GovernmentBuilding)).
+fof(miloA3309, axiom,  p__d__subclass(c__GovernmentBuilding,c__Building)).
+fof(miloA3310, axiom,  ![X1]:(p__d__instance(X1,c__GovernmentBuilding)=>?[X150]:(p__d__instance(X150,c__Government)&p__possesses(X150,X1)))).
+fof(mergeA2317, axiom,  ![X64]:(p__d__instance(X64,c__OrganOrTissueProcess)=>?[X35]:((p__d__instance(X35,c__Object)&p__eventLocated(X64,X35))&(p__d__instance(X35,c__Organ)|p__d__instance(X35,c__Tissue))))).
+fof(mergeA3061, axiom,  p__d__subclass(c__Tissue,c__BodySubstance)).
+fof(mergeA3063, axiom,  ![X266]:(p__d__instance(X266,c__Tissue)=>?[X233]:(p__d__instance(X233,c__Organism)&p__part(X266,X233)))).
+fof(mergeA3064, axiom,  p__d__subclass(c__Bone,c__Tissue)).
+fof(miloA1426, axiom,  p__d__subclass(c__Wood,c__Tissue)).
+fof(mergeA253, axiom,  ![X27]:(p__d__instance(X27,c__CorpuscularObject)=>?[X42, X43]:((((p__d__subclass(X42,c__Substance)&p__d__subclass(X43,c__Substance))&p__material(X42,X27))&p__material(X43,X27))&~(X42=X43)))).
+fof(typeA300, axiom,  ![X1038, X1039]:(p__material(X1038,X1039)=>(p__d__instance(X1039,c__CorpuscularObject)&p__d__subclass(X1038,c__Substance)))).
+fof(miloA912, axiom,  ![X348]:((p__d__instance(X348,c__Object)&p__attribute(X348,c__Cancer))=>?[X630]:(p__d__instance(X630,c__Tumor)&p__part(X630,X348)))).
+fof(miloA1462, axiom,  p__d__subclass(c__Tumor,c__AbnormalAnatomicalStructure)).
+fof(miloA1463, axiom,  ![X630, X41]:(((p__d__subclass(X41,c__Substance)&p__d__instance(X630,c__Tumor))&p__material(X41,X630))=>p__d__subclass(X41,c__Tissue))).
+fof(mergeA226, axiom,  p__d__subclass(c__Substance,c__SelfConnectedObject)).
+fof(mergeA229, axiom,  ![X27, X41, X28]:(((((p__d__instance(X28,c__Attribute)&p__d__instance(X41,c__Object))&p__d__instance(X27,c__Substance))&p__attribute(X27,X28))&p__part(X41,X27))=>p__attribute(X41,X28))).
+fof(mergeA233, axiom,  p__d__subclass(c__PureSubstance,c__Substance)).
+fof(mergeA252, axiom,  p__d__disjoint(c__CorpuscularObject,c__Substance)).
+fof(mergeA2791, axiom,  ![X58]:(p__d__instance(X58,c__Object)=>(?[X378]:((p__d__instance(X378,c__RadiatingLight)&p__patient(X378,X58))&p__d__instance(X58,c__Region))<=>p__attribute(X58,c__Illuminated)))).
+fof(mergeA3579, axiom,  p__d__instance(c__Illuminated,c__VisualAttribute)).
+fof(mergeA3581, axiom,  p__contraryAttribute2(c__Unilluminated,c__Illuminated)).
+fof(mergeA2641, axiom,  ![X326]:(p__d__instance(X326,c__Combustion)=>?[X327, X328]:(((p__d__instance(X327,c__Heating)&p__d__instance(X328,c__RadiatingLight))&p__subProcess(X327,X326))&p__subProcess(X328,X326)))).
+fof(mergeA2790, axiom,  p__d__subclass(c__RadiatingLight,c__RadiatingElectromagnetic)).
+fof(miloA1023, axiom,  p__d__subclass(c__Dormitory,c__TemporaryResidence)).
+fof(miloA1024, axiom,  p__d__disjoint(c__Dormitory,c__SingleFamilyResidence)).
+fof(miloA1025, axiom,  ![X284]:(p__d__instance(X284,c__Dormitory)=>?[X215]:(p__d__instance(X215,c__School)&p__possesses(X215,X284)))).
+fof(mergeA991, axiom,  ![X39, X40]:(((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__partlyLocated(X39,X40))=>p__overlapsSpatially(X39,X40))).
+fof(mergeA992, axiom,  ![X39, X40]:(((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__partlyLocated(X39,X40))=>?[X101]:((p__d__instance(X101,c__Object)&p__part(X101,X39))&p__located(X101,X40)))).
+fof(schemaBinaryRelationA308, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Object)&p__d__instance(X1033,c__Physical))=>(p__d__holds3(c__partlyLocated,X1033,X1034)<=>p__partlyLocated(X1033,X1034)))).
+fof(typeA306, axiom,  ![X1038, X1039]:(p__partlyLocated(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Physical)))).
+fof(miloA3306, axiom,  ![X1]:(p__d__instance(X1,c__EmbassyBuilding)=>?[X961, X962]:((((p__d__instance(X961,c__Nation)&p__d__instance(X962,c__Nation))&~(X961=X962))&p__possesses(X961,X1))&p__located(X1,X962)))).
+fof(miloA1142, axiom,  p__subrelation(c__headquartersOfOrganization,c__located)).
+fof(miloA1408, axiom,  p__d__subclass(c__OuterSpaceRegion,c__SpaceRegion)).
+fof(miloA760, axiom,  ![X610, X41]:(((p__d__instance(X41,c__OneDimensionalFigure)&p__d__instance(X610,c__Polygon))&p__geometricPart(X41,X610))=>(p__sideOfFigure(X41,X610)|?[X213]:((p__d__instance(X213,c__OneDimensionalFigure)&p__sideOfFigure(X213,X610))&p__geometricPart(X41,X213))))).
+fof(schemaBinaryRelationA16, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__GeometricFigure)&p__d__instance(X1033,c__GeometricFigure))=>(p__d__holds3(c__geometricPart,X1033,X1034)<=>p__geometricPart(X1033,X1034)))).
+fof(typeA17, axiom,  ![X1038, X1039]:(p__geometricPart(X1038,X1039)=>(p__d__instance(X1039,c__GeometricFigure)&p__d__instance(X1038,c__GeometricFigure)))).
+fof(typeA419, axiom,  ![X1038, X1039]:(p__sideOfFigure(X1038,X1039)=>(p__d__instance(X1039,c__GeometricFigure)&p__d__instance(X1038,c__OneDimensionalFigure)))).
+fof(mergeA3610, axiom,  p__d__subclass(c__OneDimensionalFigure,c__GeometricFigure)).
+fof(miloA759, axiom,  p__d__subclass(c__Polygon,c__ClosedTwoDimensionalFigure)).
+fof(miloA765, axiom,  p__d__subclass(c__Quadrilateral,c__Polygon)).
+fof(miloA1080, axiom,  ![X73]:(p__d__instance(X73,c__Restaurant)=>?[X284]:(p__possesses(X73,X284)&p__d__instance(X284,c__DiningArea)))).
+fof(miloA2208, axiom,  p__d__subclass(c__DiningArea,c__Region)).
+fof(miloA2211, axiom,  p__d__subclass(c__DiningRoom,c__DiningArea)).
+fof(miloA1077, axiom,  p__d__subclass(c__Restaurant,c__Business)).
+fof(miloA1166, axiom,  p__d__subclass(c__Tavern,c__Restaurant)).
+fof(miloA3851, axiom,  p__d__instance(c__postCity,c__AsymmetricRelation)).
+fof(miloA3852, axiom,  p__d__instance(c__postCity,c__BinaryPredicate)).
+fof(miloA3855, axiom,  p__subrelation(c__postCity,c__located)).
+fof(schemaBinaryRelationA159, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__City)&p__d__instance(X1033,c__PostalPlace))=>(p__d__holds3(c__postCity,X1033,X1034)<=>p__postCity(X1033,X1034)))).
+fof(miloA1588, axiom,  p__d__subclass(c__Mouth,c__AnimalAnatomicalStructure)).
+fof(miloA1589, axiom,  p__d__subclass(c__Mouth,c__BodyPart)).
+fof(miloA1590, axiom,  ![X635]:(p__d__instance(X635,c__Mouth)=>?[X727]:(p__d__instance(X727,c__Face)&p__part(X635,X727)))).
+fof(miloA1643, axiom,  ![X734]:(p__d__instance(X734,c__Throat)=>?[X635]:(p__d__instance(X635,c__Mouth)&p__connected(X734,X635)))).
+fof(miloA1600, axiom,  p__d__subclass(c__Tooth,c__Bone)).
+fof(miloA1601, axiom,  ![X729]:(p__d__instance(X729,c__Tooth)=>?[X635]:(p__d__instance(X635,c__Mouth)&p__part(X729,X635)))).
+fof(miloA1614, axiom,  ![X730, X729]:(((p__d__instance(X729,c__Physical)&p__d__instance(X730,c__Chewing))&p__instrument(X730,X729))=>p__d__instance(X729,c__Tooth))).
+fof(miloA3331, axiom,  p__subAttribute(c__PoliticalFigure,c__Celebrity)).
+fof(miloA3332, axiom,  ![X1]:((p__d__instance(X1,c__Agent)&p__attribute(X1,c__PoliticalFigure))=>?[X556]:(p__agent(X556,X1)&p__d__instance(X556,c__PoliticalProcess)))).
+fof(mergeA3070, axiom,  p__d__subclass(c__Noun,c__Word)).
+fof(mergeA3071, axiom,  p__d__partition6(c__Word,c__Noun,c__Verb,c__Adjective,c__Adverb,c__ParticleWord)).
+fof(mergeA3088, axiom,  ![X424]:((p__d__instance(X424,c__Object)&p__d__instance(X424,c__NounPhrase))=>?[X429]:((p__d__instance(X429,c__Object)&p__d__instance(X429,c__Noun))&p__part(X429,X424)))).
+fof(mergeA3085, axiom,  p__d__subclass(c__NounPhrase,c__Phrase)).
+fof(mergeA3086, axiom,  p__d__disjoint(c__NounPhrase,c__VerbPhrase)).
+fof(mergeA3087, axiom,  ![X426]:((p__d__instance(X426,c__Object)&p__d__instance(X426,c__Sentence))=>?[X427, X428]:(((((p__d__instance(X427,c__Object)&p__d__instance(X428,c__Object))&p__d__instance(X427,c__NounPhrase))&p__d__instance(X428,c__VerbPhrase))&p__part(X427,X426))&p__part(X428,X426)))).
+fof(miloA1619, axiom,  p__d__subclass(c__Lip,c__AnimalAnatomicalStructure)).
+fof(miloA1620, axiom,  p__d__subclass(c__Lip,c__BodyPart)).
+fof(miloA1621, axiom,  ![X731]:(p__d__instance(X731,c__Lip)=>?[X635]:(p__d__instance(X635,c__Mouth)&p__part(X731,X635)))).
+fof(miloA2181, axiom,  p__d__subclass(c__BuildingLevel,c__StationaryArtifact)).
+fof(miloA2182, axiom,  ![X831]:(p__d__instance(X831,c__BuildingLevel)=>?[X456]:(p__d__instance(X456,c__Building)&p__part(X831,X456)))).
+fof(mergeA289, axiom,  p__d__subclass(c__LinguisticExpression,c__ContentBearingPhysical)).
+fof(mergeA290, axiom,  p__d__disjoint(c__LinguisticExpression,c__Icon)).
+fof(mergeA291, axiom,  p__d__subclass(c__Language,c__LinguisticExpression)).
+fof(mergeA310, axiom,  p__d__subclass(c__Word,c__LinguisticExpression)).
+fof(mergeA3091, axiom,  p__d__subclass(c__Text,c__LinguisticExpression)).
+fof(mergeA3094, axiom,  ![X331]:(p__d__instance(X331,c__Text)=>?[X41]:((p__d__instance(X41,c__Object)&p__part(X41,X331))&p__d__instance(X41,c__LinguisticExpression)))).
+fof(mergeA3101, axiom,  p__d__subclass(c__Sentence,c__LinguisticExpression)).
+fof(mergeA3092, axiom,  p__d__subclass(c__Text,c__ContentBearingObject)).
+fof(mergeA3093, axiom,  p__d__subclass(c__Text,c__Artifact)).
+fof(mergeA3367, axiom,  p__d__subclass(c__PoliceOrganization,c__GovernmentOrganization)).
+fof(miloA1903, axiom,  ![X534, X66, X84]:((((p__d__instance(X66,c__Agent)&p__d__instance(X84,c__SelfConnectedObject))&p__d__instance(X534,c__LawEnforcement))&p__agent(X534,X66))=>(p__d__instance(X84,c__PoliceOrganization)|?[X169]:(p__d__instance(X169,c__PoliceOrganization)&p__member(X84,X169))))).
+fof(miloA1901, axiom,  p__d__subclass(c__LawEnforcement,c__PoliticalProcess)).
+fof(miloA1902, axiom,  p__d__subclass(c__LawEnforcement,c__RegulatoryProcess)).
+fof(miloA3584, axiom,  p__d__subclass(c__PlacingUnderArrest,c__LawEnforcement)).
+fof(miloA563, axiom,  p__d__subclass(c__VehicleWheel,c__Wheel)).
+fof(miloA564, axiom,  p__d__subclass(c__Wheel,c__Artifact)).
+fof(mergeA2388, axiom,  ![X252]:(p__d__instance(X252,c__LegalDecision)=>?[X253]:(p__d__instance(X253,c__LegalAction)&p__refers(X252,X253)))).
+fof(mergeA2757, axiom,  p__d__subclass(c__LegalAction,c__Contest)).
+fof(miloA3586, axiom,  p__d__subclass(c__PlacingUnderArrest,c__LegalAction)).
+fof(mergeA2386, axiom,  p__d__subclass(c__LegalDecision,c__JudicialProcess)).
+fof(mergeA2387, axiom,  p__d__subclass(c__LegalDecision,c__Declaring)).
+fof(mergeA2389, axiom,  ![X252]:(p__d__instance(X252,c__LegalDecision)=>?[X254]:(p__d__instance(X254,c__Deciding)&p__earlier(f__WhenFn1(X254),f__WhenFn1(X252))))).
+fof(miloA2319, axiom,  ![X858]:(p__d__instance(X858,c__LegalOpinion)=>?[X252, X331, X493]:(((((p__d__instance(X331,c__ContentBearingPhysical)&p__d__instance(X493,c__Argument))&p__d__instance(X252,c__LegalDecision))&p__result(X252,X331))&p__containsInformation(X331,X493))&p__conclusion(X493,X858)))).
+fof(schemaBinaryRelationA327, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Proposition)&p__d__instance(X1033,c__Argument))=>(p__d__holds3(c__conclusion,X1033,X1034)<=>p__conclusion(X1033,X1034)))).
+fof(typeA324, axiom,  ![X1038, X1039]:(p__conclusion(X1038,X1039)=>(p__d__instance(X1039,c__Proposition)&p__d__instance(X1038,c__Argument)))).
+fof(mergeA1122, axiom,  ![X40, X39, X110]:(((((p__d__instance(X40,c__ContentBearingPhysical)&p__d__instance(X39,c__ContentBearingPhysical))&p__d__instance(X110,c__Proposition))&p__subsumesContentInstance(X39,X40))&p__containsInformation(X40,X110))=>p__containsInformation(X39,X110))).
+fof(mergeA1129, axiom,  ![X46, X111]:(((p__d__instance(X111,c__Proposition)&p__d__instance(X46,c__Process))&p__realization(X46,X111))=>?[X27]:(p__d__instance(X27,c__ContentBearingObject)&p__containsInformation(X27,X111)))).
+fof(mergeA3102, axiom,  ![X433]:(p__d__instance(X433,c__Sentence)=>?[X111]:(p__d__instance(X111,c__Proposition)&p__containsInformation(X433,X111)))).
+fof(typeA66, axiom,  ![X1038, X1039]:(p__containsInformation(X1038,X1039)=>(p__d__instance(X1039,c__Proposition)&p__d__instance(X1038,c__ContentBearingPhysical)))).
+fof(mergeA3387, axiom,  p__d__subclass(c__Argument,c__Proposition)).
+fof(mergeA272, axiom,  p__d__subclass(c__ContentBearingPhysical,c__Physical)).
+fof(mergeA277, axiom,  p__d__subclass(c__ContentBearingObject,c__ContentBearingPhysical)).
+fof(miloA2318, axiom,  p__d__subclass(c__LegalOpinion,c__Argument)).
+fof(schemaTernaryRelationA75, axiom,  ![X1033, X1034, X1035]:(((p__d__instance(X1035,c__GeographicArea)&p__d__subclass(X1034,c__Process))&p__d__instance(X1033,c__Agent))=>(p__d__holds4(c__areaOfResponsibility,X1033,X1034,X1035)<=>p__areaOfResponsibility(X1033,X1034,X1035)))).
+fof(typeA550, axiom,  ![X1038, X1039, X1040]:(p__areaOfResponsibility(X1038,X1039,X1040)=>((p__d__instance(X1040,c__GeographicArea)&p__d__subclass(X1039,c__Process))&p__d__instance(X1038,c__Agent)))).
+fof(miloA1319, axiom,  ![X323]:((p__d__instance(X323,c__OrganicCompound)&p__d__instance(X323,c__Molecule))=>?[X682]:(p__d__instance(X682,c__Carbon)&p__part(X682,X323)))).
+fof(miloA1324, axiom,  ![X215]:(p__d__instance(X215,c__Hydrocarbon)=>?[X89, X90]:((X215=f__MereologicalSumFn2(X89,X90)&p__d__instance(X89,c__Carbon))&p__d__instance(X90,c__Hydrogen)))).
+fof(miloA4253, axiom,  p__d__subclass(c__Carbon,c__ElementalSubstance)).
+fof(miloA4254, axiom,  p__atomicNumber(c__Carbon,c__6)).
+fof(mergeA3132, axiom,  p__d__subclass(c__Molecule,c__CompoundSubstance)).
+fof(mergeA3133, axiom,  ![X448]:(p__d__instance(X448,c__Molecule)=>?[X449, X450]:((((p__d__instance(X449,c__Atom)&p__d__instance(X450,c__Atom))&p__part(X449,X448))&p__part(X450,X448))&~(X449=X450)))).
+fof(miloA3220, axiom,  ![X150]:(p__d__instance(X150,c__AtomicGroup)=>?[X149]:(p__d__instance(X149,c__Molecule)&p__part(X150,X149)))).
+fof(miloA1318, axiom,  p__d__subclass(c__OrganicCompound,c__CompoundSubstance)).
+fof(miloA1235, axiom,  p__d__subclass(c__OverseasArea,c__DependencyOrSpecialSovereigntyArea)).
+fof(miloA2192, axiom,  p__d__subclass(c__Garage,c__StationaryArtifact)).
+fof(miloA2194, axiom,  ![X833]:(p__d__instance(X833,c__Garage)=>?[X456]:(p__d__instance(X456,c__Building)&p__part(X833,X456)))).
+fof(mergeA2574, axiom,  p__d__subclass(c__Voting,c__Deciding)).
+fof(miloA991, axiom,  ![X84]:(p__d__instance(X84,c__VotingPoll)=>?[X571]:(p__d__instance(X571,c__Voting)&p__eventLocated(X571,X84)))).
+fof(miloA3802, axiom,  ![X65, X989, X277]:((((p__d__instance(X989,c__SymbolicString)&p__d__instance(X65,c__Language))&p__d__instance(X277,c__Region))&p__canonicalPlaceName(X277,X65,X989))=>p__names(X989,X277))).
+fof(typeA556, axiom,  ![X1038, X1039, X1040]:(p__canonicalPlaceName(X1038,X1039,X1040)=>((p__d__instance(X1040,c__SymbolicString)&p__d__instance(X1039,c__Language))&p__d__instance(X1038,c__Region)))).
+fof(typeA436, axiom,  ![X1038, X1039]:(p__resource(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Process)))).
+fof(miloA515, axiom,  ![X544]:(p__d__instance(X544,c__PaintedPicture)=>?[X572, X573]:(((p__d__instance(X572,c__Paint)&p__d__instance(X573,c__Painting))&p__resource(X573,X572))&p__result(X573,X544)))).
+fof(miloA528, axiom,  p__d__subclass(c__Painting,c__Covering)).
+fof(miloA530, axiom,  ![X572, X502, X266]:(((((p__d__instance(X502,c__SelfConnectedObject)&p__d__instance(X266,c__Object))&p__d__instance(X572,c__Painting))&p__patient(X572,X502))&p__resource(X572,X266))=>?[X27]:((p__d__instance(X27,c__SelfConnectedObject)&p__surface(X502,X27))&p__d__instance(X266,c__Paint)))).
+fof(miloA531, axiom,  p__d__subclass(c__Paint,c__Solution)).
+fof(miloA533, axiom,  p__d__subclass(c__WatercolorPaint,c__Paint)).
+fof(miloA535, axiom,  p__d__subclass(c__OilPaint,c__Paint)).
+fof(miloA514, axiom,  p__d__subclass(c__PaintedPicture,c__ArtWork)).
+fof(miloA3096, axiom,  p__d__subclass(c__SocialScience,c__Science)).
+fof(miloA3097, axiom,  p__d__instance(c__PoliticalScience,c__SocialScience)).
+fof(mergeA2747, axiom,  p__d__subclass(c__ViolentContest,c__Contest)).
+fof(miloA3824, axiom,  ![X277, X990, X991]:(((((p__d__instance(X277,c__PostalPlace)&p__d__instance(X990,c__SymbolicString))&p__d__instance(X991,c__SymbolicString))&p__unitNumber(X990,X277))&p__floorCode(X991,X277))=>?[X158, X549]:(((((p__d__instance(X549,c__BuildingLevel)&p__d__instance(X158,c__Room))&p__located(X158,X549))&p__part(X549,X277))&p__names(X990,X158))&p__names(X991,X549)))).
+fof(miloA3825, axiom,  ![X277, X990, X992]:(((((p__d__instance(X277,c__PostalPlace)&p__d__instance(X990,c__SymbolicString))&p__d__instance(X992,c__Object))&p__unitNumber(X990,X277))&![X993]:(~(p__d__instance(X993,c__SymbolicString))|~(p__floorCode(X993,X277))))=>?[X158]:((p__d__instance(X158,c__Room)&p__names(X990,X158))&p__located(X158,X992)))).
+fof(schemaBinaryRelationA467, axiom,  ![X1033, X1034]:(p__d__instance(X1033,c__SymbolicString)=>(p__d__holds3(c__names,X1033,X1034)<=>p__names(X1033,X1034)))).
+fof(typeA464, axiom,  ![X1038, X1039]:(p__names(X1038,X1039)=>p__d__instance(X1038,c__SymbolicString))).
+fof(mergeA353, axiom,  p__d__subclass(c__RelationalAttribute,c__Attribute)).
+fof(mergeA3437, axiom,  p__d__subclass(c__PositionalAttribute,c__RelationalAttribute)).
+fof(miloA4165, axiom,  p__d__instance(c__Urban,c__RelationalAttribute)).
+fof(mergeA2405, axiom,  p__d__subclass(c__Heating,c__Increasing)).
+fof(mergeA2825, axiom,  p__d__subclass(c__Melting,c__StateChange)).
+fof(mergeA2826, axiom,  ![X383]:(p__d__instance(X383,c__Melting)=>?[X327]:(p__d__instance(X327,c__Heating)&p__subProcess(X327,X383)))).
+fof(miloA877, axiom,  ![X215]:(p__d__instance(X215,c__Soldering)=>?[X149]:(p__d__instance(X149,c__Melting)&p__subProcess(X149,X215)))).
+fof(mergeA2195, axiom,  ![X77, X41, X178]:((((((p__d__instance(X77,c__SelfConnectedObject)&p__d__instance(X178,c__SelfConnectedObject))&p__d__instance(X41,c__Object))&p__top(X178,X77))&p__part(X41,X77))&~(p__connected(X41,X178)))=>p__orientation(X41,X178,c__Below))).
+fof(mergeA3460, axiom,  p__d__instance(c__Below,c__PositionalAttribute)).
+fof(mergeA3461, axiom,  p__d__instance(c__Below,c__AntiSymmetricPositionalAttribute)).
+fof(miloA2183, axiom,  p__d__subclass(c__Basement,c__BuildingLevel)).
+fof(miloA2184, axiom,  ![X832]:(p__d__instance(X832,c__Basement)=>![X831, X456]:(~(p__d__instance(X831,c__Object))|~(p__d__instance(X456,c__Object))|~(p__d__instance(X831,c__BuildingLevel))|~(p__d__instance(X456,c__Building))|~(p__part(X831,X456))|~(p__part(X832,X456))|X831=X832|~(p__orientation(X831,X832,c__Below))))).
+fof(mergeA3028, axiom,  ![X41]:(p__d__instance(X41,c__AnatomicalStructure)=>?[X400]:(p__d__instance(X400,c__Cell)&p__part(X400,X41)))).
+fof(mergeA3057, axiom,  p__d__subclass(c__Cell,c__BodyPart)).
+fof(mergeA2904, axiom,  p__d__partition3(c__OrganicObject,c__Organism,c__AnatomicalStructure)).
+fof(mergeA3024, axiom,  p__d__subclass(c__AnatomicalStructure,c__OrganicObject)).
+fof(mergeA3025, axiom,  p__d__partition3(c__AnatomicalStructure,c__BodyPart,c__AbnormalAnatomicalStructure)).
+fof(mergeA3026, axiom,  p__d__partition3(c__AnatomicalStructure,c__AnimalAnatomicalStructure,c__PlantAnatomicalStructure)).
+fof(mergeA3029, axiom,  p__d__subclass(c__AbnormalAnatomicalStructure,c__AnatomicalStructure)).
+fof(mergeA3031, axiom,  p__d__subclass(c__BodyPart,c__AnatomicalStructure)).
+fof(mergeA3034, axiom,  p__d__subclass(c__AnimalAnatomicalStructure,c__AnatomicalStructure)).
+fof(mergeA3036, axiom,  p__d__subclass(c__PlantAnatomicalStructure,c__AnatomicalStructure)).
+fof(mergeA604, axiom,  p__d__subclass(c__TransitiveRelation,c__BinaryRelation)).
+fof(mergeA605, axiom,  ![X72]:(p__d__instance(X72,c__BinaryRelation)=>(p__d__instance(X72,c__TransitiveRelation)<=>![X18, X19, X24]:((p__d__holds3(X72,X18,X19)&p__d__holds3(X72,X19,X24))=>p__d__holds3(X72,X18,X24))))).
+fof(mergeA608, axiom,  p__d__subclass(c__PartialOrderingRelation,c__TransitiveRelation)).
+fof(typeA33, axiom,  ![X1038, X1039]:(p__origin(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Process)))).
+fof(mergeA2472, axiom,  p__d__subclass(c__Transfer,c__Translocation)).
+fof(mergeA2505, axiom,  p__d__subclass(c__Translocation,c__Motion)).
+fof(mergeA2511, axiom,  p__d__subclass(c__Transportation,c__Translocation)).
+fof(mergeA3161, axiom,  p__d__subclass(c__SingleFamilyResidence,c__PermanentResidence)).
+fof(mergeA318, axiom,  p__d__instance(c__leader,c__BinaryPredicate)).
+fof(mergeA319, axiom,  p__d__instance(c__leader,c__AsymmetricRelation)).
+fof(mergeA320, axiom,  p__d__instance(c__leader,c__SingleValuedRelation)).
+fof(mergeA2745, axiom,  p__d__subclass(c__Contest,c__SocialInteraction)).
+fof(mergeA2746, axiom,  ![X363]:(p__d__instance(X363,c__Contest)=>?[X294, X293, X364, X365]:(((((((((p__d__instance(X294,c__CognitiveAgent)&p__d__instance(X293,c__CognitiveAgent))&p__d__instance(X364,c__Formula))&p__d__instance(X365,c__Formula))&p__agent(X363,X294))&p__agent(X363,X293))&p__hasPurposeForAgent(X363,X364,X294))&p__hasPurposeForAgent(X363,X365,X293))&~(X294=X293))&~(X364=X365)))).
+fof(mergeA2754, axiom,  p__d__subclass(c__Game,c__Contest)).
+fof(mergeA2759, axiom,  ![X369]:(p__d__instance(X369,c__Maneuver)=>?[X363]:(p__d__instance(X363,c__Contest)&p__subProcess(X369,X363)))).
+fof(mergeA3148, axiom,  p__d__subclass(c__Room,c__StationaryArtifact)).
+fof(mergeA3134, axiom,  p__d__subclass(c__Artifact,c__Object)).
+fof(mergeA3181, axiom,  p__d__subclass(c__Device,c__Artifact)).
+fof(mergeA390, axiom,  p__d__subclass(c__RationalNumber,c__RealNumber)).
+fof(mergeA398, axiom,  p__d__subclass(c__Integer,c__RationalNumber)).
+fof(mergeA418, axiom,  p__d__instance(c__7,c__PositiveInteger)).
+fof(miloA4256, axiom,  p__atomicNumber(c__Nitrogen,c__7)).
+fof(mergeA2133, axiom,  ![X184, X204, X7, X185, X186]:(((((((((p__d__subclass(X204,c__TimeInterval)&p__d__instance(X184,c__TimeInterval))&p__d__subclass(X7,c__TimeInterval))&f__TemporalCompositionFn2(X184,X204)=X7)&p__d__instance(X185,c__TimeInterval))&p__d__instance(X186,c__TimeInterval))&p__d__instance(X185,X7))&p__d__instance(X186,X7))&~(X185=X186))=>(p__meetsTemporally(X185,X186)|p__meetsTemporally(X186,X185)|p__earlier(X185,X186)|p__earlier(X186,X185)))).
+fof(mergeA2134, axiom,  ![X204, X7, X184]:((((p__d__subclass(X204,c__TimeInterval)&p__d__instance(X184,c__TimeInterval))&p__d__subclass(X7,c__TimeInterval))&f__TemporalCompositionFn2(X184,X204)=X7)=>?[X38]:((p__d__instance(X38,c__TimeInterval)&p__d__instance(X38,X7))&p__starts(X38,X184)))).
+fof(mergeA2135, axiom,  ![X204, X7, X184]:((((p__d__subclass(X204,c__TimeInterval)&p__d__instance(X184,c__TimeInterval))&p__d__subclass(X7,c__TimeInterval))&f__TemporalCompositionFn2(X184,X204)=X7)=>?[X38]:((p__d__instance(X38,c__TimeInterval)&p__d__instance(X38,X7))&p__finishes(X38,X184)))).
+fof(mergeA2136, axiom,  ![X204, X184, X7, X185]:(((((((p__d__subclass(X204,c__TimeInterval)&p__d__instance(X184,c__TimeInterval))&p__d__subclass(X7,c__TimeInterval))&f__TemporalCompositionFn2(X184,X204)=X7)&p__d__instance(X185,c__TimeInterval))&p__d__instance(X185,X7))&~(p__finishes(X185,X184)))=>?[X186]:((p__d__instance(X186,c__TimeInterval)&p__d__instance(X186,X7))&p__meetsTemporally(X185,X186)))).
+fof(mergeA2137, axiom,  ![X204, X184, X7, X185]:(((((((p__d__subclass(X204,c__TimeInterval)&p__d__instance(X184,c__TimeInterval))&p__d__subclass(X7,c__TimeInterval))&f__TemporalCompositionFn2(X184,X204)=X7)&p__d__instance(X185,c__TimeInterval))&p__d__instance(X185,X7))&~(p__starts(X185,X184)))=>?[X186]:((p__d__instance(X186,c__TimeInterval)&p__d__instance(X186,X7))&p__meetsTemporally(X186,X185)))).
+fof(mergeA2138, axiom,  ![X204, X184, X7, X38]:((((((p__d__subclass(X204,c__TimeInterval)&p__d__instance(X184,c__TimeInterval))&p__d__subclass(X7,c__TimeInterval))&f__TemporalCompositionFn2(X184,X204)=X7)&p__d__instance(X38,c__TimePoint))&p__temporalPart(X38,X184))=>?[X206]:((p__d__instance(X206,c__TimePosition)&p__d__instance(X206,X7))&p__temporalPart(X38,X206)))).
+fof(mergeA2095, axiom,  p__d__subclass(c__Day,c__TimeInterval)).
+fof(mergeA2113, axiom,  p__d__subclass(c__Week,c__TimeInterval)).
+fof(mergeA471, axiom,  p__d__instance(c__60,c__PositiveInteger)).
+fof(mergeA1700, axiom,  ![X23]:((p__d__instance(X23,c__RealNumber)&X23=f__MultiplicationFn2(c__1,X23))=>f__MeasureFn2(X23,c__HourDuration)=f__MeasureFn2(f__MultiplicationFn2(X23,c__60),c__MinuteDuration))).
+fof(mergeA1702, axiom,  ![X23]:((p__d__instance(X23,c__RealNumber)&X23=f__MultiplicationFn2(c__1,X23))=>f__MeasureFn2(X23,c__MinuteDuration)=f__MeasureFn2(f__MultiplicationFn2(X23,c__60),c__SecondDuration))).
+fof(mergeA2119, axiom,  p__d__subclass(c__Minute,c__TimeInterval)).
+fof(mergeA2115, axiom,  p__d__subclass(c__Hour,c__TimeInterval)).
+fof(mergeA2142, axiom,  ![X208]:(p__d__instance(X208,c__Day)=>f__CardinalityFn1(f__TemporalCompositionFn2(X208,c__Hour))=c__24)).
+fof(mergeA563, axiom,  p__d__subclass(c__ConstantQuantity,c__PhysicalQuantity)).
+fof(mergeA1520, axiom,  p__d__subclass(c__UnitOfMeasure,c__PhysicalQuantity)).
+fof(typeA99, axiom,  ![X1038, X1039]:(p__measure(X1038,X1039)=>(p__d__instance(X1039,c__PhysicalQuantity)&p__d__instance(X1038,c__Object)))).
+fof(mergeA35, axiom,  p__d__instance(c__domain,c__TernaryPredicate)).
+fof(mergeA580, axiom,  p__d__partition3(c__Relation,c__TotalValuedRelation,c__PartialValuedRelation)).
+fof(mergeA581, axiom,  p__d__subclass(c__SingleValuedRelation,c__Relation)).
+fof(mergeA582, axiom,  p__d__subclass(c__TotalValuedRelation,c__Relation)).
+fof(mergeA583, axiom,  p__d__subclass(c__PartialValuedRelation,c__Relation)).
+fof(mergeA584, axiom,  p__d__subclass(c__BinaryRelation,c__Relation)).
+fof(mergeA693, axiom,  p__d__subclass(c__SpatialRelation,c__Relation)).
+fof(mergeA695, axiom,  p__d__subclass(c__TemporalRelation,c__Relation)).
+fof(mergeA788, axiom,  p__d__subclass(c__List,c__Relation)).
+fof(mergeA867, axiom,  p__d__subclass(c__RelationExtendedToQuantities,c__Relation)).
+fof(typeA1, axiom,  ![X1038, X1039]:(p__subrelation(X1038,X1039)=>(p__d__instance(X1039,c__Relation)&p__d__instance(X1038,c__Relation)))).
+fof(typeA177, axiom,  ![X1038, X1039]:(p__disjointRelation(X1038,X1039)=>(p__d__instance(X1039,c__Relation)&p__d__instance(X1038,c__Relation)))).
+fof(typeA114, axiom,  ![X1038, X1039]:(p__atomicNumber(X1038,X1039)=>(p__d__instance(X1039,c__PositiveInteger)&p__d__subclass(X1038,c__ElementalSubstance)))).
+fof(mergeA30, axiom,  ![X16, X17]:((p__subrelation(X16,X17)&p__d__instance(X17,c__BinaryRelation))=>(p__d__instance(X16,c__BinaryRelation)&![X18, X19]:(p__d__holds3(X16,X18,X19)=>p__d__holds3(X17,X18,X19))))).
+fof(mergeA83, axiom,  ![X18, X19, X16, X17]:(((p__d__instance(X16,c__BinaryRelation)&p__d__instance(X17,c__BinaryRelation))&p__disjointRelation(X16,X17))=>(~(p__d__holds3(X16,X18,X19))|~(p__d__holds3(X17,X18,X19))))).
+fof(mergeA593, axiom,  p__d__subclass(c__IrreflexiveRelation,c__BinaryRelation)).
+fof(mergeA594, axiom,  ![X72]:(p__d__instance(X72,c__BinaryRelation)=>(p__d__instance(X72,c__IrreflexiveRelation)<=>![X6]:~(p__d__holds3(X72,X6,X6))))).
+fof(mergeA595, axiom,  p__d__subclass(c__SymmetricRelation,c__BinaryRelation)).
+fof(mergeA596, axiom,  ![X72]:(p__d__instance(X72,c__BinaryRelation)=>(p__d__instance(X72,c__SymmetricRelation)<=>![X18, X19]:(p__d__holds3(X72,X18,X19)=>p__d__holds3(X72,X19,X18))))).
+fof(mergeA833, axiom,  p__d__subclass(c__UnaryFunction,c__BinaryRelation)).
+fof(mergeA854, axiom,  p__d__subclass(c__BinaryPredicate,c__BinaryRelation)).
+fof(typeA3, axiom,  ![X1038, X1039, X1040]:(p__d__holds3(X1038,X1039,X1040)=>p__d__instance(X1038,c__BinaryRelation))).
+fof(mergeA2933, axiom,  p__d__subclass(c__Animal,c__Organism)).
+fof(mergeA204, axiom,  ![X39, X40]:((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))=>(p__part(X39,X40)<=>![X41]:((p__d__instance(X41,c__Object)&p__overlapsSpatially(X41,X39))=>p__overlapsSpatially(X41,X40))))).
+fof(mergeA2168, axiom,  ![X39, X40]:((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))=>(p__overlapsSpatially(X39,X40)<=>?[X107]:((p__d__instance(X107,c__Object)&p__part(X107,X39))&p__part(X107,X40))))).
+fof(mergeA2212, axiom,  ![X107, X39, X40, X41]:(((((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__d__instance(X107,c__Object))&X107=f__MereologicalSumFn2(X39,X40))&p__d__instance(X41,c__Object))=>(p__overlapsSpatially(X41,X107)<=>(p__overlapsSpatially(X41,X39)|p__overlapsSpatially(X41,X40))))).
+fof(mergeA2255, axiom,  ![X44, X27]:(((p__d__instance(X27,c__SelfConnectedObject)&p__d__instance(X44,c__Hole))&p__hole(X44,X27))=>~(p__overlapsSpatially(X44,X27)))).
+fof(mergeA2258, axiom,  ![X39, X44, X40]:(((((p__d__instance(X39,c__SelfConnectedObject)&p__d__instance(X44,c__Hole))&p__d__instance(X40,c__SelfConnectedObject))&p__hole(X44,X39))&p__part(X39,X40))=>(p__overlapsSpatially(X44,X40)|p__hole(X44,X40)))).
+fof(mergeA2259, axiom,  ![X224, X225, X39, X40]:(((((((p__d__instance(X39,c__SelfConnectedObject)&p__d__instance(X224,c__Hole))&p__d__instance(X40,c__SelfConnectedObject))&p__d__instance(X225,c__Hole))&p__hole(X224,X39))&p__hole(X225,X40))&p__overlapsSpatially(X224,X225))=>p__overlapsSpatially(X39,X40))).
+fof(typeA28, axiom,  ![X1038, X1039]:(p__overlapsSpatially(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Object)))).
+fof(miloA1243, axiom,  p__d__instance(c__PerCapitaFn,c__BinaryFunction)).
+fof(mergeA993, axiom,  p__d__instance(c__located,c__AntisymmetricRelation)).
+fof(mergeA994, axiom,  p__d__instance(c__located,c__TransitiveRelation)).
+fof(schemaBinaryRelationA224, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Object)&p__d__instance(X1033,c__Physical))=>(p__d__holds3(c__located,X1033,X1034)<=>p__located(X1033,X1034)))).
+fof(mergeA2983, axiom,  p__d__subclass(c__Woman,c__Human)).
+fof(mergeA2984, axiom,  ![X406]:(p__d__instance(X406,c__Woman)=>p__attribute(X406,c__Female))).
+fof(mergeA2981, axiom,  p__d__subclass(c__Man,c__Human)).
+fof(mergeA2199, axiom,  ![X77, X213, X41]:((((((p__d__instance(X77,c__SelfConnectedObject)&p__d__instance(X213,c__SelfConnectedObject))&p__d__instance(X41,c__Object))&p__side(X213,X77))&p__part(X41,X77))&~(p__connected(X41,X213)))=>?[X214]:(p__d__instance(X214,c__PositionalAttribute)&p__orientation(X213,X41,X214)))).
+fof(mergeA3438, axiom,  p__d__subclass(c__DirectionalAttribute,c__PositionalAttribute)).
+fof(typeA537, axiom,  ![X1038, X1039, X1040]:(p__orientation(X1038,X1039,X1040)=>((p__d__instance(X1040,c__PositionalAttribute)&p__d__instance(X1039,c__Object))&p__d__instance(X1038,c__Object)))).
+fof(miloA1632, axiom,  p__d__subclass(c__Exoskeleton,c__AnimalAnatomicalStructure)).
+fof(miloA1633, axiom,  p__d__subclass(c__Exoskeleton,c__BodyPart)).
+fof(miloA1634, axiom,  ![X732, X244]:(((p__d__instance(X244,c__Animal)&p__d__instance(X732,c__Exoskeleton))&p__part(X732,X244))=>p__d__instance(X244,c__Invertebrate))).
+fof(miloA1635, axiom,  ![X419]:(p__d__instance(X419,c__Object)=>(p__d__instance(X419,c__Bone)<=>?[X732]:((p__d__instance(X732,c__Object)&(p__d__instance(X732,c__Skeleton)|p__d__instance(X732,c__Exoskeleton)))&p__properPart(X419,X732))))).
+fof(mergeA2719, axiom,  p__d__subclass(c__LinguisticCommunication,c__Communication)).
+fof(mergeA2721, axiom,  p__d__subclass(c__Stating,c__LinguisticCommunication)).
+fof(mergeA2733, axiom,  p__d__subclass(c__Committing,c__LinguisticCommunication)).
+fof(mergeA2736, axiom,  p__d__subclass(c__Declaring,c__LinguisticCommunication)).
+fof(mergeA287, axiom,  p__d__subclass(c__Icon,c__ContentBearingPhysical)).
+fof(miloA1421, axiom,  p__d__subclass(c__Indoors,c__Region)).
+fof(mergeA2364, axiom,  p__d__subclass(c__OrganizationalProcess,c__IntentionalProcess)).
+fof(mergeA2365, axiom,  ![X231, X66]:((((p__d__instance(X66,c__Agent)&p__d__instance(X66,c__SelfConnectedObject))&p__d__instance(X231,c__OrganizationalProcess))&p__agent(X231,X66))=>(p__d__instance(X66,c__Organization)|?[X228]:(p__d__instance(X228,c__Organization)&p__member(X66,X228))))).
+fof(miloA3506, axiom,  p__subrelation(c__workAddress,c__postContactSite)).
+fof(miloA3513, axiom,  p__subrelation(c__homeAddress,c__postContactSite)).
+fof(miloA3813, axiom,  p__d__instance(c__postContactSite,c__AsymmetricRelation)).
+fof(miloA3814, axiom,  p__d__instance(c__postContactSite,c__BinaryPredicate)).
+fof(miloA3817, axiom,  p__subrelation(c__postContactSite,c__siteForContact)).
+fof(mergeA2906, axiom,  p__d__subclass(c__Organism,c__Agent)).
+fof(schemaTernaryRelationA72, axiom,  ![X1033, X1034, X1035]:(((p__d__instance(X1035,c__TimePosition)&p__d__instance(X1034,c__Collection))&p__d__instance(X1033,c__SelfConnectedObject))=>(p__d__holds4(c__memberAtTime,X1033,X1034,X1035)<=>p__memberAtTime(X1033,X1034,X1035)))).
+fof(typeA547, axiom,  ![X1038, X1039, X1040]:(p__memberAtTime(X1038,X1039,X1040)=>((p__d__instance(X1040,c__TimePosition)&p__d__instance(X1039,c__Collection))&p__d__instance(X1038,c__SelfConnectedObject)))).
+fof(mergeA180, axiom,  ![X36]:(p__d__instance(X36,c__Physical)=>?[X37, X38]:(((p__d__instance(X37,c__Object)&p__d__instance(X38,c__TimePosition))&p__located(X36,X37))&p__time(X36,X38)))).
+fof(mergeA1867, axiom,  ![X35, X188]:((p__d__instance(X35,c__Physical)&p__d__instance(X188,c__TimePosition))=>(p__temporalPart(X188,f__WhenFn1(X35))<=>p__time(X35,X188)))).
+fof(mergeA1904, axiom,  ![X64, X27, X38]:(((((p__d__instance(X27,c__Physical)&p__d__instance(X64,c__Process))&p__result(X64,X27))&p__d__instance(X38,c__TimePoint))&p__before(X38,f__BeginFn1(f__WhenFn1(X64))))=>~(p__time(X27,X38)))).
+fof(schemaBinaryRelationA84, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__TimePosition)&p__d__instance(X1033,c__Physical))=>(p__d__holds3(c__time,X1033,X1034)<=>p__time(X1033,X1034)))).
+fof(typeA83, axiom,  ![X1038, X1039]:(p__time(X1038,X1039)=>(p__d__instance(X1039,c__TimePosition)&p__d__instance(X1038,c__Physical)))).
+fof(miloA3518, axiom,  ![X98, X255, X27]:((((p__d__instance(X255,c__Process)&p__d__instance(X98,c__CaseRole))&p__d__instance(X27,c__Object))&p__playsRoleInEvent(X27,X98,X255))=>p__d__holds3(X98,X255,X27))).
+fof(miloA3519, axiom,  ![X98, X27, X965, X255]:((((((p__d__instance(X255,c__Process)&p__d__instance(X98,c__CaseRole))&p__d__instance(X27,c__Object))&p__d__instance(X965,c__CaseRole))&p__playsRoleInEvent(X27,X98,X255))&p__subrelation(X98,X965))=>p__playsRoleInEvent(X27,X965,X255))).
+fof(miloA3520, axiom,  ![X27, X98, X255]:((((p__d__holds3(X98,X255,X27)&p__d__instance(X98,c__CaseRole))&p__d__instance(X255,c__Process))&p__d__instance(X27,c__Object))=>p__playsRoleInEvent(X27,X98,X255))).
+fof(miloA3521, axiom,  ![X255, X27, X98, X7, X38, X277]:((((((((((p__d__instance(X255,c__Process)&p__d__instance(X98,c__CaseRole))&p__d__instance(X27,c__Object))&p__d__instance(X38,c__TimePosition))&p__d__instance(X277,c__Object))&p__playsRoleInEvent(X27,X98,X255))&p__d__instance(X255,X7))&p__d__subclass(X7,c__Process))&p__time(X255,X38))&p__eventLocated(X255,X277))=>p__playsRoleInEventOfType(X27,X98,X7,X38,X277))).
+fof(miloA3528, axiom,  ![X381, X38, X277, X27, X98]:((((((p__d__instance(X277,c__Object)&p__d__instance(X38,c__TimePosition))&p__d__subclass(X381,c__Process))&p__d__instance(X98,c__CaseRole))&p__d__instance(X27,c__Object))&p__playsRoleInEventOfType(X27,X98,X381,X38,X277))=>?[X255]:((((p__d__instance(X255,c__Process)&p__d__instance(X255,X381))&p__time(X255,X38))&p__eventLocated(X255,X277))&p__playsRoleInEvent(X27,X98,X255)))).
+fof(miloA3529, axiom,  ![X255, X27, X98, X381, X38, X277]:((((((((((p__d__instance(X255,c__Process)&p__d__instance(X98,c__CaseRole))&p__d__instance(X27,c__Object))&p__d__instance(X38,c__TimePosition))&p__d__instance(X277,c__Object))&p__playsRoleInEvent(X27,X98,X255))&p__d__instance(X255,X381))&p__d__subclass(X381,c__Process))&p__time(X255,X38))&p__eventLocated(X255,X277))=>p__playsRoleInEventOfType(X27,X98,X381,X38,X277))).
+fof(typeA551, axiom,  ![X1038, X1039, X1040]:(p__playsRoleInEvent(X1038,X1039,X1040)=>((p__d__instance(X1040,c__Process)&p__d__instance(X1039,c__CaseRole))&p__d__instance(X1038,c__Object)))).
+fof(mergeA617, axiom,  p__d__subclass(c__CaseRole,c__BinaryPredicate)).
+fof(mergeA619, axiom,  p__d__subclass(c__CaseRole,c__AsymmetricRelation)).
+fof(mergeA625, axiom,  p__d__instance(c__agent,c__CaseRole)).
+fof(mergeA644, axiom,  p__d__instance(c__patient,c__CaseRole)).
+fof(mergeA956, axiom,  ![X97, X64, X98, X99]:(((((p__d__instance(X99,c__Object)&p__d__instance(X98,c__CaseRole))&p__d__holds3(X98,X97,X99))&p__d__instance(X97,X64))&p__d__subclass(X64,c__Process))=>p__capability(X64,X98,X99))).
+fof(typeA525, axiom,  ![X1038, X1039, X1040]:(p__capability(X1038,X1039,X1040)=>((p__d__instance(X1040,c__Object)&p__d__instance(X1039,c__CaseRole))&p__d__subclass(X1038,c__Process)))).
+fof(mergeA3354, axiom,  ![X228]:(p__d__instance(X228,c__MilitaryForce)=>p__capability(c__ViolentContest,c__agent,X228))).
+fof(mergeA3355, axiom,  p__d__subclass(c__MilitaryOrganization,c__MilitaryForce)).
+fof(mergeA3357, axiom,  p__d__subclass(c__ParamilitaryOrganization,c__MilitaryForce)).
+fof(mergeA3359, axiom,  p__d__subclass(c__GovernmentOrganization,c__Organization)).
+fof(miloA2711, axiom,  ![X84, X169, X228]:((((p__d__instance(X228,c__Organization)&p__d__instance(X84,c__Human))&p__d__instance(X169,c__GovernmentPosition))&p__occupiesPosition(X84,X169,X228))=>p__d__instance(X228,c__GovernmentOrganization))).
+fof(mergeA2152, axiom,  ![X27]:(p__d__instance(X27,c__Object)=>(p__d__instance(X27,c__SelfConnectedObject)<=>![X211, X212]:(((p__d__instance(X212,c__Object)&p__d__instance(X211,c__Object))&X27=f__MereologicalSumFn2(X211,X212))=>p__connected(X211,X212))))).
+fof(mergeA2159, axiom,  ![X39, X40, X107]:(((p__d__instance(X107,c__SelfConnectedObject)&p__d__instance(X40,c__SelfConnectedObject))&p__d__instance(X39,c__SelfConnectedObject))=>(p__connects(X39,X40,X107)<=>((p__connected(X39,X40)&p__connected(X39,X107))&~(p__connected(X40,X107)))))).
+fof(mergeA2267, axiom,  ![X44, X27]:(((p__d__instance(X27,c__SelfConnectedObject)&p__d__instance(X44,c__Hole))&p__hole(X44,X27))=>p__connected(X44,X27))).
+fof(typeA27, axiom,  ![X1038, X1039]:(p__connected(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Object)))).
+fof(mergeA1811, axiom,  ![X39, X40, X179]:((((p__d__instance(X179,c__LengthMeasure)&p__d__instance(X40,c__Physical))&p__d__instance(X39,c__SelfConnectedObject))&p__depth(X39,X40,X179))=>?[X180]:((p__d__instance(X180,c__SelfConnectedObject)&p__bottom(X180,X39))&p__distance(X180,X40,X179)))).
+fof(mergeA2202, axiom,  ![X77, X178, X180, X177]:(((((((p__d__instance(X177,c__LengthMeasure)&p__d__instance(X77,c__SelfConnectedObject))&p__d__instance(X178,c__SelfConnectedObject))&p__d__instance(X180,c__SelfConnectedObject))&p__height(X77,X177))&p__top(X178,X77))&p__bottom(X180,X77))=>p__distance(X178,X180,X177))).
+fof(typeA406, axiom,  ![X1038, X1039]:(p__bottom(X1038,X1039)=>(p__d__instance(X1039,c__SelfConnectedObject)&p__d__instance(X1038,c__SelfConnectedObject)))).
+fof(mergeA3454, axiom,  p__d__subclass(c__AntiSymmetricPositionalAttribute,c__PositionalAttribute)).
+fof(mergeA3455, axiom,  ![X222, X221, X84]:((((p__d__instance(X222,c__Object)&p__d__instance(X221,c__Object))&p__d__instance(X84,c__AntiSymmetricPositionalAttribute))&p__orientation(X221,X222,X84))=>~(p__orientation(X222,X221,X84)))).
+fof(mergeA3466, axiom,  p__d__instance(c__Left,c__AntiSymmetricPositionalAttribute)).
+fof(mergeA3468, axiom,  p__d__instance(c__Right,c__AntiSymmetricPositionalAttribute)).
+fof(mergeA3474, axiom,  p__d__instance(c__On,c__AntiSymmetricPositionalAttribute)).
+fof(mergeA3475, axiom,  ![X39, X40]:(((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__orientation(X39,X40,c__On))=>p__connected(X39,X40))).
+fof(mergeA3476, axiom,  ![X39, X40]:(((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__orientation(X39,X40,c__On))=>p__located(X39,X40))).
+fof(mergeA3477, axiom,  ![X40, X39]:(((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__orientation(X39,X40,c__On))=>~(p__orientation(X40,X39,c__On)))).
+fof(miloA659, axiom,  ![X1, X597, X598]:((((((((p__d__instance(X1,c__CorpuscularObject)&p__d__instance(X598,c__CorpuscularObject))&p__d__instance(X597,c__CorpuscularObject))&p__d__instance(X1,c__Bed))&p__component(X598,X1))&p__d__instance(X598,c__BedFrame))&p__component(X597,X1))&p__d__instance(X597,c__Mattress))=>p__orientation(X597,X598,c__On))).
+fof(mergeA205, axiom,  p__d__instance(c__properPart,c__AsymmetricRelation)).
+fof(mergeA206, axiom,  p__d__instance(c__properPart,c__TransitiveRelation)).
+fof(mergeA207, axiom,  p__subrelation(c__properPart,c__part)).
+fof(schemaBinaryRelationA64, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Object)&p__d__instance(X1033,c__Object))=>(p__d__holds3(c__properPart,X1033,X1034)<=>p__properPart(X1033,X1034)))).
+fof(mergeA3182, axiom,  ![X289]:(p__d__instance(X289,c__Device)=>?[X64]:(p__d__subclass(X64,c__Process)&p__capability(X64,c__instrument,X289)))).
+fof(mergeA2516, axiom,  ![X290]:(p__d__instance(X290,c__Driving)=>?[X291]:(p__d__instance(X291,c__Vehicle)&p__patient(X290,X291)))).
+fof(mergeA3188, axiom,  p__d__subclass(c__Vehicle,c__TransportationDevice)).
+fof(miloA3600, axiom,  ![X291, X890]:(((p__d__instance(X890,c__Transportation)&p__instrument(X890,X291))&p__d__instance(X291,c__RoadVehicle))=>p__d__instance(X890,c__TransportViaRoadVehicle))).
+fof(miloA3601, axiom,  ![X890, X291]:(((p__d__instance(X291,c__TransportationDevice)&p__d__instance(X890,c__TransportViaRoadVehicle))&p__conveyance(X890,X291))=>p__d__instance(X291,c__RoadVehicle))).
+fof(miloA3604, axiom,  ![X291, X290]:(((p__d__instance(X290,c__Driving)&p__patient(X290,X291))&p__d__instance(X291,c__RoadVehicle))=>?[X890]:(p__d__instance(X890,c__TransportViaRoadVehicle)&p__subProcess(X890,X290)))).
+fof(mergeA2513, axiom,  ![X288]:(p__d__instance(X288,c__Transportation)=>?[X289]:(p__d__instance(X289,c__TransportationDevice)&p__instrument(X288,X289)))).
+fof(mergeA3187, axiom,  ![X289]:(p__d__instance(X289,c__TransportationDevice)=>p__capability(c__Transportation,c__instrument,X289))).
+fof(mergeA2889, axiom,  p__d__subclass(c__LandTransitway,c__Transitway)).
+fof(mergeA2890, axiom,  p__d__subclass(c__LandTransitway,c__LandArea)).
+fof(mergeA2892, axiom,  p__d__subclass(c__Roadway,c__LandTransitway)).
+fof(mergeA2433, axiom,  ![X46, X258, X166, X259, X260, X261, X27]:((((((((((((((p__d__instance(X259,c__Object)&p__d__instance(X46,c__Motion))&p__d__instance(X260,c__Object))&p__d__instance(X261,c__Object))&p__d__instance(X258,c__LengthMeasure))&p__d__instance(X166,c__LengthMeasure))&p__d__instance(X27,c__Object))&p__path(X46,X259))&p__origin(X46,X260))&p__destination(X46,X261))&p__length(X259,X258))&p__distance(X260,X261,X166))&~(p__greaterThan(X258,X166)))&p__part(X27,X259))=>p__between(X260,X27,X261))).
+fof(mergeA2507, axiom,  ![X272]:(p__d__instance(X272,c__Translocation)=>?[X169, X284, X84]:(((((p__d__instance(X169,c__Object)&p__d__instance(X284,c__Object))&p__d__instance(X84,c__Object))&p__path(X272,X84))&p__origin(X272,X169))&p__destination(X272,X284)))).
+fof(schemaBinaryRelationA39, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Object)&p__d__instance(X1033,c__Motion))=>(p__d__holds3(c__path,X1033,X1034)<=>p__path(X1033,X1034)))).
+fof(typeA38, axiom,  ![X1038, X1039]:(p__path(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Motion)))).
+fof(miloA2565, axiom,  p__d__subclass(c__TransportViaRoadVehicle,c__Transportation)).
+fof(miloA3602, axiom,  ![X890]:(p__d__instance(X890,c__TransportViaRoadVehicle)=>?[X978]:(p__d__instance(X978,c__Driving)&p__subProcess(X890,X978)))).
+fof(miloA2841, axiom,  p__d__partition3(c__PoliticoEconomicAttribute,c__FormOfGovernment,c__EconomicAttribute)).
+fof(schemaBinaryRelationA387, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__FormOfGovernment)&p__d__instance(X1033,c__Organization))=>(p__d__holds3(c__ideologicalAffiliationOfOrganization,X1033,X1034)<=>p__ideologicalAffiliationOfOrganization(X1033,X1034)))).
+fof(typeA384, axiom,  ![X1038, X1039]:(p__ideologicalAffiliationOfOrganization(X1038,X1039)=>(p__d__instance(X1039,c__FormOfGovernment)&p__d__instance(X1038,c__Organization)))).
+fof(miloA620, axiom,  p__d__subclass(c__Furniture,c__Artifact)).
+fof(miloA623, axiom,  p__d__disjoint(c__Furniture,c__EngineeringComponent)).
+fof(miloA624, axiom,  p__d__disjoint(c__Furniture,c__Machine)).
+fof(miloA625, axiom,  p__d__disjoint(c__Furniture,c__TransportationDevice)).
+fof(miloA626, axiom,  p__d__disjoint(c__Furniture,c__Weapon)).
+fof(miloA633, axiom,  p__d__subclass(c__Bed,c__Furniture)).
+fof(mergeA628, axiom,  p__subrelation(c__agent,c__involvedInEvent)).
+fof(schemaBinaryRelationA31, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Agent)&p__d__instance(X1033,c__Process))=>(p__d__holds3(c__agent,X1033,X1034)<=>p__agent(X1033,X1034)))).
+fof(mergeA2770, axiom,  p__d__subclass(c__Seeing,c__Perception)).
+fof(mergeA3002, axiom,  ![X408]:(p__d__instance(X408,c__Cloud)=>p__capability(c__Seeing,c__patient,X408))).
+fof(miloA1670, axiom,  ![X738]:(p__d__instance(X738,c__Eye)=>p__capability(c__Seeing,c__instrument,X738))).
+fof(miloA1038, axiom,  p__d__subclass(c__CommercialUnit,c__PlaceOfCommerce)).
+fof(miloA1039, axiom,  ![X158, X228]:(((p__d__instance(X158,c__CommercialUnit)&p__d__instance(X228,c__Organization))&p__located(X228,X158))=>![X141]:(~(p__d__instance(X141,c__Physical))|~(p__d__instance(X141,c__Organization))|~(p__located(X141,X158))|X141=X228))).
+fof(miloA2259, axiom,  p__d__subclass(c__Performance,c__Demonstrating)).
+fof(miloA2260, axiom,  ![X843]:(p__d__instance(X843,c__Performance)=>?[X101]:((p__d__instance(X101,c__Process)&p__subProcess(X101,X843))&(p__d__instance(X101,c__DramaticActing)|p__d__instance(X101,c__MakingMusic))))).
+fof(mergeA3004, axiom,  p__d__subclass(c__WaterCloud,c__Cloud)).
+fof(mergeA3005, axiom,  ![X408]:(p__d__instance(X408,c__WaterCloud)=>?[X267]:(p__d__instance(X267,c__Water)&p__part(X267,X408)))).
+fof(mergeA3006, axiom,  ![X408, X41]:((((p__d__instance(X41,c__Object)&p__d__instance(X408,c__WaterCloud))&p__part(X41,X408))&~(p__d__instance(X41,c__Water)))=>?[X267, X258, X409]:((((((p__d__instance(X258,c__PhysicalQuantity)&p__d__instance(X409,c__PhysicalQuantity))&p__d__instance(X267,c__Water))&p__part(X267,X408))&p__measure(X267,X258))&p__measure(X41,X409))&p__greaterThan(X258,X409)))).
+fof(mergeA3372, axiom,  p__subrelation(c__subOrganization,c__subCollection)).
+fof(mergeA3373, axiom,  p__d__instance(c__subOrganization,c__PartialOrderingRelation)).
+fof(miloA3693, axiom,  p__disjointRelation(c__ancestorOrganization,c__subOrganization)).
+fof(miloA1299, axiom,  p__d__instance(c__hostileForces,c__BinaryPredicate)).
+fof(miloA1300, axiom,  p__d__instance(c__hostileForces,c__IrreflexiveRelation)).
+fof(mergeA3356, axiom,  p__d__subclass(c__MilitaryOrganization,c__GovernmentOrganization)).
+fof(miloA1287, axiom,  p__d__subclass(c__MilitaryService,c__MilitaryOrganization)).
+fof(mergeA3452, axiom,  p__d__subclass(c__SymmetricPositionalAttribute,c__PositionalAttribute)).
+fof(mergeA3453, axiom,  ![X222, X221, X84]:((((p__d__instance(X222,c__Object)&p__d__instance(X221,c__Object))&p__d__instance(X84,c__SymmetricPositionalAttribute))&p__orientation(X221,X222,X84))=>p__orientation(X222,X221,X84))).
+fof(mergeA2158, axiom,  ![X40, X39, X107]:(((p__d__instance(X107,c__SelfConnectedObject)&p__d__instance(X40,c__SelfConnectedObject))&p__d__instance(X39,c__SelfConnectedObject))=>(p__connects(X39,X40,X107)<=>p__between(X40,X39,X107)))).
+fof(mergeA2160, axiom,  ![X135, X133, X134]:((((p__d__instance(X133,c__SelfConnectedObject)&p__d__instance(X134,c__SelfConnectedObject))&p__d__instance(X135,c__SelfConnectedObject))&p__connects(X135,X134,X133))=>p__connects(X135,X133,X134))).
+fof(typeA536, axiom,  ![X1038, X1039, X1040]:(p__connects(X1038,X1039,X1040)=>((p__d__instance(X1040,c__SelfConnectedObject)&p__d__instance(X1039,c__SelfConnectedObject))&p__d__instance(X1038,c__SelfConnectedObject)))).
+fof(miloA2129, axiom,  p__d__subclass(c__Curb,c__StationaryArtifact)).
+fof(miloA2159, axiom,  p__d__subclass(c__Door,c__Device)).
+fof(miloA2160, axiom,  ![X826]:(p__d__instance(X826,c__Door)=>?[X827]:(p__part(X826,X827)&p__d__instance(X827,c__Doorway)))).
+fof(miloA2165, axiom,  ![X826]:(p__d__instance(X826,c__Door)=>?[X339]:((p__d__instance(X339,c__Object)&p__part(X826,X339))&(p__d__instance(X339,c__Building)|p__d__instance(X339,c__Room))))).
+fof(miloA2166, axiom,  p__d__subclass(c__Wall,c__StationaryArtifact)).
+fof(miloA2167, axiom,  ![X825]:(p__d__instance(X825,c__Wall)=>?[X339]:((p__d__instance(X339,c__Object)&p__part(X825,X339))&(p__d__instance(X339,c__Building)|p__d__instance(X339,c__Room))))).
+fof(miloA2154, axiom,  p__d__instance(c__AdjoiningRoom,c__RelationalAttribute)).
+fof(miloA2155, axiom,  ![X1]:((p__d__instance(X1,c__Object)&p__attribute(X1,c__AdjoiningRoom))=>p__d__instance(X1,c__Room))).
+fof(miloA3867, axiom,  p__d__instance(c__postStreet,c__AsymmetricRelation)).
+fof(miloA3868, axiom,  p__d__instance(c__postStreet,c__BinaryPredicate)).
+fof(mergeA2434, axiom,  p__d__subclass(c__BodyMotion,c__Motion)).
+fof(mergeA2436, axiom,  ![X257]:(p__d__instance(X257,c__BodyMotion)=>?[X66]:(p__d__instance(X66,c__Organism)&p__agent(X257,X66)))).
+fof(miloA2567, axiom,  p__d__subclass(c__FlyingAircraft,c__Driving)).
+fof(miloA2568, axiom,  ![X878]:(p__d__instance(X878,c__FlyingAircraft)=>?[X580]:(p__d__instance(X580,c__Aircraft)&p__patient(X878,X580)))).
+fof(mergeA3369, axiom,  p__d__subclass(c__EducationalOrganization,c__Organization)).
+fof(miloA2603, axiom,  p__d__subclass(c__Tilling,c__Digging)).
+fof(miloA2604, axiom,  p__d__subclass(c__Tilling,c__IntentionalProcess)).
+fof(miloA2605, axiom,  p__d__subclass(c__Tilling,c__SurfaceChange)).
+fof(miloA2606, axiom,  ![X897, X898]:((p__d__instance(X897,c__Tilling)&p__patient(X897,X898))=>p__d__instance(X898,c__Soil))).
+fof(mergeA2595, axiom,  p__d__subclass(c__Maintaining,c__IntentionalProcess)).
+fof(miloA859, axiom,  p__d__subclass(c__Cleaning,c__Maintaining)).
+fof(mergeA33, axiom,  ![X16, X17]:((p__subrelation(X16,X17)&p__d__instance(X17,c__QuintaryRelation))=>(p__d__instance(X16,c__QuintaryRelation)&![X18, X19, X24, X25, X26]:(p__d__holds6(X16,X18,X19,X24,X25,X26)=>p__d__holds6(X17,X18,X19,X24,X25,X26))))).
+fof(mergeA86, axiom,  ![X18, X19, X24, X25, X26, X16, X17]:(((p__d__instance(X16,c__QuintaryRelation)&p__d__instance(X17,c__QuintaryRelation))&p__disjointRelation(X16,X17))=>(~(p__d__holds6(X16,X18,X19,X24,X25,X26))|~(p__d__holds6(X17,X18,X19,X24,X25,X26))))).
+fof(typeA571, axiom,  ![X1038, X1039, X1040, X1041, X1042, X1043]:(p__d__holds6(X1038,X1039,X1040,X1041,X1042,X1043)=>p__d__instance(X1038,c__QuintaryRelation))).
+fof(miloA965, axiom,  p__d__instance(c__StreetAddressFn,c__QuaternaryFunction)).
+fof(mergeA2361, axiom,  p__d__subclass(c__IntentionalPsychologicalProcess,c__IntentionalProcess)).
+fof(mergeA2362, axiom,  p__d__subclass(c__IntentionalPsychologicalProcess,c__PsychologicalProcess)).
+fof(mergeA3385, axiom,  p__d__subclass(c__Plan,c__Procedure)).
+fof(miloA2380, axiom,  p__d__subclass(c__EducationalProgram,c__Plan)).
+fof(mergeA276, axiom,  p__d__subclass(c__ContentBearingObject,c__CorpuscularObject)).
+fof(mergeA279, axiom,  p__d__subclass(c__SymbolicString,c__ContentBearingObject)).
+fof(mergeA923, axiom,  ![X89, X90]:(((p__d__instance(X90,c__Process)&p__d__instance(X89,c__Process))&p__causes(X89,X90))=>p__earlier(f__WhenFn1(X89),f__WhenFn1(X90)))).
+fof(mergeA1955, axiom,  ![X189, X190]:((p__d__instance(X190,c__TimeInterval)&p__d__instance(X189,c__TimeInterval))=>(p__earlier(X189,X190)<=>p__before(f__EndFn1(X189),f__BeginFn1(X190))))).
+fof(typeA195, axiom,  ![X1038, X1039]:(p__earlier(X1038,X1039)=>(p__d__instance(X1039,c__TimeInterval)&p__d__instance(X1038,c__TimeInterval)))).
+fof(mergeA2308, axiom,  ![X227, X64]:(((p__d__instance(X64,c__Process)&p__d__instance(X227,c__Process))&p__subProcess(X227,X64))=>p__temporalPart(f__WhenFn1(X227),f__WhenFn1(X64)))).
+fof(mergeA3269, axiom,  ![X238, X237]:(((p__d__instance(X238,c__Organism)&p__d__instance(X237,c__Organism))&p__parent(X237,X238))=>p__before(f__BeginFn1(f__WhenFn1(X238)),f__BeginFn1(f__WhenFn1(X237))))).
+fof(miloA2286, axiom,  p__d__subclass(c__FormalMeeting,c__Meeting)).
+fof(miloA2287, axiom,  p__d__disjoint(c__FormalMeeting,c__SocialParty)).
+fof(miloA2290, axiom,  p__d__subclass(c__Funeral,c__FormalMeeting)).
+fof(mergeA305, axiom,  p__d__subclass(c__NaturalLanguage,c__HumanLanguage)).
+fof(mergeA298, axiom,  p__d__subclass(c__HumanLanguage,c__Language)).
+fof(mergeA301, axiom,  ![X64, X65, X66]:(((((p__d__instance(X66,c__Agent)&p__d__instance(X64,c__Process))&p__d__instance(X65,c__HumanLanguage))&p__agent(X64,X66))&p__instrument(X64,X65))=>p__d__instance(X66,c__Human))).
+fof(mergeA307, axiom,  p__d__subclass(c__SpokenHumanLanguage,c__HumanLanguage)).
+fof(mergeA295, axiom,  p__d__subclass(c__ArtificialLanguage,c__Language)).
+fof(mergeA296, axiom,  p__d__subclass(c__ComputerLanguage,c__ArtificialLanguage)).
+fof(miloA1399, axiom,  p__d__subclass(c__StreamWaterArea,c__WaterArea)).
+fof(miloA1401, axiom,  p__d__disjoint(c__StreamWaterArea,c__StaticWaterArea)).
+fof(mergeA3564, axiom,  p__d__instance(c__Fluid,c__PhysicalState)).
+fof(mergeA3566, axiom,  p__subAttribute(c__Liquid,c__Fluid)).
+fof(mergeA3569, axiom,  p__subAttribute(c__Gas,c__Fluid)).
+fof(miloA723, axiom,  ![X603, X266]:((((p__d__instance(X603,c__SelfConnectedObject)&p__d__instance(X266,c__Object))&p__d__instance(X603,c__FluidContainer))&p__contains(X603,X266))=>p__attribute(X266,c__Fluid))).
+fof(mergeA2463, axiom,  p__d__subclass(c__LiquidMotion,c__Motion)).
+fof(mergeA2464, axiom,  ![X257, X27]:(((p__d__instance(X27,c__Object)&p__d__instance(X257,c__LiquidMotion))&p__patient(X257,X27))=>p__attribute(X27,c__Liquid))).
+fof(mergeA3058, axiom,  p__d__subclass(c__Organ,c__BodyPart)).
+fof(mergeA2315, axiom,  p__d__subclass(c__OrganOrTissueProcess,c__AutonomicProcess)).
+fof(mergeA2316, axiom,  p__d__disjoint(c__OrganOrTissueProcess,c__OrganismProcess)).
+fof(mergeA3009, axiom,  p__d__subclass(c__BodySubstance,c__Substance)).
+fof(mergeA3010, axiom,  p__d__subclass(c__AnimalSubstance,c__BodySubstance)).
+fof(mergeA3012, axiom,  p__d__subclass(c__PlantSubstance,c__BodySubstance)).
+fof(mergeA3014, axiom,  p__d__subclass(c__Hormone,c__BodySubstance)).
+fof(mergeA3017, axiom,  p__d__subclass(c__Blood,c__BodySubstance)).
+fof(miloA336, axiom,  p__d__subclass(c__Excrement,c__BodySubstance)).
+fof(miloA1510, axiom,  p__d__subclass(c__LiquidBodySubstance,c__BodySubstance)).
+fof(mergeA3065, axiom,  p__d__subclass(c__Bone,c__AnimalSubstance)).
+fof(mergeA3066, axiom,  ![X419]:(p__d__instance(X419,c__Bone)=>?[X420]:(p__d__instance(X420,c__Vertebrate)&p__properPart(X419,X420)))).
+fof(miloA1427, axiom,  p__d__subclass(c__Wood,c__PlantSubstance)).
+fof(miloA1428, axiom,  ![X1]:(p__d__instance(X1,c__Wood)=>?[X400]:(p__d__instance(X400,c__Cellulose)&p__part(X400,X1)))).
+fof(miloA1431, axiom,  ![X380]:((p__d__instance(X380,c__CorpuscularObject)&p__d__instance(X380,c__WoodArtifact))=>p__material(c__Wood,X380))).
+fof(miloA1474, axiom,  ![X1]:(p__d__instance(X1,c__BotanicalTree)=>p__material(c__Wood,X1))).
+fof(miloA3031, axiom,  ![X171]:(p__d__instance(X171,c__Carpentry)=>?[X541, X380]:(((p__d__instance(X541,c__Building)&p__d__instance(X380,c__Wood))&p__part(X380,X541))&p__result(X171,X541)))).
+fof(mergeA251, axiom,  p__d__subclass(c__CorpuscularObject,c__SelfConnectedObject)).
+fof(miloA911, axiom,  p__d__instance(c__Cancer,c__DiseaseOrSyndrome)).
+fof(mergeA3030, axiom,  ![X415]:(p__d__instance(X415,c__AbnormalAnatomicalStructure)=>?[X64]:(p__d__instance(X64,c__PathologicProcess)&p__result(X64,X415)))).
+fof(miloA1457, axiom,  p__d__subclass(c__Lesion,c__AbnormalAnatomicalStructure)).
+fof(mergeA140, axiom,  ![X29, X30, X27]:(((((p__d__instance(X30,c__Attribute)&p__d__instance(X29,c__Attribute))&p__d__instance(X27,c__Object))&p__subAttribute(X29,X30))&p__attribute(X27,X29))=>p__attribute(X27,X30))).
+fof(typeA2, axiom,  ![X1038, X1039]:(p__subAttribute(X1038,X1039)=>(p__d__instance(X1039,c__Attribute)&p__d__instance(X1038,c__Attribute)))).
+fof(typeA68, axiom,  ![X1038, X1039]:(p__attribute(X1038,X1039)=>(p__d__instance(X1039,c__Attribute)&p__d__instance(X1038,c__Object)))).
+fof(mergeA227, axiom,  p__d__partition3(c__Substance,c__PureSubstance,c__Mixture)).
+fof(mergeA234, axiom,  p__d__partition3(c__PureSubstance,c__CompoundSubstance,c__ElementalSubstance)).
+fof(mergeA235, axiom,  p__d__subclass(c__ElementalSubstance,c__PureSubstance)).
+fof(mergeA247, axiom,  p__d__subclass(c__CompoundSubstance,c__PureSubstance)).
+fof(mergeA249, axiom,  ![X55]:(p__d__instance(X55,c__Mixture)=>?[X56, X57]:((((p__d__instance(X56,c__PureSubstance)&p__d__instance(X57,c__PureSubstance))&~(X56=X57))&p__part(X56,X55))&p__part(X57,X55)))).
+fof(mergeA250, axiom,  ![X55, X45]:((((p__d__instance(X45,c__Object)&p__d__instance(X55,c__Mixture))&p__part(X45,X55))&~(p__d__instance(X45,c__Mixture)))=>p__d__instance(X45,c__PureSubstance))).
+fof(mergeA2632, axiom,  ![X64, X266]:(((p__d__instance(X266,c__Object)&p__d__instance(X64,c__ChemicalProcess))&(p__resource(X64,X266)|p__result(X64,X266)))=>p__d__instance(X266,c__PureSubstance))).
+fof(mergeA3578, axiom,  p__d__subclass(c__VisualAttribute,c__PerceptualAttribute)).
+fof(mergeA3580, axiom,  p__d__instance(c__Unilluminated,c__VisualAttribute)).
+fof(mergeA3582, axiom,  p__d__subclass(c__ColorAttribute,c__VisualAttribute)).
+fof(mergeA2640, axiom,  p__d__subclass(c__Combustion,c__ChemicalDecomposition)).
+fof(mergeA2643, axiom,  ![X1]:((p__d__instance(X1,c__Object)&p__attribute(X1,c__Flammable))=>p__capability(c__Combustion,c__patient,X1))).
+fof(miloA3227, axiom,  p__d__subclass(c__Fire,c__Combustion)).
+fof(mergeA2804, axiom,  p__d__subclass(c__RadiatingElectromagnetic,c__Radiating)).
+fof(miloA419, axiom,  ![X557]:(p__d__instance(X557,c__PowerSource)=>?[X558]:(p__d__instance(X558,c__RadiatingElectromagnetic)&p__origin(X558,X557)))).
+fof(mergeA219, axiom,  p__subrelation(c__contains,c__partlyLocated)).
+fof(mergeA987, axiom,  p__d__instance(c__partlyLocated,c__SpatialRelation)).
+fof(mergeA988, axiom,  p__d__instance(c__partlyLocated,c__BinaryPredicate)).
+fof(mergeA995, axiom,  p__subrelation(c__located,c__partlyLocated)).
+fof(mergeA998, axiom,  p__subrelation(c__eventPartlyLocated,c__partlyLocated)).
+fof(mergeA3617, axiom,  p__d__instance(c__geometricPart,c__BinaryPredicate)).
+fof(mergeA3618, axiom,  p__d__instance(c__geometricPart,c__PartialOrderingRelation)).
+fof(mergeA3607, axiom,  p__d__subclass(c__GeometricFigure,c__ShapeAttribute)).
+fof(mergeA3609, axiom,  p__d__subclass(c__GeometricPoint,c__GeometricFigure)).
+fof(mergeA3611, axiom,  p__d__subclass(c__TwoDimensionalFigure,c__GeometricFigure)).
+fof(mergeA3616, axiom,  p__d__subclass(c__ThreeDimensionalFigure,c__GeometricFigure)).
+fof(mergeA3612, axiom,  p__d__partition3(c__TwoDimensionalFigure,c__OpenTwoDimensionalFigure,c__ClosedTwoDimensionalFigure)).
+fof(mergeA3615, axiom,  p__d__subclass(c__ClosedTwoDimensionalFigure,c__TwoDimensionalFigure)).
+fof(miloA661, axiom,  ![X1]:(p__d__instance(X1,c__FourPosterBed)=>?[X599]:(p__attribute(X1,X599)&p__d__instance(X599,c__Quadrilateral)))).
+fof(miloA767, axiom,  p__d__subclass(c__Rectangle,c__Quadrilateral)).
+fof(miloA2210, axiom,  p__d__subclass(c__DiningRoom,c__Room)).
+fof(mergeA3221, axiom,  p__d__subclass(c__Business,c__CommercialAgent)).
+fof(mergeA3222, axiom,  p__d__subclass(c__Business,c__Organization)).
+fof(miloA1167, axiom,  ![X662]:(p__d__instance(X662,c__Tavern)=>?[X663, X664]:((((p__d__instance(X663,c__CommercialService)&p__agent(X663,X662))&p__d__instance(X663,c__Selling))&p__patient(X663,X664))&p__d__instance(X664,c__AlcoholicBeverage)))).
+fof(miloA4201, axiom,  ![X1]:(p__d__instance(X1,c__NightClub)=>?[X1024]:(p__d__instance(X1024,c__Tavern)&p__located(X1024,X1)))).
+fof(miloA1682, axiom,  ![X725]:(p__d__instance(X725,c__Nose)=>?[X727]:(p__d__instance(X727,c__Face)&p__part(X725,X727)))).
+fof(miloA1767, axiom,  p__d__subclass(c__Face,c__AnimalAnatomicalStructure)).
+fof(miloA1768, axiom,  p__d__subclass(c__Face,c__BodyPart)).
+fof(miloA1769, axiom,  ![X727]:(p__d__instance(X727,c__Face)=>?[X615]:(p__d__instance(X615,c__Head)&p__part(X727,X615)))).
+fof(miloA1770, axiom,  ![X727]:(p__d__instance(X727,c__Face)=>?[X749]:(p__d__instance(X749,c__Vertebrate)&p__part(X727,X749)))).
+fof(miloA1787, axiom,  ![X66, X112]:(((p__d__instance(X66,c__Agent)&p__d__instance(X112,c__FacialExpression))&p__agent(X112,X66))=>?[X727]:((p__part(X727,X66)&p__d__instance(X727,c__Face))&p__instrument(X112,X727)))).
+fof(miloA1582, axiom,  ![X726]:(p__d__instance(X726,c__Nostril)=>?[X157, X272]:((p__d__instance(X157,c__Nose)&p__d__instance(X272,c__Throat))&p__connects(X726,X157,X272)))).
+fof(miloA1640, axiom,  p__d__subclass(c__Throat,c__AnimalAnatomicalStructure)).
+fof(miloA1641, axiom,  p__d__subclass(c__Throat,c__BodyVessel)).
+fof(miloA1612, axiom,  p__d__subclass(c__Chewing,c__BodyMotion)).
+fof(miloA1615, axiom,  ![X730]:(p__d__instance(X730,c__Chewing)=>?[X403]:(p__d__instance(X403,c__Eating)&p__subProcess(X730,X403)))).
+fof(mergeA141, axiom,  ![X7, X29, X30]:((p__subAttribute(X29,X30)&p__d__instance(X30,X7))=>p__d__instance(X29,X7))).
+fof(miloA3282, axiom,  p__d__instance(c__Celebrity,c__SocialRole)).
+fof(mergeA3082, axiom,  ![X424]:((p__d__instance(X424,c__Object)&p__d__instance(X424,c__Phrase))=>?[X211, X212]:((((((p__d__instance(X211,c__Object)&p__d__instance(X212,c__Object))&p__part(X211,X424))&p__part(X212,X424))&p__d__instance(X211,c__Word))&p__d__instance(X212,c__Word))&~(X211=X212)))).
+fof(predefinitionsA18, axiom,  ((((![X7, X8, X9]:(p__d__partition3(X7,X8,X9)<=>(p__d__exhaustiveDecomposition3(X7,X8,X9)&p__d__disjointDecomposition3(X7,X8,X9)))&![X7, X8, X9, X10]:(p__d__partition4(X7,X8,X9,X10)<=>(p__d__exhaustiveDecomposition4(X7,X8,X9,X10)&p__d__disjointDecomposition4(X7,X8,X9,X10))))&![X7, X8, X9, X10, X11]:(p__d__partition5(X7,X8,X9,X10,X11)<=>(p__d__exhaustiveDecomposition5(X7,X8,X9,X10,X11)&p__d__disjointDecomposition5(X7,X8,X9,X10,X11))))&![X7, X8, X9, X10, X11, X12]:(p__d__partition6(X7,X8,X9,X10,X11,X12)<=>(p__d__exhaustiveDecomposition6(X7,X8,X9,X10,X11,X12)&p__d__disjointDecomposition6(X7,X8,X9,X10,X11,X12))))&![X7, X8, X9, X10, X11, X12, X13]:(p__d__partition7(X7,X8,X9,X10,X11,X12,X13)<=>(p__d__exhaustiveDecomposition7(X7,X8,X9,X10,X11,X12,X13)&p__d__disjointDecomposition7(X7,X8,X9,X10,X11,X12,X13))))).
+fof(mergeA3075, axiom,  p__d__subclass(c__ParticleWord,c__Word)).
+fof(mergeA3090, axiom,  ![X424]:((p__d__instance(X424,c__Object)&p__d__instance(X424,c__PrepositionalPhrase))=>?[X430]:((p__d__instance(X430,c__Object)&p__d__instance(X430,c__ParticleWord))&p__part(X430,X424)))).
+fof(mergeA3074, axiom,  p__d__subclass(c__Adverb,c__Word)).
+fof(mergeA3073, axiom,  p__d__subclass(c__Adjective,c__Word)).
+fof(mergeA3072, axiom,  p__d__subclass(c__Verb,c__Word)).
+fof(mergeA3084, axiom,  ![X424]:((p__d__instance(X424,c__Object)&p__d__instance(X424,c__VerbPhrase))=>?[X425]:((p__d__instance(X425,c__Object)&p__d__instance(X425,c__Verb))&p__part(X425,X424)))).
+fof(mergeA3080, axiom,  p__d__subclass(c__Phrase,c__LinguisticExpression)).
+fof(mergeA3083, axiom,  p__d__subclass(c__VerbPhrase,c__Phrase)).
+fof(mergeA3081, axiom,  p__d__disjointDecomposition4(c__Phrase,c__VerbPhrase,c__NounPhrase,c__PrepositionalPhrase)).
+fof(mergeA311, axiom,  p__d__subclass(c__Formula,c__Sentence)).
+fof(mergeA2392, axiom,  p__d__subclass(c__RegulatoryProcess,c__Guiding)).
+fof(miloA1307, axiom,  ![X228]:(p__d__instance(X228,c__ServiceOrganization)=>?[X64, X251]:(((p__d__instance(X64,c__RegulatoryProcess)&p__patient(X64,X228))&p__agent(X64,X251))&p__d__instance(X251,c__Government)))).
+fof(miloA3056, axiom,  ![X84]:((p__d__instance(X84,c__Agent)&p__attribute(X84,c__PoliceOfficer))=>p__hasSkill(c__PlacingUnderArrest,X84))).
+fof(miloA3585, axiom,  p__d__subclass(c__PlacingUnderArrest,c__SocialInteraction)).
+fof(miloA3591, axiom,  ![X975, X66]:(((p__d__instance(X66,c__Agent)&p__d__instance(X975,c__PlacingUnderArrest))&p__agent(X975,X66))=>p__d__instance(X66,c__CognitiveAgent))).
+fof(miloA575, axiom,  ![X272]:(p__d__instance(X272,c__VehicleTire)=>?[X380]:(p__d__instance(X380,c__VehicleWheel)&p__part(X272,X380)))).
+fof(miloA594, axiom,  ![X571, X380]:((((p__d__instance(X571,c__CorpuscularObject)&p__d__instance(X380,c__VehicleWheel))&p__d__instance(X571,c__RoadVehicle))&p__part(X380,X571))=>?[X464]:(((p__d__instance(X464,c__CorpuscularObject)&p__d__instance(X464,c__Axle))&p__component(X464,X571))&p__connected(X380,X464)))).
+fof(mergeA2384, axiom,  p__d__subclass(c__JudicialProcess,c__PoliticalProcess)).
+fof(mergeA2572, axiom,  p__d__subclass(c__Deciding,c__Selecting)).
+fof(mergeA2573, axiom,  ![X254, X46, X66]:(((((p__d__instance(X66,c__Agent)&p__d__instance(X46,c__Process))&p__d__instance(X254,c__Deciding))&p__agent(X254,X66))&p__patient(X254,X46))=>(p__d__instance(X46,c__IntentionalProcess)&p__agent(X46,X66)))).
+fof(miloA2336, axiom,  p__d__subclass(c__GameCall,c__Deciding)).
+fof(mergeA3405, axiom,  p__d__instance(c__conclusion,c__BinaryPredicate)).
+fof(mergeA3406, axiom,  p__d__instance(c__conclusion,c__SingleValuedRelation)).
+fof(mergeA3407, axiom,  p__d__instance(c__conclusion,c__TotalValuedRelation)).
+fof(mergeA3098, axiom,  ![X7, X331, X66, X432]:(((((((p__d__instance(X331,c__ContentBearingPhysical)&p__d__instance(X66,c__CognitiveAgent))&p__d__instance(X331,X7))&p__d__subclass(X7,c__FactualText))&p__authors(X66,X7))&p__subsumesContentInstance(X331,X432))&p__d__instance(X432,c__Formula))=>p__believes(X66,X432))).
+fof(mergeA3100, axiom,  ![X7, X331, X66]:(((((p__d__instance(X331,c__ContentBearingPhysical)&p__d__instance(X66,c__CognitiveAgent))&p__d__instance(X331,X7))&p__d__subclass(X7,c__FictionalText))&p__authors(X66,X7))=>?[X432]:((p__subsumesContentInstance(X331,X432)&p__d__instance(X432,c__Formula))&~(p__believes(X66,X432))))).
+fof(miloA2036, axiom,  ![X808]:(p__d__instance(X808,c__Series)=>?[X810, X811]:((((p__d__instance(X810,c__Book)&p__d__instance(X811,c__Book))&p__subsumesContentInstance(X808,X810))&p__subsumesContentInstance(X808,X811))&~(X810=X811)))).
+fof(typeA12, axiom,  ![X1038, X1039]:(p__subsumesContentInstance(X1038,X1039)=>(p__d__instance(X1039,c__ContentBearingPhysical)&p__d__instance(X1038,c__ContentBearingPhysical)))).
+fof(typeA92, axiom,  ![X1038, X1039]:(p__realization(X1038,X1039)=>(p__d__instance(X1039,c__Proposition)&p__d__instance(X1038,c__Process)))).
+fof(miloA3426, axiom,  p__d__instance(c__areaOfResponsibility,c__TernaryPredicate)).
+fof(miloA1353, axiom,  ![X267]:(p__d__instance(X267,c__Water)=>?[X686, X690, X691]:(((((p__d__instance(X686,c__ChemicalSynthesis)&p__resource(X686,X690))&p__d__instance(X690,c__Hydrogen))&p__resource(X686,X691))&p__d__instance(X691,c__Oxygen))&p__result(X686,X267)))).
+fof(miloA4243, axiom,  p__d__subclass(c__Hydrogen,c__ElementalSubstance)).
+fof(miloA4244, axiom,  p__atomicNumber(c__Hydrogen,c__1)).
+fof(mergeA2211, axiom,  ![X219, X220, X84, X221, X222, X215, X223, X41]:(((((((((((((p__d__instance(X221,c__Object)&p__d__instance(X219,c__Object))&p__d__instance(X222,c__Object))&p__d__instance(X220,c__Object))&p__d__instance(X84,c__Object))&p__d__instance(X223,c__Object))&p__d__instance(X215,c__Object))&X219=f__MereologicalComplementFn1(X221))&X220=f__MereologicalComplementFn1(X222))&X84=f__MereologicalProductFn2(X219,X220))&X223=f__MereologicalComplementFn1(X84))&X215=f__MereologicalSumFn2(X221,X222))&p__d__instance(X41,c__Object))=>(p__part(X41,X215)<=>p__part(X41,X223)))).
+fof(mergeA2213, axiom,  ![X39, X40, X107, X41]:((((((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__d__instance(X107,c__Object))&X107=f__MereologicalSumFn2(X39,X40))&p__d__instance(X41,c__Object))&(p__part(X41,X39)|p__part(X41,X40)))=>p__part(X41,X107))).
+fof(mergeA2214, axiom,  ![X40, X39]:((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))=>f__MereologicalSumFn2(X39,X40)=f__MereologicalSumFn2(X40,X39))).
+fof(mergeA2215, axiom,  ![X39, X40]:((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))=>f__MereologicalSumFn2(X39,X40)=f__MereologicalSumFn2(f__MereologicalSumFn2(X39,X40),X40))).
+fof(mergeA2242, axiom,  ![X39, X40]:((p__d__instance(X39,c__Object)&p__d__instance(X40,c__Object))=>f__MereologicalSumFn2(X39,f__MereologicalComplementFn1(X39))=f__MereologicalSumFn2(X40,f__MereologicalComplementFn1(X40)))).
+fof(mergeA2244, axiom,  ![X41, X27]:((p__d__instance(X27,c__Object)&p__d__instance(X41,c__Object))=>p__part(X41,f__MereologicalSumFn2(X27,f__MereologicalComplementFn1(X27))))).
+fof(mergeA2245, axiom,  ![X39, X40]:((p__d__instance(X39,c__Object)&p__d__instance(X40,c__Object))=>f__MereologicalProductFn2(X39,f__MereologicalComplementFn1(X39))=f__MereologicalComplementFn1(f__MereologicalSumFn2(X40,f__MereologicalComplementFn1(X40))))).
+fof(mergeA2246, axiom,  ![X39, X40]:((p__d__instance(X39,c__Object)&p__d__instance(X40,c__Object))=>f__MereologicalSumFn2(X39,f__MereologicalComplementFn1(X39))=f__MereologicalComplementFn1(f__MereologicalProductFn2(X40,f__MereologicalComplementFn1(X40))))).
+fof(mergeA2257, axiom,  ![X224, X225, X27, X226]:(((((((p__d__instance(X27,c__SelfConnectedObject)&p__d__instance(X224,c__Hole))&p__d__instance(X225,c__Hole))&p__hole(X224,X27))&p__hole(X225,X27))&p__d__instance(X226,c__Hole))&p__part(X226,f__MereologicalSumFn2(X224,X225)))=>p__hole(X226,X27))).
+fof(miloA1323, axiom,  p__d__subclass(c__Hydrocarbon,c__OrganicCompound)).
+fof(miloA1435, axiom,  p__d__subclass(c__Rubber,c__Hydrocarbon)).
+fof(miloA1437, axiom,  p__d__subclass(c__Plastic,c__Hydrocarbon)).
+fof(mergeA417, axiom,  p__d__instance(c__6,c__PositiveInteger)).
+fof(mergeA3485, axiom,  ![X186, X185]:(((p__d__instance(X185,c__TimePosition)&p__d__instance(X186,c__TimePosition))&f__RelativeTimeFn2(X185,c__CentralTimeZone)=X186)=>X186=f__AdditionFn2(X185,c__6))).
+fof(mergeA2635, axiom,  ![X42, X43, X64]:(((((p__d__instance(X64,c__Process)&p__resource(X64,X42))&p__result(X64,X43))&p__d__instance(X42,c__ElementalSubstance))&p__d__instance(X43,c__CompoundSubstance))=>p__d__instance(X64,c__ChemicalSynthesis))).
+fof(mergeA2636, axiom,  ![X323]:(p__d__instance(X323,c__CompoundSubstance)<=>?[X324, X325, X46]:((((((p__d__instance(X324,c__ElementalSubstance)&p__d__instance(X325,c__ElementalSubstance))&~(X324=X325))&p__d__instance(X46,c__ChemicalSynthesis))&p__resource(X46,X324))&p__resource(X46,X325))&p__result(X46,X323)))).
+fof(mergeA2893, axiom,  p__d__subclass(c__Water,c__CompoundSubstance)).
+fof(mergeA237, axiom,  p__d__subclass(c__Atom,c__ElementalSubstance)).
+fof(miloA3218, axiom,  p__d__subclass(c__AtomicGroup,c__CompoundSubstance)).
+fof(miloA3219, axiom,  ![X150]:(p__d__instance(X150,c__AtomicGroup)=>?[X449, X450]:((((p__d__instance(X449,c__Atom)&p__d__instance(X450,c__Atom))&~(X449=X450))&p__part(X449,X150))&p__part(X450,X150)))).
+fof(miloA990, axiom,  p__d__subclass(c__VotingPoll,c__StationaryArtifact)).
+fof(mergeA2480, axiom,  p__d__disjoint(c__Uncovering,c__Covering)).
+fof(mergeA2483, axiom,  p__d__subclass(c__Covering,c__Putting)).
+fof(miloA1677, axiom,  ![X546]:(p__d__instance(X546,c__Eyelid)=>p__capability(c__Covering,c__instrument,X546))).
+fof(miloA2599, axiom,  ![X541]:(p__d__instance(X541,c__Burying)=>?[X171, X215]:(((p__d__instance(X171,c__Covering)&p__instrument(X171,X215))&p__d__instance(X215,c__Soil))&p__subProcess(X171,X541)))).
+fof(mergeA2183, axiom,  ![X40, X39, X107]:(((((p__d__instance(X40,c__SelfConnectedObject)&p__d__instance(X39,c__SelfConnectedObject))&p__d__instance(X107,c__Object))&p__surface(X39,X40))&p__superficialPart(X107,X40))=>p__part(X107,X39))).
+fof(mergeA3597, axiom,  ![X27, X502, X495]:(((((p__d__instance(X27,c__SelfConnectedObject)&p__d__instance(X502,c__SelfConnectedObject))&p__d__instance(X495,c__ShapeAttribute))&p__attribute(X27,X495))&p__surface(X502,X27))=>p__attribute(X502,X495))).
+fof(miloA1544, axiom,  ![X624]:(p__d__instance(X624,c__Skin)=>?[X502, X244]:((((p__d__instance(X502,c__SelfConnectedObject)&p__surface(X502,X244))&p__part(X624,X244))&p__d__instance(X244,c__Animal))&p__overlapsSpatially(X624,X502)))).
+fof(typeA105, axiom,  ![X1038, X1039]:(p__surface(X1038,X1039)=>(p__d__instance(X1039,c__SelfConnectedObject)&p__d__instance(X1038,c__SelfConnectedObject)))).
+fof(mergeA2996, axiom,  p__d__subclass(c__Solution,c__LiquidMixture)).
+fof(mergeA3567, axiom,  ![X27]:(p__d__instance(X27,c__Solution)=>p__attribute(X27,c__Liquid))).
+fof(miloA517, axiom,  ![X380]:(p__d__instance(X380,c__WatercolorPicture)=>?[X574, X84]:(((p__d__instance(X574,c__WatercolorPaint)&p__d__instance(X84,c__Painting))&p__resource(X84,X574))&p__result(X84,X380)))).
+fof(miloA534, axiom,  ![X84]:(p__d__instance(X84,c__WatercolorPaint)=>?[X380]:(p__d__instance(X380,c__Water)&p__part(X380,X84)))).
+fof(miloA536, axiom,  p__d__disjoint(c__OilPaint,c__WatercolorPaint)).
+fof(miloA537, axiom,  ![X84]:(p__d__instance(X84,c__OilPaint)=>?[X169]:(p__d__instance(X169,c__Oil)&p__part(X169,X84)))).
+fof(miloA540, axiom,  ![X84]:(p__d__instance(X84,c__OilPicture)=>?[X169, X573]:(((p__d__instance(X169,c__OilPaint)&p__d__instance(X573,c__Painting))&p__resource(X573,X169))&p__result(X573,X84)))).
+fof(mergeA3163, axiom,  p__d__subclass(c__ArtWork,c__Artifact)).
+fof(miloA3095, axiom,  p__d__subclass(c__Science,c__FieldOfStudy)).
+fof(schemaBinaryRelationA400, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__PostalPlace)&p__d__instance(X1033,c__SymbolicString))=>(p__d__holds3(c__floorCode,X1033,X1034)<=>p__floorCode(X1033,X1034)))).
+fof(typeA397, axiom,  ![X1038, X1039]:(p__floorCode(X1038,X1039)=>(p__d__instance(X1039,c__PostalPlace)&p__d__instance(X1038,c__SymbolicString)))).
+fof(schemaBinaryRelationA399, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__PostalPlace)&p__d__instance(X1033,c__SymbolicString))=>(p__d__holds3(c__unitNumber,X1033,X1034)<=>p__unitNumber(X1033,X1034)))).
+fof(typeA396, axiom,  ![X1038, X1039]:(p__unitNumber(X1038,X1039)=>(p__d__instance(X1039,c__PostalPlace)&p__d__instance(X1038,c__SymbolicString)))).
+fof(mergeA1086, axiom,  p__subrelation(c__names,c__refers)).
+fof(mergeA2401, axiom,  p__d__partition3(c__QuantityChange,c__Increasing,c__Decreasing)).
+fof(mergeA2402, axiom,  p__d__subclass(c__Increasing,c__QuantityChange)).
+fof(mergeA2806, axiom,  p__d__subclass(c__StateChange,c__InternalChange)).
+fof(mergeA2828, axiom,  p__d__subclass(c__Boiling,c__StateChange)).
+fof(miloA872, axiom,  p__d__subclass(c__Soldering,c__Attaching)).
+fof(miloA873, axiom,  ![X215, X39, X40]:((((((p__d__instance(X39,c__SelfConnectedObject)&p__d__instance(X40,c__SelfConnectedObject))&p__d__instance(X215,c__Soldering))&p__patient(X215,X39))&p__patient(X215,X40))&~(X39=X40))=>?[X464]:(p__d__instance(X464,c__MetallicAlloy)&p__connects(X464,X39,X40)))).
+fof(miloA875, axiom,  ![X215]:(p__d__instance(X215,c__Soldering)=>?[X627]:(p__d__instance(X627,c__SolderingIron)&p__instrument(X215,X627)))).
+fof(mergeA2200, axiom,  ![X169, X178, X215]:(((((p__d__instance(X169,c__SelfConnectedObject)&p__d__instance(X178,c__SelfConnectedObject))&p__d__instance(X215,c__SelfConnectedObject))&p__top(X178,X169))&p__side(X215,X169))=>~(X178=X215))).
+fof(typeA407, axiom,  ![X1038, X1039]:(p__top(X1038,X1039)=>(p__d__instance(X1039,c__SelfConnectedObject)&p__d__instance(X1038,c__SelfConnectedObject)))).
+fof(mergeA2902, axiom,  p__d__subclass(c__OrganicObject,c__CorpuscularObject)).
+fof(mergeA2905, axiom,  p__d__subclass(c__Organism,c__OrganicObject)).
+fof(mergeA3660, axiom,  ![X34, X228]:(((p__d__instance(X228,c__Object)&p__attribute(X228,X34))&p__d__instance(X34,c__BiologicalAttribute))=>p__d__instance(X228,c__OrganicObject))).
+fof(mergeA3037, axiom,  ![X415, X412]:(((p__d__instance(X412,c__Object)&p__d__instance(X415,c__PlantAnatomicalStructure))&p__properPart(X415,X412))=>p__d__instance(X412,c__Plant))).
+fof(mergeA3046, axiom,  p__d__subclass(c__FruitOrVegetable,c__PlantAnatomicalStructure)).
+fof(mergeA201, axiom,  p__d__instance(c__part,c__PartialOrderingRelation)).
+fof(mergeA2473, axiom,  ![X268, X66, X269]:((((p__d__instance(X66,c__Agent)&p__d__instance(X268,c__Transfer))&p__agent(X268,X66))&p__patient(X268,X269))=>~(X66=X269))).
+fof(mergeA2477, axiom,  p__d__subclass(c__Removing,c__Transfer)).
+fof(mergeA2481, axiom,  p__d__subclass(c__Putting,c__Transfer)).
+fof(mergeA2422, axiom,  p__d__subclass(c__Motion,c__Process)).
+fof(mergeA2428, axiom,  p__d__subclass(c__MotionDownward,c__Motion)).
+fof(mergeA831, axiom,  p__d__subclass(c__Function,c__SingleValuedRelation)).
+fof(mergeA2551, axiom,  p__d__subclass(c__ServiceProcess,c__SocialInteraction)).
+fof(mergeA2697, axiom,  p__d__subclass(c__SocialInteraction,c__IntentionalProcess)).
+fof(mergeA2701, axiom,  p__d__subclass(c__Communication,c__SocialInteraction)).
+fof(mergeA729, axiom,  ![X27, X66]:(((p__d__instance(X27,c__Physical)&p__d__instance(X66,c__CognitiveAgent))&p__wants(X66,X27))=>?[X78]:(p__d__instance(X78,c__Formula)&p__hasPurposeForAgent(X27,X78,X66)))).
+fof(mergeA970, axiom,  ![X35, X100]:(((p__d__instance(X100,c__Formula)&p__d__instance(X35,c__Physical))&p__hasPurpose(X35,X100))=>?[X66]:(p__d__instance(X66,c__CognitiveAgent)&p__hasPurposeForAgent(X35,X100,X66)))).
+fof(mergeA2358, axiom,  ![X64, X66]:(((p__d__instance(X66,c__CognitiveAgent)&p__d__instance(X64,c__IntentionalProcess))&p__agent(X64,X66))=>?[X78]:(p__d__instance(X78,c__Formula)&p__hasPurposeForAgent(X64,X78,X66)))).
+fof(typeA526, axiom,  ![X1038, X1039, X1040]:(p__hasPurposeForAgent(X1038,X1039,X1040)=>((p__d__instance(X1040,c__CognitiveAgent)&p__d__instance(X1039,c__Formula))&p__d__instance(X1038,c__Physical)))).
+fof(mergeA2755, axiom,  p__d__subclass(c__Game,c__RecreationOrExercise)).
+fof(mergeA2756, axiom,  p__d__subclass(c__Sport,c__Game)).
+fof(miloA2438, axiom,  ![X339]:(p__d__instance(X339,c__GameArtifact)=>?[X860]:(p__d__subclass(X860,c__Game)&p__capability(X860,c__instrument,X339)))).
+fof(miloA2449, axiom,  ![X801]:(p__d__instance(X801,c__GameShot)=>?[X860]:(p__d__instance(X860,c__Game)&p__subProcess(X801,X860)))).
+fof(mergeA2758, axiom,  p__d__subclass(c__Maneuver,c__IntentionalProcess)).
+fof(miloA2447, axiom,  p__d__subclass(c__GameShot,c__Maneuver)).
+fof(miloA1329, axiom,  ![X464]:(p__d__instance(X464,c__Alkaloid)=>?[X157]:(p__d__instance(X157,c__Nitrogen)&p__part(X157,X464)))).
+fof(miloA4255, axiom,  p__d__subclass(c__Nitrogen,c__ElementalSubstance)).
+fof(mergeA1947, axiom,  ![X189, X190]:((p__d__instance(X190,c__TimeInterval)&p__d__instance(X189,c__TimeInterval))=>(p__meetsTemporally(X189,X190)<=>f__EndFn1(X189)=f__BeginFn1(X190)))).
+fof(typeA103, axiom,  ![X1038, X1039]:(p__meetsTemporally(X1038,X1039)=>(p__d__instance(X1039,c__TimeInterval)&p__d__instance(X1038,c__TimeInterval)))).
+fof(mergeA1888, axiom,  ![X189, X190]:((p__d__instance(X190,c__TimeInterval)&p__d__instance(X189,c__TimeInterval))=>(p__starts(X189,X190)<=>(f__BeginFn1(X189)=f__BeginFn1(X190)&p__before(f__EndFn1(X189),f__EndFn1(X190)))))).
+fof(mergeA2474, axiom,  ![X270, X221, X271, X84, X93, X94]:(((((((((((p__d__instance(X221,c__Object)&p__d__instance(X270,c__Object))&p__d__instance(X84,c__Agent))&p__d__instance(X93,c__Translocation))&p__d__instance(X94,c__Translocation))&p__origin(X93,X221))&p__origin(X94,X270))&p__destination(X93,X270))&p__destination(X94,X271))&p__experiencer(X93,X84))&p__experiencer(X94,X84))=>?[X272]:(((((((p__d__instance(X272,c__Translocation)&p__origin(X272,X221))&p__destination(X272,X271))&p__subProcess(X93,X272))&p__subProcess(X94,X272))&p__experiencer(X272,X84))&p__starts(f__WhenFn1(X93),f__WhenFn1(X272)))&p__finishes(f__WhenFn1(X94),f__WhenFn1(X272))))).
+fof(typeA191, axiom,  ![X1038, X1039]:(p__starts(X1038,X1039)=>(p__d__instance(X1039,c__TimeInterval)&p__d__instance(X1038,c__TimeInterval)))).
+fof(mergeA1895, axiom,  ![X190, X189]:((p__d__instance(X190,c__TimeInterval)&p__d__instance(X189,c__TimeInterval))=>(p__finishes(X189,X190)<=>(p__before(f__BeginFn1(X190),f__BeginFn1(X189))&f__EndFn1(X190)=f__EndFn1(X189))))).
+fof(typeA192, axiom,  ![X1038, X1039]:(p__finishes(X1038,X1039)=>(p__d__instance(X1039,c__TimeInterval)&p__d__instance(X1038,c__TimeInterval)))).
+fof(mergeA1863, axiom,  ![X174]:(p__d__instance(X174,c__TimePoint)=>?[X184]:(p__d__instance(X184,c__TimeInterval)&p__temporalPart(X174,X184)))).
+fof(mergeA1864, axiom,  ![X184]:(p__d__instance(X184,c__TimeInterval)=>?[X174]:(p__d__instance(X174,c__TimePoint)&p__temporalPart(X174,X184)))).
+fof(typeA13, axiom,  ![X1038, X1039]:(p__temporalPart(X1038,X1039)=>(p__d__instance(X1039,c__TimePosition)&p__d__instance(X1038,c__TimePosition)))).
+fof(mergeA1701, axiom,  p__d__instance(c__MinuteDuration,c__UnitOfDuration)).
+fof(mergeA1698, axiom,  ![X23]:((p__d__instance(X23,c__RealNumber)&X23=f__MultiplicationFn2(c__1,X23))=>f__MeasureFn2(X23,c__DayDuration)=f__MeasureFn2(f__MultiplicationFn2(X23,c__24),c__HourDuration))).
+fof(mergeA1699, axiom,  p__d__instance(c__HourDuration,c__UnitOfDuration)).
+fof(mergeA1633, axiom,  p__d__instance(c__SecondDuration,c__UnitOfDuration)).
+fof(mergeA1634, axiom,  p__d__instance(c__SecondDuration,c__SystemeInternationalUnit)).
+fof(mergeA435, axiom,  p__d__instance(c__24,c__PositiveInteger)).
+fof(miloA4290, axiom,  p__atomicNumber(c__Chromium,c__24)).
+fof(mergeA1527, axiom,  p__d__subclass(c__LengthMeasure,c__ConstantQuantity)).
+fof(mergeA1535, axiom,  p__d__subclass(c__TemperatureMeasure,c__ConstantQuantity)).
+fof(mergeA1537, axiom,  p__d__subclass(c__CurrencyMeasure,c__ConstantQuantity)).
+fof(mergeA1521, axiom,  p__d__subclass(c__CompositeUnitOfMeasure,c__UnitOfMeasure)).
+fof(mergeA1526, axiom,  p__d__subclass(c__SystemeInternationalUnit,c__UnitOfMeasure)).
+fof(mergeA200, axiom,  p__d__instance(c__part,c__SpatialRelation)).
+fof(mergeA868, axiom,  p__d__subclass(c__RelationExtendedToQuantities,c__InheritableRelation)).
+fof(mergeA597, axiom,  p__d__subclass(c__AsymmetricRelation,c__IrreflexiveRelation)).
+fof(mergeA225, axiom,  ![X39, X40]:((p__d__instance(X40,c__Object)&p__d__instance(X39,c__SelfConnectedObject))=>(p__contains(X39,X40)<=>?[X44]:((p__d__instance(X44,c__Hole)&p__hole(X44,X39))&p__properlyFills(X40,X44))))).
+fof(mergeA2253, axiom,  ![X44]:(p__d__instance(X44,c__Hole)=>?[X27]:(p__d__instance(X27,c__SelfConnectedObject)&p__hole(X44,X27)))).
+fof(mergeA2254, axiom,  ![X44, X27]:(((p__d__instance(X27,c__SelfConnectedObject)&p__d__instance(X44,c__Hole))&p__hole(X44,X27))=>~(p__d__instance(X27,c__Hole)))).
+fof(mergeA2256, axiom,  ![X39, X40, X44]:(((((p__d__instance(X39,c__SelfConnectedObject)&p__d__instance(X44,c__Hole))&p__d__instance(X40,c__SelfConnectedObject))&p__hole(X44,X39))&p__hole(X44,X40))=>?[X107]:((p__d__instance(X107,c__SelfConnectedObject)&p__properPart(X107,f__MereologicalProductFn2(X39,X40)))&p__hole(X44,X107)))).
+fof(typeA107, axiom,  ![X1038, X1039]:(p__hole(X1038,X1039)=>(p__d__instance(X1039,c__SelfConnectedObject)&p__d__instance(X1038,c__Hole)))).
+fof(mergeA598, axiom,  p__d__subclass(c__AsymmetricRelation,c__AntisymmetricRelation)).
+fof(mergeA599, axiom,  ![X72]:(p__d__instance(X72,c__AsymmetricRelation)<=>(p__d__instance(X72,c__AntisymmetricRelation)&p__d__instance(X72,c__IrreflexiveRelation)))).
+fof(mergeA600, axiom,  p__d__subclass(c__AntisymmetricRelation,c__BinaryRelation)).
+fof(mergeA601, axiom,  ![X72]:(p__d__instance(X72,c__BinaryRelation)=>(p__d__instance(X72,c__AntisymmetricRelation)<=>![X18, X19]:((p__d__holds3(X72,X18,X19)&p__d__holds3(X72,X19,X18))=>X18=X19)))).
+fof(mergeA609, axiom,  p__d__subclass(c__PartialOrderingRelation,c__AntisymmetricRelation)).
+fof(miloA3736, axiom,  p__d__instance(c__subString,c__AntisymmetricRelation)).
+fof(mergeA3277, axiom,  ![X237, X240]:(((p__d__instance(X240,c__Organism)&p__d__instance(X237,c__Organism))&p__mother(X237,X240))=>p__attribute(X240,c__Female))).
+fof(mergeA3300, axiom,  ![X237, X238]:((((p__d__instance(X238,c__Organism)&p__d__instance(X237,c__Organism))&p__parent(X237,X238))&p__attribute(X238,c__Female))=>p__mother(X237,X238))).
+fof(mergeA3677, axiom,  ![X239, X228]:(((p__d__instance(X239,c__ReproductiveBody)&p__part(X239,X228))&p__d__instance(X228,c__Organism))=>p__attribute(X228,c__Female))).
+fof(mergeA3679, axiom,  p__contraryAttribute2(c__Male,c__Female)).
+fof(miloA454, axiom,  ![X543]:((p__d__instance(X543,c__SelfConnectedObject)&p__attribute(X543,c__Flat))=>?[X342, X85, X86, X562, X563]:(((((((((((((p__d__instance(X85,c__SelfConnectedObject)&p__d__instance(X86,c__SelfConnectedObject))&p__d__instance(X342,c__LengthMeasure))&p__d__instance(X562,c__LengthMeasure))&p__d__instance(X563,c__LengthMeasure))&p__side(X85,X543))&p__side(X86,X543))&p__meetsSpatially(X85,X86))&~(X85=X86))&p__height(X543,X342))&p__height(X85,X562))&p__height(X86,X563))&p__greaterThan(X562,f__MultiplicationFn2(c__2,X342)))&p__greaterThan(X563,f__MultiplicationFn2(c__2,X342))))).
+fof(typeA408, axiom,  ![X1038, X1039]:(p__side(X1038,X1039)=>(p__d__instance(X1039,c__SelfConnectedObject)&p__d__instance(X1038,c__SelfConnectedObject)))).
+fof(mergeA3439, axiom,  ![X214, X39, X40, X107]:((((((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__d__instance(X107,c__Object))&p__d__instance(X214,c__DirectionalAttribute))&p__orientation(X39,X40,X214))&p__orientation(X40,X107,X214))=>p__between(X39,X40,X107))).
+fof(mergeA2934, axiom,  p__d__partition3(c__Animal,c__Vertebrate,c__Invertebrate)).
+fof(mergeA2943, axiom,  p__d__subclass(c__Invertebrate,c__Animal)).
+fof(mergeA2947, axiom,  p__d__subclass(c__Arthropod,c__Invertebrate)).
+fof(miloA1628, axiom,  p__d__subclass(c__Skeleton,c__AnimalAnatomicalStructure)).
+fof(miloA1629, axiom,  p__d__subclass(c__Skeleton,c__BodyPart)).
+fof(miloA1630, axiom,  ![X732, X244]:(((p__d__instance(X244,c__Animal)&p__d__instance(X732,c__Skeleton))&p__part(X732,X244))=>p__d__instance(X244,c__Vertebrate))).
+fof(miloA1631, axiom,  ![X215]:(p__d__instance(X215,c__Skeleton)=>?[X464]:(p__d__instance(X464,c__Animal)&p__interiorPart(X215,X464)))).
+fof(miloA1638, axiom,  ![X733]:(p__d__instance(X733,c__BodyJoint)=>?[X215, X89, X90]:((((((p__d__instance(X89,c__CorpuscularObject)&p__d__instance(X90,c__CorpuscularObject))&p__d__instance(X215,c__Skeleton))&p__component(X89,X215))&p__component(X90,X215))&p__component(X733,X215))&p__connects(X733,X89,X90)))).
+fof(mergeA2705, axiom,  ![X345]:(p__d__instance(X345,c__Communication)=>?[X36, X14, X294, X293]:(((((p__refers(X36,X14)&p__patient(X345,X36))&p__d__instance(X294,c__CognitiveAgent))&p__agent(X345,X294))&p__d__instance(X293,c__CognitiveAgent))&p__destination(X345,X293)))).
+fof(mergeA2713, axiom,  p__d__subclass(c__Gesture,c__Communication)).
+fof(mergeA2717, axiom,  p__d__subclass(c__Expressing,c__Communication)).
+fof(miloA482, axiom,  ![X289]:(p__d__instance(X289,c__CommunicationDevice)=>p__capability(c__Communication,c__instrument,X289))).
+fof(mergeA2734, axiom,  ![X359, X76]:(((p__d__instance(X359,c__Committing)&p__patient(X359,X76))&p__d__instance(X76,c__Formula))=>p__modalAttribute(X76,c__Promise))).
+fof(mergeA2735, axiom,  p__d__subclass(c__Offering,c__Committing)).
+fof(miloA1913, axiom,  ![X780]:(p__d__instance(X780,c__Agreement)=>?[X781]:(p__d__instance(X781,c__Committing)&p__represents(X781,X780)))).
+fof(miloA1918, axiom,  ![X66, X432]:(((p__d__instance(X432,c__Agreement)&p__d__instance(X66,c__CognitiveAgent))&p__partyToAgreement(X66,X432))=>?[X171]:((p__d__instance(X171,c__Committing)&p__agent(X171,X66))&p__patient(X171,X432)))).
+fof(mergeA2357, axiom,  p__d__subclass(c__IntentionalProcess,c__Process)).
+fof(mergeA2359, axiom,  ![X64]:(p__d__instance(X64,c__IntentionalProcess)=>?[X66]:(p__d__instance(X66,c__CognitiveAgent)&p__agent(X64,X66)))).
+fof(miloA3504, axiom,  p__d__instance(c__workAddress,c__BinaryPredicate)).
+fof(miloA3505, axiom,  p__d__instance(c__workAddress,c__AsymmetricRelation)).
+fof(schemaBinaryRelationA150, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__PostalPlace)&p__d__instance(X1033,c__CognitiveAgent))=>(p__d__holds3(c__workAddress,X1033,X1034)<=>p__workAddress(X1033,X1034)))).
+fof(miloA3509, axiom,  p__d__instance(c__homeAddress,c__BinaryPredicate)).
+fof(miloA3510, axiom,  p__d__instance(c__homeAddress,c__AsymmetricRelation)).
+fof(schemaBinaryRelationA151, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Human)&p__d__instance(X1033,c__PermanentResidence))=>(p__d__holds3(c__homeAddress,X1033,X1034)<=>p__homeAddress(X1033,X1034)))).
+fof(miloA3809, axiom,  p__d__instance(c__siteForContact,c__AsymmetricRelation)).
+fof(miloA3810, axiom,  p__d__instance(c__siteForContact,c__BinaryPredicate)).
+fof(miloA3892, axiom,  p__subrelation(c__telecomContactDevice,c__siteForContact)).
+fof(schemaBinaryRelationA154, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Agent)&p__d__instance(X1033,c__ContactSite))=>(p__d__holds3(c__siteForContact,X1033,X1034)<=>p__siteForContact(X1033,X1034)))).
+fof(miloA3364, axiom,  p__d__instance(c__memberAtTime,c__TernaryPredicate)).
+fof(typeA193, axiom,  ![X1038, X1039]:(p__before(X1038,X1039)=>(p__d__instance(X1039,c__TimePoint)&p__d__instance(X1038,c__TimePoint)))).
+fof(mergeA1948, axiom,  ![X189, X190]:((((p__d__instance(X189,c__TimeInterval)&p__d__instance(X190,c__TimeInterval))&f__BeginFn1(X189)=f__BeginFn1(X190))&f__EndFn1(X189)=f__EndFn1(X190))=>X189=X190)).
+fof(mergeA939, axiom,  p__d__instance(c__time,c__BinaryPredicate)).
+fof(mergeA940, axiom,  p__d__instance(c__time,c__TemporalRelation)).
+fof(mergeA941, axiom,  p__d__instance(c__time,c__AsymmetricRelation)).
+fof(mergeA944, axiom,  p__relatedInternalConcept(c__time,c__located)).
+fof(mergeA945, axiom,  p__relatedInternalConcept(c__time,c__holdsDuring)).
+fof(mergeA2011, axiom,  p__subrelation(c__date,c__time)).
+fof(typeA574, axiom,  ![X1038, X1039, X1040, X1041, X1042]:(p__playsRoleInEventOfType(X1038,X1039,X1040,X1041,X1042)=>((((p__d__instance(X1042,c__Object)&p__d__instance(X1041,c__TimePosition))&p__d__subclass(X1040,c__Process))&p__d__instance(X1039,c__CaseRole))&p__d__instance(X1038,c__Object)))).
+fof(mergeA637, axiom,  p__subrelation(c__instrument,c__patient)).
+fof(mergeA647, axiom,  p__subrelation(c__patient,c__involvedInEvent)).
+fof(schemaBinaryRelationA35, axiom,  ![X1033, X1034]:(p__d__instance(X1033,c__Process)=>(p__d__holds3(c__patient,X1033,X1034)<=>p__patient(X1033,X1034)))).
+fof(mergeA3358, axiom,  p__d__disjoint(c__ParamilitaryOrganization,c__GovernmentOrganization)).
+fof(mergeA3503, axiom,  ![X228, X66, X496]:((((p__d__instance(X228,c__Organization)&p__d__instance(X496,c__Position))&p__d__instance(X66,c__Human))&p__occupiesPosition(X66,X496,X228))=>p__attribute(X66,X496))).
+fof(mergeA3504, axiom,  ![X348, X228]:(((p__d__instance(X348,c__Human)&p__d__instance(X228,c__Organization))&p__employs(X228,X348))=>?[X496]:(p__d__instance(X496,c__Position)&p__occupiesPosition(X348,X496,X228)))).
+fof(mergeA3505, axiom,  ![X496, X348, X497]:((((p__d__instance(X497,c__Organization)&p__d__instance(X496,c__Position))&p__d__instance(X348,c__Human))&p__occupiesPosition(X348,X496,X497))=>p__member(X348,X497))).
+fof(typeA538, axiom,  ![X1038, X1039, X1040]:(p__occupiesPosition(X1038,X1039,X1040)=>((p__d__instance(X1040,c__Organization)&p__d__instance(X1039,c__Position))&p__d__instance(X1038,c__Human)))).
+fof(miloA2710, axiom,  p__d__subclass(c__GovernmentPosition,c__Profession)).
+fof(mergeA1803, axiom,  ![X40, X39, X159]:((((p__d__instance(X159,c__LengthMeasure)&p__d__instance(X40,c__Physical))&p__d__instance(X39,c__Physical))&p__distance(X39,X40,X159))=>p__distance(X40,X39,X159))).
+fof(mergeA1807, axiom,  ![X39, X40, X177]:((((p__d__instance(X177,c__LengthMeasure)&p__d__instance(X40,c__Physical))&p__d__instance(X39,c__SelfConnectedObject))&p__altitude(X39,X40,X177))=>?[X178]:((p__d__instance(X178,c__SelfConnectedObject)&p__top(X178,X39))&p__distance(X178,X40,X177)))).
+fof(mergeA2201, axiom,  ![X77, X216]:((p__d__instance(X216,c__LengthMeasure)&p__d__instance(X77,c__SelfConnectedObject))=>(p__width(X77,X216)<=>?[X217, X218]:((((p__d__instance(X217,c__SelfConnectedObject)&p__d__instance(X218,c__SelfConnectedObject))&p__side(X217,X77))&p__side(X218,X77))&p__distance(X217,X218,X216))))).
+fof(schemaTernaryRelationA58, axiom,  ![X1033, X1034, X1035]:(((p__d__instance(X1035,c__LengthMeasure)&p__d__instance(X1034,c__Physical))&p__d__instance(X1033,c__Physical))=>(p__d__holds4(c__distance,X1033,X1034,X1035)<=>p__distance(X1033,X1034,X1035)))).
+fof(typeA533, axiom,  ![X1038, X1039, X1040]:(p__distance(X1038,X1039,X1040)=>((p__d__instance(X1040,c__LengthMeasure)&p__d__instance(X1039,c__Physical))&p__d__instance(X1038,c__Physical)))).
+fof(mergeA1810, axiom,  ![X179, X39, X40]:((((p__d__instance(X179,c__LengthMeasure)&p__d__instance(X40,c__Object))&p__d__instance(X39,c__Object))&p__depth(X39,X40,X179))=>p__orientation(X39,X40,c__Below))).
+fof(miloA2538, axiom,  ![X179, X265]:((((p__d__instance(X179,c__LengthMeasure)&p__d__instance(X265,c__WaterArea))&p__d__instance(X265,c__SelfConnectedObject))&p__waterDepth(X265,X179))=>?[X180, X178]:((((p__d__instance(X180,c__SelfConnectedObject)&p__d__instance(X178,c__SelfConnectedObject))&p__depth(X178,X180,X179))&p__top(X178,X265))&p__bottom(X180,X265)))).
+fof(schemaTernaryRelationA85, axiom,  ![X1033, X1034, X1035]:(((p__d__instance(X1035,c__LengthMeasure)&p__d__instance(X1034,c__Physical))&p__d__instance(X1033,c__Physical))=>(p__d__holds4(c__depth,X1033,X1034,X1035)<=>p__depth(X1033,X1034,X1035)))).
+fof(typeA560, axiom,  ![X1038, X1039, X1040]:(p__depth(X1038,X1039,X1040)=>((p__d__instance(X1040,c__LengthMeasure)&p__d__instance(X1039,c__Physical))&p__d__instance(X1038,c__Physical)))).
+fof(typeA447, axiom,  ![X1038, X1039]:(p__height(X1038,X1039)=>(p__d__instance(X1039,c__LengthMeasure)&p__d__instance(X1038,c__SelfConnectedObject)))).
+fof(mergeA3465, axiom,  p__d__instance(c__Left,c__PositionalAttribute)).
+fof(mergeA3469, axiom,  p__contraryAttribute2(c__Right,c__Left)).
+fof(mergeA3470, axiom,  ![X40, X39]:((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))=>(p__orientation(X39,X40,c__Right)<=>p__orientation(X40,X39,c__Left)))).
+fof(mergeA3467, axiom,  p__d__instance(c__Right,c__PositionalAttribute)).
+fof(miloA655, axiom,  p__d__subclass(c__Mattress,c__Artifact)).
+fof(miloA656, axiom,  ![X1]:((p__d__instance(X1,c__CorpuscularObject)&p__d__instance(X1,c__Mattress))=>?[X387]:((p__d__instance(X387,c__CorpuscularObject)&p__d__instance(X387,c__Bed))&p__component(X1,X387)))).
+fof(mergeA3201, axiom,  ![X469]:((p__d__instance(X469,c__CorpuscularObject)&p__d__instance(X469,c__EngineeringComponent))=>?[X289]:((p__d__instance(X289,c__CorpuscularObject)&p__d__instance(X289,c__Device))&p__component(X469,X289)))).
+fof(typeA405, axiom,  ![X1038, X1039]:(p__component(X1038,X1039)=>(p__d__instance(X1039,c__CorpuscularObject)&p__d__instance(X1038,c__CorpuscularObject)))).
+fof(miloA658, axiom,  p__d__subclass(c__BedFrame,c__Artifact)).
+fof(miloA660, axiom,  p__d__subclass(c__FourPosterBed,c__BedFrame)).
+fof(schemaBinaryRelationA4, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Object)&p__d__instance(X1033,c__Object))=>(p__d__holds3(c__part,X1033,X1034)<=>p__part(X1033,X1034)))).
+fof(mergeA2515, axiom,  p__d__subclass(c__Driving,c__Guiding)).
+fof(miloA3603, axiom,  ![X890, X290, X291]:(((((p__d__instance(X890,c__Transportation)&p__subProcess(X890,X290))&p__d__instance(X290,c__Driving))&p__instrument(X890,X291))&p__d__instance(X291,c__TransportationDevice))=>p__patient(X290,X291))).
+fof(miloA3606, axiom,  ![X978, X890, X261]:((((p__d__instance(X978,c__Driving)&p__subProcess(X890,X978))&p__d__instance(X890,c__Transportation))&p__destination(X978,X261))=>p__destination(X890,X261))).
+fof(mergeA3186, axiom,  p__d__subclass(c__TransportationDevice,c__Device)).
+fof(miloA3607, axiom,  ![X978, X890, X291]:(((((p__d__instance(X978,c__Driving)&p__subProcess(X890,X978))&p__d__instance(X890,c__Transportation))&p__d__instance(X291,c__Vehicle))&p__patient(X978,X291))=>p__conveyance(X890,X291))).
+fof(schemaBinaryRelationA48, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__TransportationDevice)&p__d__instance(X1033,c__Transportation))=>(p__d__holds3(c__conveyance,X1033,X1034)<=>p__conveyance(X1033,X1034)))).
+fof(typeA47, axiom,  ![X1038, X1039]:(p__conveyance(X1038,X1039)=>(p__d__instance(X1039,c__TransportationDevice)&p__d__instance(X1038,c__Transportation)))).
+fof(mergeA2887, axiom,  p__d__subclass(c__Transitway,c__Region)).
+fof(mergeA2888, axiom,  p__d__subclass(c__Transitway,c__SelfConnectedObject)).
+fof(mergeA1013, axiom,  ![X103, X104, X105]:((((p__d__instance(X103,c__Object)&p__d__instance(X104,c__Object))&p__d__instance(X105,c__Object))&p__between(X105,X104,X103))=>p__between(X103,X104,X105))).
+fof(mergeA1020, axiom,  ![X106, X39, X40, X107]:(((((p__d__instance(X106,c__Object)&p__d__instance(X107,c__Object))&p__d__instance(X40,c__Object))&p__d__instance(X39,c__Object))&p__betweenOnPath(X39,X40,X107,X106))=>p__between(X39,X40,X107))).
+fof(typeA529, axiom,  ![X1038, X1039, X1040]:(p__between(X1038,X1039,X1040)=>((p__d__instance(X1040,c__Object)&p__d__instance(X1039,c__Object))&p__d__instance(X1038,c__Object)))).
+fof(mergeA557, axiom,  ![X1]:(p__d__instance(X1,c__PositiveInteger)=>p__greaterThan(X1,c__0))).
+fof(typeA180, axiom,  ![X1038, X1039]:(p__greaterThan(X1038,X1039)=>(p__d__instance(X1039,c__Quantity)&p__d__instance(X1038,c__Quantity)))).
+fof(mergeA1776, axiom,  ![X169, X149]:(((p__d__instance(X149,c__LengthMeasure)&p__d__instance(X169,c__Object))&p__length(X169,X149))=>![X170]:(~(p__d__instance(X170,c__LengthMeasure))|~(p__linearExtent(X169,X170))|~(p__greaterThan(X170,X149))))).
+fof(miloA456, axiom,  ![X543]:((p__d__instance(X543,c__SelfConnectedObject)&p__attribute(X543,c__LongAndThin))=>?[X342, X85, X86, X562, X563]:(((((((((((((p__d__instance(X85,c__SelfConnectedObject)&p__d__instance(X86,c__SelfConnectedObject))&p__d__instance(X342,c__LengthMeasure))&p__d__instance(X562,c__LengthMeasure))&p__d__instance(X563,c__LengthMeasure))&p__side(X85,X543))&p__side(X86,X543))&p__meetsSpatially(X85,X86))&~(X85=X86))&p__length(X543,X342))&p__length(X85,X562))&p__length(X86,X563))&p__lessThan(X562,f__MultiplicationFn2(c__3,X342)))&p__lessThan(X563,f__MultiplicationFn2(c__3,X342))))).
+fof(schemaBinaryRelationA451, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__LengthMeasure)&p__d__instance(X1033,c__Object))=>(p__d__holds3(c__length,X1033,X1034)<=>p__length(X1033,X1034)))).
+fof(typeA448, axiom,  ![X1038, X1039]:(p__length(X1038,X1039)=>(p__d__instance(X1039,c__LengthMeasure)&p__d__instance(X1038,c__Object)))).
+fof(typeA31, axiom,  ![X1038, X1039]:(p__destination(X1038,X1039)=>p__d__instance(X1038,c__Process))).
+fof(mergeA2429, axiom,  p__d__instance(c__path,c__CaseRole)).
+fof(mergeA2430, axiom,  p__subrelation(c__path,c__eventPartlyLocated)).
+fof(miloA392, axiom,  ![X73]:(p__d__instance(X73,c__Ramp)=>p__capability(c__MotionUpward,c__path,X73))).
+fof(miloA393, axiom,  ![X73]:(p__d__instance(X73,c__Ramp)=>p__capability(c__MotionDownward,c__path,X73))).
+fof(miloA2843, axiom,  p__d__subclass(c__EconomicAttribute,c__PoliticoEconomicAttribute)).
+fof(miloA3679, axiom,  p__d__instance(c__ideologicalAffiliationOfOrganization,c__BinaryPredicate)).
+fof(mergeA3200, axiom,  p__d__subclass(c__EngineeringComponent,c__Device)).
+fof(mergeA3198, axiom,  p__d__subclass(c__Machine,c__Device)).
+fof(mergeA3199, axiom,  ![X467, X64]:(((p__d__instance(X64,c__Process)&p__d__instance(X467,c__Machine))&p__instrument(X64,X467))=>?[X468, X338]:((p__d__instance(X468,c__Object)&p__resource(X64,X468))&p__result(X64,X338)))).
+fof(mergeA3202, axiom,  ![X467]:(p__d__instance(X467,c__Machine)=>?[X470, X471]:((((p__d__instance(X470,c__EngineeringComponent)&p__d__instance(X471,c__EngineeringComponent))&~(X470=X471))&p__part(X470,X467))&p__part(X471,X467)))).
+fof(mergeA3195, axiom,  p__d__subclass(c__Weapon,c__Device)).
+fof(mergeA3196, axiom,  ![X466]:(p__d__instance(X466,c__Weapon)=>p__capability(c__Damaging,c__instrument,X466))).
+fof(miloA174, axiom,  p__d__subclass(c__Projectile,c__Weapon)).
+fof(miloA184, axiom,  p__d__subclass(c__Gun,c__Weapon)).
+fof(mergeA620, axiom,  p__d__instance(c__involvedInEvent,c__BinaryPredicate)).
+fof(mergeA621, axiom,  p__d__instance(c__involvedInEvent,c__AsymmetricRelation)).
+fof(mergeA624, axiom,  ![X73]:(p__d__instance(X73,c__CaseRole)=>p__subrelation(X73,c__involvedInEvent))).
+fof(mergeA636, axiom,  p__subrelation(c__experiencer,c__involvedInEvent)).
+fof(mergeA2767, axiom,  p__d__subclass(c__Perception,c__PsychologicalProcess)).
+fof(mergeA2768, axiom,  ![X372, X66]:(((p__d__instance(X66,c__Agent)&p__d__instance(X372,c__Perception))&p__agent(X372,X66))=>p__d__instance(X66,c__Animal))).
+fof(mergeA2769, axiom,  ![X66]:(p__d__instance(X66,c__SentientAgent)=>p__capability(c__Perception,c__experiencer,X66))).
+fof(mergeA2780, axiom,  p__d__subclass(c__Hearing,c__Perception)).
+fof(mergeA3574, axiom,  ![X498, X27]:(((p__d__instance(X27,c__Object)&p__d__instance(X498,c__Perception))&p__patient(X498,X27))=>?[X111]:(p__d__instance(X111,c__PerceptualAttribute)&p__attribute(X27,X111)))).
+fof(mergeA3001, axiom,  p__d__subclass(c__Cloud,c__GasMixture)).
+fof(miloA504, axiom,  ![X534]:(p__d__instance(X534,c__Lightning)=>?[X171]:(p__d__instance(X171,c__Cloud)&p__eventLocated(X534,X171)))).
+fof(miloA1516, axiom,  ![X272]:(p__d__instance(X272,c__TearSubstance)=>?[X84, X546]:(((p__d__instance(X84,c__Process)&p__d__instance(X546,c__Eye))&p__instrument(X84,X546))&p__result(X84,X272)))).
+fof(miloA1547, axiom,  ![X73]:(p__d__instance(X73,c__Retina)=>?[X546]:(p__d__instance(X546,c__Eye)&p__part(X73,X546)))).
+fof(miloA1668, axiom,  p__d__subclass(c__Eye,c__Organ)).
+fof(miloA1669, axiom,  p__d__subclass(c__Eye,c__AnimalAnatomicalStructure)).
+fof(miloA1671, axiom,  ![X738]:(p__d__instance(X738,c__Eye)=>?[X615]:(p__d__instance(X615,c__Head)&p__part(X738,X615)))).
+fof(mergeA2708, axiom,  p__d__subclass(c__Demonstrating,c__Disseminating)).
+fof(miloA2263, axiom,  p__d__subclass(c__Lecture,c__Demonstrating)).
+fof(mergeA2796, axiom,  p__d__subclass(c__MakingMusic,c__RadiatingSound)).
+fof(mergeA266, axiom,  p__d__instance(c__subCollection,c__BinaryPredicate)).
+fof(mergeA267, axiom,  p__d__instance(c__subCollection,c__PartialOrderingRelation)).
+fof(mergeA270, axiom,  p__subrelation(c__subCollection,c__part)).
+fof(schemaBinaryRelationA5, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Collection)&p__d__instance(X1033,c__Collection))=>(p__d__holds3(c__subCollection,X1033,X1034)<=>p__subCollection(X1033,X1034)))).
+fof(miloA3688, axiom,  p__d__instance(c__ancestorOrganization,c__BinaryPredicate)).
+fof(miloA3689, axiom,  p__d__instance(c__ancestorOrganization,c__TransitiveRelation)).
+fof(miloA3690, axiom,  p__d__instance(c__ancestorOrganization,c__IrreflexiveRelation)).
+fof(miloA2163, axiom,  p__d__subclass(c__Doorway,c__StationaryArtifact)).
+fof(miloA2164, axiom,  ![X827]:(p__d__instance(X827,c__Doorway)=>?[X339]:((p__d__instance(X339,c__Object)&p__part(X827,X339))&(p__d__instance(X339,c__Building)|p__d__instance(X339,c__Room))))).
+fof(miloA2598, axiom,  p__d__subclass(c__Burying,c__Digging)).
+fof(miloA2600, axiom,  p__d__subclass(c__Digging,c__IntentionalProcess)).
+fof(miloA2601, axiom,  p__d__subclass(c__Digging,c__SurfaceChange)).
+fof(miloA2602, axiom,  ![X284]:(p__d__instance(X284,c__Digging)=>?[X215]:(p__patient(X284,X215)&p__d__instance(X215,c__Soil)))).
+fof(mergeA2646, axiom,  p__d__subclass(c__SurfaceChange,c__InternalChange)).
+fof(miloA2592, axiom,  p__d__subclass(c__Soil,c__Mixture)).
+fof(miloA864, axiom,  p__d__subclass(c__Washing,c__Cleaning)).
+fof(mergeA578, axiom,  p__d__disjointDecomposition6(c__Relation,c__BinaryRelation,c__TernaryRelation,c__QuaternaryRelation,c__QuintaryRelation,c__VariableArityRelation)).
+fof(mergeA775, axiom,  p__d__subclass(c__QuintaryRelation,c__Relation)).
+fof(mergeA850, axiom,  p__d__subclass(c__QuaternaryFunction,c__QuintaryRelation)).
+fof(mergeA863, axiom,  p__d__subclass(c__QuintaryPredicate,c__QuintaryRelation)).
+fof(mergeA849, axiom,  p__d__subclass(c__QuaternaryFunction,c__Function)).
+fof(mergeA851, axiom,  ![X80]:(p__d__instance(X80,c__QuaternaryFunction)=>p__valence(X80,c__4))).
+fof(mergeA1621, axiom,  p__d__instance(c__VelocityFn,c__QuaternaryFunction)).
+fof(mergeA2344, axiom,  p__d__subclass(c__PsychologicalProcess,c__BiologicalProcess)).
+fof(mergeA2345, axiom,  ![X46]:(p__d__instance(X46,c__PsychologicalProcess)=>?[X244]:(p__d__instance(X244,c__Animal)&p__experiencer(X46,X244)))).
+fof(mergeA3381, axiom,  p__d__subclass(c__Procedure,c__Proposition)).
+fof(mergeA3382, axiom,  p__d__subclass(c__ComputerProgram,c__Procedure)).
+fof(miloA2365, axiom,  ![X122, X66]:(((p__d__instance(X66,c__Agent)&p__d__instance(X122,c__AcademicDegree))&p__possesses(X66,X122))=>?[X803, X862]:(((p__d__instance(X862,c__Process)&p__d__instance(X803,c__EducationalProgram))&p__realization(X862,X803))&p__experiencer(X862,X66)))).
+fof(miloA2381, axiom,  ![X803]:(p__d__instance(X803,c__EducationalProgram)=>?[X863, X864]:((((p__d__instance(X863,c__EducationalCourse)&p__d__instance(X864,c__EducationalCourse))&~(X863=X864))&p__subPlan(X863,X803))&p__subPlan(X864,X803)))).
+fof(miloA2382, axiom,  p__d__subclass(c__EducationalCourse,c__EducationalProgram)).
+fof(mergeA922, axiom,  ![X87]:(p__d__instance(X87,c__Process)=>?[X88]:(p__d__instance(X88,c__Process)&p__causes(X88,X87)))).
+fof(typeA80, axiom,  ![X1038, X1039]:(p__causes(X1038,X1039)=>(p__d__instance(X1039,c__Process)&p__d__instance(X1038,c__Process)))).
+fof(mergeA3270, axiom,  ![X238, X237, X7]:(((((p__d__instance(X238,c__Organism)&p__d__instance(X237,c__Organism))&p__parent(X237,X238))&p__d__subclass(X7,c__Organism))&p__d__instance(X238,X7))=>p__d__instance(X237,X7))).
+fof(mergeA3272, axiom,  ![X233]:(p__d__instance(X233,c__Organism)=>?[X238]:(p__d__instance(X238,c__Organism)&p__parent(X233,X238)))).
+fof(miloA3457, axiom,  ![X237, X238]:(((p__d__instance(X237,c__Organism)&p__parent(X237,X238))&p__d__instance(X238,c__Man))=>p__father(X237,X238))).
+fof(typeA123, axiom,  ![X1038, X1039]:(p__parent(X1038,X1039)=>(p__d__instance(X1039,c__Organism)&p__d__instance(X1038,c__Organism)))).
+fof(mergeA2742, axiom,  p__d__subclass(c__Meeting,c__SocialInteraction)).
+fof(miloA2284, axiom,  p__d__subclass(c__SocialParty,c__Meeting)).
+fof(miloA2285, axiom,  p__d__subclass(c__SocialParty,c__RecreationOrExercise)).
+fof(miloA2289, axiom,  p__d__subclass(c__Funeral,c__Ceremony)).
+fof(miloA2291, axiom,  ![X543]:(p__d__instance(X543,c__Funeral)=>?[X284]:(p__d__instance(X284,c__Death)&p__refers(X543,X284)))).
+fof(mergeA292, axiom,  p__d__disjointDecomposition4(c__Language,c__AnimalLanguage,c__HumanLanguage,c__ComputerLanguage)).
+fof(mergeA297, axiom,  ![X64, X65, X66]:(((((p__d__instance(X66,c__Agent)&p__d__instance(X64,c__Process))&p__d__instance(X65,c__ComputerLanguage))&p__agent(X64,X66))&p__instrument(X64,X65))=>p__d__instance(X66,c__Machine))).
+fof(miloA1402, axiom,  p__d__subclass(c__StaticWaterArea,c__WaterArea)).
+fof(mergeA3560, axiom,  p__d__subclass(c__PhysicalState,c__InternalAttribute)).
+fof(mergeA3563, axiom,  p__d__instance(c__Solid,c__PhysicalState)).
+fof(mergeA3565, axiom,  p__d__instance(c__Liquid,c__PhysicalState)).
+fof(mergeA3568, axiom,  p__d__instance(c__Gas,c__PhysicalState)).
+fof(mergeA3570, axiom,  ![X27]:(p__d__instance(X27,c__Object)=>(p__d__instance(X27,c__Substance)<=>?[X28]:(p__d__instance(X28,c__PhysicalState)&p__attribute(X27,X28))))).
+fof(miloA3159, axiom,  ![X951]:(p__d__instance(X951,c__Beverage)=>p__attribute(X951,c__Liquid))).
+fof(mergeA3000, axiom,  ![X407]:(p__d__instance(X407,c__GasMixture)=>?[X41]:((p__d__instance(X41,c__Object)&p__part(X41,X407))&p__attribute(X41,c__Gas)))).
+fof(miloA788, axiom,  ![X541, X84]:(((p__d__instance(X84,c__Object)&p__d__instance(X541,c__Bubble))&p__interiorPart(X84,X541))=>p__attribute(X84,c__Gas))).
+fof(typeA64, axiom,  ![X1038, X1039]:(p__contains(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__SelfConnectedObject)))).
+fof(miloA722, axiom,  p__d__subclass(c__FluidContainer,c__Container)).
+fof(mergeA2313, axiom,  p__d__subclass(c__AutonomicProcess,c__PhysiologicProcess)).
+fof(mergeA2314, axiom,  p__d__disjoint(c__AutonomicProcess,c__IntentionalProcess)).
+fof(mergeA2324, axiom,  p__d__subclass(c__Breathing,c__AutonomicProcess)).
+fof(mergeA2332, axiom,  p__d__subclass(c__Digesting,c__AutonomicProcess)).
+fof(mergeA2318, axiom,  p__d__subclass(c__OrganismProcess,c__PhysiologicProcess)).
+fof(mergeA2319, axiom,  p__d__subclass(c__Birth,c__OrganismProcess)).
+fof(mergeA2321, axiom,  p__d__subclass(c__Death,c__OrganismProcess)).
+fof(mergeA2323, axiom,  p__d__subclass(c__Breathing,c__OrganismProcess)).
+fof(mergeA2331, axiom,  p__d__subclass(c__Digesting,c__OrganismProcess)).
+fof(mergeA2336, axiom,  p__d__subclass(c__Replication,c__OrganismProcess)).
+fof(mergeA3011, axiom,  ![X45, X244]:(((p__d__instance(X45,c__AnimalSubstance)&p__d__instance(X244,c__Organism))&p__part(X45,X244))=>p__d__instance(X244,c__Animal))).
+fof(mergeA3068, axiom,  p__d__subclass(c__Muscle,c__AnimalSubstance)).
+fof(mergeA3013, axiom,  ![X45, X412]:(((p__d__instance(X45,c__PlantSubstance)&p__d__instance(X412,c__Organism))&p__part(X45,X412))=>p__d__instance(X412,c__Plant))).
+fof(miloA1327, axiom,  p__d__subclass(c__Alkaloid,c__PlantSubstance)).
+fof(mergeA3015, axiom,  p__d__subclass(c__Hormone,c__BiologicallyActiveSubstance)).
+fof(mergeA3016, axiom,  ![X413]:(p__d__instance(X413,c__Hormone)=>?[X46, X414]:(((p__d__instance(X46,c__Process)&p__d__instance(X414,c__Gland))&p__instrument(X46,X414))&p__result(X46,X413)))).
+fof(miloA1553, axiom,  ![X721]:(p__d__instance(X721,c__BloodVessel)=>?[X722, X268]:(((p__d__instance(X722,c__Blood)&p__d__instance(X268,c__Transfer))&p__patient(X268,X722))&p__instrument(X268,X721)))).
+fof(miloA1585, axiom,  ![X724]:(p__d__instance(X724,c__Heart)=>?[X268, X722]:(((p__d__instance(X268,c__Transfer)&p__d__instance(X722,c__Blood))&p__instrument(X268,X724))&p__patient(X268,X722)))).
+fof(miloA337, axiom,  ![X1]:(p__d__instance(X1,c__Excrement)=>?[X64, X228]:(((p__d__instance(X228,c__Organism)&p__d__instance(X64,c__PhysiologicProcess))&p__result(X64,X1))&p__agent(X64,X228)))).
+fof(miloA338, axiom,  p__d__subclass(c__Feces,c__Excrement)).
+fof(miloA341, axiom,  p__d__subclass(c__Urine,c__Excrement)).
+fof(miloA345, axiom,  ![X64]:(p__d__instance(X64,c__Excretion)=>?[X228, X551, X41]:(((((p__d__instance(X228,c__Organism)&p__agent(X64,X228))&p__patient(X64,X551))&p__d__instance(X551,c__Excrement))&p__d__instance(X41,c__BodyPart))&p__instrument(X64,X41)))).
+fof(miloA1511, axiom,  ![X45]:(p__d__instance(X45,c__LiquidBodySubstance)=>p__attribute(X45,c__Liquid))).
+fof(miloA1514, axiom,  p__d__subclass(c__TearSubstance,c__LiquidBodySubstance)).
+fof(miloA1517, axiom,  p__d__subclass(c__Milk,c__LiquidBodySubstance)).
+fof(mergeA2942, axiom,  p__d__subclass(c__Vertebrate,c__Animal)).
+fof(mergeA2953, axiom,  p__d__subclass(c__ColdBloodedVertebrate,c__Vertebrate)).
+fof(miloA1716, axiom,  ![X746]:(p__d__instance(X746,c__Limb)=>?[X749]:(p__d__instance(X749,c__Vertebrate)&p__part(X746,X749)))).
+fof(miloA1440, axiom,  p__d__subclass(c__Cellulose,c__PlantSubstance)).
+fof(miloA1441, axiom,  p__d__subclass(c__Cellulose,c__Carbohydrate)).
+fof(miloA1430, axiom,  p__d__subclass(c__WoodArtifact,c__Artifact)).
+fof(miloA1392, axiom,  ![X704]:(p__d__instance(X704,c__Field)=>![X705]:(~(p__d__instance(X705,c__Physical))|~(p__d__instance(X705,c__BotanicalTree))|~(p__located(X705,X704))))).
+fof(miloA1436, axiom,  ![X73]:(p__d__instance(X73,c__Rubber)=>?[X272]:(p__d__instance(X272,c__BotanicalTree)&p__part(X73,X272)))).
+fof(miloA1473, axiom,  p__d__subclass(c__BotanicalTree,c__FloweringPlant)).
+fof(miloA3029, axiom,  ![X84]:((p__d__instance(X84,c__Agent)&p__attribute(X84,c__Carpenter))=>p__hasSkill(c__Carpentry,X84))).
+fof(miloA3030, axiom,  p__d__subclass(c__Carpentry,c__Making)).
+fof(mergeA2348, axiom,  ![X106, X228]:(((p__d__instance(X228,c__Agent)&p__d__instance(X106,c__PathologicProcess))&p__experiencer(X106,X228))=>?[X41, X245]:(((p__d__instance(X41,c__Object)&p__part(X41,X228))&p__d__instance(X245,c__DiseaseOrSyndrome))&p__attribute(X41,X245)))).
+fof(mergeA3695, axiom,  p__d__subclass(c__DiseaseOrSyndrome,c__BiologicalAttribute)).
+fof(mergeA2346, axiom,  p__d__subclass(c__PathologicProcess,c__BiologicalProcess)).
+fof(mergeA2347, axiom,  p__d__disjoint(c__PathologicProcess,c__PhysiologicProcess)).
+fof(mergeA2349, axiom,  p__d__subclass(c__Injuring,c__PathologicProcess)).
+fof(miloA1458, axiom,  ![X534]:(p__d__instance(X534,c__Lesion)=>?[X120]:(p__d__instance(X120,c__Injuring)&p__result(X120,X534)))).
+fof(miloA1459, axiom,  ![X534]:(p__d__instance(X534,c__Lesion)=>?[X215, X169]:(((p__d__instance(X215,c__SelfConnectedObject)&p__surface(X215,X169))&p__d__instance(X169,c__Organ))&p__located(X534,X215)))).
+fof(mergeA248, axiom,  p__d__subclass(c__Mixture,c__Substance)).
+fof(mergeA2630, axiom,  p__d__subclass(c__ChemicalProcess,c__InternalChange)).
+fof(mergeA2631, axiom,  p__d__partition3(c__ChemicalProcess,c__ChemicalSynthesis,c__ChemicalDecomposition)).
+fof(mergeA2633, axiom,  p__d__subclass(c__ChemicalSynthesis,c__ChemicalProcess)).
+fof(mergeA2637, axiom,  p__d__subclass(c__ChemicalDecomposition,c__ChemicalProcess)).
+fof(mergeA334, axiom,  p__d__partition4(c__Attribute,c__InternalAttribute,c__RelationalAttribute,c__PerceptualAttribute)).
+fof(mergeA2782, axiom,  p__d__subclass(c__SoundAttribute,c__PerceptualAttribute)).
+fof(mergeA3573, axiom,  p__d__subclass(c__PerceptualAttribute,c__Attribute)).
+fof(mergeA3602, axiom,  p__d__subclass(c__TextureAttribute,c__PerceptualAttribute)).
+fof(mergeA3583, axiom,  p__d__subclass(c__PrimaryColor,c__ColorAttribute)).
+fof(mergeA3589, axiom,  p__d__instance(c__Monochromatic,c__ColorAttribute)).
+fof(mergeA3592, axiom,  p__d__instance(c__Polychromatic,c__ColorAttribute)).
+fof(mergeA3594, axiom,  ![X27]:((p__d__instance(X27,c__Object)&p__attribute(X27,c__Polychromatic))=>?[X211, X212, X500, X501]:((((((((p__d__instance(X211,c__Object)&p__d__instance(X212,c__Object))&p__superficialPart(X211,X27))&p__superficialPart(X212,X27))&p__attribute(X211,X500))&p__attribute(X212,X501))&p__d__instance(X500,c__ColorAttribute))&p__d__instance(X501,c__ColorAttribute))&~(X500=X501)))).
+fof(miloA2813, axiom,  p__d__subclass(c__SecondaryColor,c__ColorAttribute)).
+fof(mergeA2334, axiom,  ![X234]:(p__d__instance(X234,c__Digesting)=>?[X236]:(p__d__instance(X236,c__ChemicalDecomposition)&p__subProcess(X236,X234)))).
+fof(mergeA2638, axiom,  p__d__subclass(c__ChemicalDecomposition,c__Separating)).
+fof(mergeA2639, axiom,  ![X42, X43, X64]:(((((p__d__instance(X64,c__Process)&p__resource(X64,X42))&p__result(X64,X43))&p__d__instance(X42,c__CompoundSubstance))&p__d__instance(X43,c__ElementalSubstance))=>p__d__instance(X64,c__ChemicalDecomposition))).
+fof(mergeA2642, axiom,  p__d__instance(c__Flammable,c__PhysicalAttribute)).
+fof(miloA263, axiom,  ![X1]:(p__d__instance(X1,c__FossilFuel)=>p__attribute(X1,c__Flammable))).
+fof(miloA3228, axiom,  p__d__subclass(c__Arson,c__Fire)).
+fof(miloA4012, axiom,  ![X1]:(p__d__instance(X1,c__FireSprinklerSystem)=>?[X1003, X308, X1004]:((((((p__d__instance(X308,c__Discovering)&p__d__instance(X1003,c__Fire))&p__instrument(X308,X1))&p__patient(X308,X1003))&p__d__instance(X1004,c__WaterMotion))&p__origin(X1004,X1))&p__causes(X308,X1004)))).
+fof(mergeA2789, axiom,  p__d__subclass(c__Radiating,c__Motion)).
+fof(mergeA2794, axiom,  p__d__subclass(c__RadiatingSound,c__Radiating)).
+fof(miloA418, axiom,  p__d__subclass(c__PowerSource,c__Device)).
+fof(mergeA220, axiom,  p__d__instance(c__contains,c__SpatialRelation)).
+fof(mergeA221, axiom,  p__d__instance(c__contains,c__AsymmetricRelation)).
+fof(mergeA222, axiom,  p__disjointRelation(c__contains,c__part)).
+fof(schemaBinaryRelationA65, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Object)&p__d__instance(X1033,c__SelfConnectedObject))=>(p__d__holds3(c__contains,X1033,X1034)<=>p__contains(X1033,X1034)))).
+fof(mergeA997, axiom,  p__d__instance(c__eventPartlyLocated,c__CaseRole)).
+fof(mergeA1004, axiom,  p__subrelation(c__eventLocated,c__eventPartlyLocated)).
+fof(schemaBinaryRelationA36, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Object)&p__d__instance(X1033,c__Process))=>(p__d__holds3(c__eventPartlyLocated,X1033,X1034)<=>p__eventPartlyLocated(X1033,X1034)))).
+fof(miloA453, axiom,  p__d__instance(c__Flat,c__ShapeAttribute)).
+fof(mergeA3613, axiom,  p__d__subclass(c__OpenTwoDimensionalFigure,c__TwoDimensionalFigure)).
+fof(mergeA3614, axiom,  p__d__subclass(c__TwoDimensionalAngle,c__OpenTwoDimensionalFigure)).
+fof(miloA768, axiom,  ![X611, X168]:(((p__d__instance(X168,c__TwoDimensionalAngle)&p__d__instance(X611,c__Rectangle))&p__angleOfFigure(X168,X611))=>p__d__instance(X168,c__RightAngle))).
+fof(miloA769, axiom,  p__d__subclass(c__Square,c__Rectangle)).
+fof(mergeA2554, axiom,  ![X304]:(p__d__instance(X304,c__CommercialService)=>?[X66]:(p__d__instance(X66,c__CommercialAgent)&p__agent(X304,X66)))).
+fof(mergeA3220, axiom,  p__d__subclass(c__CommercialAgent,c__Agent)).
+fof(miloA1185, axiom,  ![X669, X670]:((((p__d__instance(X669,c__CognitiveAgent)&p__d__instance(X670,c__CognitiveAgent))&p__d__instance(X669,c__WholesaleStore))&p__customer(X670,X669))=>p__d__instance(X670,c__CommercialAgent))).
+fof(miloA1526, axiom,  p__d__subclass(c__AlcoholicBeverage,c__Beverage)).
+fof(miloA1527, axiom,  p__d__subclass(c__AlcoholicBeverage,c__Depressant)).
+fof(mergeA2559, axiom,  p__d__subclass(c__Selling,c__FinancialTransaction)).
+fof(mergeA2560, axiom,  ![X293, X294, X77]:((p__d__instance(X294,c__Agent)&p__d__instance(X293,c__Agent))=>(?[X305]:(((p__d__instance(X305,c__Buying)&p__agent(X305,X294))&p__origin(X305,X293))&p__patient(X305,X77))<=>?[X306]:(((p__d__instance(X306,c__Selling)&p__agent(X306,X293))&p__destination(X306,X294))&p__patient(X306,X77))))).
+fof(mergeA2561, axiom,  ![X306, X66]:(((p__d__instance(X66,c__Agent)&p__d__instance(X306,c__Selling))&p__agent(X306,X66))=>p__origin(X306,X66))).
+fof(miloA1188, axiom,  ![X1]:(p__d__instance(X1,c__RetailStore)=>p__capability(c__Selling,c__agent,X1))).
+fof(mergeA2552, axiom,  p__d__subclass(c__CommercialService,c__FinancialTransaction)).
+fof(mergeA2553, axiom,  p__d__subclass(c__CommercialService,c__ServiceProcess)).
+fof(miloA4200, axiom,  p__d__subclass(c__NightClub,c__DanceHall)).
+fof(miloA1581, axiom,  ![X725]:(p__d__instance(X725,c__Nose)=>?[X119, X118]:((((p__d__instance(X119,c__Nostril)&p__d__instance(X118,c__Nostril))&~(X119=X118))&p__connected(X119,X725))&p__connected(X118,X725)))).
+fof(miloA1679, axiom,  p__d__subclass(c__Nose,c__Organ)).
+fof(miloA1680, axiom,  p__d__subclass(c__Nose,c__AnimalAnatomicalStructure)).
+fof(miloA1681, axiom,  ![X725]:(p__d__instance(X725,c__Nose)=>p__capability(c__Smelling,c__instrument,X725))).
+fof(miloA1762, axiom,  p__d__subclass(c__Head,c__AnimalAnatomicalStructure)).
+fof(miloA1763, axiom,  p__d__subclass(c__Head,c__BodyPart)).
+fof(miloA1766, axiom,  ![X758]:(p__d__instance(X758,c__Neck)=>?[X615]:(p__d__instance(X615,c__Head)&p__connected(X758,X615)))).
+fof(miloA1786, axiom,  p__d__subclass(c__FacialExpression,c__Gesture)).
+fof(miloA1793, axiom,  p__d__subclass(c__Laughing,c__FacialExpression)).
+fof(miloA1579, axiom,  p__d__subclass(c__Nostril,c__BodyVessel)).
+fof(miloA1580, axiom,  p__d__subclass(c__Nostril,c__AnimalAnatomicalStructure)).
+fof(miloA1551, axiom,  p__d__subclass(c__BloodVessel,c__BodyVessel)).
+fof(miloA1661, axiom,  p__d__subclass(c__Intestine,c__BodyVessel)).
+fof(mergeA2327, axiom,  p__d__subclass(c__Eating,c__Ingesting)).
+fof(mergeA2328, axiom,  ![X231, X232]:(((p__d__instance(X232,c__Object)&p__d__instance(X231,c__Eating))&p__resource(X231,X232))=>p__attribute(X232,c__Solid))).
+fof(mergeA2968, axiom,  ![X402, X403, X404]:((((p__d__instance(X402,c__Carnivore)&p__d__instance(X403,c__Eating))&p__agent(X403,X402))&p__patient(X403,X404))=>p__d__instance(X404,c__Animal))).
+fof(miloA2935, axiom,  ![X464, X546, X543]:((((p__d__instance(X464,c__Herbivore)&p__agent(X546,X464))&p__d__instance(X546,c__Eating))&p__patient(X546,X543))=>p__d__instance(X543,c__Plant))).
+fof(mergeA3494, axiom,  p__d__subclass(c__SocialRole,c__RelationalAttribute)).
+fof(mergeA3495, axiom,  ![X495, X348]:(((p__d__instance(X348,c__Object)&p__attribute(X348,X495))&p__d__instance(X495,c__SocialRole))=>p__d__instance(X348,c__Human))).
+fof(mergeA3498, axiom,  p__d__subclass(c__Position,c__SocialRole)).
+fof(predefinitionsA24, axiom,  ((((![X7, X8, X9]:(p__d__disjointDecomposition3(X7,X8,X9)<=>p__d__disjoint(X8,X9))&![X7, X8, X9, X10]:(p__d__disjointDecomposition4(X7,X8,X9,X10)<=>((p__d__disjoint(X8,X9)&p__d__disjoint(X8,X10))&p__d__disjoint(X9,X10))))&![X7, X8, X9, X10, X11]:(p__d__disjointDecomposition5(X7,X8,X9,X10,X11)<=>(((((p__d__disjoint(X8,X9)&p__d__disjoint(X8,X10))&p__d__disjoint(X8,X11))&p__d__disjoint(X9,X10))&p__d__disjoint(X9,X11))&p__d__disjoint(X10,X11))))&![X7, X8, X9, X10, X11, X12]:(p__d__disjointDecomposition6(X7,X8,X9,X10,X11,X12)<=>(((((((((p__d__disjoint(X8,X9)&p__d__disjoint(X8,X10))&p__d__disjoint(X8,X11))&p__d__disjoint(X8,X12))&p__d__disjoint(X9,X10))&p__d__disjoint(X9,X11))&p__d__disjoint(X9,X12))&p__d__disjoint(X10,X11))&p__d__disjoint(X10,X12))&p__d__disjoint(X11,X12))))&![X7, X8, X9, X10, X11, X12, X13]:(p__d__disjointDecomposition7(X7,X8,X9,X10,X11,X12,X13)<=>((((((((((((((p__d__disjoint(X8,X9)&p__d__disjoint(X8,X10))&p__d__disjoint(X8,X11))&p__d__disjoint(X8,X12))&p__d__disjoint(X8,X13))&p__d__disjoint(X9,X10))&p__d__disjoint(X9,X11))&p__d__disjoint(X9,X12))&p__d__disjoint(X9,X13))&p__d__disjoint(X10,X11))&p__d__disjoint(X10,X12))&p__d__disjoint(X10,X13))&p__d__disjoint(X11,X12))&p__d__disjoint(X11,X13))&p__d__disjoint(X12,X13))))).
+fof(predefinitionsA21, axiom,  ((((![X7, X8, X9]:(p__d__exhaustiveDecomposition3(X7,X8,X9)<=>![X1]:(p__d__instance(X1,X7)=>(p__d__instance(X1,X8)|p__d__instance(X1,X9))))&![X7, X8, X9, X10]:(p__d__exhaustiveDecomposition4(X7,X8,X9,X10)<=>![X1]:(p__d__instance(X1,X7)=>(p__d__instance(X1,X8)|p__d__instance(X1,X9)|p__d__instance(X1,X10)))))&![X7, X8, X9, X10, X11]:(p__d__exhaustiveDecomposition5(X7,X8,X9,X10,X11)<=>![X1]:(p__d__instance(X1,X7)=>(p__d__instance(X1,X8)|p__d__instance(X1,X9)|p__d__instance(X1,X10)|p__d__instance(X1,X11)))))&![X7, X8, X9, X10, X11, X12]:(p__d__exhaustiveDecomposition6(X7,X8,X9,X10,X11,X12)<=>![X1]:(p__d__instance(X1,X7)=>(p__d__instance(X1,X8)|p__d__instance(X1,X9)|p__d__instance(X1,X10)|p__d__instance(X1,X11)|p__d__instance(X1,X12)))))&![X7, X8, X9, X10, X11, X12, X13]:(p__d__exhaustiveDecomposition7(X7,X8,X9,X10,X11,X12,X13)<=>![X1]:(p__d__instance(X1,X7)=>(p__d__instance(X1,X8)|p__d__instance(X1,X9)|p__d__instance(X1,X10)|p__d__instance(X1,X11)|p__d__instance(X1,X12)|p__d__instance(X1,X13)))))).
+fof(mergeA2703, axiom,  p__d__partition7(c__Communication,c__Stating,c__Supposing,c__Directing,c__Committing,c__Expressing,c__Declaring)).
+fof(mergeA331, axiom,  p__d__disjointDecomposition6(c__Abstract,c__Quantity,c__Attribute,c__SetOrClass,c__Relation,c__Proposition)).
+fof(miloA1962, axiom,  p__d__disjointDecomposition6(c__Sentence,c__Statement,c__Supposition,c__Question,c__Request,c__Order)).
+fof(mergeA2948, axiom,  p__d__disjointDecomposition5(c__Arthropod,c__Arachnid,c__Myriapod,c__Insect,c__Crustacean)).
+fof(mergeA3608, axiom,  p__d__partition5(c__GeometricFigure,c__GeometricPoint,c__OneDimensionalFigure,c__TwoDimensionalFigure,c__ThreeDimensionalFigure)).
+fof(miloA2768, axiom,  p__d__partition5(c__SeasonOfYear,c__WinterSeason,c__SpringSeason,c__SummerSeason,c__FallSeason)).
+fof(mergeA579, axiom,  p__d__partition4(c__Relation,c__Predicate,c__Function,c__List)).
+fof(mergeA2908, axiom,  p__d__partition4(c__Organism,c__Animal,c__Plant,c__Microorganism)).
+fof(miloA1776, axiom,  p__d__disjointDecomposition3(c__Expressing,c__ExpressingApproval,c__ExpressingDisapproval)).
+fof(miloA2437, axiom,  p__d__disjointDecomposition3(c__GameArtifact,c__GameBoard,c__GamePiece)).
+fof(mergeA3089, axiom,  p__d__subclass(c__PrepositionalPhrase,c__Phrase)).
+fof(mergeA2514, axiom,  p__d__subclass(c__Guiding,c__IntentionalProcess)).
+fof(mergeA2517, axiom,  p__d__subclass(c__EducationalProcess,c__Guiding)).
+fof(miloA3567, axiom,  p__d__subclass(c__AchievingControl,c__Guiding)).
+fof(miloA1072, axiom,  ![X380]:(p__d__instance(X380,c__Welfare)=>?[X169]:(p__d__instance(X169,c__ServiceOrganization)&p__agent(X380,X169)))).
+fof(miloA1306, axiom,  p__d__subclass(c__ServiceOrganization,c__Organization)).
+fof(mergeA975, axiom,  ![X64, X66]:(((p__d__instance(X66,c__Agent)&p__d__subclass(X64,c__Process))&p__hasSkill(X64,X66))=>p__capability(X64,c__agent,X66))).
+fof(schemaBinaryRelationA88, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Agent)&p__d__subclass(X1033,c__Process))=>(p__d__holds3(c__hasSkill,X1033,X1034)<=>p__hasSkill(X1033,X1034)))).
+fof(typeA87, axiom,  ![X1038, X1039]:(p__hasSkill(X1038,X1039)=>(p__d__instance(X1039,c__Agent)&p__d__subclass(X1038,c__Process)))).
+fof(miloA3054, axiom,  p__d__instance(c__PoliceOfficer,c__SkilledOccupation)).
+fof(miloA3055, axiom,  p__d__instance(c__PoliceOfficer,c__GovernmentPosition)).
+fof(miloA574, axiom,  p__d__subclass(c__VehicleTire,c__Artifact)).
+fof(miloA593, axiom,  p__d__subclass(c__Axle,c__Device)).
+fof(mergeA2571, axiom,  p__d__subclass(c__Selecting,c__IntentionalPsychologicalProcess)).
+fof(miloA2337, axiom,  p__d__subclass(c__GameCall,c__Declaring)).
+fof(miloA2338, axiom,  ![X859]:(p__d__instance(X859,c__GameCall)=>?[X860]:(p__d__instance(X860,c__Game)&p__refers(X859,X860)))).
+fof(mergeA753, axiom,  ![X66, X76]:(((p__d__instance(X76,c__Formula)&p__d__instance(X66,c__CognitiveAgent))&p__knows(X66,X76))=>p__believes(X66,X76))).
+fof(mergeA3343, axiom,  ![X473]:(p__d__instance(X473,c__BeliefGroup)=>?[X487]:(p__d__instance(X487,c__Formula)&![X474]:(((p__d__instance(X474,c__SelfConnectedObject)&p__d__instance(X474,c__CognitiveAgent))&p__member(X474,X473))=>p__believes(X474,X487))))).
+fof(schemaBinaryRelationA52, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Formula)&p__d__instance(X1033,c__CognitiveAgent))=>(p__d__holds3(c__believes,X1033,X1034)<=>p__believes(X1033,X1034)))).
+fof(typeA51, axiom,  ![X1038, X1039]:(p__believes(X1038,X1039)=>(p__d__instance(X1039,c__Formula)&p__d__instance(X1038,c__CognitiveAgent)))).
+fof(mergeA3107, axiom,  ![X66, X434]:(((p__d__subclass(X434,c__Text)&p__d__instance(X66,c__Agent))&p__authors(X66,X434))=>?[X46, X206]:(((p__d__instance(X46,c__Process)&p__agent(X46,X66))&p__d__instance(X206,X434))&p__result(X46,X206)))).
+fof(typeA119, axiom,  ![X1038, X1039]:(p__authors(X1038,X1039)=>(p__d__subclass(X1039,c__Text)&p__d__instance(X1038,c__Agent)))).
+fof(mergeA3096, axiom,  p__d__subclass(c__FactualText,c__Text)).
+fof(mergeA3097, axiom,  p__d__disjoint(c__FactualText,c__FictionalText)).
+fof(mergeA3099, axiom,  p__d__subclass(c__FictionalText,c__Text)).
+fof(miloA2045, axiom,  p__d__disjoint(c__Article,c__Book)).
+fof(miloA2046, axiom,  ![X814, X815]:(((p__d__instance(X814,c__Article)&p__d__instance(X815,c__Book))&p__subsumesContentInstance(X815,X814))=>?[X816]:((p__d__instance(X816,c__Article)&~(X816=X814))&p__subsumesContentInstance(X815,X816)))).
+fof(miloA2035, axiom,  p__d__subclass(c__Series,c__Text)).
+fof(miloA2043, axiom,  p__d__subclass(c__Periodical,c__Series)).
+fof(miloA4257, axiom,  p__d__subclass(c__Oxygen,c__ElementalSubstance)).
+fof(miloA4258, axiom,  p__atomicNumber(c__Oxygen,c__8)).
+fof(mergeA2634, axiom,  p__d__subclass(c__ChemicalSynthesis,c__Combining)).
+fof(mergeA2239, axiom,  ![X40, X39, X41]:((((p__d__instance(X39,c__Object)&p__d__instance(X40,c__Object))&X40=f__MereologicalComplementFn1(X39))&p__d__instance(X41,c__Object))=>((p__part(X41,X39)<=>~(p__overlapsSpatially(X41,X40)))&(p__part(X41,X40)<=>~(p__overlapsSpatially(X41,X39)))))).
+fof(mergeA2240, axiom,  ![X27]:(p__d__instance(X27,c__Object)=>X27=f__MereologicalComplementFn1(f__MereologicalComplementFn1(X27)))).
+fof(mergeA2241, axiom,  ![X39, X40, X41]:((((p__d__instance(X39,c__Object)&p__d__instance(X40,c__Object))&X40=f__MereologicalComplementFn1(X39))&p__d__instance(X41,c__Object))=>(p__overlapsSpatially(X41,X39)|p__overlapsSpatially(X41,X40)))).
+fof(mergeA2243, axiom,  ![X39, X40]:((p__d__instance(X39,c__Object)&p__d__instance(X40,c__Object))=>f__MereologicalProductFn2(X39,f__MereologicalComplementFn1(X39))=f__MereologicalProductFn2(X40,f__MereologicalComplementFn1(X40)))).
+fof(mergeA2223, axiom,  ![X107, X39, X40, X41]:(((((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__d__instance(X107,c__Object))&X107=f__MereologicalProductFn2(X39,X40))&p__d__instance(X41,c__Object))=>(p__part(X41,X107)<=>(p__part(X41,X39)&p__part(X41,X40))))).
+fof(mergeA2224, axiom,  ![X40, X39]:((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))=>f__MereologicalProductFn2(X39,X40)=f__MereologicalProductFn2(X40,X39))).
+fof(mergeA2225, axiom,  ![X39, X40]:((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))=>f__MereologicalProductFn2(X39,X40)=f__MereologicalProductFn2(f__MereologicalProductFn2(X39,X40),X40))).
+fof(miloA1433, axiom,  p__d__subclass(c__Rubber,c__PlantSubstance)).
+fof(miloA1434, axiom,  p__d__subclass(c__Rubber,c__BodySubstance)).
+fof(mergeA1167, axiom,  ![X23]:(p__d__instance(X23,c__Integer)=>f__SuccessorFn1(X23)=f__AdditionFn2(X23,c__1))).
+fof(mergeA3481, axiom,  ![X186, X185]:(((p__d__instance(X185,c__TimePosition)&p__d__instance(X186,c__TimePosition))&f__RelativeTimeFn2(X185,c__PacificTimeZone)=X186)=>X186=f__AdditionFn2(X185,c__8))).
+fof(mergeA3483, axiom,  ![X186, X185]:(((p__d__instance(X185,c__TimePosition)&p__d__instance(X186,c__TimePosition))&f__RelativeTimeFn2(X185,c__MountainTimeZone)=X186)=>X186=f__AdditionFn2(X185,c__7))).
+fof(mergeA3487, axiom,  ![X186, X185]:(((p__d__instance(X185,c__TimePosition)&p__d__instance(X186,c__TimePosition))&f__RelativeTimeFn2(X185,c__EasternTimeZone)=X186)=>X186=f__AdditionFn2(X185,c__5))).
+fof(mergeA3484, axiom,  p__d__instance(c__CentralTimeZone,c__TimeZone)).
+fof(mergeA2479, axiom,  p__d__subclass(c__Uncovering,c__Removing)).
+fof(miloA857, axiom,  p__d__subclass(c__RemovingClothing,c__Uncovering)).
+fof(mergeA2590, axiom,  ![X66, X27, X312]:((((p__d__instance(X66,c__Agent)&p__d__instance(X312,c__Keeping))&p__agent(X312,X66))&p__patient(X312,X27))=>?[X275]:(((p__d__instance(X275,c__Putting)&p__agent(X275,X66))&p__patient(X275,X27))&p__earlier(f__WhenFn1(X275),f__WhenFn1(X312))))).
+fof(miloA1676, axiom,  p__d__subclass(c__Eyelid,c__Skin)).
+fof(miloA2908, axiom,  ![X464, X927]:(((p__d__instance(X464,c__Agent)&p__d__instance(X927,c__EyeMotion))&p__agent(X927,X464))=>?[X546]:((p__d__instance(X546,c__Eyelid)&p__part(X546,X464))&p__patient(X927,X546)))).
+fof(miloA2597, axiom,  p__d__subclass(c__Burying,c__Putting)).
+fof(mergeA2178, axiom,  ![X40, X39]:(((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__superficialPart(X39,X40))=>(~(p__interiorPart(X39,X40))&![X107]:(~(p__d__instance(X107,c__Object))|~(p__interiorPart(X107,X39)))))).
+fof(mergeA2187, axiom,  ![X40, X39, X41]:(((((p__d__instance(X40,c__Object)&p__d__instance(X39,c__Object))&p__d__instance(X41,c__Object))&p__interiorPart(X39,X40))&p__superficialPart(X41,X40))=>~(p__overlapsSpatially(X39,X41)))).
+fof(schemaBinaryRelationA200, axiom,  ![X1033, X1034]:((p__d__instance(X1034,c__Object)&p__d__instance(X1033,c__Object))=>(p__d__holds3(c__superficialPart,X1033,X1034)<=>p__superficialPart(X1033,X1034)))).
+fof(typeA198, axiom,  ![X1038, X1039]:(p__superficialPart(X1038,X1039)=>(p__d__instance(X1039,c__Object)&p__d__instance(X1038,c__Object)))).
+fof(miloA1542, axiom,  p__d__subclass(c__Skin,c__BodyCovering)).
+fof(miloA1543, axiom,  p__d__subclass(c__Skin,c__AnimalAnatomicalStructure)).
+fof(mergeA2993, axiom,  p__d__subclass(c__LiquidMixture,c__Mixture)).
+fof(mergeA2995, axiom,  ![X407]:(p__d__instance(X407,c__LiquidMixture)=>?[X41]:((p__d__instance(X41,c__Object)&p__part(X41,X407))&p__attribute(X41,c__Liquid)))).
+fof(mergeA2999, axiom,  p__d__disjoint(c__GasMixture,c__LiquidMixture)).
+fof(miloA516, axiom,  p__d__subclass(c__WatercolorPicture,c__PaintedPicture)).
+fof(miloA539, axiom,  p__d__disjoint(c__OilPicture,c__WatercolorPicture)).
+fof(miloA258, axiom,  p__d__subclass(c__PetroleumProduct,c__Oil)).
+fof(miloA1360, axiom,  p__d__subclass(c__Oil,c__Solution)).
+fof(miloA1361, axiom,  ![X692]:(p__d__instance(X692,c__Oil)=>![X407, X267]:(~(p__d__instance(X407,c__Object))|~(p__d__instance(X267,c__Object))|~(p__d__instance(X407,c__Mixture))|~(p__part(X267,X407))|~(p__d__instance(X267,c__Water))|~(p__part(X692,X407))))).
+fof(miloA538, axiom,  p__d__subclass(c__OilPicture,c__PaintedPicture)).
+fof(mergeA3380, axiom,  p__d__subclass(c__FieldOfStudy,c__Proposition)).
+fof(miloA3821, axiom,  p__d__instance(c__floorCode,c__BinaryPredicate)).
+fof(miloA3818, axiom,  p__d__instance(c__unitNumber,c__BinaryPredicate)).
+fof(mergeA1083, axiom,  p__d__instance(c__refers,c__BinaryPredicate)).
+fof(mergeA1090, axiom,  p__subrelation(c__represents,c__refers)).
+fof(miloA3540, axiom,  p__subrelation(c__deceptiveIdentifier,c__refers)).
+fof(schemaBinaryRelationA310, axiom,  ![X1033, X1034]:(p__d__holds3(c__refers,X1033,X1034)<=>p__refers(X1033,X1034))).
+fof(mergeA2408, axiom,  p__d__subclass(c__Decreasing,c__QuantityChange)).
+fof(mergeA2411, axiom,  p__d__subclass(c__Cooling,c__Decreasing)).
+fof(miloA2477, axiom,  p__d__subclass(c__Decelerating,c__Decreasing)).
+fof(mergeA2400, axiom,  p__d__subclass(c__QuantityChange,c__InternalChange)).
+fof(mergeA2309, axiom,  p__d__subclass(c__BiologicalProcess,c__InternalChange)).
+fof(mergeA2603, axiom,  p__d__subclass(c__Damaging,c__InternalChange)).
+fof(mergeA2644, axiom,  p__d__subclass(c__InternalChange,c__Process)).
+fof(mergeA2670, axiom,  p__d__subclass(c__Creation,c__InternalChange)).
+fof(mergeA2829, axiom,  ![X382]:(p__d__instance(X382,c__Boiling)=>?[X327]:(p__d__instance(X327,c__Heating)&p__subProcess(X327,X382)))).
+fof(miloA4036, axiom,  ![X1006]:(p__d__instance(X1006,c__Steam)=>?[X382, X267]:((((p__d__instance(X382,c__Boiling)&p__d__instance(X267,c__Water))&p__patient(X382,X267))&p__result(X382,X1006))&p__attribute(X1006,c__Gas)))).
+fof(mergeA2614, axiom,  p__d__subclass(c__Attaching,c__DualObjectProcess)).
+fof(mergeA2615, axiom,  p__d__disjoint(c__Attaching,c__Detaching)).
+fof(mergeA2618, axiom,  ![X319]:(p__d__instance(X319,c__Attaching)=>?[X27]:(p__d__instance(X27,c__CorpuscularObject)&p__patient(X319,X27)))).
+fof(mergeA3194, axiom,  ![X289]:(p__d__instance(X289,c__AttachingDevice)=>?[X319]:(p__d__instance(X319,c__Attaching)&p__instrument(X319,X289)))).
+fof(miloA1376, axiom,  p__d__subclass(c__MetallicAlloy,c__Mixture)).
+fof(miloA1377, axiom,  ![X693]:(p__d__instance(X693,c__MetallicAlloy)=>?[X694, X695]:((((p__d__instance(X694,c__Metal)&p__d__instance(X695,c__Metal))&~(X694=X695))&p__part(X694,X693))&p__part(X695,X693)))).
+fof(miloA874, axiom,  p__d__subclass(c__SolderingIron,c__ElectricDevice)).
+fof(miloA876, axiom,  ![X627]:(p__d__instance(X627,c__SolderingIron)=>?[X1]:((p__d__instance(X1,c__CorpuscularObject)&p__part(X1,X627))&p__material(c__Metal,X1)))).
+fof(mergeA3659, axiom,  p__d__subclass(c__BiologicalAttribute,c__InternalAttribute)).
+fof(mergeA3661, axiom,  p__d__subclass(c__BodyPosition,c__BiologicalAttribute)).
+fof(mergeA3681, axiom,  p__d__subclass(c__DevelopmentalAttribute,c__BiologicalAttribute)).
+fof(mergeA3696, axiom,  p__d__subclass(c__PsychologicalAttribute,c__BiologicalAttribute)).
+fof(mergeA2922, axiom,  p__d__subclass(c__Plant,c__Organism)).
+fof(mergeA2923, axiom,  p__d__subclass(c__FloweringPlant,c__Plant)).
+fof(mergeA2924, axiom,  p__d__subclass(c__NonFloweringPlant,c__Plant)).
+fof(mergeA3047, axiom,  p__d__subclass(c__FruitOrVegetable,c__ReproductiveBody)).

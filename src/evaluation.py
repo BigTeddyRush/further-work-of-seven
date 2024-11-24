@@ -341,7 +341,7 @@ def evaluate(src: str, count: int = None):
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
 
-    tests = [ 20, 40, 60, 80, 100, 120, 140, 160, 180 ]
+    tests = [160]
 
     # write filter to file
     filter_path = "./filter.txt"
@@ -355,7 +355,7 @@ def count_selected(src: str, name: str, b: float, k: int):
         counts = []
         for i, c in enumerate(data.candidates):
             c_name, conjecture = read_tstp_single(c)
-            path = f"./selection/{c_name}.tstp"
+            path = f"./selection/{c_name}_{name}.tstp"
             
             encoded_conjecture = data.encoder.encode_axiom(conjecture)
 
@@ -368,6 +368,8 @@ def count_selected(src: str, name: str, b: float, k: int):
 
             # remove conjectures from selection
             axioms = read_tstp(path, type='axiom')
+            write_tstp(path, axioms)
+
 
             counts.append(len(axioms))
             print(f"(n{n}|{i}) {c}: {len(axioms)}")
@@ -381,8 +383,8 @@ if __name__ == "__main__":
     parser.add_argument('--select')
     args = parser.parse_args()
 
-    evaluate(args.src, args.select)
+    #evaluate(args.src, args.select)
 
-    count_selected(args.src, "b60_k05", b=6.0, k=5)
     count_selected(args.src, "b20_k03", b=2.0, k=3)
     count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
+    count_selected(args.src, "b30_kUU", b=3.0, k=2147483647)
