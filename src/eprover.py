@@ -21,12 +21,11 @@ class ProverResult(Enum):
     TIME_OUT = 3
     PROOF_FOUND = 4
 
-def run_eprover(base: str|list[str], problem: str, args: list[str] = []) -> tuple[ProverResult, str]:
+def run_eprover(base: str|list[str], args: list[str] = []) -> tuple[ProverResult, str]:
     cmd = [
-        'eprover',
-        '-s',
-        '--tstp-format',
-        '--soft-cpu-limit=15'
+        'vampire',
+        '--time_limit', '15s',
+        '--input_syntax', 'tptp'
     ]
     cmd.extend(args)
 
@@ -35,24 +34,10 @@ def run_eprover(base: str|list[str], problem: str, args: list[str] = []) -> tupl
     else:
         cmd.extend(base)
 
-    cmd.append(problem)
-
     with subprocess.Popen(cmd, stdout=subprocess.PIPE) as process:
         output = process.stdout.read()
 
-    if b"status Theorem" in output:
-        return ProverResult.PROOF_FOUND, output
-
-    if b"status ResourceOut" in output:
-        return ProverResult.TIME_OUT, output
-
-    if b"status CounterSatisfiable" in output:
-        return ProverResult.COUNTER_SATISFIABLE, output
-
-    if b"status GaveUp" in output:
-        return ProverResult.GAVE_UP, output
-
-    return ProverResult.ERROR, output
+    return output
 
 def run_e_axfilter(files: str|list[str], filter_path: str, out_path: str):
     cmd = [
