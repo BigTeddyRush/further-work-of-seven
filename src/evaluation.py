@@ -54,19 +54,6 @@ class TestData():
         self.ontology = read_tstp("./adimen.sumo.tstp")
 
 
-def test_seven(data: TestData, **kwargs) -> dict[str, ProverResult]:
-    results = dict()
-    for i, c in enumerate(data.candidates):
-        selection_path = seven_select(c, data.encoder, data.tensors, data.ontology, **kwargs)
-
-        print(f"Test {i}: {c}")
-        result, _ = run_eprover(selection_path, c)
-        print("    ->", result)
-
-        results[c] = result
-
-    return results
-
 def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverResult]:
     # write filter to file
     #filter_path = "./filter.txt"
@@ -85,93 +72,12 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
         
         execution_time = end_time - start_time  # Calculate elapsed time
         print("    ->", result, f"(Time taken: {execution_time:.4f} seconds)")
-        print(type(result))
         result += tuple([execution_time])
         
         results[c] = result
 
     return results
 
-def test_sine(data: TestData, b: float, k: int) -> dict[str, ProverResult]:
-    filter = create_sine_filter(b, k)
-
-    results = dict()
-    for i, c in enumerate(data.candidates):
-
-        print(f"Test {i}: {c}")
-        result, _ = run_eprover("./adimen.sumo.tstp", c, [f'--sine={filter}'])
-        print("    ->", result)
-
-        results[c] = result
-
-    return results
-
-tests_sine = {
-    'sine_b50_k04': {
-        'type': 'sine',
-        'args': { 'b': 5.0, 'k': 4 }
-    },
-    'sine_b12_k02': {
-        'type': 'sine',
-        'args': { 'b': 1.2, 'k': 2 }
-    },
-    'sine_b15_kUU': {
-        'type': 'sine',
-        'args': { 'b': 1.5, 'k': 2147483647 }
-    },
-    'sine_b20_k03': {
-        'type': 'sine',
-        'args': { 'b': 2.0, 'k': 3 }
-    },
-    'sine_b60_k05': {
-        'type': 'sine',
-        'args': { 'b': 6.0, 'k': 5 }
-    },
-    'sine_b20_kUU': {
-        'type': 'sine',
-        'args': { 'b': 2.0, 'k': 2147483647 }
-    },
-}
-
-tests_seven = {
-    'seven_n50': {
-        'type': 'seven',
-        'args': { 'n': 50 }
-    },
-    'seven_n100': {
-        'type': 'seven',
-        'args': { 'n': 100 }
-    },
-    'seven_n200': {
-        'type': 'seven',
-        'args': { 'n': 200 }
-    },
-    'seven_n300': {
-        'type': 'seven',
-        'args': { 'n': 300 }
-    },
-    'seven_n400': {
-        'type': 'seven',
-        'args': { 'n': 400 }
-    },
-    'seven_n500': {
-        'type': 'seven',
-        'args': { 'n': 500 }
-    },
-
-    'seven_t08': {
-        'type': 'seven',
-        'args': { 't': 0.8 }
-    },
-    'seven_t06': {
-        'type': 'seven',
-        'args': { 't': 0.6 }
-    },
-    'seven_t04': {
-        'type': 'seven',
-        'args': { 't': 0.4 }
-    },
-}
 
 tests_union = {
     'union_n160_b20_k03': {
@@ -188,22 +94,16 @@ def evaluate(src: str, count: int = None):
     data = TestData(f"./{src}_candidates.json")
 
     tests = dict()
-    #tests |= tests_sine
-    #tests |= tests_seven
     tests |= tests_union
 
     for name, test in tests.items():
         print(f"Testing {name}")
 
         match test['type']:
-            case 'sine':
-                results = test_sine(data, **test['args'])
-            case 'seven':
-                results = test_seven(data, **test['args'])
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/auto_{src}_{name}_timer_3.json")
+        write_results(results, f"./results/auto_{src}_{name}_timer_proof_object.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
