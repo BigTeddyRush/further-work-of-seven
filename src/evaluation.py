@@ -60,10 +60,11 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
     with open(filter_path, 'w') as file:
         file.write(f"filter = {create_sine_filter(b, k)}")
 
+    path_A12 = union_select("predefinitionsA12.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
     results = dict()
     for i, c in enumerate(data.candidates):
         selection_path = union_select(c, data.encoder, data.tensors, data.ontology, filter=filter_path, **kwargs)
-        
+        merge_tstp_files(path_A12, selection_path, selection_path)
         print(f"Test {i}: {c}")
         
         start_time = time.time()  # Start timer
@@ -78,11 +79,41 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
 
     return results
 
+def merge_tstp_files(file1_path, file2_path, output_path):
+    """
+    Merge two .tstp files into one.
+    
+    Args:
+    - file1_path: path to the first .tstp file
+    - file2_path: path to the second .tstp file
+    - output_path: path where the merged file will be saved
+    """
+    try:
+        # Use a set to store unique lines
+        lines_set = set()
+        
+        # Read content from the first file
+        with open(file1_path, 'r') as file1:
+            lines_set.update(file1.readlines())
+        
+        # Read content from the second file
+        with open(file2_path, 'r') as file2:
+            lines_set.update(file2.readlines())
+        
+        # Write unique lines to the output file
+        with open(output_path, 'w') as output_file:
+            for line in sorted(lines_set):
+                output_file.write(line)
+        
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
 tests_union = {
     
-    'union_n160_b30_kUU': {
+    'union_n160_b20_k30': {
         'type': 'union',
-        'args': { 'n': 160, 'b': 3.0, 'k': 2147483647 }
+        'args': { 'n': 160, 'b': 2.0, 'k': 3 }
     }
 }
 
