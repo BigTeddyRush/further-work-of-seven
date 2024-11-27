@@ -74,39 +74,42 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
     results = dict()
     for i, c in enumerate(data.candidates):
         selection_path = union_select(c, data.encoder, data.tensors, data.ontology, filter=filter_path, **kwargs)
-        merge_tstp_files_into_empty('adimen.sumo_withcon.tstp', 'adimen.sumo.tstp', c)
+        merge_into_file2(c, selection_path)
         print(f"Test {i}: {c}")
-        result = run_eprover('adimen.sumo_withcon.tstp')
+        result = run_eprover(selection_path)
         print("    ->", result)
 
         results[c] = result
 
     return results
 
-def merge_tstp_files_into_empty(output_file_path, input_file1_path, input_file2_path):
+def merge_into_file2(file1_path, file2_path):
     """
-    Merges two TSTP files into a target file, clearing the target file before writing.
-
+    Merge the contents of file1 into file2 and save it back to file2.
+    
     Args:
-    - output_file_path: path to the target file where the merged content will be saved
-    - input_file1_path: path to the first TSTP file
-    - input_file2_path: path to the second TSTP file
+    - file1_path: path to the first .tstp file
+    - file2_path: path to the second .tstp file (which will be updated with the merged contents)
     """
     try:
-        # Open the target file in write mode to ensure it's empty before merging
-        with open(output_file_path, 'w') as output_file:
-            # Read and write the contents of the first file
-            with open(input_file1_path, 'r') as input_file1:
-                output_file.writelines(input_file1.readlines())
-
-            # Read and write the contents of the second file
-            with open(input_file2_path, 'r') as input_file2:
-                output_file.writelines(input_file2.readlines())
-
-        print(f"Merged files into {output_file_path}")
+        with open(file1_path, 'r') as file1:
+            content1 = file1.readlines()
+        
+        with open(file2_path, 'r') as file2:
+            content2 = file2.readlines()
+        
+        # Combine the contents
+        merged_content = content2 + content1
+        
+        with open(file2_path, 'w') as output_file:
+            output_file.writelines(merged_content)
+        
+        print(f"File '{file2_path}' has been updated with the merged content.")
 
     except Exception as e:
         print(f"An error occurred: {e}")
+
+
 tests_union = {
     'union_n160_b20_k03': {
         'type': 'union',
@@ -130,7 +133,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/{src}_{name}_vampire_nounion.json")
+        write_results(results, f"./results/{src}_{name}_vampire_union.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
@@ -177,6 +180,6 @@ if __name__ == "__main__":
 
     evaluate(args.src, args.select)
 
-    #count_selected(args.src, "b60_k05", b=6.0, k=5)
-    #count_selected(args.src, "b20_k03", b=2.0, k=3)
-    #count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
+    count_selected(args.src, "b60_k05", b=6.0, k=5)
+    count_selected(args.src, "b20_k03", b=2.0, k=3)
+    count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
