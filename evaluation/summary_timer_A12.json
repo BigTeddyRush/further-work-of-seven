@@ -1,0 +1,7 @@
+{
+  "auto_mode_no_union_n160_b20_k03.json": { "ProverResult.TIME_OUT": 690, "ProverResult.PROOF_FOUND": 310 },
+  "auto_whitebox_union_n160_b20_k30_timer_withA12.json": { "ProverResult.PROOF_FOUND": 532, "ProverResult.TIME_OUT": 465, "ProverResult.GAVE_UP": 3 },
+  "satauto_whitebox_union_n160_b20_k30_timer_withA12.json": { "ProverResult.PROOF_FOUND": 536, "ProverResult.TIME_OUT": 464 },
+  "whitebox_union_n160_b20_k03.json": { "ProverResult.PROOF_FOUND": 120, "ProverResult.TIME_OUT": 880 },
+  "whitebox_union_n160_b20_k30_timer_withA12.json": { "ProverResult.PROOF_FOUND": 256, "ProverResult.TIME_OUT": 744 }
+}
