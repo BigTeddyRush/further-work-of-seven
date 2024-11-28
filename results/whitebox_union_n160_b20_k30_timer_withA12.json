@@ -1,0 +1,5002 @@
+{
+  "./goals/whitebox/whiteBoxTruthTest4664.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.48548221588134766
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0666.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018870115280151
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7572.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023401021957397
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0469.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010294675827026
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5122.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7218821048736572
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1103.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.589716911315918
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4467.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009932518005371
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4176.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    14.441404581069946
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2232.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015094518661499
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2574.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.030158996582031
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0058.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010629653930664
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2872.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7224953174591064
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2454.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00871753692627
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5713.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00830888748169
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0929.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.17224788665771484
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7717.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01747989654541
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4834.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7336843013763428
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6626.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008457899093628
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0386.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.18366670608520508
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4790.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00328016281128
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2518.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017701148986816
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7407.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009937524795532
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3391.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014158964157104
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5802.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.032500505447388
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1218.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02195143699646
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0751.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021821022033691
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2120.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0302257537841797
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4336.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.033037424087524
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0293.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028585195541382
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1773.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023780584335327
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0974.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.19899964332580566
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5273.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9845924377441406
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7934.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010273933410645
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4439.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01861023902893
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7467.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009680271148682
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7348.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018364906311035
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0297.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02734661102295
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6469.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009974002838135
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3629.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016695737838745
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2782.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0045695304870605
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7655.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028747320175171
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7495.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012553453445435
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0422.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021599769592285
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3949.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    2.6372461318969727
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3350.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021028757095337
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2911.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.6527621746063232
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1589.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.1970510482788086
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7221.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.03200101852417
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0374.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.711540699005127
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6997.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7084248065948486
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1874.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02159571647644
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6394.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012467622756958
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7603.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027611494064331
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5048.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01087760925293
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0170.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026779890060425
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7835.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.47019267082214355
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6066.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.346428632736206
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1256.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024901628494263
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4403.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021445274353027
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2313.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00437331199646
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7444.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02622389793396
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3728.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.031543970108032
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6677.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027266025543213
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4965.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    2.3890743255615234
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4697.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009472608566284
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0935.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023167133331299
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0603.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.12334322929382324
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7025.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028589487075806
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0250.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009310722351074
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7868.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.035882234573364
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4542.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.003836154937744
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6771.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013916254043579
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0502.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.0234534740448
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5066.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017356634140015
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4622.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016902208328247
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5538.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009101867675781
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3192.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024866104125977
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4293.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.037468910217285
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6601.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.032827854156494
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6165.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02026081085205
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0489.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019740581512451
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1303.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023465394973755
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4270.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025368452072144
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6256.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015109300613403
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4201.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010020732879639
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6090.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.2055089473724365
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6269.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.007359027862549
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3868.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024088859558105
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5853.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9258055686950684
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7460.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026253461837769
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3198.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022762775421143
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4360.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014198064804077
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7715.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014940023422241
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1695.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.033847570419312
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4565.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.032979011535645
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6202.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009179592132568
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4186.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6502997875213623
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4996.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009519577026367
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6810.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013851881027222
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7369.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.798485517501831
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6288.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009715795516968
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1123.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020176887512207
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6103.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028780937194824
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5757.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    5.1411051750183105
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1737.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025181531906128
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5917.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013375282287598
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5523.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012276887893677
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5637.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024443864822388
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3928.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5360047817230225
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1270.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018525838851929
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5920.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015333890914917
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1443.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010257959365845
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6134.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013085126876831
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6807.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01282525062561
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6282.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.1541855335235596
+  ],
+  "./goals/whitebox/whiteBoxTruthTest8001.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017060995101929
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7489.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017470836639404
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4828.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.036682844161987
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1383.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025506019592285
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3756.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018895626068115
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1457.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021283864974976
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3196.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.4536449909210205
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4826.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020746946334839
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6859.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011797904968262
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4395.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.042578220367432
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0137.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.660020112991333
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4317.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.034766912460327
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0644.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.001417636871338
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0805.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021947860717773
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1290.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023831844329834
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0031.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028702974319458
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6775.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8236913681030273
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1239.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018094301223755
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1724.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028408765792847
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5783.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018341302871704
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6526.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008695125579834
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5719.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016438007354736
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3015.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020803689956665
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5304.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020373106002808
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4414.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.4814410209655762
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3234.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016852378845215
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1651.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.3297598361968994
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6464.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012008905410767
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6878.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011555433273315
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6595.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023356914520264
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6045.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.034417867660522
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7454.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028064250946045
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6777.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015434503555298
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6785.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6109068393707275
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1104.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020859003067017
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3262.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026216745376587
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1604.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026698350906372
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7397.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.226203441619873
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0592.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.45453357696533203
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2491.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.2748405933380127
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0062.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.14168930053710938
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2626.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.1454873085021973
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2352.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016941547393799
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0057.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013729572296143
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6212.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6059412956237793
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0901.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011141300201416
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6440.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8356280326843262
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2745.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.036656618118286
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7398.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017503499984741
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5624.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01379919052124
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2969.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8111732006072998
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1291.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029740333557129
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3288.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.035303354263306
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1522.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01714015007019
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7791.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.032449007034302
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7216.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025756597518921
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0251.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.084686279296875
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7986.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014703273773193
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5711.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027350187301636
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2119.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013450384140015
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4797.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.030610084533691
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6001.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02061414718628
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6524.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.2274916172027588
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5643.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009932518005371
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1315.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023751020431519
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0385.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017139196395874
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6952.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008737802505493
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1073.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.7812209129333496
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2503.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.27480268478393555
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3896.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.032988548278809
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3830.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9659867286682129
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0444.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014390468597412
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6959.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.033296346664429
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7692.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026662588119507
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2678.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01380467414856
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5089.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    13.791388750076294
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6665.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.036798000335693
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4302.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017368793487549
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5600.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.037815809249878
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0675.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029174327850342
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5548.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.3554885387420654
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4246.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014492988586426
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7519.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01375937461853
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3829.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023436069488525
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3304.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019554615020752
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4130.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.034167289733887
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5716.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01263952255249
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1128.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017958402633667
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2670.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5899901390075684
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5297.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.031508684158325
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6500.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016437292098999
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7561.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6943163871765137
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1272.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019482374191284
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2312.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6833109855651855
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7313.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.048908948898315
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5568.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01820707321167
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3792.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011646032333374
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7488.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    9.532901048660278
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5564.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015804767608643
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0638.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5028488636016846
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4717.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.6338388919830322
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0796.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    14.996930599212646
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3893.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014044284820557
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0740.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026445150375366
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0629.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015557527542114
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1377.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017100095748901
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7573.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028806924819946
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4259.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.7328693866729736
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3326.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01821756362915
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1916.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.4768707752227783
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3685.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015006065368652
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4774.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023579835891724
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6979.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02841067314148
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6360.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.3378424644470215
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6458.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.6753547191619873
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3250.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02356243133545
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6855.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011931896209717
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3845.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012471914291382
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6925.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016950130462646
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7043.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013174057006836
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1255.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029705047607422
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4670.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015623807907104
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0004.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6255545616149902
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7242.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022225379943848
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6654.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011728048324585
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0145.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5318655967712402
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0821.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    5.39127779006958
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4269.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020987749099731
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6648.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022712707519531
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7064.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6550743579864502
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1236.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00635290145874
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5750.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015807390213013
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6124.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014012336730957
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5848.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.5011792182922363
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0834.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.18832945823669434
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1334.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02773404121399
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7881.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.33771443367004395
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7455.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02375340461731
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1465.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029945373535156
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3190.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028683185577393
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4404.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023128747940063
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2361.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014638900756836
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2761.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010475397109985
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3394.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.007904529571533
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5733.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013046026229858
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4735.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014967679977417
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7554.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.033869981765747
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3705.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.811408519744873
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1856.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015578508377075
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5725.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022188186645508
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3307.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011053800582886
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1509.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026010990142822
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0871.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021609544754028
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7699.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012244939804077
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7538.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025722980499268
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1634.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027101993560791
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4313.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01296091079712
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0067.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01450777053833
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4418.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009532690048218
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4410.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024798393249512
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6569.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022408723831177
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2024.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012125968933105
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5811.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.2492165565490723
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7863.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.23548603057861328
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4594.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.005067825317383
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7956.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017996788024902
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7893.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022660732269287
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5590.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011454343795776
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0074.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02500319480896
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7831.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012104511260986
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1324.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012505292892456
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6746.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8915998935699463
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3979.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01497483253479
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7050.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.2249324321746826
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6322.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009734869003296
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7797.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.38775634765625
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0063.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.28027772903442383
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5560.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.247025489807129
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2314.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5610020160675049
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4968.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0387182235717773
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4786.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010720491409302
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6365.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015672206878662
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6668.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01136064529419
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4279.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012774467468262
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7915.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01216745376587
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4875.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.19475674629211426
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1444.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017132043838501
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2071.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029473304748535
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0009.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.37783288955688477
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3049.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.03093671798706
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1524.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017164468765259
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6138.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6731269359588623
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0955.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011332988739014
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2660.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02320408821106
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4839.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012004375457764
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6637.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02389669418335
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5258.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0411489009857178
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1373.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02346420288086
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1569.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019928455352783
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4136.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    12.212392568588257
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1232.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015943765640259
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6834.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5744690895080566
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2781.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010359048843384
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3477.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009498834609985
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7383.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.006201028823853
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6805.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.040358543395996
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1430.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023507595062256
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1399.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027325868606567
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4569.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026340246200562
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5705.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025185346603394
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5520.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029823064804077
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0116.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7079765796661377
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5116.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.3566057682037354
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5839.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.043242454528809
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1801.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02857232093811
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3053.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02841329574585
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1082.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02326250076294
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5893.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    2.004175901412964
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6362.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029316663742065
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3393.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021704196929932
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5641.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6090841293334961
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3435.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021292686462402
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5118.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.038629055023193
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7909.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.25954461097717285
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4134.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.668179988861084
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7300.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01115894317627
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6170.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.018416166305542
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1156.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01371693611145
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0529.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.1851367950439453
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5702.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014718770980835
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4290.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.000939130783081
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3170.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.8614742755889893
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1630.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020399570465088
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6356.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6146109104156494
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2926.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8016283512115479
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6012.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0763745307922363
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2322.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016838073730469
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2846.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.031166315078735
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2508.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8657655715942383
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4939.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009803295135498
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6991.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021620273590088
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2380.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017665386199951
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7194.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01004672050476
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5704.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.23426246643066406
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0970.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018951654434204
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3325.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015409231185913
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1098.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022876739501953
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6984.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016332149505615
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3040.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.039322137832642
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7208.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.037386655807495
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5790.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015415906906128
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1048.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.35086774826049805
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6418.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.6383099555969238
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6590.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6456127166748047
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5768.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012830018997192
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2326.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.004751443862915
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3573.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015293836593628
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5582.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010867595672607
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7130.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018452882766724
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6965.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.033767938613892
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1180.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025590419769287
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1536.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018066644668579
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1204.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015376806259155
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0312.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015764951705933
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3312.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02548623085022
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5977.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02289891242981
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2883.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017883777618408
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2096.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017212390899658
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3788.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01055908203125
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6079.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022773504257202
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1873.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.0275239944458
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0019.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.2315387725830078
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7408.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    2.09423565864563
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2604.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011321306228638
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3590.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7426557540893555
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3339.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.33173680305480957
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2498.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021147966384888
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6836.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009146451950073
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4561.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012784719467163
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7852.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023924827575684
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7654.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010684728622437
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5617.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.006165981292725
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5322.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018288135528564
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7566.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020763397216797
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7704.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01225209236145
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5685.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02900767326355
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5260.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.0444016456604
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1042.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012282133102417
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0581.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021543502807617
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1962.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6184263229370117
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2929.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.3239312171936035
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7452.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009503364562988
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3902.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010402917861938
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6376.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8322367668151855
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5588.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.037602663040161
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1285.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025535821914673
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4226.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.2291865348815918
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2857.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.004020690917969
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7263.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.030275583267212
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7891.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.20393133163452148
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4659.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011525869369507
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4550.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01247787475586
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1572.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.4205939769744873
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4098.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00891637802124
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5724.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02363395690918
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1250.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019196271896362
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5800.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01460862159729
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3582.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.7536344528198242
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3034.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026044130325317
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0600.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024145364761353
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4754.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0515363216400146
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5106.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.033974409103394
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7902.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029014110565186
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6986.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013547420501709
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1686.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025700807571411
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3319.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015812158584595
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0942.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01732325553894
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2585.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02076244354248
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6094.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00146746635437
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2100.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017026424407959
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1126.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0936245918273926
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6205.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    2.170987129211426
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6568.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015940189361572
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2562.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010033130645752
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7584.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.043674945831299
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0867.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020771265029907
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6720.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008947849273682
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2460.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02202033996582
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1746.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013010501861572
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1594.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.3455517292022705
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3455.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025853872299194
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1752.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01424765586853
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6574.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017582416534424
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4379.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.031201124191284
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0430.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.21889305114746094
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0473.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.4437072277069092
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5003.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015322923660278
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1974.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.041901588439941
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4228.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018495559692383
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6216.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.3038382530212402
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1662.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009203910827637
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0978.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01600170135498
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2657.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.6765470504760742
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2376.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016132354736328
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4549.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013927221298218
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2048.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010166883468628
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6271.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010669231414795
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0418.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.15677380561828613
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2894.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.030653953552246
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2153.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016791343688965
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4598.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014458656311035
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7209.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.034286499023438
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4178.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011922597885132
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1299.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022954940795898
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7624.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022510051727295
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0923.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01909613609314
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1549.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016796112060547
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3702.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    2.3694748878479004
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7476.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023456811904907
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5195.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0488243103027344
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5593.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017319202423096
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3413.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.007189512252808
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2206.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023575067520142
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7492.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02602481842041
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2543.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017961025238037
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2489.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008709907531738
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6766.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.035511016845703
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3887.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023333311080933
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0785.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010632514953613
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0342.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.001949071884155
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4851.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.754180908203125
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3508.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013071060180664
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7388.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014241218566895
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0965.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029813766479492
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2947.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014770030975342
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1833.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01096487045288
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7742.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5244014263153076
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1143.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02784276008606
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3155.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    13.071234941482544
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6988.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00572395324707
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1072.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008288145065308
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1034.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027744054794312
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0602.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017772436141968
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1108.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028777837753296
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1283.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00651478767395
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1772.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028047323226929
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4824.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024223566055298
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1391.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018983125686646
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5808.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012031316757202
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6370.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.087205171585083
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2151.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02721905708313
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3314.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.46478724479675293
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4026.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013582706451416
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5774.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9231526851654053
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5841.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.5872526168823242
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1194.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.2138526439666748
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1092.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.03270936012268
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6974.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009501218795776
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7875.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    5.9459545612335205
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3232.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023176670074463
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2338.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8940274715423584
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3358.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.03287672996521
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7931.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011004447937012
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1068.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023119926452637
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7113.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01025104522705
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3450.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014927387237549
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5782.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5227580070495605
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5392.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016984701156616
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6214.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013574838638306
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2300.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.0093355178833
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1164.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018901824951172
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7925.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.21616315841674805
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0134.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.041102886199951
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7502.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.23110508918762207
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4602.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    14.185716390609741
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3480.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7138690948486328
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1274.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020905017852783
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1140.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016470909118652
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7976.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012377262115479
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5791.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01148772239685
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5016.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018470525741577
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5241.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.032102108001709
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4231.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013288736343384
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7541.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027000665664673
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7555.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9073359966278076
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6502.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.005178928375244
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4210.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9529995918273926
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1412.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022151231765747
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0492.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.3537583351135254
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5737.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024712324142456
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5915.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.039448976516724
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2288.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010809421539307
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1940.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.006007671356201
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3644.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.035694599151611
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7088.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.037175416946411
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1504.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.46221089363098145
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3571.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011378049850464
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4505.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.22020244598388672
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1915.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.031001806259155
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4376.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009411334991455
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2297.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012081861495972
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2514.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027863502502441
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3550.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9295663833618164
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7365.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010124206542969
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4730.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.0201096534729
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2612.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011690139770508
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6127.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020149230957031
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4357.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02027702331543
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4445.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8118710517883301
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2798.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.036446332931519
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0364.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.4431006908416748
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1479.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016326665878296
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4740.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012346506118774
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7684.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021674394607544
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7648.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027230024337769
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4125.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    2.069176197052002
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3490.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019052505493164
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2912.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.35019683837890625
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2168.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.006323099136353
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4371.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014878749847412
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6092.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6917519569396973
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6680.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017616748809814
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5431.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014654159545898
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1313.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.007935285568237
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4101.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017877340316772
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1644.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02646017074585
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6492.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010738611221313
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7439.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01750636100769
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2466.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8425548076629639
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1278.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025562763214111
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1699.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.037899732589722
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1820.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02464485168457
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1936.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017968654632568
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0794.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010624885559082
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1026.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6784803867340088
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5952.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014317035675049
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4559.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6246495246887207
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6250.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00357460975647
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0798.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.37738847732543945
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4734.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7249019145965576
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1345.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022250652313232
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2413.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025577068328857
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1565.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018704652786255
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5595.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011643171310425
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4946.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.45114636421203613
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6555.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016883850097656
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4593.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010377168655396
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3151.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019673585891724
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5571.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010813474655151
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1473.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019578695297241
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2655.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012505292892456
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4208.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01689338684082
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1786.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028948068618774
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6932.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022817134857178
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5139.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.035118103027344
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5736.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0025608539581299
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6403.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01146411895752
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4314.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.043645143508911
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7219.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027506351470947
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6787.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022830247879028
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7482.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.038582801818848
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3538.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00968861579895
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7812.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021783351898193
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3066.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.03019380569458
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3173.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008840084075928
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0481.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017999410629272
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2602.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010184526443481
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5739.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01162576675415
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0065.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.28841495513916016
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0034.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016430377960205
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1530.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018171787261963
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2828.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.005226850509644
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4567.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028928756713867
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3172.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7090778350830078
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0734.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018478870391846
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3906.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.23552846908569336
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1395.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015963792800903
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0630.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022746562957764
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5092.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014944791793823
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7558.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.5897159576416016
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0961.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0539941787719727
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2849.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013508081436157
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0381.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.3638753890991211
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4248.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.047058820724487
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0436.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015328168869019
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7487.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01969861984253
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2890.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.29828834533691406
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1643.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.35660719871520996
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3470.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010934591293335
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5672.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017029762268066
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5529.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02828335762024
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3574.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015918970108032
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2390.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01432466506958
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1333.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016337156295776
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5878.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6900670528411865
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6912.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008968830108643
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3180.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    3.658574342727661
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4814.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023981809616089
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2163.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.037760734558105
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3544.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009616136550903
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5008.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021301984786987
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4296.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026267766952515
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3700.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02269697189331
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6391.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.03750729560852
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5963.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.039445638656616
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0946.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016592502593994
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1669.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013268947601318
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1248.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025765180587769
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1295.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016753196716309
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3213.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018079280853271
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2987.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.678999662399292
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5257.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016851425170898
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1882.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024431705474854
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1636.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.12901949882507324
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6329.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7044496536254883
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3422.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9954037666320801
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3374.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.035539865493774
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3081.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.034547328948975
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4344.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.200963020324707
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2186.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019275426864624
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6039.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016210556030273
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0769.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.030611991882324
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7079.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008144855499268
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4282.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014759540557861
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4936.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014343500137329
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7532.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017727851867676
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7557.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.038370609283447
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0802.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.037501811981201
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4619.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011218786239624
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0657.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013879776000977
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6490.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.093815803527832
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3680.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009851455688477
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4853.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01452088356018
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7545.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025354385375977
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2103.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015625238418579
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2959.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.037808179855347
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6632.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018077850341797
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3670.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.2394247055053711
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3079.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019186735153198
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5877.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    2.756948471069336
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6344.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013195276260376
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0754.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.15966105461120605
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3142.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7750966548919678
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1728.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.48698878288269043
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4468.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0965187549591064
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3750.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012876749038696
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7097.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014518022537231
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5639.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02285385131836
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2805.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.006774187088013
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3258.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.0146324634552
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2252.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012067556381226
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7513.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.032787322998047
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6861.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014052629470825
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3237.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011636734008789
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7588.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021902799606323
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4074.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.2908787727355957
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1653.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021643161773682
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1997.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    8.533069372177124
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1244.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024001121520996
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7815.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.04121446609497
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7927.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025957584381104
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2858.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014888286590576
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1735.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026137590408325
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5270.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0029780864715576
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7708.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.042313575744629
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1114.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016798257827759
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1876.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021830797195435
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0768.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.43541717529296875
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3494.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010202646255493
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2416.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.033010482788086
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4112.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01386833190918
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4669.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.0130934715271
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7941.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016407251358032
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1225.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017611742019653
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1555.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016665697097778
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0336.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    14.996916770935059
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0478.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.4362459182739258
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1739.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6794793605804443
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7847.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    6.389739513397217
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5650.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    14.997513771057129
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0173.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010410785675049
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1514.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017176628112793
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3584.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010419845581055
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5788.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00996732711792
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3562.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012693166732788
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3386.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025277614593506
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0998.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0644176006317139
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5477.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012564897537231
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7319.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01224970817566
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3406.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029664993286133
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3864.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015379667282104
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2292.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009240865707397
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5179.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.007502317428589
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7361.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.84006667137146
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6330.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9542818069458008
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1304.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024494647979736
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0184.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025009870529175
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0378.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.19884681701660156
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5530.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013537168502808
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5035.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010891914367676
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7862.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014015674591064
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1890.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029375791549683
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0071.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02034306526184
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5269.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009357690811157
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1887.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024774074554443
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1893.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018749713897705
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2042.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010169506072998
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0474.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.2412877082824707
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4312.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01318645477295
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3802.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017951250076294
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3942.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7273352146148682
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7757.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.1241264343261719
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4068.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011005878448486
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2939.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023948669433594
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7289.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8578228950500488
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6423.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013349056243896
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4765.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.499422311782837
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6280.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011396408081055
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1954.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013660907745361
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6041.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    11.374467849731445
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3704.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008748531341553
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6050.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.1056859493255615
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6662.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.03660774230957
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3410.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.051170825958252
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2464.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022648811340332
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0528.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02637767791748
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0788.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0275328159332275
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4512.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.002350807189941
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1908.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013784170150757
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5566.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.000087261199951
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5626.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028642177581787
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4574.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016440629959106
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3033.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.031731128692627
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6906.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026662826538086
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7874.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029956579208374
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7702.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019324779510498
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6186.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018807411193848
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6891.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018322229385376
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6905.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01698350906372
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2869.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025294780731201
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0574.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018687725067139
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5074.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023425340652466
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3335.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026111364364624
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2020.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5740759372711182
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4801.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02059006690979
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5378.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009772300720215
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1878.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02622389793396
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2088.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016487121582031
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5012.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00996470451355
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1148.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    8.860130548477173
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4309.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011668920516968
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1930.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01615047454834
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3880.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.034669399261475
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4803.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.19934749603271484
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5714.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010474920272827
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6114.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008087635040283
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4271.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029777526855469
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1318.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011850357055664
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3138.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024072885513306
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0016.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.30645084381103516
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1570.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014154195785522
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0495.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5057592391967773
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6180.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010123252868652
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4806.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023849964141846
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4239.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024084091186523
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1740.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.03054404258728
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7641.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027471780776978
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7857.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.254162073135376
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1024.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5928151607513428
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6697.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.3943173885345459
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6577.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019404411315918
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1578.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.2519383430480957
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3755.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012439250946045
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3948.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02361011505127
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3989.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    14.998408794403076
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4534.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.8445167541503906
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7386.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026715517044067
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1557.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01655626296997
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3252.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018070697784424
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1500.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019545078277588
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7639.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014780759811401
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6378.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013075590133667
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1944.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.7577526569366455
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7127.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013661623001099
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7366.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023833513259888
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5731.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023411273956299
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5770.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.858950138092041
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2501.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.005645990371704
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4962.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0775904655456543
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0646.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.3359048366546631
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0155.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5358896255493164
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1355.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018884420394897
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7463.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023916244506836
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7244.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024870872497559
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0907.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.006133079528809
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6736.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.032631635665894
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5709.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009880304336548
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0608.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    14.998419046401978
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6494.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.003334045410156
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3613.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.188525676727295
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0707.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00738525390625
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2430.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02883267402649
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7140.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022473096847534
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5014.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015894889831543
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6564.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.5295906066894531
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1571.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.3154125213623047
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2766.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8551506996154785
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7679.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5425815582275391
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2128.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.2534797191619873
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1680.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026618003845215
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4942.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01369047164917
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7283.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9492547512054443
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7802.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.1574077606201172
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2680.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014648675918579
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5722.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5676572322845459
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5157.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9808580875396729
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5659.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00891637802124
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6962.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018497467041016
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1487.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018946170806885
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4894.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017197608947754
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3156.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.03195595741272
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5646.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.007035732269287
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7727.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009093046188354
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6354.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009321928024292
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0583.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.1321854591369629
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4062.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020205974578857
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3530.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.0285139083862305
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1059.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.036588668823242
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5645.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.002862215042114
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6265.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020775318145752
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6651.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.025487184524536
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7218.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009434700012207
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1392.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027420282363892
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3400.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.031902074813843
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3242.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017098426818848
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4240.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    14.739947080612183
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7799.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.9979977607727051
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0051.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.2209761142730713
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7659.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011075496673584
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7023.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012029647827148
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2633.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.041339635848999
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6191.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.17003154754638672
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4568.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.15655016899108887
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4188.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024006605148315
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3337.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.3580925464630127
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3380.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013001203536987
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7321.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01288390159607
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1518.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02078652381897
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5866.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.017258644104004
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3111.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027033567428589
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3368.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028923273086548
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3766.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01710033416748
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7441.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021998882293701
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0108.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013456583023071
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1028.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023135900497437
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3611.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.020681381225586
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1743.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027212381362915
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2954.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    12.37682056427002
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6818.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027225494384766
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1926.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8693528175354004
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7828.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02672004699707
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2286.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.1178460121154785
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7734.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013748407363892
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0544.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.18032073974609375
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7212.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.038256168365479
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6871.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01393437385559
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4297.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.057632446289062
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5751.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016294240951538
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4205.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015836238861084
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6174.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5693502426147461
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0299.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.022751092910767
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2016.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6871440410614014
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0304.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011451244354248
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0235.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.028085470199585
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3264.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.019451141357422
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0052.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.1325666904449463
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1111.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015473365783691
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4516.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01761794090271
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1277.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02547025680542
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1641.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.029457092285156
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5420.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.007030963897705
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4912.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.018701553344727
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7823.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.24001240730285645
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5807.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012908935546875
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4973.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009572505950928
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6980.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.610100507736206
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6160.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012584447860718
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0039.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.19823598861694336
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6196.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008498430252075
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1639.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.026613235473633
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4014.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.17727041244506836
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1577.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.18654775619506836
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3699.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    2.424839735031128
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4430.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.044610261917114
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3973.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.4773714542388916
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6119.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.021910667419434
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1991.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011815071105957
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0215.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024035930633545
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0731.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.035297632217407
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5542.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6403706073760986
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1367.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.024046659469604
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6893.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011948823928833
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6913.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    2.049192428588867
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5889.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.011836528778076
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5458.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.014819860458374
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0048.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01625680923462
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6949.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01750898361206
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3615.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.007960557937622
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4148.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.4479725360870361
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7515.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    1.1149156093597412
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1834.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.03140139579773
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1426.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02098035812378
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3737.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02737283706665
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0598.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016777515411377
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5281.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.039857149124146
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5943.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009323120117188
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6725.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.013535022735596
+  ],
+  "./goals/whitebox/whiteBoxTruthTest6791.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.037761211395264
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7752.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.037048101425171
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7163.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.4866790771484375
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2520.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5246264934539795
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5662.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009363651275635
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7477.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.023509979248047
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7767.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8680751323699951
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5028.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.009757995605469
+  ],
+  "./goals/whitebox/whiteBoxTruthTest5825.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.036033868789673
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2437.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.5231618881225586
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1311.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.008055686950684
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1649.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.02396821975708
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2727.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027096509933472
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0700.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.010631799697876
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4174.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.6822261810302734
+  ],
+  "./goals/whitebox/whiteBoxTruthTest2886.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.595928430557251
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3870.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.8484690189361572
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4992.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.01246690750122
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7656.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012736082077026
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3114.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.045217275619507
+  ],
+  "./goals/whitebox/whiteBoxTruthTest3397.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.015438318252563
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7585.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.4683713912963867
+  ],
+  "./goals/whitebox/whiteBoxTruthTest1305.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.027719736099243
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4541.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.016805648803711
+  ],
+  "./goals/whitebox/whiteBoxTruthTest7159.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.007899045944214
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0622.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.00935983657837
+  ],
+  "./goals/whitebox/whiteBoxTruthTest4539.adimen.tstp": [
+    "ProverResult.TIME_OUT",
+    "b'\\n# Failure: User resource limit exceeded!\\n# SZS status ResourceOut\\n'",
+    15.012671709060669
+  ],
+  "./goals/whitebox/whiteBoxTruthTest0005.adimen.tstp": [
+    "ProverResult.PROOF_FOUND",
+    "b'\\n# Proof found!\\n# SZS status Theorem\\n'",
+    0.634718656539917
+  ]
+}
