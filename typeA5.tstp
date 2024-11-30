@@ -1,0 +1,21 @@
+fof( typeA5, axiom,
+	(![X1,X2]: 
+		(
+			(
+				p__part(X1,X2)
+			)
+			=>
+			(
+				(
+					(
+						p__d__instance(X2,c__Object)
+					)
+				 &
+					(
+						p__d__instance(X1,c__Object)
+					)
+				)
+			)
+		)
+	)
+).

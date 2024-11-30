@@ -1,0 +1,29 @@
+fof( mergeA3300, axiom,
+	(![CHILD,PARENT]: 
+		(
+			(
+				(
+					(
+						p__d__instance(PARENT,c__Organism)
+					)
+				 &
+					(
+						p__d__instance(CHILD,c__Organism)
+					)
+				 &
+					(
+						p__parent(CHILD,PARENT)
+					)
+				 &
+					(
+						p__attribute(PARENT,c__Female)
+					)
+				)
+			)
+			=>
+			(
+				p__mother(CHILD,PARENT)
+			)
+		)
+	)
+).
