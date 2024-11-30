@@ -58,7 +58,7 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
     # write filter to file
     filter_path = "./filter.txt"
     with open(filter_path, 'w') as file:
-        file.write(f"filter = {create_sine_filter(b, k)}")
+        file.write(f"filter = {create_sine_filter(1, 1)}")
 
     path_A12 = union_select("predefinitionsA12.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
     path_A15 = union_select("predefinitionsA15.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
@@ -86,6 +86,9 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
     mergeA257 = union_select("mergeA257.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
     predefinitionsA24 = union_select("predefinitionsA24.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
 
+    with open(filter_path, 'w') as file:
+        file.write(f"filter = {create_sine_filter(b, k)}")
+        
     results = dict()
     for i, c in enumerate(data.candidates):
         selection_path = union_select(c, data.encoder, data.tensors, data.ontology, filter=filter_path, **kwargs)
@@ -183,7 +186,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/satauto_{src}_{name}_timer_withAddedAxiom_withProofObject_8000.json")
+        write_results(results, f"./results/satauto_{src}_{name}_timer_withAddedAxiom_withProofObject_8000_withoutpresine.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
