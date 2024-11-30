@@ -3,6 +3,7 @@ import json, glob, random, torch, argparse
 from operator import countOf
 from seven import *
 from eprover import *
+import sys
 
 import time
 
@@ -10,24 +11,22 @@ import time
 # candidates
 #=========================================================================================
 def select_candidates(src: str, n: int):
-    candidates = list()
+    
+    # Assuming `src` is defined somewhere above this line
+    files = glob.glob(f"./AdimenSUMO2.6/E-KIFtoFOF/Goals/*.tstp")
 
-    files = glob.glob(f"./goals/{src}/*.tstp")
-    random.shuffle(files)
+    # Filter files that start with "whiteBoxTruthTest" and end with ".tstp"
+    filtered_files = [f for f in files if f.startswith(f"./AdimenSUMO2.6/E-KIFtoFOF/Goals/whiteBoxTruthTest") and f.endswith(".tstp")]
 
-    for i, file in enumerate(files):
-        print(f"Test {i}: {file}")
-        result, _ = run_eprover("./adimen.sumo.tstp", file)
-        print("    ->", result)
+    # Define a dictionary to store the filtered files
+    data = {
+        "filtered_files": filtered_files
+    }
 
-        if result == ProverResult.TIME_OUT:
-            candidates.append(file)
+    # Write the dictionary to a JSON file
+    with open('whitebox_candidates.json', 'w') as json_file:
+        json.dump(data, json_file, indent=4)
 
-        if len(candidates) >= n:
-            break
-
-    with open(f"./{src}_candidates.json", 'w') as file:
-        json.dump(candidates, file, indent=2)
 
 
 #=========================================================================================
@@ -103,7 +102,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/auto_{src}_{name}_timer_proof_object.json")
+        write_results(results, f"./results/{src}_{name}_timer_proof_object_noauto_8000.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")

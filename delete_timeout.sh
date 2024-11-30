@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Input and output file paths
-input_file="results/satauto_whitebox_union_n160_b20_k30_timer_withA12_withProofObject.json"
-output_file="filtered_file_satauto.json"
+input_file="results/whitebox_union_n160_b20_k03_timer_proof_object_noauto_8000.json"
+output_file="filtered_file_8000.json"
 
 # Use jq to filter keys based on the value content
 jq 'to_entries
