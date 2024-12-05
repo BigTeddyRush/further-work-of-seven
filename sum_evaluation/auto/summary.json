@@ -1,5 +1,6 @@
 {
   "auto_nounion.json": { "ProverResult.TIME_OUT": 690, "ProverResult.PROOF_FOUND": 310 },
   "auto_union_n160_b20_k03.json": { "ProverResult.TIME_OUT": 607, "ProverResult.PROOF_FOUND": 391, "ProverResult.GAVE_UP": 2 },
-  "auto_union_n160_b20_k30_addedAxiom_1000.json": { "ProverResult.PROOF_FOUND": 532, "ProverResult.TIME_OUT": 465, "ProverResult.GAVE_UP": 3 }
+  "auto_union_n160_b20_k30_addedAxiom_1000.json": { "ProverResult.PROOF_FOUND": 532, "ProverResult.TIME_OUT": 465, "ProverResult.GAVE_UP": 3 },
+  "auto_union_n160_b20_k30_timer_addedAxiom_8000_presineb1k1.json": { "ProverResult.PROOF_FOUND": 546, "ProverResult.TIME_OUT": 453, "ProverResult.GAVE_UP": 1 }
 }
