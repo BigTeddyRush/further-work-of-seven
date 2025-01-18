@@ -42,3 +42,7 @@ selection/**
 
 .venv/
 .venv_2/
+
+*.xml
+
+.DS_Store
