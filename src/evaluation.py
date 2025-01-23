@@ -80,7 +80,7 @@ def evaluate(src: str, count: int = None):
     if count:
         select_candidates(src, count)
 
-    data = TestData(f"./{src}_candidates_autonounion_proofed.json")
+    data = TestData(f"./{src}_candidates.json")
 
     tests = dict()
     tests |= tests_union
@@ -92,7 +92,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/just_proofed_by_auto_{src}_{name}.json")
+        write_results(results, f"./results/just_proofed_without_auto_without_union_{src}_{name}.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")

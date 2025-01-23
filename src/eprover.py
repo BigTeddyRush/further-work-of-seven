@@ -25,10 +25,8 @@ def run_eprover(base: str|list[str], problem: str, args: list[str] = []) -> tupl
     cmd = [
         'eprover',
         '-s',
-        '--auto',
         '--tstp-format',
-        '--soft-cpu-limit=15',
-        '--proof-object'
+        '--soft-cpu-limit=15'
     ]
     cmd.extend(args)
 
