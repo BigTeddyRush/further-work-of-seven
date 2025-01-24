@@ -1,0 +1,25 @@
+fof( predefinitionsA15, axiom,
+	(![CLASS1,CLASS2]: 
+		(
+			(
+				p__d__disjoint(CLASS1,CLASS2)
+			)
+			<=>
+			(
+				(![INST]: 
+					(
+						(
+							~ (
+								p__d__instance(INST,CLASS1)
+							)
+						 |
+							~ (
+								p__d__instance(INST,CLASS2)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+).

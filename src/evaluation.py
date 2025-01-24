@@ -70,11 +70,27 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
     filter_path = "./filter.txt"
     with open(filter_path, 'w') as file:
         file.write(f"filter = {create_sine_filter(b, k)}")
-
+    
     results = dict()
     for i, c in enumerate(data.candidates):
+        
+        target_file = c
+        path_A12 = union_select("predefinitionsA12.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        merge_into_file2(path_A12, target_file)
+        path_A15 = union_select("predefinitionsA15.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        merge_into_file2(path_A15, target_file)
+        mergeA3229 = union_select("mergeA3229.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        merge_into_file2(mergeA3229, target_file)
+        mergeA257 = union_select("mergeA257.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        merge_into_file2(mergeA257, target_file)
+        predefinitionsA24 = union_select("predefinitionsA24.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        merge_into_file2(predefinitionsA24, target_file)
+        
+        
         selection_path = union_select(c, data.encoder, data.tensors, data.ontology, filter=filter_path, **kwargs)
+        print(selection_path)
         merge_into_file2(c, selection_path)
+        
         print(f"Test {i}: {c}")
         result = run_eprover(selection_path)
         print("    ->", result)
@@ -133,7 +149,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/{src}_{name}_vampire_union.json")
+        write_results(results, f"./results/{src}_{name}_vampire_union_addedAxiom_1000.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
@@ -179,7 +195,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     evaluate(args.src, args.select)
-
-    count_selected(args.src, "b60_k05", b=6.0, k=5)
-    count_selected(args.src, "b20_k03", b=2.0, k=3)
-    count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
