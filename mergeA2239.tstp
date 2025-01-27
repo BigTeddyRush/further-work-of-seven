@@ -1,0 +1,53 @@
+fof( mergeA2239, axiom,
+	(![OBJ2,OBJ1,PART]: 
+		(
+			(
+				(
+					(
+						p__d__instance(OBJ1,c__Object)
+					)
+				 &
+					(
+						p__d__instance(OBJ2,c__Object)
+					)
+				 &
+					(
+						( OBJ2 = f__MereologicalComplementFn1(OBJ1) )
+					)
+				 &
+					(
+						p__d__instance(PART,c__Object)
+					)
+				)
+			)
+			=>
+			(
+				(
+					(
+						(
+							p__part(PART,OBJ1)
+						)
+						<=>
+						(
+							~ (
+								p__overlapsSpatially(PART,OBJ2)
+							)
+						)
+					)
+				 &
+					(
+						(
+							p__part(PART,OBJ2)
+						)
+						<=>
+						(
+							~ (
+								p__overlapsSpatially(PART,OBJ1)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+).

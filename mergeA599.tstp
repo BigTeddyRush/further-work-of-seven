@@ -1,0 +1,21 @@
+fof( mergeA599, axiom,
+	(![REL]: 
+		(
+			(
+				p__d__instance(REL,c__AsymmetricRelation)
+			)
+			<=>
+			(
+				(
+					(
+						p__d__instance(REL,c__AntisymmetricRelation)
+					)
+				 &
+					(
+						p__d__instance(REL,c__IrreflexiveRelation)
+					)
+				)
+			)
+		)
+	)
+).

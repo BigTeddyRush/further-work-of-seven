@@ -58,12 +58,67 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
     # write filter to file
     filter_path = "./filter.txt"
     with open(filter_path, 'w') as file:
+        file.write(f"filter = {create_sine_filter(1, 1)}")
+        
+    path_A12 = union_select("predefinitionsA12.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    path_A15 = union_select("predefinitionsA15.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    path_A8 = union_select("predefinitionsA8.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA176 = union_select("mergeA176.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA178 = union_select("mergeA178.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA181 = union_select("mergeA181.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA594 = union_select("mergeA594.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    typeA3 = union_select("typeA3.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA2239 = union_select("mergeA2239.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA2244 = union_select("mergeA2244.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    typeA5 = union_select("typeA5.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    path_A7 = union_select("predefinitionsA7.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    miloA4176 = union_select("miloA4176.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    typeA28 = union_select("typeA28.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA331 = union_select("mergeA331.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA324 = union_select("mergeA324.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA3134 = union_select("mergeA3134.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA251 = union_select("mergeA251.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA599 = union_select("mergeA599.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA226 = union_select("mergeA226.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA330 = union_select("mergeA330.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    typeA68 = union_select("typeA68.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA3229 = union_select("mergeA3229.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA257 = union_select("mergeA257.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    predefinitionsA24 = union_select("predefinitionsA24.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+
+    with open(filter_path, 'w') as file:
         file.write(f"filter = {create_sine_filter(b, k)}")
 
     results = dict()
-    for i, c in enumerate(data.candidates):
+    for i, c in enumerate(data.candidates):       
         selection_path = union_select(c, data.encoder, data.tensors, data.ontology, filter=filter_path, **kwargs)
-        
+        """
+        merge_tstp_files(path_A12, selection_path, selection_path)
+        merge_tstp_files(path_A15, selection_path, selection_path)
+        merge_tstp_files(mergeA3229, selection_path, selection_path)
+        merge_tstp_files(mergeA257, selection_path, selection_path)
+        merge_tstp_files(predefinitionsA24, selection_path, selection_path)
+        merge_tstp_files(path_A8, selection_path, selection_path)
+        merge_tstp_files(mergeA176, selection_path, selection_path)
+        merge_tstp_files(mergeA178, selection_path, selection_path)
+        merge_tstp_files(mergeA181, selection_path, selection_path)
+        merge_tstp_files(mergeA594, selection_path, selection_path)
+        merge_tstp_files(typeA3, selection_path, selection_path)
+        merge_tstp_files(mergeA2239, selection_path, selection_path)
+        merge_tstp_files(mergeA2244, selection_path, selection_path)
+        merge_tstp_files(typeA5, selection_path, selection_path)
+        merge_tstp_files(path_A7, selection_path, selection_path)
+        merge_tstp_files(miloA4176, selection_path, selection_path)
+        merge_tstp_files(typeA28, selection_path, selection_path)
+        merge_tstp_files(mergeA331, selection_path, selection_path)
+        merge_tstp_files(mergeA324, selection_path, selection_path)
+        merge_tstp_files(mergeA3134, selection_path, selection_path)
+        merge_tstp_files(mergeA251, selection_path, selection_path)
+        merge_tstp_files(mergeA599, selection_path, selection_path)
+        merge_tstp_files(mergeA226, selection_path, selection_path)
+        merge_tstp_files(mergeA330, selection_path, selection_path)
+        merge_tstp_files(typeA68, selection_path, selection_path)
+        """
         print(f"Test {i}: {c}")
         
         start_time = time.time()  # Start timer
@@ -78,11 +133,40 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
 
     return results
 
+def merge_tstp_files(file1_path, file2_path, output_path):
+    """
+    Merge two .tstp files into one.
+    
+    Args:
+    - file1_path: path to the first .tstp file
+    - file2_path: path to the second .tstp file
+    - output_path: path where the merged file will be saved
+    """
+    try:
+        # Use a set to store unique lines
+        lines_set = set()
+        
+        # Read content from the first file
+        with open(file1_path, 'r') as file1:
+            lines_set.update(file1.readlines())
+        
+        # Read content from the second file
+        with open(file2_path, 'r') as file2:
+            lines_set.update(file2.readlines())
+        
+        # Write unique lines to the output file
+        with open(output_path, 'w') as output_file:
+            for line in sorted(lines_set):
+                output_file.write(line)
+        
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
 tests_union = {
     
-    'union_n160_b30_kUU': {
+    'union_n160_b0_k3': {
         'type': 'union',
-        'args': { 'n': 160, 'b': 3.0, 'k': 2147483647 }
+        'args': { 'n': 160, 'b': 2.0, 'k': 3 }
     }
 }
 
@@ -102,44 +186,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/auto_{src}_{name}_timer_withA12.json")
-
-def count_selected(src: str, name: str, b: float, k: int):
-    data = TestData(f"./{src}_candidates.json")
-
-    tests = [ 20, 40, 60, 80, 100, 120, 140, 160, 180 ]
-
-    # write filter to file
-    filter_path = "./filter.txt"
-    with open(filter_path, 'w') as file:
-        file.write(f"filter = {create_sine_filter(b, k)}")
-
-    results = dict()
-    for n in tests:
-        print(f"Counting for n={n}")
-
-        counts = []
-        for i, c in enumerate(data.candidates):
-            c_name, conjecture = read_tstp_single(c)
-            path = f"./selection/{c_name}.tstp"
-            
-            encoded_conjecture = data.encoder.encode_axiom(conjecture)
-
-            selection = select(encoded_conjecture, data.tensors, n=n)
-
-            write_tstp(path, {s: data.ontology[s] for s in selection}, type='conjecture')
-
-            # sine selection
-            run_e_axfilter(["./adimen.sumo.tstp", c, path], filter_path, path)
-
-            # remove conjectures from selection
-            axioms = read_tstp(path, type='axiom')
-
-            counts.append(len(axioms))
-            print(f"(n{n}|{i}) {c}: {len(axioms)}")
-
-        results[n] = counts
-    write_results(results, f"./results/counts/{src}_{name}.json")
+        write_results(results, f"./results/noauto_{src}_{name}_timer_union_all-mpnet-base-v2.json")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

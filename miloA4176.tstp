@@ -1,0 +1,25 @@
+fof( miloA4176, axiom,
+	(![X]: 
+		(
+			(
+				p__d__subclass(X,c__UniformClothing)
+			)
+			=>
+			(
+				(?[GRP]: 
+					(
+						(
+							(
+								p__d__instance(GRP,c__Group)
+							)
+						 &
+							(
+								p__hasUniform(GRP,X)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+).

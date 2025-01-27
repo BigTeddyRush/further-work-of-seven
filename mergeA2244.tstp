@@ -1,0 +1,21 @@
+fof( mergeA2244, axiom,
+	(![PART,OBJ]: 
+		(
+			(
+				(
+					(
+						p__d__instance(OBJ,c__Object)
+					)
+				 &
+					(
+						p__d__instance(PART,c__Object)
+					)
+				)
+			)
+			=>
+			(
+				p__part(PART,f__MereologicalSumFn2(OBJ,f__MereologicalComplementFn1(OBJ)))
+			)
+		)
+	)
+).

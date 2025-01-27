@@ -1,0 +1,25 @@
+fof( mergeA2260, axiom,
+	(![HOLE1]: 
+		(
+			(
+				p__d__instance(HOLE1,c__Hole)
+			)
+			=>
+			(
+				(?[HOLE2]: 
+					(
+						(
+							(
+								p__d__instance(HOLE2,c__Object)
+							)
+						 &
+							(
+								p__properPart(HOLE2,HOLE1)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+).

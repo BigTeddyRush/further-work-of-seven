@@ -15,7 +15,10 @@ Ontology = dict[str,str]
 EncOntology = dict[str, torch.tensor]
 
 class Encoder():
-    def __init__(self, model: str = 'all-MiniLM-L6-v2') -> None:
+    # math-similarity/Bert-MLM_arXiv-MP-class_zbMath MATHMODEL 768 dimensions max seq length 256
+    # best model: sentence-transformers/all-mpnet-base-v2 768 dimensions max seq length 384
+    # sentence-transformers/paraphrase-albert-small-v2 768 dimensions max seq length 256
+    def __init__(self, model: str = 'all-mpnet-base-v2') -> None:
         self.model = SentenceTransformer(model)
 
     def encode_axiom(self, axiom: str) -> torch.Tensor:

@@ -1,0 +1,25 @@
+fof( mergeA594, axiom,
+	(![REL]: 
+		(
+			(
+				p__d__instance(REL,c__BinaryRelation)
+			)
+			=>
+			(
+				(
+					p__d__instance(REL,c__IrreflexiveRelation)
+				)
+				<=>
+				(
+					(![INST]: 
+						(
+							~ (
+								p__d__holds3(REL,INST,INST)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+).
