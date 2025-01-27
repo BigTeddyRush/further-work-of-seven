@@ -16,9 +16,16 @@ EncOntology = dict[str, torch.tensor]
 
 class Encoder():
     # math-similarity/Bert-MLM_arXiv-MP-class_zbMath MATHMODEL 768 dimensions max seq length 256
-    # best model: sentence-transformers/all-mpnet-base-v2 768 dimensions max seq length 384
-    # sentence-transformers/paraphrase-albert-small-v2 768 dimensions max seq length 256
-    def __init__(self, model: str = 'all-mpnet-base-v2') -> None:
+    # sentence-transformers/all-distilroberta-v1 768 dimensions max seq length 512 source dataset: distilroberta-base
+    # sentence-transformers/all-mpnet-base-v2 768 dimensions max seq length 384 source dataset: microsoft/mpnet-base
+    # sentence-transformers/paraphrase-albert-small-v2 768 dimensions max seq length 256 source dataset: nreimers/albert-small-v2
+    
+    
+    # USE THEM
+    # sentence-transformers/multi-qa-MiniLM-L6-cos-v1 384 dimensions max seq length 512 source dataset: nreimers/MiniLM-L6-H384-uncased
+    # sentence-transformers/all-MiniLM-L6-v2 384 dimensions max seq length 256 source dataset: nreimers/MiniLM-L6-H384-uncased
+    # sentence-transformers/paraphrase-MiniLM-L3-v2 384 dimensions max seq length 128 source dataset: 	nreimers/MiniLM-L6-H384-uncased
+    def __init__(self, model: str = 'sentence-transformers/multi-qa-MiniLM-L6-cos-v1') -> None:
         self.model = SentenceTransformer(model)
 
     def encode_axiom(self, axiom: str) -> torch.Tensor:
