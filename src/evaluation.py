@@ -45,18 +45,21 @@ class TestData():
     tensors: EncOntology
     ontology: Ontology
 
-    def __init__(self, path) -> None:
+    def __init__(self, path, model) -> None:
         with open(path, 'r') as f:
             self.candidates = json.load(f)
 
         self.encoder = Encoder()
-        self.tensors = torch.load("./axioms.pt")
+        model = f"./{model}.pt"
+        print(model)
+        self.tensors = torch.load(model)
         self.ontology = read_tstp("./adimen.sumo.tstp")
 
 
-def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverResult]:
+def test_union(data: TestData, b: float, k: int, addedAxiom: str = None, **kwargs) -> dict[str, ProverResult]:
     # write filter to file
     filter_path = "./filter.txt"
+    print(b, k)
     with open(filter_path, 'w') as file:
         file.write(f"filter = {create_sine_filter(1, 1)}")
         
@@ -92,33 +95,34 @@ def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverRe
     results = dict()
     for i, c in enumerate(data.candidates):       
         selection_path = union_select(c, data.encoder, data.tensors, data.ontology, filter=filter_path, **kwargs)
-        """
-        merge_tstp_files(path_A12, selection_path, selection_path)
-        merge_tstp_files(path_A15, selection_path, selection_path)
-        merge_tstp_files(mergeA3229, selection_path, selection_path)
-        merge_tstp_files(mergeA257, selection_path, selection_path)
-        merge_tstp_files(predefinitionsA24, selection_path, selection_path)
-        merge_tstp_files(path_A8, selection_path, selection_path)
-        merge_tstp_files(mergeA176, selection_path, selection_path)
-        merge_tstp_files(mergeA178, selection_path, selection_path)
-        merge_tstp_files(mergeA181, selection_path, selection_path)
-        merge_tstp_files(mergeA594, selection_path, selection_path)
-        merge_tstp_files(typeA3, selection_path, selection_path)
-        merge_tstp_files(mergeA2239, selection_path, selection_path)
-        merge_tstp_files(mergeA2244, selection_path, selection_path)
-        merge_tstp_files(typeA5, selection_path, selection_path)
-        merge_tstp_files(path_A7, selection_path, selection_path)
-        merge_tstp_files(miloA4176, selection_path, selection_path)
-        merge_tstp_files(typeA28, selection_path, selection_path)
-        merge_tstp_files(mergeA331, selection_path, selection_path)
-        merge_tstp_files(mergeA324, selection_path, selection_path)
-        merge_tstp_files(mergeA3134, selection_path, selection_path)
-        merge_tstp_files(mergeA251, selection_path, selection_path)
-        merge_tstp_files(mergeA599, selection_path, selection_path)
-        merge_tstp_files(mergeA226, selection_path, selection_path)
-        merge_tstp_files(mergeA330, selection_path, selection_path)
-        merge_tstp_files(typeA68, selection_path, selection_path)
-        """
+        if addedAxiom == "addedAxiom8000":
+            print("run with added axiom")
+            merge_tstp_files(path_A12, selection_path, selection_path)
+            merge_tstp_files(path_A15, selection_path, selection_path)
+            merge_tstp_files(mergeA3229, selection_path, selection_path)
+            merge_tstp_files(mergeA257, selection_path, selection_path)
+            merge_tstp_files(predefinitionsA24, selection_path, selection_path)
+            merge_tstp_files(path_A8, selection_path, selection_path)
+            merge_tstp_files(mergeA176, selection_path, selection_path)
+            merge_tstp_files(mergeA178, selection_path, selection_path)
+            merge_tstp_files(mergeA181, selection_path, selection_path)
+            merge_tstp_files(mergeA594, selection_path, selection_path)
+            merge_tstp_files(typeA3, selection_path, selection_path)
+            merge_tstp_files(mergeA2239, selection_path, selection_path)
+            merge_tstp_files(mergeA2244, selection_path, selection_path)
+            merge_tstp_files(typeA5, selection_path, selection_path)
+            merge_tstp_files(path_A7, selection_path, selection_path)
+            merge_tstp_files(miloA4176, selection_path, selection_path)
+            merge_tstp_files(typeA28, selection_path, selection_path)
+            merge_tstp_files(mergeA331, selection_path, selection_path)
+            merge_tstp_files(mergeA324, selection_path, selection_path)
+            merge_tstp_files(mergeA3134, selection_path, selection_path)
+            merge_tstp_files(mergeA251, selection_path, selection_path)
+            merge_tstp_files(mergeA599, selection_path, selection_path)
+            merge_tstp_files(mergeA226, selection_path, selection_path)
+            merge_tstp_files(mergeA330, selection_path, selection_path)
+            merge_tstp_files(typeA68, selection_path, selection_path)
+        
         print(f"Test {i}: {c}")
         
         start_time = time.time()  # Start timer
@@ -164,17 +168,17 @@ def merge_tstp_files(file1_path, file2_path, output_path):
 
 tests_union = {
     
-    'union_n160_b0_k3': {
+    'union_n160_b20_k3': {
         'type': 'union',
         'args': { 'n': 160, 'b': 2.0, 'k': 3 }
     }
 }
 
-def evaluate(src: str, count: int = None):
+def evaluate(src: str, count: int = None, modelName: str = None, addedAxiom: str = None, **kwargs):
     if count:
         select_candidates(src, count)
 
-    data = TestData(f"./{src}_candidates.json")
+    data = TestData(f"./{src}_candidates.json", model=modelName)
 
     tests = dict()
     tests |= tests_union
@@ -184,9 +188,9 @@ def evaluate(src: str, count: int = None):
 
         match test['type']:
             case 'union':
-                results = test_union(data, **test['args'])
+                results = test_union(data=data, addedAxiom=addedAxiom, **test['args'])
 
-        write_results(results, f"./results/noauto_{src}_{name}_timer_union_all-mpnet-base-v2.json")
+        write_results(results, f"./results/noauto_{src}_{name}_timer_union_{modelName}_{addedAxiom}.json")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -194,8 +198,9 @@ if __name__ == "__main__":
     parser.add_argument('--select')
     args = parser.parse_args()
 
-    evaluate(args.src, args.select)
-
-    #count_selected(args.src, "b60_k05", b=6.0, k=5)
-    #count_selected(args.src, "b20_k03", b=2.0, k=3)
-    #count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
+    evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom=None)
+    evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom="addedAxiom8000")
+    evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom=None)
+    evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom="addedAxiom8000")
+    evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom=None)
+    evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom="addedAxiom8000")
