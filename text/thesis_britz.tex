@@ -85,11 +85,72 @@
     \item Ziel und Beitrag der Arbeit
   \end{itemize}
 \chapter{Verwandte Arbeit}
+\begin{itemize}
+  \item ALR12. ´Alvez, Javier, Paqui Lucio and German Rigau: Adimen-SUMO:
+  Reengineering an Ontology for First-Order Reasoning. Int. J. Semantic
+  Web Inf. Syst., 8(4):80–116, 2012.
+  \item Syntaktische Selektionsstrategien:
+  \begin{itemize}
+    \item HV11. Hoder, Krystof and Andrei Voronkov: Sine Qua Non for
+    Large Theory Reasoning. In Bjørner, Nikolaj S. and Viorica
+    Sofronie-Stokkermans (editors): Automated Deduction - CADE-
+    23 - 23rd International Conference on Automated Deduction, Wroclaw,
+    Poland, July 31 - August 5, 2011. Proceedings, volume 6803 of Lecture
+    Notes in Computer Science, pages 299–314. Springer, 2011.
+    \item Meng, Jia and Lawrence C. Paulson: Lightweight relevance filter-
+    ing for machine-generated resolution problems. J. Appl. Log., 7(1):41–
+    57, 2009.
+    \item Roederer, Alex, Yury Puzis and Geoff Sutcliffe: Divvy: An
+    ATP Meta-system Based on Axiom Relevance Ordering. In Schmidt,
+    Renate A. (editor): Automated Deduction - CADE-22, 22nd Interna-
+    tional Conference on Automated Deduction, Montreal, Canada, August
+    2-7, 2009. Proceedings, volume 5663 of Lecture Notes in Computer Sci-
+    ence, pages 157–162. Springer, 2009.
+  \end{itemize}
+  \item SInE: Roederer, Alex, Yury Puzis and Geoff Sutcliffe: Divvy: An
+  ATP Meta-system Based on Axiom Relevance Ordering. In Schmidt,
+  Renate A. (editor): Automated Deduction - CADE-22, 22nd Interna-
+  tional Conference on Automated Deduction, Montreal, Canada, August
+  2-7, 2009. Proceedings, volume 5663 of Lecture Notes in Computer Sci-
+  ence, pages 157–162. Springer, 2009.
+  \item Semantisch: Sutcliffe, Geoff and Yury Puzis: SRASS - A Semantic Relevance
+  Axiom Selection System. In Pfenning, Frank (editor): Automated
+  Deduction - CADE-21, 21st International Conference on Automated
+  Deduction, Bremen, Germany, July 17-20, 2007, Proceedings, volume
+  4603 of Lecture Notes in Computer Science, pages 295–310. Springer,
+  2007.
+\end{itemize}
 %
+\chapter{Behauptung}
+Die semantische Nähe von Wörtern kann das Commen Sense Reasoning unterstützen.\\
+Wieso? Grobe Beschreibung. Wie ist eine Grammatik strukturiert? Wie ist der Zusammenhang zwischen Logik und natürlicher Sprache? \\
+Proover berücksichtigt nur die Signaturen und bringt solche in Verbindung, die in einer logischen Kette sind. \\
+Wenn nun aber ein Begriff in dieser Kette nicht vorkommt, aber für den Beweis relevant ist, dann fehlt dies. \\
+
+the semantic structure of ontologies often mirrors descriptions and categorizations found in natural language.
+
+Ontologies might integrate or be constructed using existing language resources such as thesauri, taxonomies, or lexical databases (e.g., WordNet), which are themselves typically developed from natural language data.
+
+Shared Semantic Goals:
+
+Both natural language and ontologies aim to represent and convey meaning. While the methods and structures differ, they both operate within the realm of semantics—understanding and relating concepts and entities.
+
+Complementary Roles:
+
+Natural language is often the starting point for building ontologies, helping to identify and articulate the necessary concepts and properties. Ontologies, in turn, can support natural language processing by providing a structured, semantic backbone for interpreting text.
+
+"The integration of natural language semantic similarity measures into the axiom selection process of automated theorem provers significantly enhances their performance in commonsense reasoning tasks, bridging the gap between human-like understanding and machine logic through improved alignment of logical axioms with linguistic context."
+
+Behauptung: Logische Axiome tragen eine semantische Bedeutung, da sie einen Bezug zur realen Welt haben: Semantische Bedeutung: Auch wenn Axiome formal und symbolisch dargestellt werden, tragen sie eine semantische Bedeutung, da sie konzeptionelle Inhalte definieren, die mit bestimmten Bedeutungen in der realen Welt verbunden sind. Zum Beispiel könnte ein Axiom in einer Ontologie besagen, dass alle Menschen sterblich sind, was eine direkte semantische Verbindung zu unserem Wissen über die Realität hat.
+
+Wie relevant ist die größe der Dimension und die max. sequenz-length
 \chapter{Vorwissen}
   \section{Commen sense reasoning}
     \begin{itemize}
-      \item Erklärung
+      \item Erklärung.
+      \item Was ist das?
+      \item Wofür braucht man es? Einsatzfelder
+      \item Wie ist der aktuelle Stand?
       \item Herausforderungen
     \end{itemize}
   \section{Word Embeddings}
@@ -104,16 +165,18 @@
     \begin{itemize}
       \item Erklärung. Was sind Grammatiken und welche gibt es?
       \item Aufbau und Struktur
+      \item Wofür benötigt man sie?
       \item SUMO
     \end{itemize}
   \section{Theorembeweiser}
     \begin{itemize}
       \item Erklärung. Was sind Theorembeweiser und welche gibt es?
-      \item Funktionalität
+      \item Funktionalität - wie werden Beweise gefunden - refutation
+      \item Wofür braucht man sie?
       \item Grenzen und Herausforderungen
       \item Prover E
         \begin{itemize}
-          \item Auto mode 
+          \item Wie arbeitet E? Wie geht E vor?
           \item Satauto mode 
         \end{itemize}
     \end{itemize} 
@@ -121,13 +184,36 @@
   \begin{itemize}
     \item Syntaktisch 
     \item Semantisch
-    \item Kombination
+    \item Kombination - Union: wie übersetzt
   \end{itemize}
+\chapter{Parallelen zwischen Sprachverarbeitung und Theorembeweisern}
+\begin{itemize}
+  \item Ziel: finde Worte/ Axiome, die zum Kontext passen, um eine gewisse Aussage zu erzielen
+  \item Mehrdeutigkeiten werden mittels Resolution gelöst
+  \item Both represent knowledge and meaning
+  \item Ontologies like Adimen-SUMO capture entities, relationships, and properties formally, analogous to how natural language uses words, sentences, and grammar to convey meaning.
+  \item Just as natural language has grammatical and syntactical rules, Adimen-SUMO is built upon logical syntax and rules. However, logical syntax is rigid and unambiguous, while natural language often allows for more flexibility and nuance
+  \item Difference: While natural languages do have grammar and syntax, they are more flexible and context-dependent, allowing for ambiguity and multiple interpretations, unlike the rigid, unambiguous nature of formal logic.
+  \item In natural language, much of the meaning is implicit, derived from context, tone, and prior knowledge. Logical systems make everything explicit, ensuring that every inference is clear and derivable from stated axioms
+\end{itemize}
 \chapter{Experimente}
   \begin{itemize}
-    \item Standard vs. Satauto vs. Auto
-    \item SInE vs. SeVen 
-    \item Welche Axiome werden gewählt?
+    \item Whitebox Truth Test: wie werden diese erzeugt? \url{https://www.researchgate.net/publication/317230162_Automatic_White-Box_Testing_of_First-Order_Logic_Ontologies}\\
+    Falsity tests created according to Adimen Sumo -> negate them to get falsity test -> Prover does refutation
+    \item Modelle: Basemodel / sequence length / dimension / Training data
+    \begin{itemize}
+      \item all-MiniLM-L6-v2
+      \item multi-qa-MiniLM-L6-cos-v1
+      \item paraphrase-MiniLM-L3-v2
+    \end{itemize}
+    \item No Auto ohne SInE -> keine Eingrenzung der Axiome
+    \item No Auto mit SInE -> Ergebnisse von Studio von Claudia
+    \item No Auto mit Seven -> Ergebnisse von Studio von Claudia
+    -> Eingrenzen der Axiomsmenge mittels semantischer Nähe hilfreich
+    \item No Auto mit Union
+    \item No Auto mit Seven aller Modelle mit AddedAxioms
+    \item Satauto mit Seven aller Modelle mit AddedAxioms
+    \item Durchschnittliche Kosinus-Ähnlichkeit der Axiome des Beweises und der Conjecture
     \item Statistiken
       \begin{itemize}
         \item Mean variable count
@@ -138,11 +224,6 @@
         \item Time to find proof
         \item Summarized time proof found
         \item Conclusion
-      \end{itemize}
-    \item Add Axiome
-      \begin{itemize}
-        \item 1000 häufigste
-        \item SInE Strategie als Auswahl
       \end{itemize}
     \item Vampire
     \item Conclusion
