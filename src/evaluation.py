@@ -198,9 +198,9 @@ if __name__ == "__main__":
     parser.add_argument('--select')
     args = parser.parse_args()
 
-    evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom=None)
-    evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom="addedAxiom8000")
-    evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom=None)
-    evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom="addedAxiom8000")
+    #evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom=None)
+    #evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom="addedAxiom8000")
+    #evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom=None)
+    #evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom="addedAxiom8000")
     evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom=None)
     evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom="addedAxiom8000")
