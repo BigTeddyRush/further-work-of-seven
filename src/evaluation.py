@@ -88,7 +88,7 @@ def test_union(data: TestData, b: float, k: int, addedAxiom: str = None, **kwarg
     mergeA3229 = union_select("mergeA3229.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
     mergeA257 = union_select("mergeA257.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
     predefinitionsA24 = union_select("predefinitionsA24.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-
+    
     with open(filter_path, 'w') as file:
         file.write(f"filter = {create_sine_filter(b, k)}")
 
@@ -98,6 +98,7 @@ def test_union(data: TestData, b: float, k: int, addedAxiom: str = None, **kwarg
         if addedAxiom == "addedAxiom8000":
             print("run with added axiom")
             merge_tstp_files(path_A12, selection_path, selection_path)
+            
             merge_tstp_files(path_A15, selection_path, selection_path)
             merge_tstp_files(mergeA3229, selection_path, selection_path)
             merge_tstp_files(mergeA257, selection_path, selection_path)
@@ -122,6 +123,7 @@ def test_union(data: TestData, b: float, k: int, addedAxiom: str = None, **kwarg
             merge_tstp_files(mergeA226, selection_path, selection_path)
             merge_tstp_files(mergeA330, selection_path, selection_path)
             merge_tstp_files(typeA68, selection_path, selection_path)
+            
         
         print(f"Test {i}: {c}")
         
@@ -160,7 +162,7 @@ def merge_tstp_files(file1_path, file2_path, output_path):
         
         # Write unique lines to the output file
         with open(output_path, 'w') as output_file:
-            for line in sorted(lines_set):
+            for line in (lines_set):
                 output_file.write(line)
         
     except Exception as e:
@@ -190,7 +192,7 @@ def evaluate(src: str, count: int = None, modelName: str = None, addedAxiom: str
             case 'union':
                 results = test_union(data=data, addedAxiom=addedAxiom, **test['args'])
 
-        write_results(results, f"./results/noauto_{src}_{name}_timer_union_{modelName}_{addedAxiom}.json")
+        write_results(results, f"./results/noauto_{src}_{name}_timer_union_{modelName}_{addedAxiom}_2ndRun.json")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -198,10 +200,10 @@ if __name__ == "__main__":
     parser.add_argument('--select')
     args = parser.parse_args()
 
-    #evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom=None)
-    #evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom="addedAxiom8000")
-    evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom=None)
     evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom="addedAxiom8000")
+    evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom=None)
+    evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom=None)
+    evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom="addedAxiom8000")
     evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom=None)
     evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom="addedAxiom8000")
     

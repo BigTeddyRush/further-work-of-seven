@@ -25,7 +25,7 @@ class Encoder():
     # sentence-transformers/multi-qa-MiniLM-L6-cos-v1 384 dimensions max seq length 512 source dataset: nreimers/MiniLM-L6-H384-uncased
     # sentence-transformers/all-MiniLM-L6-v2 384 dimensions max seq length 256 source dataset: nreimers/MiniLM-L6-H384-uncased
     # sentence-transformers/paraphrase-MiniLM-L3-v2 384 dimensions max seq length 128 source dataset: 	nreimers/MiniLM-L6-H384-uncased
-    def __init__(self, model: str = 'sentence-transformers/multi-qa-MiniLM-L6-cos-v1') -> None:
+    def __init__(self, model: str = 'all-MiniLM-L6-v2') -> None:
         self.model = SentenceTransformer(model)
 
     def encode_axiom(self, axiom: str) -> torch.Tensor:
