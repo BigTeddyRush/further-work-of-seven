@@ -21,13 +21,17 @@ class ProverResult(Enum):
     TIME_OUT = 3
     PROOF_FOUND = 4
 
-def run_eprover(base: str|list[str], problem: str, args: list[str] = []) -> tuple[ProverResult, str]:
+def run_eprover(base: str|list[str], problem: str, proverMode: str, args: list[str] = []) -> tuple[ProverResult, str]:
     cmd = [
         'eprover',
         '-s',
         '--tstp-format',
         '--soft-cpu-limit=15'
     ]
+    if proverMode:
+        cmd.append(proverMode)
+    print(cmd)
+        
     cmd.extend(args)
 
     if type(base) is str:

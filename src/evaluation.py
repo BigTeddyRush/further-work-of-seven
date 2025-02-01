@@ -52,42 +52,44 @@ class TestData():
         self.encoder = Encoder()
         model = f"./{model}.pt"
         print(model)
-        self.tensors = torch.load(model)
+        self.tensors = torch.load('./axioms.pt')
         self.ontology = read_tstp("./adimen.sumo.tstp")
 
 
-def test_union(data: TestData, b: float, k: int, addedAxiom: str = None, **kwargs) -> dict[str, ProverResult]:
+def test_union(data: TestData, b: float, k: int, addedAxiom: str = None, proverMode: str = None, **kwargs) -> dict[str, ProverResult]:
     # write filter to file
     filter_path = "./filter.txt"
     print(b, k)
-    with open(filter_path, 'w') as file:
-        file.write(f"filter = {create_sine_filter(1, 1)}")
+    
+    if addedAxiom == "addedAxiom8000":
+        with open(filter_path, 'w') as file:
+            file.write(f"filter = {create_sine_filter(1, 1)}")
         
-    path_A12 = union_select("predefinitionsA12.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    path_A15 = union_select("predefinitionsA15.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    path_A8 = union_select("predefinitionsA8.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA176 = union_select("mergeA176.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA178 = union_select("mergeA178.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA181 = union_select("mergeA181.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA594 = union_select("mergeA594.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    typeA3 = union_select("typeA3.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA2239 = union_select("mergeA2239.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA2244 = union_select("mergeA2244.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    typeA5 = union_select("typeA5.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    path_A7 = union_select("predefinitionsA7.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    miloA4176 = union_select("miloA4176.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    typeA28 = union_select("typeA28.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA331 = union_select("mergeA331.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA324 = union_select("mergeA324.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA3134 = union_select("mergeA3134.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA251 = union_select("mergeA251.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA599 = union_select("mergeA599.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA226 = union_select("mergeA226.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA330 = union_select("mergeA330.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    typeA68 = union_select("typeA68.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA3229 = union_select("mergeA3229.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    mergeA257 = union_select("mergeA257.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-    predefinitionsA24 = union_select("predefinitionsA24.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        path_A12 = union_select("predefinitionsA12.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        path_A15 = union_select("predefinitionsA15.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        path_A8 = union_select("predefinitionsA8.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA176 = union_select("mergeA176.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA178 = union_select("mergeA178.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA181 = union_select("mergeA181.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA594 = union_select("mergeA594.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        typeA3 = union_select("typeA3.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA2239 = union_select("mergeA2239.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA2244 = union_select("mergeA2244.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        typeA5 = union_select("typeA5.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        path_A7 = union_select("predefinitionsA7.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        miloA4176 = union_select("miloA4176.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        typeA28 = union_select("typeA28.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA331 = union_select("mergeA331.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA324 = union_select("mergeA324.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA3134 = union_select("mergeA3134.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA251 = union_select("mergeA251.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA599 = union_select("mergeA599.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA226 = union_select("mergeA226.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA330 = union_select("mergeA330.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        typeA68 = union_select("typeA68.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA3229 = union_select("mergeA3229.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        mergeA257 = union_select("mergeA257.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+        predefinitionsA24 = union_select("predefinitionsA24.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
     
     with open(filter_path, 'w') as file:
         file.write(f"filter = {create_sine_filter(b, k)}")
@@ -128,7 +130,7 @@ def test_union(data: TestData, b: float, k: int, addedAxiom: str = None, **kwarg
         print(f"Test {i}: {c}")
         
         start_time = time.time()  # Start timer
-        result = run_eprover(selection_path, c)
+        result = run_eprover(selection_path, c, proverMode)
         end_time = time.time()  # End timer
         
         execution_time = end_time - start_time  # Calculate elapsed time
@@ -176,7 +178,7 @@ tests_union = {
     }
 }
 
-def evaluate(src: str, count: int = None, modelName: str = None, addedAxiom: str = None, **kwargs):
+def evaluate(src: str, count: int = None, modelName: str = None, addedAxiom: str = None, proverMode: str = None, **kwargs):
     if count:
         select_candidates(src, count)
 
@@ -190,9 +192,9 @@ def evaluate(src: str, count: int = None, modelName: str = None, addedAxiom: str
 
         match test['type']:
             case 'union':
-                results = test_union(data=data, addedAxiom=addedAxiom, **test['args'])
+                results = test_union(data=data, addedAxiom=addedAxiom, proverMode=proverMode, **test['args'])
 
-        write_results(results, f"./results/noauto_{src}_{name}_timer_union_{modelName}_{addedAxiom}_2ndRun.json")
+        write_results(results, f"./results/{proverMode}_{src}_{name}_timer_union_{modelName}_{addedAxiom}_2ndRun.json")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -200,10 +202,14 @@ if __name__ == "__main__":
     parser.add_argument('--select')
     args = parser.parse_args()
 
-    evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom="addedAxiom8000")
-    evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom=None)
-    evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom=None)
-    evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom="addedAxiom8000")
-    evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom=None)
-    evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom="addedAxiom8000")
-    
+    #evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom="addedAxiom8000")
+    #evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom=None)
+    #evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom=None)
+    #evaluate(args.src, args.select, modelName="axioms_multi-qa-MiniLM-L6-cos-v1", addedAxiom="addedAxiom8000")
+    #evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom=None)
+    #evaluate(args.src, args.select, modelName="axioms_paraphrase-MiniLM-L3-v2", addedAxiom="addedAxiom8000")
+    #evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom="addedAxiom8000")
+    evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom=None, proverMode="--auto")
+    evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom="addedAxiom8000", proverMode="--auto")
+    evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom=None, proverMode="--satauto")
+    evaluate(args.src, args.select, modelName="axioms_all-MiniLM-L6-v2", addedAxiom="addedAxiom8000", proverMode="--satauto")
