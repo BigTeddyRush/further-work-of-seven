@@ -1,0 +1,21 @@
+fof( typeA68, axiom,
+	(![X1,X2]: 
+		(
+			(
+				p__attribute(X1,X2)
+			)
+			=>
+			(
+				(
+					(
+						p__d__instance(X2,c__Attribute)
+					)
+				 &
+					(
+						p__d__instance(X1,c__Object)
+					)
+				)
+			)
+		)
+	)
+).

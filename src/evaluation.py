@@ -4,6 +4,8 @@ from operator import countOf
 from seven import *
 from eprover import *
 
+import sys
+
 #=========================================================================================
 # candidates
 #=========================================================================================
@@ -68,31 +70,78 @@ def test_seven(data: TestData, **kwargs) -> dict[str, ProverResult]:
 def test_union(data: TestData, b: float, k: int, **kwargs) -> dict[str, ProverResult]:
     # write filter to file
     filter_path = "./filter.txt"
+    
+    with open(filter_path, 'w') as file:
+            file.write(f"filter = {create_sine_filter(1, 1)}")
+    path_A12 = union_select("predefinitionsA12.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    path_A15 = union_select("predefinitionsA15.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    path_A8 = union_select("predefinitionsA8.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA176 = union_select("mergeA176.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA178 = union_select("mergeA178.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA181 = union_select("mergeA181.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA594 = union_select("mergeA594.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    typeA3 = union_select("typeA3.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA2239 = union_select("mergeA2239.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA2244 = union_select("mergeA2244.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    typeA5 = union_select("typeA5.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    path_A7 = union_select("predefinitionsA7.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    miloA4176 = union_select("miloA4176.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    typeA28 = union_select("typeA28.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA331 = union_select("mergeA331.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA324 = union_select("mergeA324.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA3134 = union_select("mergeA3134.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA251 = union_select("mergeA251.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA599 = union_select("mergeA599.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA226 = union_select("mergeA226.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA330 = union_select("mergeA330.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    typeA68 = union_select("typeA68.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA3229 = union_select("mergeA3229.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    mergeA257 = union_select("mergeA257.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
+    predefinitionsA24 = union_select("predefinitionsA24.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)    
+    
     with open(filter_path, 'w') as file:
         file.write(f"filter = {create_sine_filter(b, k)}")
-    
+        
     results = dict()
     for i, c in enumerate(data.candidates):
-        
-        target_file = c
-        path_A12 = union_select("predefinitionsA12.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-        merge_into_file2(path_A12, target_file)
-        path_A15 = union_select("predefinitionsA15.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-        merge_into_file2(path_A15, target_file)
-        mergeA3229 = union_select("mergeA3229.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-        merge_into_file2(mergeA3229, target_file)
-        mergeA257 = union_select("mergeA257.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-        merge_into_file2(mergeA257, target_file)
-        predefinitionsA24 = union_select("predefinitionsA24.tstp", data.encoder, data.tensors, data.ontology, filter=filter_path, n=10)
-        merge_into_file2(predefinitionsA24, target_file)
-        
+        selection_path_final = f"./selection/{i}.tstp"
+        print(selection_path_final)
+        with open(selection_path_final, 'w') as f:
+            pass
+        merge_into_file2(c, selection_path_final)
         
         selection_path = union_select(c, data.encoder, data.tensors, data.ontology, filter=filter_path, **kwargs)
-        print(selection_path)
-        merge_into_file2(c, selection_path)
+
+        merge_into_file2(path_A12, selection_path)
+        merge_into_file2(path_A15, selection_path)
+        merge_into_file2(path_A8, selection_path)
+        merge_into_file2(mergeA176, selection_path)
+        merge_into_file2(mergeA178, selection_path)
+        merge_into_file2(mergeA181, selection_path)
+        merge_into_file2(mergeA594, selection_path)
+        merge_into_file2(typeA3, selection_path)
+        merge_into_file2(mergeA2239, selection_path)
+        merge_into_file2(mergeA2244, selection_path)
+        merge_into_file2(typeA5, selection_path)
+        merge_into_file2(path_A7, selection_path)    
+        merge_into_file2(miloA4176, selection_path)
+        merge_into_file2(typeA28, selection_path)  
+        merge_into_file2(mergeA331, selection_path)
+        merge_into_file2(mergeA324, selection_path)
+        merge_into_file2(mergeA3134, selection_path)
+        merge_into_file2(mergeA251, selection_path)
+        merge_into_file2(mergeA599, selection_path)
+        merge_into_file2(mergeA226, selection_path)
+        merge_into_file2(mergeA330, selection_path)
+        merge_into_file2(typeA68, selection_path)  
+        merge_into_file2(mergeA3229, selection_path)
+        merge_into_file2(mergeA257, selection_path)
+        merge_into_file2(predefinitionsA24, selection_path)
+        
+        merge_into_file2(selection_path, selection_path_final)
         
         print(f"Test {i}: {c}")
-        result = run_eprover(selection_path)
+        result = run_eprover(selection_path_final)
         print("    ->", result)
 
         results[c] = result
@@ -120,8 +169,6 @@ def merge_into_file2(file1_path, file2_path):
         with open(file2_path, 'w') as output_file:
             output_file.writelines(merged_content)
         
-        print(f"File '{file2_path}' has been updated with the merged content.")
-
     except Exception as e:
         print(f"An error occurred: {e}")
 
@@ -149,44 +196,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/{src}_{name}_vampire_union_addedAxiom_1000.json")
-
-def count_selected(src: str, name: str, b: float, k: int):
-    data = TestData(f"./{src}_candidates.json")
-
-    tests = [ 20, 40, 60, 80, 100, 120, 140, 160, 180 ]
-
-    # write filter to file
-    filter_path = "./filter.txt"
-    with open(filter_path, 'w') as file:
-        file.write(f"filter = {create_sine_filter(b, k)}")
-
-    results = dict()
-    for n in tests:
-        print(f"Counting for n={n}")
-
-        counts = []
-        for i, c in enumerate(data.candidates):
-            c_name, conjecture = read_tstp_single(c)
-            path = f"./selection/{c_name}.tstp"
-            
-            encoded_conjecture = data.encoder.encode_axiom(conjecture)
-
-            selection = select(encoded_conjecture, data.tensors, n=n)
-
-            write_tstp(path, {s: data.ontology[s] for s in selection}, type='conjecture')
-
-            # sine selection
-            run_e_axfilter(["./adimen.sumo.tstp", c, path], filter_path, path)
-
-            # remove conjectures from selection
-            axioms = read_tstp(path, type='axiom')
-
-            counts.append(len(axioms))
-            print(f"(n{n}|{i}) {c}: {len(axioms)}")
-
-        results[n] = counts
-    write_results(results, f"./results/counts/{src}_{name}.json")
+        write_results(results, f"./results/{src}_{name}_vampire_union_addedAxiom_8000.json")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

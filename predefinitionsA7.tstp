@@ -1,0 +1,7 @@
+fof( predefinitionsA7, axiom,
+	(![X]: 
+		(
+			p__d__subclass(X,X)
+		)
+	)
+).

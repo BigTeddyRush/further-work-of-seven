@@ -1,0 +1,13 @@
+fof( typeA3, axiom,
+	(![X1,X2,X3]: 
+		(
+			(
+				p__d__holds3(X1,X2,X3)
+			)
+			=>
+			(
+				p__d__instance(X1,c__BinaryRelation)
+			)
+		)
+	)
+).

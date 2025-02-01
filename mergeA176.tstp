@@ -1,0 +1,17 @@
+fof( mergeA176, axiom,
+	(![CLASS]: 
+		(
+			(
+				p__d__subclass(CLASS,c__Entity)
+			)
+			=>
+			(
+				(?[THING]: 
+					(
+						p__d__instance(THING,CLASS)
+					)
+				)
+			)
+		)
+	)
+).

@@ -68,7 +68,7 @@ def seven_select_t(path: str, conjecture: torch.Tensor, tensors: EncOntology, on
 #=========================================================================================
 def union_select(goal: str, encoder: Encoder, tensors: EncOntology, ontology: Ontology, filter: str, **kwargs) -> str:
     name, conjecture = read_tstp_single(goal)
-    path = f"./selection/{name}.tstp"
+    path = f"./selection/{name}_stage.tstp"
     
     encoded_conjecture = encoder.encode_axiom(conjecture)
 
