@@ -1,0 +1,17 @@
+{
+  "standard": {
+    "ProverResult.TIME_OUT": 0,
+    "ProverResult.PROOF_FOUND": 0,
+    "ProverResult.GAVE_UP": 0
+  },
+  "union": {
+    "ProverResult.TIME_OUT": 0,
+    "ProverResult.PROOF_FOUND": 0,
+    "ProverResult.GAVE_UP": 0
+  },
+  "union_addedAxiom": {
+    "ProverResult.TIME_OUT": 0,
+    "ProverResult.PROOF_FOUND": 0,
+    "ProverResult.GAVE_UP": 0
+  }
+}

@@ -198,34 +198,107 @@ Wie relevant ist die größe der Dimension und die max. sequenz-length
 \end{itemize}
 \chapter{Experimente}
   \begin{itemize}
-    \item Whitebox Truth Test: wie werden diese erzeugt? \url{https://www.researchgate.net/publication/317230162_Automatic_White-Box_Testing_of_First-Order_Logic_Ontologies}\\
+    \item Whitebox Truth Test: wie werden diese erzeugt? \\ 
+    \url{https://www.researchgate.net/publication/317230162_Automatic_White-Box_Testing_of_First-Order_Logic_Ontologies} \\ 
     Falsity tests created according to Adimen Sumo -> negate them to get falsity test -> Prover does refutation
-    \item Modelle: Basemodel / sequence length / dimension / Training data
+    \clearpage
+    \item Standard
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{standard_mode_output.pdf} % Add path to the PDF image
+      \caption{Summary of Prover Results: Standard Mode}
+      \label{fig:prover_results_standard}
+    \end{figure}
+    \clearpage
+    \item Satauto
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{satauto_mode_output.pdf} % Add path to the PDF image
+      \caption{Summary of Prover Results: Satauto Mode}
+      \label{fig:prover_results_satauto}
+    \end{figure}
+    \clearpage
+    \item Auto
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{auto_mode_output.pdf} % Add path to the PDF image
+      \caption{Summary of Prover Results: Auto Mode}
+      \label{fig:prover_results_auto}
+    \end{figure}
+    \clearpage
+    \item Modelle
     \begin{itemize}
       \item all-MiniLM-L6-v2
-      \item multi-qa-MiniLM-L6-cos-v1
-      \item paraphrase-MiniLM-L3-v2
+      \item mpnet-base-v2
     \end{itemize}
-    \item No Auto ohne SInE -> keine Eingrenzung der Axiome
-    \item No Auto mit SInE -> Ergebnisse von Studio von Claudia
-    \item No Auto mit Seven -> Ergebnisse von Studio von Claudia
-    -> Eingrenzen der Axiomsmenge mittels semantischer Nähe hilfreich
-    \item No Auto mit Union
-    \item No Auto mit Seven aller Modelle mit AddedAxioms
-    \item Satauto mit Seven aller Modelle mit AddedAxioms
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{different_mode_output.pdf} % Add path to the PDF image
+      \caption{Summary of Prover Results: Model Mode}
+      \label{fig:prover_results_model}
+    \end{figure}
+    \clearpage
+    \item Vampire
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{vampire_mode_output.pdf} % Add path to the PDF image
+      \caption{Summary of Prover Results: Vampire Mode}
+      \label{fig:prover_results_vampire}
+    \end{figure}
+    \clearpage
     \item Durchschnittliche Kosinus-Ähnlichkeit der Axiome des Beweises und der Conjecture
     \item Statistiken
       \begin{itemize}
         \item Mean variable count
+        \begin{figure}[h!]
+          \centering
+          \includegraphics[width=\textwidth]{variable_count.pdf} % Add path to the PDF image
+          \caption{Summary of Prover Results: Variable Count}
+          \label{fig:prover_results_vampire}
+        \end{figure}
+        \clearpage
         \item Count signs
+        \begin{figure}[h!]
+          \centering
+          \includegraphics[width=\textwidth]{signs_count.pdf} % Add path to the PDF image
+          \caption{Summary of Prover Results: Signs Count}
+          \label{fig:prover_results_vampire}
+        \end{figure}
+        \clearpage
         \item Character Count
-        \item Variable appearence
+        \begin{figure}[h!]
+          \centering
+          \includegraphics[width=\textwidth]{character_count.pdf} % Add path to the PDF image
+          \caption{Summary of Prover Results: Character Count}
+          \label{fig:prover_results_vampire}
+        \end{figure}
+        \clearpage
         \item Proofs found in first named
+        \begin{figure}[h!]
+          \centering
+          \includegraphics[width=\textwidth]{proof_found_difference.pdf} % Add path to the PDF image
+          \caption{Summary of Prover Results: Proofs found}
+          \label{fig:prover_results_proof_found}
+        \end{figure}
+        \clearpage
         \item Time to find proof
-        \item Summarized time proof found
+        \begin{figure}[h!]
+          \centering
+          \includegraphics[width=\textwidth]{time_to_find_proof.pdf} % Add path to the PDF image
+          \caption{Summary of Prover Results: Proofs found time}
+          \label{fig:prover_results_proof_found}
+        \end{figure}
+        \clearpage
+        \item Time to find common proof
+        \begin{figure}[h!]
+          \centering
+          \includegraphics[width=\textwidth]{time_to_find_common_proof.pdf} % Add path to the PDF image
+          \caption{Summary of Prover Results: Common proofs found time}
+          \label{fig:prover_results_proof_found}
+        \end{figure}
+        \clearpage
         \item Conclusion
       \end{itemize}
-    \item Vampire
     \item Conclusion
   \end{itemize}
 \chapter{Weiterführende Arbeit}

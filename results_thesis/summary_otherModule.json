@@ -1,0 +1,18 @@
+{
+  "all-MiniLM-L6-v2_union": {
+    "ProverResult.TIME_OUT": 877,
+    "ProverResult.PROOF_FOUND": 123
+  },
+  "all-MiniLM-L6-v2_union_addedAxiom": {
+    "ProverResult.TIME_OUT": 762,
+    "ProverResult.PROOF_FOUND": 238
+  },
+  "all-mpnet-base-v2_union": {
+    "ProverResult.TIME_OUT": 903,
+    "ProverResult.PROOF_FOUND": 97
+  },
+  "all-mpnet-base-v2_union_addedAxiom": {
+    "ProverResult.TIME_OUT": 749,
+    "ProverResult.PROOF_FOUND": 251
+  }
+}
