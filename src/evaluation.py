@@ -97,222 +97,13 @@ def test_sine(data: TestData, b: float, k: int) -> dict[str, ProverResult]:
 
     return results
 
-tests_sine = {
-    'sine_b50_k04': {
-        'type': 'sine',
-        'args': { 'b': 5.0, 'k': 4 }
-    },
-    'sine_b12_k02': {
-        'type': 'sine',
-        'args': { 'b': 1.2, 'k': 2 }
-    },
-    'sine_b15_kUU': {
-        'type': 'sine',
-        'args': { 'b': 1.5, 'k': 2147483647 }
-    },
-    'sine_b20_k03': {
-        'type': 'sine',
-        'args': { 'b': 2.0, 'k': 3 }
-    },
-    'sine_b60_k05': {
-        'type': 'sine',
-        'args': { 'b': 6.0, 'k': 5 }
-    },
-    'sine_b20_kUU': {
-        'type': 'sine',
-        'args': { 'b': 2.0, 'k': 2147483647 }
-    },
-}
-
 tests_seven = {
-    'seven_n50': {
+    'seven_n1500': {
         'type': 'seven',
-        'args': { 'n': 50 }
-    },
-    'seven_n100': {
-        'type': 'seven',
-        'args': { 'n': 100 }
-    },
-    'seven_n200': {
-        'type': 'seven',
-        'args': { 'n': 200 }
-    },
-    'seven_n300': {
-        'type': 'seven',
-        'args': { 'n': 300 }
-    },
-    'seven_n400': {
-        'type': 'seven',
-        'args': { 'n': 400 }
-    },
-    'seven_n500': {
-        'type': 'seven',
-        'args': { 'n': 500 }
-    },
-
-    'seven_t08': {
-        'type': 'seven',
-        'args': { 't': 0.8 }
-    },
-    'seven_t06': {
-        'type': 'seven',
-        'args': { 't': 0.6 }
-    },
-    'seven_t04': {
-        'type': 'seven',
-        'args': { 't': 0.4 }
+        'args': { 'n': 1500 }
     },
 }
 
-tests_union = {
-    'union_n20_b20_k03': {
-        'type': 'union',
-        'args': { 'n': 20, 'b': 2.0, 'k': 3 }
-    },
-    'union_n40_b20_k03': {
-        'type': 'union',
-        'args': { 'n': 40, 'b': 2.0, 'k': 3 }
-    },
-    'union_n60_b20_k03': {
-        'type': 'union',
-        'args': { 'n': 60, 'b': 2.0, 'k': 3 }
-    },
-    'union_n80_b20_k03': {
-        'type': 'union',
-        'args': { 'n': 80, 'b': 2.0, 'k': 3 }
-    },
-    'union_n100_b20_k03': {
-        'type': 'union',
-        'args': { 'n': 100, 'b': 2.0, 'k': 3 }
-    },
-    'union_n120_b20_k03': {
-        'type': 'union',
-        'args': { 'n': 120, 'b': 2.0, 'k': 3 }
-    },
-    'union_n140_b20_k03': {
-        'type': 'union',
-        'args': { 'n': 140, 'b': 2.0, 'k': 3 }
-    },
-    'union_n160_b20_k03': {
-        'type': 'union',
-        'args': { 'n': 160, 'b': 2.0, 'k': 3 }
-    },
-    'union_n180_b20_k03': {
-        'type': 'union',
-        'args': { 'n': 180, 'b': 2.0, 'k': 3 }
-    },
-
-    'union_n20_b60_k05': {
-        'type': 'union',
-        'args': { 'n': 20, 'b': 6.0, 'k': 5 }
-    },
-    'union_n40_b60_k05': {
-        'type': 'union',
-        'args': { 'n': 40, 'b': 6.0, 'k': 5 }
-    },
-    'union_n60_b60_k05': {
-        'type': 'union',
-        'args': { 'n': 60, 'b': 6.0, 'k': 5 }
-    },
-    'union_n80_b60_k05': {
-        'type': 'union',
-        'args': { 'n': 80, 'b': 6.0, 'k': 5 }
-    },
-    'union_n100_b60_k05': {
-        'type': 'union',
-        'args': { 'n': 100, 'b': 6.0, 'k': 5 }
-    },
-    'union_n120_b60_k05': {
-        'type': 'union',
-        'args': { 'n': 120, 'b': 6.0, 'k': 5 }
-    },
-    'union_n140_b60_k05': {
-        'type': 'union',
-        'args': { 'n': 140, 'b': 6.0, 'k': 5 }
-    },
-    'union_n160_b60_k05': {
-        'type': 'union',
-        'args': { 'n': 160, 'b': 6.0, 'k': 5 }
-    },
-    'union_n180_b60_k05': {
-        'type': 'union',
-        'args': { 'n': 180, 'b': 6.0, 'k': 5 }
-    },
-
-    'union_n20_b20_kUU': {
-        'type': 'union',
-        'args': { 'n': 20, 'b': 2.0, 'k': 2147483647 }
-    },
-    'union_n40_b20_kUU': {
-        'type': 'union',
-        'args': { 'n': 40, 'b': 2.0, 'k': 2147483647 }
-    },
-    'union_n60_b20_kUU': {
-        'type': 'union',
-        'args': { 'n': 60, 'b': 2.0, 'k': 2147483647 }
-    },
-    'union_n80_b20_kUU': {
-        'type': 'union',
-        'args': { 'n': 80, 'b': 2.0, 'k': 2147483647 }
-    },
-    'union_n100_b20_kUU': {
-        'type': 'union',
-        'args': { 'n': 100, 'b': 2.0, 'k': 2147483647 }
-    },
-    'union_n120_b20_kUU': {
-        'type': 'union',
-        'args': { 'n': 120, 'b': 2.0, 'k': 2147483647 }
-    },
-    'union_n140_b20_kUU': {
-        'type': 'union',
-        'args': { 'n': 140, 'b': 2.0, 'k': 2147483647 }
-    },
-    'union_n160_b20_kUU': {
-        'type': 'union',
-        'args': { 'n': 160, 'b': 2.0, 'k': 2147483647 }
-    },
-    'union_n180_b20_kUU': {
-        'type': 'union',
-        'args': { 'n': 180, 'b': 2.0, 'k': 2147483647 }
-    },
-
-    'union_t08_b20_k03': {
-       'type': 'union',
-       'args': { 't': 0.8, 'b': 2.0, 'k': 3 }
-    },
-    'union_t06_b20_k03': {
-       'type': 'union',
-       'args': { 't': 0.6, 'b': 2.0, 'k': 3 }
-    },
-    'union_t04_b20_k03': {
-       'type': 'union',
-       'args': { 't': 0.4, 'b': 2.0, 'k': 3 }
-    },
-    'union_t08_b60_k05': {
-        'type': 'union',
-        'args': { 't': 0.8, 'b': 6.0, 'k': 5 }
-    },
-    'union_t06_b60_k05': {
-       'type': 'union',
-        'args': { 't': 0.6, 'b': 6.0, 'k': 5 }
-    },
-    'union_t04_b60_k05': {
-       'type': 'union',
-        'args': { 't': 0.4, 'b': 6.0, 'k': 5 }
-    },
-    'union_t08_b20_kUU': {
-        'type': 'union',
-        'args': { 't': 0.8, 'b': 2.0, 'k': 2147483647 }
-    },
-    'union_t06_b20_kUU': {
-        'type': 'union',
-        'args': { 't': 0.6, 'b': 2.0, 'k': 2147483647 }
-    },
-    'union_t04_b20_kUU': {
-        'type': 'union',
-        'args': { 't': 0.4, 'b': 2.0, 'k': 2147483647 }
-    },
-}
 
 def evaluate(src: str, count: int = None):
     if count:
@@ -321,22 +112,16 @@ def evaluate(src: str, count: int = None):
     data = TestData(f"./{src}_candidates.json")
 
     tests = dict()
-    tests |= tests_sine
     tests |= tests_seven
-    tests |= tests_union
 
     for name, test in tests.items():
         print(f"Testing {name}")
 
         match test['type']:
-            case 'sine':
-                results = test_sine(data, **test['args'])
             case 'seven':
                 results = test_seven(data, **test['args'])
-            case 'union':
-                results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/{src}_{name}.json")
+        write_results(results, f"./results/{src}_{name}_2ndRund.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
@@ -382,7 +167,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     evaluate(args.src, args.select)
-
-    count_selected(args.src, "b60_k05", b=6.0, k=5)
-    count_selected(args.src, "b20_k03", b=2.0, k=3)
-    count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
