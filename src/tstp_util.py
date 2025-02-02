@@ -28,4 +28,4 @@ def read_tstp_single(filename: str) -> tuple[str,str]:
 def write_tstp(filename: str, axioms: dict[str,str], type: str='axiom', mode='w'):
     with open(filename, mode) as file:
         for name in axioms:
-            file.write(f"fof({name}, {type}, {axioms[name]}).\n")
+            file.write(f"{axioms[name]};\n")

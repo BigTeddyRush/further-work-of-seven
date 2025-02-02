@@ -107,7 +107,7 @@ def evaluate(src: str, count: int = None):
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
 
-    tests = [ 20, 40, 60, 80, 100, 120, 140, 160, 180 ]
+    tests = [ 160 ]
 
     # write filter to file
     filter_path = "./filter.txt"
@@ -119,24 +119,35 @@ def count_selected(src: str, name: str, b: float, k: int):
         print(f"Counting for n={n}")
 
         counts = []
+        mean_list = []
         for i, c in enumerate(data.candidates):
             c_name, conjecture = read_tstp_single(c)
-            path = f"./selection/{c_name}.tstp"
+            path = f"./selection/{c_name}.json"
             
             encoded_conjecture = data.encoder.encode_axiom(conjecture)
 
             selection = select(encoded_conjecture, data.tensors, n=n)
+            
+            mean_cosin = []
+            for name in selection:
+                mean_cosin.append(float(selection[name]))
+                
+            print(f"{i}: mean_cosin for {c}: {sum(mean_cosin) / len(mean_cosin)}")
+            mean_list.append(sum(mean_cosin) / len(mean_cosin))
+                
+        with open("./selection/mean_cosin_all.json", 'w') as file:
+                file.write(f"{mean_list}")
 
-            write_tstp(path, {s: data.ontology[s] for s in selection}, type='conjecture')
+            #write_tstp(path, {s: selection[s] for s in selection}, type='conjecture')
 
             # sine selection
-            run_e_axfilter(["./adimen.sumo.tstp", c, path], filter_path, path)
+            #run_e_axfilter(["./adimen.sumo.tstp", c, path], filter_path, path)
 
             # remove conjectures from selection
-            axioms = read_tstp(path, type='axiom')
+            #axioms = read_tstp(path, type='axiom')
 
-            counts.append(len(axioms))
-            print(f"(n{n}|{i}) {c}: {len(axioms)}")
+            #counts.append(len(axioms))
+            #print(f"(n{n}|{i}) {c}: {len(axioms)}")
 
         results[n] = counts
     write_results(results, f"./results/counts/{src}_{name}.json")
@@ -147,8 +158,8 @@ if __name__ == "__main__":
     parser.add_argument('--select')
     args = parser.parse_args()
 
-    evaluate(args.src, args.select)
+    #evaluate(args.src, args.select)
 
-    #count_selected(args.src, "b60_k05", b=6.0, k=5)
+    count_selected(args.src, "b20_k03", b=2.0, k=3)
     #count_selected(args.src, "b20_k03", b=2.0, k=3)
     #count_selected(args.src, "b20_kUU", b=2.0, k=2147483647)
