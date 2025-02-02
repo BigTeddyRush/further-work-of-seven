@@ -107,7 +107,7 @@ def evaluate(src: str, count: int = None):
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
 
-    tests = [ 160 ]
+    tests = [ 7432 ]
 
     # write filter to file
     filter_path = "./filter.txt"
@@ -135,7 +135,7 @@ def count_selected(src: str, name: str, b: float, k: int):
             print(f"{i}: mean_cosin for {c}: {sum(mean_cosin) / len(mean_cosin)}")
             mean_list.append(sum(mean_cosin) / len(mean_cosin))
                 
-        with open("./selection/mean_cosin_all.json", 'w') as file:
+        with open("./selection/mean_cosin_all_mini_7432.json", 'w') as file:
                 file.write(f"{mean_list}")
 
             #write_tstp(path, {s: selection[s] for s in selection}, type='conjecture')
