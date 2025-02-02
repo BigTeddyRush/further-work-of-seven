@@ -1,17 +1,17 @@
 {
   "standard": {
-    "ProverResult.TIME_OUT": 0,
-    "ProverResult.PROOF_FOUND": 0,
+    "ProverResult.TIME_OUT": 613,
+    "ProverResult.PROOF_FOUND": 387,
     "ProverResult.GAVE_UP": 0
   },
   "union": {
-    "ProverResult.TIME_OUT": 0,
-    "ProverResult.PROOF_FOUND": 0,
+    "ProverResult.TIME_OUT": 576,
+    "ProverResult.PROOF_FOUND": 424,
     "ProverResult.GAVE_UP": 0
   },
   "union_addedAxiom": {
-    "ProverResult.TIME_OUT": 0,
-    "ProverResult.PROOF_FOUND": 0,
+    "ProverResult.TIME_OUT": 526,
+    "ProverResult.PROOF_FOUND": 474,
     "ProverResult.GAVE_UP": 0
   }
 }
