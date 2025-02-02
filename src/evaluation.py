@@ -114,6 +114,7 @@ def count_selected(src: str, name: str, b: float, k: int):
     with open(filter_path, 'w') as file:
         file.write(f"filter = {create_sine_filter(b, k)}")
 
+    mean_list_print = []
     results = dict()
     for n in tests:
         print(f"Counting for n={n}")
@@ -134,9 +135,10 @@ def count_selected(src: str, name: str, b: float, k: int):
                 
             print(f"{i}: mean_cosin for {c}: {sum(mean_cosin) / len(mean_cosin)}")
             mean_list.append(sum(mean_cosin) / len(mean_cosin))
-                
-        with open("./selection/mean_cosin_all_mini_7432.json", 'w') as file:
-                file.write(f"{mean_list}")
+        
+        mean_list_print.append(sum(mean_list) / len(mean_list))     
+        with open("./selection/mean_cosin_all_mpnet_7432.json", 'w') as file:
+                file.write(f"{mean_list_print}")
 
             #write_tstp(path, {s: selection[s] for s in selection}, type='conjecture')
 

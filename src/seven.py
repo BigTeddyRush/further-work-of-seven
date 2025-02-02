@@ -15,7 +15,7 @@ Ontology = dict[str,str]
 EncOntology = dict[str, torch.tensor]
 
 class Encoder():
-    def __init__(self, model: str = 'all-MiniLM-L6-v2') -> None:
+    def __init__(self, model: str = 'all-mpnet-base-v2') -> None:
         self.model = SentenceTransformer(model)
 
     def encode_axiom(self, axiom: str) -> torch.Tensor:
