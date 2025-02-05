@@ -203,11 +203,78 @@ Wie relevant ist die größe der Dimension und die max. sequenz-length
     Falsity tests created according to Adimen Sumo -> negate them to get falsity test -> Prover does refutation
     \clearpage
     \item Standard
+    Self made results of Claudia Schon
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{standard_mode_noAdded_output.pdf} % Add path to the PDF image
+      \caption{Summary of Prover Results: Standard Mode}
+      \label{fig:prover_results_standard}
+    \end{figure}
+    \clearpage
+    \item Mean variable count
+    Analyze the runs. Find that there are no clear statements that offer conclusions.
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{variable_count.pdf} % Add path to the PDF image
+      \caption{Summary of Prover Results: Variable Count}
+      \label{fig:prover_results_vampire}
+    \end{figure}
+    \clearpage
+    \item Count signs
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{signs_count.pdf} % Add path to the PDF image
+      \caption{Summary of Prover Results: Signs Count}
+      \label{fig:prover_results_vampire}
+    \end{figure}
+    \clearpage
+    \item Character Count
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{character_count.pdf} % Add path to the PDF image
+      \caption{Summary of Prover Results: Character Count}
+      \label{fig:prover_results_vampire}
+    \end{figure}
+    \clearpage
+    \item Analyze Cosine Similarity
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{cosine_similarity_mini_noAdded_summary.pdf} % Add path to the PDF image
+      \caption{Cosine No Added}
+      \label{fig:prover_results_standard}
+    \end{figure}
+    Why Would Provable Conjectures Have Lower Axiom Similarity? This suggests that proving the conjecture involves bridging different concepts, rather than just refining a single closely related idea
+    \clearpage
+    \item Added Axiom
     \begin{figure}[h!]
       \centering
       \includegraphics[width=\textwidth]{standard_mode_output.pdf} % Add path to the PDF image
       \caption{Summary of Prover Results: Standard Mode}
       \label{fig:prover_results_standard}
+    \end{figure}
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{cosine_similarity_mini_summary.pdf} % Add path to the PDF image
+      \caption{Summary of Prover Results: Standard Mode}
+      \label{fig:prover_results_standard}
+    \end{figure}
+    \clearpage
+    \item Modelle
+    \begin{itemize}
+      \item all-MiniLM-L6-v2
+      \item mpnet-base-v2
+    \end{itemize}
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{different_mode_output.pdf} % Add path to the PDF image
+      \caption{Summary of Prover Results: Model Mode}
+      \label{fig:prover_results_model}
+    \end{figure}
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=\textwidth]{cosine_similarity_mpnet_summary.pdf} % Add path to the PDF image
+      \caption{Cosine Similarity Mpnet}
+      \label{fig:prover_results_model}
     \end{figure}
     \clearpage
     \item Satauto
@@ -226,31 +293,6 @@ Wie relevant ist die größe der Dimension und die max. sequenz-length
       \label{fig:prover_results_auto}
     \end{figure}
     \clearpage
-    \item Modelle
-    \begin{itemize}
-      \item all-MiniLM-L6-v2
-      \item mpnet-base-v2
-    \end{itemize}
-    \begin{figure}[h!]
-      \centering
-      \includegraphics[width=\textwidth]{different_mode_output.pdf} % Add path to the PDF image
-      \caption{Summary of Prover Results: Model Mode}
-      \label{fig:prover_results_model}
-    \end{figure}
-    \clearpage
-    \begin{figure}[h!]
-      \centering
-      \includegraphics[width=\textwidth]{cosine_similarity_mpnet_summary.pdf} % Add path to the PDF image
-      \caption{Cosine Similarity Mpnet}
-      \label{fig:prover_results_model}
-    \end{figure}
-    \begin{figure}[h!]
-      \centering
-      \includegraphics[width=\textwidth]{cosine_similarity_mini_summary.pdf} % Add path to the PDF image
-      \caption{Cosine Similarity Mini}
-      \label{fig:prover_results_model}
-    \end{figure}
-    \clearpage
     \item Vampire
     \begin{figure}[h!]
       \centering
@@ -261,30 +303,6 @@ Wie relevant ist die größe der Dimension und die max. sequenz-length
     \clearpage
     \item Statistiken
       \begin{itemize}
-        \item Mean variable count
-        \begin{figure}[h!]
-          \centering
-          \includegraphics[width=\textwidth]{variable_count.pdf} % Add path to the PDF image
-          \caption{Summary of Prover Results: Variable Count}
-          \label{fig:prover_results_vampire}
-        \end{figure}
-        \clearpage
-        \item Count signs
-        \begin{figure}[h!]
-          \centering
-          \includegraphics[width=\textwidth]{signs_count.pdf} % Add path to the PDF image
-          \caption{Summary of Prover Results: Signs Count}
-          \label{fig:prover_results_vampire}
-        \end{figure}
-        \clearpage
-        \item Character Count
-        \begin{figure}[h!]
-          \centering
-          \includegraphics[width=\textwidth]{character_count.pdf} % Add path to the PDF image
-          \caption{Summary of Prover Results: Character Count}
-          \label{fig:prover_results_vampire}
-        \end{figure}
-        \clearpage
         \item Proofs found in first named
         \begin{figure}[h!]
           \centering
@@ -309,7 +327,6 @@ Wie relevant ist die größe der Dimension und die max. sequenz-length
           \label{fig:prover_results_proof_found}
         \end{figure}
         \clearpage
-        \item Conclusion
       \end{itemize}
     \item Conclusion
   \end{itemize}

@@ -1,0 +1,17 @@
+{
+  "syntactic": {
+    "ProverResult.TIME_OUT": 977,
+    "ProverResult.PROOF_FOUND": 20,
+    "ProverResult.GAVE_UP": 3
+  },
+  "semantic_1500": {
+    "ProverResult.TIME_OUT": 977,
+    "ProverResult.PROOF_FOUND": 23,
+    "ProverResult.GAVE_UP": 0
+  },
+  "union": {
+    "ProverResult.TIME_OUT": 877,
+    "ProverResult.PROOF_FOUND": 123,
+    "ProverResult.GAVE_UP": 0
+  }
+}
