@@ -339,57 +339,112 @@
 %
 
 
-\chapter{Introduction}
-% In a German thesis write: \chapter{Einleitung}
+\section{Introduction}
 
-  In this thesis, we investigate how adding frequently used axioms ("core axioms") to a subset of the Adimen SUMO grammar, selected based on a combination of syntactic and semantic criteria, enhances the success rate of automated theorem proving.
+In this thesis, we investigate how adding frequently used axioms ("core axioms") to a subset of the Adimen SUMO grammar, selected based on a combination of syntactic and semantic criteria, enhances the success rate of automated theorem proving.
 
-  \section{Problem Statement}
-    \begin{itemize}
-        \item Given a formal logical grammar, such as Adimen SUMO, and a conjecture $C$, we aim to determine a subset of axioms that maximizes the probability of proving $C$.
-        \item We use a combination of syntactic and semantic similarity measures to select an initial set of relevant axioms $\mathcal{A}_{\text{rel}}$.
-        \item We hypothesize that augmenting this set with frequently used axioms $\mathcal{A}_{\text{core}}$ further improves proof success.
-    \end{itemize}
-  \section{Entanglement Between Natural Language and Logical Grammar}
-    \begin{itemize}
-      \item Adimen SUMO, partially derived from WordNet, reflects structured knowledge from natural language.
-      \item Natural language inherently follows logical structures, even if it remains ambiguous and context-dependent.
-      \item Language models like SBERT capture semantic relationships, supporting the idea that formal logical expressions share deep structural similarities with natural language.
-      \item We propose an \textbf{entanglement hypothesis}, where natural language and logical structures influence each other:
-      \begin{equation}
-          \mathcal{L}_{\text{NL}} \bowtie \mathcal{L}_{\text{logic}}
-      \end{equation}
-    \end{itemize}
-  \section{Formal Hypothesis}
-    \begin{itemize}
-        \item Define:
+\subsection{Problem Statement}
+\begin{itemize}
+    \item Given a formal logical grammar, such as Adimen SUMO, and a conjecture $C$, we aim to determine a subset of axioms that maximizes the probability of proving $C$.
+    \item We use a combination of syntactic and semantic similarity measures to select an initial set of relevant axioms $\mathcal{A}_{\text{rel}}$.
+    \item We hypothesize that augmenting this set with frequently used axioms $\mathcal{A}_{\text{core}}$ further improves proof success.
+\end{itemize}
+
+\subsection{Entanglement Between Natural Language and Logical Grammar}
+\begin{itemize}
+    \item We do not assume a direct mapping $f: \mathcal{L}_{\text{NL}} \to \mathcal{L}_{\text{logic}}$ between natural language ($\mathcal{L}_{\text{NL}}$) and formal logic ($\mathcal{L}_{\text{logic}}$).
+    \item Instead, we propose an \textbf{entanglement hypothesis}, where natural language and logical structures influence each other:
+    \begin{equation}
+        \mathcal{L}_{\text{NL}} \bowtie \mathcal{L}_{\text{logic}}
+    \end{equation}
+    \item Adimen SUMO, partially derived from WordNet, reflects structured knowledge from natural language.
+    \item Natural language inherently follows logical structures, even if it remains ambiguous and context-dependent.
+    \item Language models like SBERT capture semantic relationships, supporting the idea that formal logical expressions share deep structural similarities with natural language.
+\end{itemize}
+
+\subsection{Necessity of Adding Core Axioms}
+\begin{itemize}
+    \item To find a proof, semantic similarity alone is insufficient because logical reasoning relies on structural dependencies and inferential steps that may not be directly encoded in semantic embeddings.
+    \item Theorem provers require axioms that establish intermediate logical connections because of the nature of theorem proving:
+    \item Operation of Theorem Prover E
+    To better understand the importance of intermediate axioms, consider how a theorem prover like E operates:
+    \begin{enumerate}
+        \item \textbf{Input and Preprocessing}:
         \begin{itemize}
-            \item $\mathcal{A}$: The set of all axioms in Adimen SUMO.
-            \item $C$: A conjecture to be proven.
-            \item $d: \mathcal{A} \times C \to \mathbb{R}$: A similarity function measuring syntactic and semantic closeness.
-            \item $\mathcal{A}_{\text{rel}}$: The subset of axioms, made out of $k$ nearest axioms to $C$:
-            \begin{equation}
-                \mathcal{A}_{\text{rel}} = \{ A \in \mathcal{A} \mid A \text{ is among the } k \text{ closest axioms to } C \text{ w.r.t. } d \}
-            \end{equation}
-            \item $\mathcal{A}_{\text{core}}$: A set of frequently used axioms in previous proofs.
-            \item $\mathcal{A}_{\text{enh}} = \mathcal{A}_{\text{rel}} \cup \mathcal{A}_{\text{core}}$: The enhanced axiom set.
-            \item $P(T, \mathcal{A}', C)$: A function that returns $\text{True}$ if theorem prover $T$ finds a proof of $C$ using $\mathcal{A}'$, otherwise $\text{False}$.
+            \item Parsing of input axioms and conjectures into a logical syntax.
+            \item Conversion of formulas into conjunctive normal form (CNF) for uniformity.
         \end{itemize}
-        \item Hypothesis:
-        \begin{equation}
-            \forall C \in \mathcal{C}, \quad \Pr(P(T, \mathcal{A}_{\text{enh}}, C) = \text{True}) > \Pr(P(T, \mathcal{A}_{\text{rel}}, C) = \text{True})
-        \end{equation}
-        \item This suggests that the success probability of proving $C$ increases when $\mathcal{A}_{\text{core}}$ is included.
-    \end{itemize}
-
-  \section{Justification and Implications}
+        \item \textbf{Indexing}:
+        \begin{itemize}
+            \item Clause indexing for efficient retrieval.
+            \item Use of structures like discrimination trees for quick unification and resolution.
+        \end{itemize}
+        \item \textbf{Main Proof Search Loop}:
+        \begin{itemize}
+            \item Selection of clauses using strategies based on heuristics.
+            \item Application of inference rules such as resolution and paramodulation.
+            \item Simplification and subsumption of inferred clauses.
+        \end{itemize}
+        \item \textbf{Proof State Management}:
+        \begin{itemize}
+            \item Balancing expansion and reduction of search space.
+            \item Employing search heuristics to efficiently explore the proof space.
+        \end{itemize}
+        \item \textbf{Proof Search Termination}:
+        \begin{itemize}
+            \item Success: Derivation of a contradiction clause indicating a proof.
+            \item Failure: Resource exhaustion without finding a proof.
+        \end{itemize}
+        \item \textbf{Output Generation}:
+        \begin{itemize}
+            \item Generation of a proof object showing applied inference rules.
+            \item Provision of a proof trace and performance statistics.
+        \end{itemize}
+    \end{enumerate}
+    
     \begin{itemize}
-        \item Since Adimen SUMO’s grammar is \textbf{entangled} with natural language structures, selecting axioms using semantic embeddings (e.g., SBERT) captures implicit logical dependencies.
-        \item Frequently used axioms act as \textbf{structural anchors} within this entanglement, improving proof discovery.
-        \item The theorem prover benefits from both the \textbf{nearest axioms} and the \textbf{core axioms}, leading to an overall higher proof success rate.
+        \item A proof is not simply a similarity-based retrieval task but requires chaining multiple inference steps to reach the desired conclusion.
+        \item Many proofs require bridging axioms, which provide necessary intermediate logical steps between known premises and the conjecture.
+        \item Without these bridging axioms, a theorem prover may fail to construct a proof, even if it has access to semantically relevant axioms.
     \end{itemize}
+    \item The absence of intermediate axioms results in gaps in the inference chain, preventing the prover from reaching the conclusion.
+    \item Empirical evidence from theorem proving suggests that missing such axioms often leads to failed proof attempts.
+    \item Core axioms provide frequently used logical rules and bridges that help complete reasoning chains.
+    \item Without these core axioms, proofs may fail due to missing key inference steps, even if semantically similar axioms are present.
+\end{itemize}
 
-  This thesis aims to empirically validate this hypothesis by evaluating proof success rates with different axiom selection strategies and demonstrating the effectiveness of incorporating core axioms.
+\subsection{Formal Hypothesis}
+\begin{itemize}
+    \item Define:
+    \begin{itemize}
+        \item $\mathcal{A}$: The set of all axioms in Adimen SUMO.
+        \item $C$: A conjecture to be proven.
+        \item $d: \mathcal{A} \times C \to \mathbb{R}^+$: A similarity function measuring syntactic and semantic closeness.
+        \item $\mathcal{A}_{\text{rel}}$: The subset of $k$ nearest axioms to $C$:
+        \begin{equation}
+            \mathcal{A}_{\text{rel}} = \{ A \in \mathcal{A} \mid A \text{ is among the } k \text{ closest axioms to } C \text{ w.r.t. } d \}
+        \end{equation}
+        \item $\mathcal{A}_{\text{core}}$: A set of frequently used axioms in previous proofs.
+        \item $\mathcal{A}_{\text{enh}} = \mathcal{A}_{\text{rel}} \cup \mathcal{A}_{\text{core}}$: The enhanced axiom set.
+        \item $P(T, \mathcal{A}', C)$: A function that returns $\text{True}$ if theorem prover $T$ finds a proof of $C$ using $\mathcal{A}'$, otherwise $\text{False}$.
+    \end{itemize}
+    \item Hypothesis:
+    \begin{equation}
+        \forall C \in \mathcal{C}, \quad \Pr(P(T, \mathcal{A}_{\text{enh}}, C) = \text{True}) > \Pr(P(T, \mathcal{A}_{\text{rel}}, C) = \text{True})
+    \end{equation}
+    \item This suggests that the success probability of proving $C$ increases when $\mathcal{A}_{\text{core}}$ is included.
+\end{itemize}
+
+\subsection{Justification and Implications}
+\begin{itemize}
+    \item Since Adimen SUMO’s grammar is \textbf{entangled} with natural language structures, selecting axioms using semantic embeddings (e.g., SBERT) captures implicit logical dependencies.
+    \item Frequently used axioms act as \textbf{structural anchors} within this entanglement, improving proof discovery.
+    \item The theorem prover benefits from both the \textbf{nearest axioms} and the \textbf{core axioms}, leading to an overall higher proof success rate.
+\end{itemize}
+
+This thesis aims to empirically validate this hypothesis by evaluating proof success rates with different axiom selection strategies and demonstrating the effectiveness of incorporating core axioms.
+
+
 
 
 % DELETE the following line for your own thesis - it causes trouble!
