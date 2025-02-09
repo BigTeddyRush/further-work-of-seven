@@ -186,7 +186,7 @@ def evaluate(src: str, count: int = None):
             case 'union':
                 results = test_union(data, **test['args'])
 
-        write_results(results, f"./results/noauto_{src}_{name}_timer_withAddedAxiom_withProofObject_8000_presineb1k1_mini_L12.json")
+        write_results(results, f"./results/noauto_{src}_{name}_timer_withAddedAxiom_withProofObject_8000_presineb1k1_albert.json")
 
 def count_selected(src: str, name: str, b: float, k: int):
     data = TestData(f"./{src}_candidates.json")
