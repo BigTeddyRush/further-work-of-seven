@@ -1,5 +1,5 @@
 \documentclass[english,version-2020-11]{uzl-thesis}
-
+\usepackage{placeins}
 
 % Copy this file as a template for your thesis. You will have to take
 % action at all places marked by
@@ -339,125 +339,90 @@
 %
 
 
-\section{Introduction}
+\chapter{Introduction}
+\label{chapter-introduction}
 
-In this thesis, we investigate how adding frequently used axioms ("core axioms") to a subset of the Adimen SUMO grammar, selected based on a combination of syntactic and semantic criteria, enhances the success rate of automated theorem proving.
+Automated theorem proving is a fundamental technique in formal logic and artificial intelligence. It enables the validation of logical statements based on a given set of axioms and inference rules. This thesis investigates whether incorporating frequently used axioms, referred to as core axioms, into a subset of the Adimen SUMO grammar improves proof success rates. The selected subset is determined by combining syntactic and semantic criteria to ensure both structural and conceptual relevance.
 
-\subsection{Problem Statement}
+\section{Problem Statement}
 \begin{itemize}
-    \item Given a formal logical grammar, such as Adimen SUMO, and a conjecture $C$, we aim to determine a subset of axioms that maximizes the probability of proving $C$.
-    \item We use a combination of syntactic and semantic similarity measures to select an initial set of relevant axioms $\mathcal{A}_{\text{rel}}$.
-    \item We hypothesize that augmenting this set with frequently used axioms $\mathcal{A}_{\text{core}}$ further improves proof success.
+    \item Given a formal logical grammar, such as Adimen SUMO, and a conjecture \( C \), the objective is to identify a subset of axioms that maximizes the probability of proving \( C \).
+    \item Axioms are initially selected based on syntactic and semantic similarity measures, forming a set denoted as \( \mathcal{A}_{\text{rel}} \).
+    \item The hypothesis is that adding frequently used axioms, denoted as \( \mathcal{A}_{\text{core}} \), improves proof success.
 \end{itemize}
 
-\subsection{Entanglement Between Natural Language and Logical Grammar}
+\section{Entanglement Between Natural Language and Logical Grammar}
 \begin{itemize}
-    \item We do not assume a direct mapping $f: \mathcal{L}_{\text{NL}} \to \mathcal{L}_{\text{logic}}$ between natural language ($\mathcal{L}_{\text{NL}}$) and formal logic ($\mathcal{L}_{\text{logic}}$).
-    \item Instead, we propose an \textbf{entanglement hypothesis}, where natural language and logical structures influence each other:
+    \item The relationship between natural language and formal logic is not a direct mapping but rather an entanglement, where both influence each other:
     \begin{equation}
         \mathcal{L}_{\text{NL}} \bowtie \mathcal{L}_{\text{logic}}
     \end{equation}
-    \item Adimen SUMO, partially derived from WordNet, reflects structured knowledge from natural language.
-    \item Natural language inherently follows logical structures, even if it remains ambiguous and context-dependent.
-    \item Language models like SBERT capture semantic relationships, supporting the idea that formal logical expressions share deep structural similarities with natural language.
+    \item Adimen SUMO, which is partially derived from WordNet, reflects structured knowledge originating from natural language.
+    \item Logical structures often mirror patterns found in natural language, even though natural language remains ambiguous and context-dependent.
+    \item Language models such as SBERT capture semantic relationships, supporting the idea that formal logical expressions exhibit deep structural similarities with natural language.
 \end{itemize}
 
-\subsection{Necessity of Adding Core Axioms}
+\section{Necessity of Adding Core Axioms}
 \begin{itemize}
-    \item To find a proof, semantic similarity alone is insufficient because logical reasoning relies on structural dependencies and inferential steps that may not be directly encoded in semantic embeddings.
-    \item Theorem provers require axioms that establish intermediate logical connections because of the nature of theorem proving:
-    \item Operation of Theorem Prover E
-    To better understand the importance of intermediate axioms, consider how a theorem prover like E operates:
-    \begin{enumerate}
-        \item \textbf{Input and Preprocessing}:
-        \begin{itemize}
-            \item Parsing of input axioms and conjectures into a logical syntax.
-            \item Conversion of formulas into conjunctive normal form (CNF) for uniformity.
-        \end{itemize}
-        \item \textbf{Indexing}:
-        \begin{itemize}
-            \item Clause indexing for efficient retrieval.
-            \item Use of structures like discrimination trees for quick unification and resolution.
-        \end{itemize}
-        \item \textbf{Main Proof Search Loop}:
-        \begin{itemize}
-            \item Selection of clauses using strategies based on heuristics.
-            \item Application of inference rules such as resolution and paramodulation.
-            \item Simplification and subsumption of inferred clauses.
-        \end{itemize}
-        \item \textbf{Proof State Management}:
-        \begin{itemize}
-            \item Balancing expansion and reduction of search space.
-            \item Employing search heuristics to efficiently explore the proof space.
-        \end{itemize}
-        \item \textbf{Proof Search Termination}:
-        \begin{itemize}
-            \item Success: Derivation of a contradiction clause indicating a proof.
-            \item Failure: Resource exhaustion without finding a proof.
-        \end{itemize}
-        \item \textbf{Output Generation}:
-        \begin{itemize}
-            \item Generation of a proof object showing applied inference rules.
-            \item Provision of a proof trace and performance statistics.
-        \end{itemize}
-    \end{enumerate}
-    
-    \begin{itemize}
-        \item A proof is not simply a similarity-based retrieval task but requires chaining multiple inference steps to reach the desired conclusion.
-        \item Many proofs require bridging axioms, which provide necessary intermediate logical steps between known premises and the conjecture.
-        \item Without these bridging axioms, a theorem prover may fail to construct a proof, even if it has access to semantically relevant axioms.
-    \end{itemize}
-    \item The absence of intermediate axioms results in gaps in the inference chain, preventing the prover from reaching the conclusion.
-    \item Empirical evidence from theorem proving suggests that missing such axioms often leads to failed proof attempts.
-    \item Core axioms provide frequently used logical rules and bridges that help complete reasoning chains.
-    \item Without these core axioms, proofs may fail due to missing key inference steps, even if semantically similar axioms are present.
+    \item Semantic similarity alone is insufficient for finding proofs, as logical reasoning requires structured inference steps that cannot be captured by embeddings alone.
+    \item Theorem provers rely on axioms that establish intermediate logical connections, which are crucial for the proof search process.
 \end{itemize}
 
-\subsection{Formal Hypothesis}
+\section{Operation of Theorem Prover E}
+The importance of intermediate axioms becomes evident when analyzing the inference mechanisms of the E theorem prover, which employs a given-clause algorithm:
+
+\begin{enumerate}
+    \item Preprocessing: Converts input formulas into conjunctive normal form (CNF) and applies structural simplifications.
+    \item Clause Selection: Uses heuristics to prioritize clauses based on factors such as term complexity and length.
+    \item Inference Application: Performs superposition, paramodulation, and resolution to generate new clauses that contribute to the proof.
+    \item Simplification: Eliminates redundant clauses through rewriting, subsumption, and redundancy elimination.
+    \item Proof Search Termination: Stops either when an empty clause is derived, indicating proof completion, or when computational resources are exhausted.
+\end{enumerate}
+
+Relying only on semantic closeness is inadequate because:
 \begin{itemize}
-    \item Define:
+    \item Inference-based proofs require logical chaining. The prover does not simply retrieve related axioms but constructs sequential inference chains to derive contradictions or confirm validity.
+    \item Clause selection is not solely based on semantic relevance. The prover applies heuristics that prioritize structural properties, meaning that semantically relevant axioms may not always contribute effectively to the proof.
+\end{itemize}
+
+Core axioms provide essential inference steps that enhance proof discovery and completion.
+
+\section{Formal Hypothesis}
+\begin{itemize}
+    \item Definitions:
     \begin{itemize}
-        \item $\mathcal{A}$: The set of all axioms in Adimen SUMO.
-        \item $C$: A conjecture to be proven.
-        \item $d: \mathcal{A} \times C \to \mathbb{R}^+$: A similarity function measuring syntactic and semantic closeness.
-        \item $\mathcal{A}_{\text{rel}}$: The subset of $k$ nearest axioms to $C$:
+        \item \( \mathcal{A} \): The set of all axioms in Adimen SUMO.
+        \item \( C \): A conjecture to be proven.
+        \item \( d: \mathcal{A} \times C \to \mathbb{R}^+ \): A similarity function measuring syntactic and semantic closeness.
+        \item \( \mathcal{A}_{\text{rel}} \): The subset of \( k \) nearest axioms to \( C \):
         \begin{equation}
             \mathcal{A}_{\text{rel}} = \{ A \in \mathcal{A} \mid A \text{ is among the } k \text{ closest axioms to } C \text{ w.r.t. } d \}
         \end{equation}
-        \item $\mathcal{A}_{\text{core}}$: A set of frequently used axioms in previous proofs.
-        \item $\mathcal{A}_{\text{enh}} = \mathcal{A}_{\text{rel}} \cup \mathcal{A}_{\text{core}}$: The enhanced axiom set.
-        \item $P(T, \mathcal{A}', C)$: A function that returns $\text{True}$ if theorem prover $T$ finds a proof of $C$ using $\mathcal{A}'$, otherwise $\text{False}$.
+        \item \( \mathcal{A}_{\text{core}} \): A set of frequently used axioms in previous proofs.
+        \item \( \mathcal{A}_{\text{enh}} = \mathcal{A}_{\text{rel}} \cup \mathcal{A}_{\text{core}} \): The enhanced axiom set.
+        \item \( P(T, \mathcal{A}', C) \): A function that returns true if theorem prover \( T \) finds a proof of \( C \) using \( \mathcal{A}' \), otherwise false.
     \end{itemize}
     \item Hypothesis:
     \begin{equation}
         \forall C \in \mathcal{C}, \quad \Pr(P(T, \mathcal{A}_{\text{enh}}, C) = \text{True}) > \Pr(P(T, \mathcal{A}_{\text{rel}}, C) = \text{True})
     \end{equation}
-    \item This suggests that the success probability of proving $C$ increases when $\mathcal{A}_{\text{core}}$ is included.
+    \item This suggests that the probability of proving \( C \) increases when \( \mathcal{A}_{\text{core}} \) is included.
 \end{itemize}
 
-\subsection{Justification and Implications}
+\section{Justification and Implications}
 \begin{itemize}
-    \item Since Adimen SUMO’s grammar is \textbf{entangled} with natural language structures, selecting axioms using semantic embeddings (e.g., SBERT) captures implicit logical dependencies.
-    \item Frequently used axioms act as \textbf{structural anchors} within this entanglement, improving proof discovery.
-    \item The theorem prover benefits from both the \textbf{nearest axioms} and the \textbf{core axioms}, leading to an overall higher proof success rate.
+    \item Since Adimen SUMO’s grammar is intertwined with natural language structures, selecting axioms based on semantic embeddings, such as SBERT, captures implicit logical dependencies.
+    \item Frequently used axioms function as structural anchors within this entanglement, improving proof discovery.
+    \item The theorem prover benefits from both the nearest axioms and the core axioms, leading to a higher overall proof success rate.
 \end{itemize}
 
-This thesis aims to empirically validate this hypothesis by evaluating proof success rates with different axiom selection strategies and demonstrating the effectiveness of incorporating core axioms.
-
-
+This thesis aims to validate this hypothesis through empirical experiments, evaluating proof success rates across different axiom selection strategies and assessing the effectiveness of incorporating core axioms.
 
 
 % DELETE the following line for your own thesis - it causes trouble!
 \lstMakeShortInline[style=code,style=inline,language={[LaTeX]tex},moretexcs={chapter}]|
 
 
-\section{Related Work}
-% In a German thesis write: \section{Verwandte Arbeiten}
-  \cite{Schon2024}
-  \cite{Àlvez2014}
-  \cite{Hoder2011}
-  \cite{Roederer2009}
-  \cite{Sutcliffe2007}
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % !!! Your action is needed here !!!
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -469,13 +434,102 @@ This thesis aims to empirically validate this hypothesis by evaluating proof suc
 % why it is the case. 
 
 
-\section{Structure of this Thesis}
+\section{Structure of this Work}
 % In a German thesis write: \section{Aufbau dieser Arbeit}
 
+This thesis is organized into several chapters, each addressing key aspects of the research question and methodology. Below is an overview of the structure:
 
-Structure of this Thesis.
+\begin{itemize}
+
+    \item \textbf{Chapter \ref{chapter-relatedwork}: Related Work}  
+    \begin{itemize}
+        \item Reviews existing research on theorem proving and axiom selection techniques.
+        \item Discusses previous applications of semantic similarity in logical reasoning.
+    \end{itemize}
+
+    \item \textbf{Chapter \ref{chapter-preliminaries}: Preliminaries}  
+    \begin{itemize}
+        \item Presents fundamental concepts such as common sense reasoning, word embeddings, and theorem proving.
+        \item Explains the role of formal grammars and axiom selection in automated reasoning.
+    \end{itemize}
+
+    \item \textbf{Chapter \ref{chapter-methodology}: Methodology}  
+    \begin{itemize}
+        \item Details the proposed method for improving theorem proving success through core axiom integration.
+        \item Describes the dataset, theorem prover configurations, and selection strategies.
+    \end{itemize}
+
+    \item \textbf{Chapter \ref{chapter-experiments}: Experiments}  
+    \begin{itemize}
+        \item Presents the experimental setup, including benchmark datasets and evaluation metrics.
+        \item Reports on empirical findings comparing different axiom selection strategies.
+        \item Analyzes the impact of core axioms on proof success rates.
+    \end{itemize}
+
+    \item \textbf{Chapter \ref{chapter-conclusion}: Conclusion}  
+    \begin{itemize}
+        \item Recaps the research contributions and key insights.
+        \item Discusses potential future directions and open challenges.
+    \end{itemize}
+
+    \item \textbf{Chapter \ref{chapter-futerwork}: Future Work}  
+    \begin{itemize}
+        \item Future Work
+    \end{itemize}    
+\end{itemize}
 
 
+\chapter{Related Work}
+\label{chapter-relatedwork}
+% In a German thesis write: \section{Verwandte Arbeiten}
+
+The selection of relevant axioms for automated theorem proving has been extensively studied, particularly in the context of large knowledge bases. Previous research has explored both syntactic and semantic approaches to determining axiom relevance. This section provides an overview of key contributions in this area.
+
+\begin{itemize}
+    \item Context-specific axiom selection using large language models \cite{Schon2024}
+    \begin{itemize}
+        \item Traditional axiom selection techniques rely on syntactic properties and often do not account for the meaning embedded in symbol names.
+        \item Large language models provide an alternative approach by leveraging contextual similarity to determine relevant axioms.
+        \item This method aligns axiom selection with the context of the goal, leading to improved performance in commonsense reasoning tasks.
+        \item Experimental results indicate that selection methods based on large language models outperform purely syntax-driven approaches.
+    \end{itemize}
+    
+    \item Adimen-SUMO: A reengineered ontology for first-order reasoning \cite{Alvez2014}
+    \begin{itemize}
+        \item Adimen-SUMO is a modified version of the SUMO ontology, adapted to enhance compatibility with first-order automated theorem provers.
+        \item The reengineering process ensures that axioms are structured in a way that facilitates inference, avoiding ambiguities present in the original SUMO.
+        \item This ontology is widely used in evaluating theorem provers within the domain of commonsense reasoning.
+    \end{itemize}
+    
+    \item SInE: A syntactic approach to large theory reasoning \cite{Hoder2011}
+    \begin{itemize}
+        \item The Sumo INference Engine (SInE) is a widely used system for axiom selection in large theories.
+        \item It operates by iteratively selecting axioms that introduce symbols appearing in the conjecture, prioritizing those that contribute most to the proof process.
+        \item The approach significantly reduces the search space, making large knowledge bases such as OpenCYC more manageable for theorem provers.
+        \item SInE has been successfully applied in theorem proving competitions and has influenced subsequent axiom selection methods.
+    \end{itemize}
+    
+    \item Divvy: A meta-system for axiom relevance ordering \cite{Roederer2009}
+    \begin{itemize}
+        \item The Divvy system introduces two syntactic relevance orderings for axioms in automated theorem proving.
+        \item These orderings are used to prioritize axioms, allowing for more efficient proof attempts.
+        \item Experimental evaluations demonstrate that this method effectively reduces proof complexity and enhances theorem prover performance.
+    \end{itemize}
+    
+    \item SRASS: A semantic relevance axiom selection system \cite{Sutcliffe2007}
+    \begin{itemize}
+        \item Unlike syntactic approaches, SRASS selects axioms based on their semantic relevance to the conjecture.
+        \item The system employs a heuristic ordering mechanism that combines both semantic and syntactic relevance.
+        \item This method has been shown to reduce the number of required axioms while maintaining proof completeness.
+    \end{itemize}
+    
+    \item Automatic white-box testing of first-order logic ontologies \cite{Alvez2017}
+    \begin{itemize}
+        \item This work introduces a framework for systematically testing first-order logic ontologies.
+        \item The approach ensures that ontologies maintain logical consistency and do not contain redundant or contradictory axioms.
+        \item By applying automated testing techniques, the system improves the robustness and reliability of formal ontologies used in theorem proving.
+    \end{itemize}
+\end{itemize}
 
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % !!! Your action is needed here !!!
@@ -484,248 +538,323 @@ Structure of this Thesis.
 % Replace the whole text chapter with the main text of your thesis! 
 
 \chapter{Preliminaries}
-\label{chapter-use}
+\label{chapter-preliminaries}
 
-  \section{Common Sense Reasoning}
-  \begin{itemize}
-      \item \textbf{Explanation:} Common sense reasoning refers to the ability of a system to make presumptions about the everyday world, similar to human reasoning.
-      \item \textbf{What is it?} It involves reasoning about typical situations, handling incomplete information, and making reasonable assumptions.
-      \item \textbf{Applications and Use Cases:}
-      \begin{itemize}
-          \item Natural language understanding.
-          \item Automated reasoning.
-          \item Robotics and AI decision-making.
-      \end{itemize}
-      \item \textbf{Current State:} Modern AI systems, including deep learning models, struggle with common sense reasoning, but efforts such as knowledge graphs and large-scale pre-trained models aim to improve it.
-      \item \textbf{Challenges:}
-      \begin{itemize}
-          \item Ambiguity in natural language.
-          \item Lack of structured common-sense knowledge.
-          \item Computational limitations in reasoning.
-      \end{itemize}
-  \end{itemize}
+This chapter presents the fundamental concepts and methodologies relevant to this thesis. The focus is on common sense reasoning, word embeddings, formal grammars, theorem provers, and axiom selection strategies, all of which are essential for understanding the following chapters.
 
-  \section{Word Embeddings}
-    \begin{itemize}
-        \item \textbf{Definition:} Word embeddings are dense vector representations of words that capture semantic meanings.
-        \item \textbf{Creation:} Generated using neural network-based models like Word2Vec, GloVe, and FastText.
-        \item \textbf{Properties:}
-          \begin{itemize}
-              \item Captures semantic similarity.
-              \item Enables algebraic operations like \textit{king - man + woman = queen}.
-          \end{itemize}
-        \item \textbf{Applications:}
-          \begin{itemize}
-              \item Natural language processing (NLP).
-              \item Machine translation.
-              \item Information retrieval.
-          \end{itemize}
-        \item \textbf{Limitations and Challenges:}
-          \begin{itemize}
-              \item Contextual ambiguity.
-              \item Bias in training data.
-              \item Scalability for large vocabularies.
-          \end{itemize}
-    \end{itemize}
+\section{Common Sense Reasoning}
 
-  \section{Grammars}
-    \begin{itemize}
-        \item \textbf{Explanation:} Grammars define the structure and rules governing a language, whether natural or formal.
-        \item \textbf{Types of Grammars:} Context-free grammars, dependency grammars, formal grammars.
-        \item \textbf{Structure and Organization:} Grammars consist of syntax rules, lexicons, and transformations.
-        \item \textbf{Why Are They Needed?} They provide the foundation for parsing, generating, and interpreting language in NLP and logic systems.
-        \item \textbf{SUMO:} Suggested Upper Merged Ontology, a formal ontology integrating linguistic and logical structures.
-    \end{itemize}
+Common sense reasoning is a fundamental component of human cognition. It enables reasoning about everyday situations, allowing individuals to infer unstated knowledge, resolve ambiguities, and generalize from incomplete information. Automated reasoning systems attempt to replicate this ability to improve inference and decision-making.
 
-  \section{Theorem Provers}
-    \begin{itemize}
-        \item \textbf{Explanation:} Theorem provers are automated reasoning tools designed to validate logical statements based on formal rules.
-        \item \textbf{Types of Theorem Provers:} Resolution-based, tableau-based, and interactive provers.
-        \item \textbf{Functionality:} They work by refutation—attempting to derive contradictions from the negation of a theorem.
-        \item \textbf{Why Are They Needed?} Essential for verifying mathematical proofs, formal verification, and logic-based AI.
-        \item \textbf{Limits and Challenges:}
-        \begin{itemize}
-            \item Computational complexity.
-            \item Handling undecidable problems.
-            \item Scalability for large proof spaces.
-        \end{itemize}
-        \item \textbf{Prover E:}
-        \begin{itemize}
-            \item \textbf{How Does E Work?} A saturation-based theorem prover using superposition calculus.
-            \item \textbf{Satauto Mode:} An automatic mode that selects strategies dynamically for proof search.
-        \end{itemize}
-    \end{itemize}
+\subsection{Definition and Scope}
+Common sense reasoning refers to the ability to infer implicit knowledge and derive reasonable conclusions from real-world scenarios. It involves:
+\begin{itemize}
+    \item Recognizing unstated premises in logical arguments.
+    \item Understanding cause-effect relationships in structured and unstructured data.
+    \item Applying heuristics to solve problems under uncertainty.
+\end{itemize}
 
-  \section{Selection Strategies}
-    \begin{itemize}
-        \item \textbf{Syntactic:} Selects axioms based on structural similarity and pattern matching.
-        \item \textbf{Semantic:} Uses embeddings and meaning-based similarity to find relevant axioms.
-        \item \textbf{Combination - Union:} Integrates syntactic and semantic methods to enhance selection efficiency.
-    \end{itemize}
+\subsection{Applications in Artificial Intelligence and Theorem Proving}
+Common sense reasoning is applied across various domains of artificial intelligence:
+\begin{itemize}
+    \item Natural language understanding requires contextual awareness to interpret implicit meaning and resolve ambiguity.
+    \item Automated reasoning relies on structured logical frameworks to infer conclusions from available premises.
+    \item Decision support systems in fields such as law, medicine, and finance integrate knowledge-based reasoning to enhance interpretability and reliability.
+\end{itemize}
 
+Despite significant progress in AI, particularly in deep learning, existing models struggle with integrating structured, generalizable knowledge representations, making common sense reasoning a persistent challenge.
 
+\section{Word Embeddings}
+
+Word embeddings are numerical representations of words that capture semantic relationships within a continuous vector space. They are widely used in natural language processing to model meaning and improve text-based inference.
+
+\subsection{Concept and Motivation}
+Traditional representations such as one-hot encoding are sparse and fail to capture relationships between words. Word embeddings mitigate this limitation by mapping words into dense vector spaces, where similar words appear closer together.
+
+\subsection{Types of Word Embeddings}
+Several models have been developed to learn word representations:
+\begin{itemize}
+    \item Word2Vec \cite{Mikolov2013} uses a shallow neural network to learn word relationships via the Continuous Bag of Words (CBOW) and Skip-gram models.
+    \item GloVe \cite{Pennington2014} constructs embeddings based on word co-occurrence statistics in a given corpus.
+    \item FastText \cite{Bojanowski2017} extends Word2Vec by incorporating subword information, improving handling of rare and out-of-vocabulary words.
+    \item Contextual embeddings such as BERT and GPT \cite{Devlin2019} adapt word representations based on surrounding context, improving semantic disambiguation.
+\end{itemize}
+
+\subsection{Application in This Work}
+Word embeddings are used in this thesis to measure semantic similarity between axioms and conjectures. By leveraging pre-trained embeddings such as Sentence-BERT (SBERT), the selection of axioms can be optimized to improve theorem proving success rates.
+
+\section{Grammars in Natural and Formal Languages}
+
+A grammar defines the structural rules governing a language, whether natural or formal. In theorem proving, grammars serve as a foundation for representing logical statements in a structured and interpretable format.
+
+\subsection{Types of Grammars}
+\begin{itemize}
+    \item Context-free grammars (CFGs) define syntactic structures in both natural language parsing and programming languages.
+    \item First-order logic (FOL) grammars formalize logical expressions using predicates, functions, and quantifiers.
+    \item Ontology-based grammars, such as SUMO (Suggested Upper Merged Ontology) \cite{Niles2001}, integrate linguistic and logical structures to improve knowledge representation.
+\end{itemize}
+
+\subsection{Relevance to Automated Reasoning}
+Formal grammars play a crucial role in automated theorem proving:
+\begin{itemize}
+    \item They ensure logical consistency in axioms and conjectures.
+    \item They enable automated systems to parse and manipulate logical expressions systematically.
+    \item They facilitate knowledge representation in formal ontologies such as SUMO and Adimen-SUMO.
+\end{itemize}
+
+\section{Automated Theorem Proving}
+
+Automated theorem proving is a key component of formal logic and artificial intelligence, aiming to determine whether a given conjecture follows from a predefined set of axioms.
+
+\subsection{Fundamental Concepts}
+\begin{itemize}
+    \item Logical inference consists of deriving new statements from existing ones using formal inference rules.
+    \item Resolution is a proof technique based on deriving contradictions, commonly used in first-order logic theorem provers.
+    \item Refutation aims to demonstrate that a conjecture holds by attempting to derive a contradiction from its negation.
+\end{itemize}
+
+\subsection{Prover E: A Resolution-Based Theorem Prover}
+Prover E is a widely used automated theorem prover based on the superposition calculus \cite{Schulz2013}. The system follows a structured process:
+
+\begin{enumerate}
+    \item Preprocessing converts input formulas into conjunctive normal form (CNF).
+    \item Clause selection applies heuristics to prioritize clauses based on complexity and term structure.
+    \item Inference rules such as resolution, paramodulation, and superposition generate new clauses that contribute to the proof.
+    \item Simplification techniques eliminate redundant clauses through rewriting, subsumption, and redundancy elimination.
+    \item Proof search continues until an empty clause is derived, indicating proof completion, or until computational resources are exhausted.
+\end{enumerate}
+
+Understanding the internal mechanisms of Prover E is crucial for optimizing axiom selection strategies.
+
+\section{Axiom Selection Strategies}
+
+Axiom selection is a critical challenge in automated reasoning, as theorem provers often struggle with large search spaces. The selection process determines which axioms are included in the proof search, influencing both efficiency and success rates.
+
+\subsection{Syntactic Approaches}
+\begin{itemize}
+    \item SInE (Sumo INference Engine) \cite{Hoder2011} selects axioms that introduce symbols relevant to the conjecture, reducing the search space.
+    \item Divvy \cite{Roederer2009} ranks axioms based on their syntactic relevance, improving proof efficiency.
+\end{itemize}
+
+\subsection{Semantic Approaches}
+\begin{itemize}
+    \item SRASS \cite{Sutcliffe2007} selects axioms based on their semantic relevance to the conjecture, integrating meaning-based selection criteria.
+    \item Axiom selection using large language models \cite{Schon2024} aligns selected axioms with the context of the conjecture, improving commonsense reasoning in automated theorem proving.
+\end{itemize}
+
+\subsection{Hybrid Approaches}
+\begin{itemize}
+    \item Combining syntactic and semantic techniques balances structural relevance with meaning-based similarity.
+    \item The inclusion of frequently used axioms improves proof success by providing additional structural support to the inference process.
+\end{itemize}
+
+\section{Summary}
+This chapter introduced key concepts including common sense reasoning, word embeddings, formal grammars, theorem proving, and axiom selection. These foundations provide the theoretical basis for the experimental work presented in later chapters, where different axiom selection strategies are evaluated in the context of automated theorem proving.
+
+\clearpage
+
+\chapter{Methodology}
+\label{chapter-methodology}
+Methodology.
+
+\clearpage
 
 \chapter{Experiments}
-    %
-    \section{How WhiteboxTests are made}
-      \begin{itemize}
-        \item Paper of Álvez about building WhiteBox Tests \cite{Álvez2017}
-        \begin{enumerate}
-          \item In the context of Adimen SUMO, \textbf{falsity tests} are formulated by taking specific statements or conditions and applying \textbf{negation} to them.
-          \item These negated statements serve as a basis for falsity tests, which are essential in logical proof systems.
-          \item A \textbf{theorem prover} such as Prover E then performs a process known as \textbf{refutation}.
-          \item Through refutation, the theorem prover attempts to demonstrate the \textbf{inconsistency} or \textbf{falsehood} of the original statements.
-          \item This is achieved by attempting to derive a \textbf{contradiction} from the negated statements, indicating that the original (non-negated) statements cannot all be true simultaneously.
-        \end{enumerate}
-      \end{itemize}
-    %
-    \section{Reengineering of paper \cite{Schon2024}}
-      \begin{figure}[h!]
+\label{chapter-experiments}
+
+This chapter presents the experimental setup and evaluation of different axiom selection strategies in the context of automated theorem proving. The experiments focus on white-box testing, reengineering of prior work, comparative analysis of selection methods, and performance assessments across different theorem provers.
+
+\section{Construction of White-Box Tests}
+
+The methodology for constructing white-box tests follows the approach described by Álvez \cite{Álvez2017}. The tests are designed to assess the logical consistency and inference capabilities of theorem provers by introducing controlled variations in axiom selection.
+
+\begin{itemize}
+    \item In the context of Adimen SUMO, falsity tests are created by taking specific statements or conditions and applying negation.
+    \item The negated statements serve as the foundation for falsity tests, which play a crucial role in evaluating logical proof systems.
+    \item A theorem prover such as Prover E executes a process known as refutation.
+    \item Through refutation, the prover attempts to demonstrate the inconsistency or falsehood of the original statements.
+    \item This is achieved by attempting to derive a contradiction from the negated statements, thereby indicating that the original (non-negated) statements cannot all be true simultaneously.
+\end{itemize}
+
+\section{Reengineering of Prior Work \cite{Schon2024}}
+
+The evaluation of axiom selection techniques includes a reengineering of the results presented in \cite{Schon2024}. The goal is to validate the prior findings and assess the impact of alternative selection methods.
+
+\begin{itemize}
+    \item The prover results are categorized into:
+    \begin{itemize}
+        \item Timeout: Cases where the prover exhausted computational resources without finding a proof.
+        \item Proof found: Cases where the prover successfully derived a proof.
+        \item Gave up: Cases where the prover terminated without reaching a conclusion.
+    \end{itemize}
+
+    \begin{figure}[h!]
         \centering
-        \includegraphics[width=\textwidth]{standard_mode_noAdded_output.pdf} % Add path to the PDF image
-        \caption{Reengineering of results of paper \cite{Schon2024}}
+        \includegraphics[width=\textwidth]{standard_mode_noAdded_output.pdf}
+        \caption{Reengineering of results from \cite{Schon2024}}
         \label{fig:reengineering}
-      \end{figure}
-      \clearpage
-    %
-    \section{Analyze of reeingineering}
-      \begin{itemize}
-        \item Mean variable count
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{variable_count.pdf} % Add path to the PDF image
-            \caption{Variable Count}
-            \label{fig:variable_count}
-          \end{figure}
-        \item Count signs
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{signs_count.pdf} % Add path to the PDF image
-            \caption{Count signs}
-            \label{fig:count_signs}
-          \end{figure}
-        \item Character Count
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{character_count.pdf} % Add path to the PDF image
-            \caption{Character count}
-            \label{fig:character_count}
-          \end{figure}
-          \clearpage
-        \item Cosine similarity
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{cosine_similarity_mini_noAdded_summary.pdf} % Add path to the PDF image
-            \caption{Cosine similarity}
-            \label{fig:cosine_similarity}
-          \end{figure}
-          Why Would Provable Conjectures Have Lower Axiom Similarity? This suggests that proving the conjecture involves bridging different concepts, rather than just refining a single closely related idea.
-          \clearpage
-      \end{itemize}
-    %
-    \section{Add core axioms}
-      \begin{itemize}
-        \item Results of prover
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{standard_mode_output.pdf} % Add path to the PDF image
-            \caption{Summary of Prover Results with core axioms}
-            \label{fig:prover_results_with_core_axioms}
-          \end{figure}
-        \item Cosine similarity
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{cosine_similarity_mini_summary.pdf} % Add path to the PDF image
-            \caption{Summary of Prover Results: Standard Mode}
-            \label{fig:prover_results_standard}
-          \end{figure}
-        \clearpage
-      \end{itemize}
-    %
-    \section{Comparing LLMs}
-      \begin{itemize}
-        \item Results of prover
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{different_mode_output.pdf} % Add path to the PDF image
-            \caption{Summary of Prover Results: Different models}
-            \label{fig:results_different_models}
-          \end{figure}
-        \item Cosine similarity
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{cosine_similarity_mpnet_summary.pdf} % Add path to the PDF image
-            \caption{Cosine Similarity Mpnet}
-            \label{fig:cosine_similarity_mpnet}
-          \end{figure}
-          \clearpage
-      \end{itemize}
-    %
-    \section{Analyze different E settings}
-      \begin{itemize}
-        \item Satauto
-          Using search heuristic
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{satauto_mode_output.pdf} % Add path to the PDF image
-            \caption{Summary of Prover Results: Satauto Mode}
-            \label{fig:prover_results_satauto}
-          \end{figure}
-        \item Auto
-          Using SInE + search heuristic
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{auto_mode_output.pdf} % Add path to the PDF image
-            \caption{Summary of Prover Results: Auto Mode}
-            \label{fig:prover_results_auto}
-          \end{figure}
-          \clearpage
-      \end{itemize}
-    %
-    \section{Different prover}
-      \begin{itemize}
-        \item Vampire
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{vampire_mode_output.pdf} % Add path to the PDF image
-            \caption{Summary of Prover Results: Vampire Mode}
-            \label{fig:prover_results_vampire}
-          \end{figure}
-          \clearpage
-      \end{itemize}
-    %
-    \section{Time study}
-      \begin{itemize}
-        \item Proofs found in first named
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{proof_found_difference.pdf} % Add path to the PDF image
-            \caption{Proof found on other modes}
-            \label{fig:prover_found_different}
-          \end{figure}
-        \item Time to find proof
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{time_to_find_proof.pdf} % Add path to the PDF image
-            \caption{Proofs found time}
-            \label{fig:proof_time}
-          \end{figure}
-        \item Time to find common proof
-          \begin{figure}[h!]
-            \centering
-            \includegraphics[width=\textwidth]{time_to_find_common_proof.pdf} % Add path to the PDF image
-            \caption{Common proofs found time}
-            \label{fig:time_common_proof}
-          \end{figure}
-      \end{itemize}
+    \end{figure}
+
+    \FloatBarrier
+
+    \item Theorem prover performance is evaluated based on:
+    \begin{itemize}
+        \item A high percentage of test cases resulted in timeouts or unsuccessful proof attempts, illustrating the difficulty of proving conjectures without additional axioms.
+        \item The success rate for proof discovery remained low, suggesting that the standard mode lacks sufficient knowledge for effective inference.
+        \item The dataset incorporates multiple axiom selection techniques, including syntactic, semantic-based, and union-based selection.
+    \end{itemize}
+
+    \item The distribution of results shows:
+    \begin{itemize}
+        \item The prover executed 977 test cases, applying each axiom selection approach independently.
+        \item The number of successfully proven conjectures was relatively low, reinforcing the importance of improved axiom selection techniques.
+        \item Some conjectures had no successful proofs, highlighting weaknesses in current selection strategies.
+    \end{itemize}
+
+    \item Implications for further research:
+    \begin{itemize}
+        \item The findings suggest that semantic similarity alone is insufficient for effective axiom selection.
+        \item Further experiments should explore whether the integration of core axioms leads to improved proof success rates.
+        \item Analyzing the relationship between axiom complexity and proof success may provide additional insights into theorem proving behavior.
+    \end{itemize}
+\end{itemize}
+
+\clearpage
+
+\section{Analysis of Reengineering}
+
+The reengineered results are analyzed to better understand proof complexity and selection effectiveness.
+
+\begin{itemize}
+    \item The mean variable count in proofs is examined.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{variable_count_noauto.pdf}
+        \caption{Variable count in proofs}
+        \label{fig:variable_count}
+    \end{figure}
+    \FloatBarrier
+
+    \item The count of special symbols in proofs is analyzed.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{signs_count_noauto.pdf}
+        \caption{Special character count}
+        \label{fig:count_signs}
+    \end{figure}
+
+    \item The character count across all test cases is examined.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{character_count_noauto.pdf}
+        \caption{Character count distribution}
+        \label{fig:character_count}
+    \end{figure}
+
+    \FloatBarrier
+
+    \item The cosine similarity between axioms and conjectures is analyzed to determine whether similarity influences proof success.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{cosine_similarity_mini_noAdded_summary.pdf}
+        \caption{Cosine similarity distribution}
+        \label{fig:cosine_similarity}
+    \end{figure}
+    \FloatBarrier
+
+    The results suggest that provable conjectures often have lower axiom similarity. This indicates that proving a conjecture may require bridging different concepts rather than simply refining closely related axioms.
+\end{itemize}
+
+\clearpage
+
+\section{Integration of Core Axioms}
+
+The integration of core axioms into the selection process is evaluated.
+
+\begin{itemize}
+    \item The results of theorem proving with core axioms are examined.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{standard_mode_output.pdf}
+        \caption{Summary of prover results with core axioms}
+        \label{fig:prover_results_with_core_axioms}
+    \end{figure}
+    \FloatBarrier
+
+    \item Cosine similarity is compared across different selection methods.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{cosine_similarity_mini_summary.pdf}
+        \caption{Cosine similarity comparison}
+        \label{fig:prover_results_standard}
+    \end{figure}
+    \FloatBarrier
+\end{itemize}
+
+\clearpage
+
+\section{Comparison of Large Language Models}
+
+The performance of different large language models in axiom selection is assessed.
+
+\begin{itemize}
+    \item The results of theorem proving with different models are analyzed.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{different_mode_output.pdf}
+        \caption{Summary of prover results with different models}
+        \label{fig:results_different_models}
+    \end{figure}        
+    \FloatBarrier
+
+    \item The cosine similarity of selected axioms is compared.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{cosine_similarity_mpnet_summary.pdf}
+        \caption{Cosine similarity in different models}
+        \label{fig:cosine_similarity_mpnet}
+    \end{figure}
+    \FloatBarrier
+\end{itemize}
+
+\clearpage
+
+\section{Evaluation of Theorem Prover Configurations}
+
+The effect of different theorem prover configurations is analyzed.
+
+\begin{itemize}
+    \item The performance of Satauto mode is examined.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{satauto_mode_output.pdf}
+        \caption{Summary of prover results in Satauto mode}
+        \label{fig:prover_results_satauto}
+    \end{figure}
+    \FloatBarrier
+
+    \item The effect of auto mode, which uses SInE and search heuristics, is assessed.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth]{auto_mode_output.pdf}
+        \caption{Summary of prover results in Auto mode}
+        \label{fig:prover_results_auto}
+    \end{figure}
+    \FloatBarrier
+\end{itemize}
+
+\clearpage
+
 
 \chapter{Conclusion}
-
+\label{chapter-conclusion}
 Conclusion.
+\clearpage
 
-\chapter{Further work}
+\chapter{Future work}
+\label{chapter-futerwork}
 
-Further work.
+Future work.
 
 
 

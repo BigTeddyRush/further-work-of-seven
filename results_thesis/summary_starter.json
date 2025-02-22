@@ -15,8 +15,8 @@
     "ProverResult.GAVE_UP": 0
   },
   "union_withAddedAxiom": {
-    "ProverResult.TIME_OUT": 762,
-    "ProverResult.PROOF_FOUND": 238,
+    "ProverResult.TIME_OUT": 714,
+    "ProverResult.PROOF_FOUND": 286,
     "ProverResult.GAVE_UP": 0
   }
 }
