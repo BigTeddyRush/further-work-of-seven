@@ -1,75 +1,12 @@
 \documentclass[english,version-2020-11]{uzl-thesis}
 \usepackage{placeins}
-
-% Copy this file as a template for your thesis. You will have to take
-% action at all places marked by
-%
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-% !!! Your action is needed here !!!
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%
-% The first place your action is needed is the first line of this
-% document:
-%
-%
-% Language of the thesis:
-%
-% You must use either 'german' or 'english' above, depending on the
-% language used in the main text. This will automatically setup a lot
-% of things in the background.
-%
-%
-% Version of the class:
-%
-% You must specify which version of the thesis class is to be
-% used. This is important in case the class style changes in later
-% years, but we still want an older thesis to look the same, even when
-% things are changed in the class.
-%
-% Do not change or remove the version-xxxx key.
-%
-%
-% Text encoding:
-%
-% Your thesis *must* be encoded in utf8 (unicode), which is the
-% default in most editors these days. Do *not* change this to latin8.
-
+\usepackage{microtype}
 
 
 %%%
-%
-% Main setup:
-%
-%%%
-%
-% You must use the \UzLThesisSetup command to specify numerous things
-% about your thesis. This includes the entries on the title page, the 
-% abstracts, and the bibliography style. You do so by specifying
-% so-called "values" for so-called "keys". For instance, 
-% for the key "Autor" you must provide your name as the value. You do
-% so by writing 'Autor = {Max Mustermann}', that is, the value is put
-% into curly braces. You can use the \UzLThesisSetup command
-% repeatedly and the order in which you provide the keys is not
-% important. 
-%
-% Everything shown on the title page must be in German -- even
-% if the thesis is written in English! Just insert German text for
-% German keys and English text for English keys (like 'Abstract' needs
-% English text, while 'Zusammenfassung' needs German text).
 
 \UzLThesisSetup{
   %
-  % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  % !!! Your action is needed here !!!
-  % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  %
-  % First, specify the institut or clinic at which the thesis was
-  % written. You get the logo file from them (make sure it has the
-  % correct size, namely the same as the example). If they do not have
-  % a logo, the university's default logo is used.
-  %
-  % The 'verfasst' gets two arguments. Change the first to {an der}
-  % for clinics, as in 'Verfasst = {an der}{Medizinischen Klinik I}'
   %
   Logo-Dateiname        = {uzl-thesis-logo-uzl.pdf},
   Verfasst              = {am}{Institut für Software Engineering und Programming Languages},
@@ -82,21 +19,7 @@
   Titel auf Englisch    = {
     Can semantic similarities of words enhance common sense reasoning?  A case study with prover E and SUMO.
   },
-  %
-  % Author and supervisor:
   % 
-  % Note that the 'Betreuer' or 'Betreuerin' is the supervisor, that
-  % is, the professor who officially supervises the thesis. If there
-  % is also an assistent of the professor who helped (typically a
-  % lot), use 'Mit Unterstützung von' to thank that person. If the
-  % thesis was mainly written 'externally' at some company or another
-  % institute, point this out using 'Weitere Unterstützung'. 
-  % 
-  % For your own name, do *not* add things like "BSc" or "BSc
-  % cand.". For the supervisor, you should normally include
-  % "Prof. Dr." or "PD Dr." (ask your supervisor, what is
-  % appropriate), but nothing more (so no
-  % "Univ.-Prof. Dr. Dr. h.c. mult." unless your supervisor insists).  
   %
   Autor                 = {Julian Britz},
   Betreuerin            = {Prof. Dr. Diedrich Wolter},
@@ -106,26 +29,6 @@
   %
   Mit Unterstützung von = {Moritz Bayerkuhnlein},
   % 
-  %   Weitere Unterstützung = {
-  %     Die Arbeit ist im Rahmen einer Tätigkeit bei der Firma Muster GmbH
-  %     entstanden.
-  %   },
-  %
-  %
-  % Your Degree Programm (Studiengang)
-  %
-  % Specify 'Bachelorarbeit' or 'Masterarbeit' and the degree
-  % programme. Make sure the name of programme is correct and not
-  % some abbreviation or some incorrect variant. For instance:
-  % 'Medizinische Ingenierwissenschaft', but not 'MIW';
-  % 'Medizinische Informatik', but not 'Medizin-Informatik';
-  % 'Informatik', but not 'Informatik (SSE)'.
-  %
-  % Use German names for German programmes and English names for
-  % English ones, so 'Infection Biology', not 'Infektionsbiologie'. 
-  % For programmes that have a German bachelor and an English master,
-  % use the German name for a bachelor thesis and the English name for
-  % the master thesis.
   %
   Bachelorarbeit,
   Studiengang           = {Informatik},
@@ -144,192 +47,16 @@
   Zusammenfassung       = {
     Zusammenfassung 
   },
-  %
-  % Optional: 'Danksagungen' (German) or 'Acknowledgements'
-  % (English). Both keys are optional and both have the same effect of
-  % adding an acknowledgements text after the abstracts and before the
-  % table of contents.
-  %
-  Acknowledgements      = {
-    Acknowledgements
-  },
   % Bibliography style: Choose between
-  % 
-  % 'Alphabetische Bibliographie'
-  % for all degree programmes in the natural sciences 
-  % 
-  % 'Numerische Bibliographie'
-  % alternative for all other degree programmes
-  % 
-  % Either will load biblatex and setup the citation methods and the
-  % bibliography styles correctly. You should not mess with them.
   % 
     Alphabetische Bibliographie,
   % Alternatively:
   % Numerische Bibliographie
 }
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%
-%
-% Styling the thesis
-%
-%%%%%%%%%%%%%%%%%%%%
-%
-% Creating a visually pleasing layout and choosing fonts is not
-% easy. Furthermore, different people have different preferences. Of
-% course, for the University of Lübeck, the dean of studies could just
-% force everyone to use one specific layout and font, but that seems a
-% bit drastic and, also, it seems nice that thesis by different people
-% have an individual style even though they all stick to the same
-% overall structure.
-%
-% For these reasons, I (Till Tantau) have spend quite some time on
-% designing a flexible layout and styling mechanism for theses.
-%
-% Basically, the overall structure of the thesis is fixed by the
-% thesis class and so are many structural elements. For instance, you
-% cannot change the order in which the abstract and table of contents
-% are shown, you cannot move the bibliography elsewhere, indeed, the
-% bibliography style is also fixed. Likewise, the text on the title
-% page is fixed.
-%
-% Although many things are fixed, you *can* change several other
-% things. For instance, you can change the font used for the main
-% text, you can change which font is used for titles and headings or
-% you can change whether titles and headlines are centered or flushed
-% left.
-%
-% There are many LaTeX packages for changing such things. You are
-% kindly asked *not to use them*. Rather, use (only) the options
-% offered by the thesis class. All possible choices and combinations
-% there have been tested by me and produce nice results; what happens
-% with other packages no one knows and might no longer conform to what
-% is expected by the university. As you will see, you still have a
-% lot of options.
-%
-%
-% Technical note: All styling is done via the command
-%
-% \UzLStyle{...}
-%
-% where ... is a key-value list just as for \UzLThesisSetup. The
-% difference is just that everything having to do with styling as
-% controlled by \UzLStyle, while the more “formal” setup keys are
-% controlled by \UzLThesisSetup.
-%
-%%%
-%
-% Designs
-%
-%
-% A \emph{design} is a whole set of font and layout options bundled
-% together. They have been chosen in such a way that a visually
-% pleasing “overall appearance” results.
-%
-%
-% \UzLStyle{computer modern oldschool design}
-%
-% The look of this design mimics the “classical” way a paper or report
-% created with \LaTeX\ looks like: The Computer Modern font is used,
-% bold face fonts are used for headlines, only black and white are
-% used as colors. This design reminds me of older scientific
-% documents, especially from the computer science community where
-% \LaTeX\ was used very early.
-%
-%
-% \UzLStyle{computer modern basic design}
-%
-% A slightly less “oldschool” version of the previous design. It is
-% still a classic design in the sense that it uses the Computer Modern
-% font and that it still has this “good old \LaTeX” look, but some
-% more modern aspects (like colors!) have been added.
-%
-% Note that this design uses Myriad for the title page (one of the
-% “modern aspect”), which means that his font must be installed.
-%
-%
-% \UzLStyle{computer modern scholary design}
-%
-% In my opinion, this is the ultimate “scholary design”: The thesis
-% will look like it has been typeset by hand some 150 years ago and
-% then printed by a university press. There is really nothing “modern”
-% about it and the word in the name of the design is just part of the
-% name of the “Computer Modern” font.
-%
-%
-% \UzLStyle{pagella basic design}
-%
-% A, well, basic design that uses the Pagella font rather than the
-% Computer Modern font. Especially the bold face version of this font
-% looks nicer than the Computer Modern counterpart. Also, Pagella,
-% while still having a “bookish” look, still feels a bit fresher than
-% Computer Modern. 
-%
-%
-% \UzLStyle{pagella centered design}
-%
-% A variant of the basic Pagella design that centers all
-% headlines. A nice alternative to the basic version.
-%
-%
-% \UzLStyle{pagella contrast design}
-%
-% This design tries to create some visual friction by contrasting the
-% sans serif headline font (in bold!) with the main text. I find it a
-% visually very interesting combination.
-%
-%
-% \UzLStyle{alegrya basic design}
-%
-% The third variant of the basic design, this time using the Alegrya
-% font. 
-%
-%
-% \UzLStyle{alegrya scholary design}
-%
-% The Alegrya version of the previous “scholary” design. Unlike the
-% Computer Modern version, this design does not look old, but more
-% fresh -- while still creating the impression that the text must be
-% about a very scientific subject. 
-%
-%
-% \UzLStyle{alegrya stylish design}
-%
-% The design is quite similar to the scholary version for the Alegrya
-% font, but with even more modern additions. “Stylish” is the word
-% that comes to my mind.
-%
-%
 \UzLStyle{alegrya modern design}
-%
-% A design that uses the sans serif version of the Alegrya font for
-% the headlines. This is a nice modern overall design.
-%
-%%%
 
-
-
-
-%%%%%%%%
-%
-% Now, include the package you need here using \usepackage. 
-%
-% However, many standard packages are already loaded by the class:
-%
-% amsmath, amssymb, amsthm, babel, biblatex, csquotes, etoolbox,
-% filecontents, fontspec, geometry, hyperref, tikz (with libraries
-% arrows.meta, positioning and shapes), varioref, url 
-%
-% Indeed, in many cases you will not need any extra packages.
-%
-%%%%%%%
-
-
-
-
+\addbibresource{thesis_julian_britz-bibtex-entries.bib}
 
 \begin{document}
 
@@ -337,7 +64,6 @@
 % The title page and table of contents will be inserted automatically
 % here. 
 %
-
 
 \chapter{Introduction}
 \label{chapter-introduction}
@@ -362,7 +88,7 @@ Even though there is no direct mapping between natural and logical language, we 
 Arguments for this assertion are that logical langugage is human made and therefore inevitably connected to human and consequently natural language.
 Also grammers like Adimen SUMO are partially derived by lexical-semantic networks that capture relationships between words of natural language.
 Making use of this entanglement the selection process of theorem proovers can be optimized by reducing the number of relevant axioms.
-Theorem prover E follows a refutational proof procedure using the superposition calculus. The proof search is based on a modified given-clause algorithm, consisting of several key steps:
+Theorem prover E follows a refutational proof procedure using the superposition calculus \cite{Schulz2019}. The proof search is based on a modified given-clause algorithm, consisting of several key steps:
 
 \begin{enumerate}
     \item Initialization: The input problem is converted into clausal normal form (CNF) and divided into two sets: unprocessed clauses \( U \) and processed clauses \( P \).
@@ -376,7 +102,6 @@ Theorem prover E follows a refutational proof procedure using the superposition 
         \item A predefined resource limit, such as time or memory, is reached.
     \end{itemize}
 \end{enumerate}
-\cite{Schulz2019}
 
 Axioms play a crucial role in simplification. While the prover cannot arbitrarily discard axioms, as they form the foundation of logical reasoning, they are essential for clause rewriting and subsumption.
 
@@ -412,27 +137,11 @@ In other words, the likelihood of proving a conjecture is higher when frequently
 
 \section{Justification and Implications}
 
-Adimen SUMO's grammar is closely connected to natural language structures. 
+Adimen SUMO's grammar is closely connected to natural language structures.
 This means that selecting axioms based on semantic embeddings, such as SBERT, helps capture underlying logical dependencies that might not be immediately apparent. Frequently used axioms act as structural anchors within this system, making it easier for the theorem prover to navigate the proof search space and discover relevant inference steps.
 By combining the most relevant axioms with those that have been frequently used in past proofs, the theorem prover benefits from both semantic alignment and structural consistency. This increases the overall proof success rate, as the prover has access to axioms that not only appear relevant but have also proven useful in previous reasoning tasks.
 
 This thesis tests this hypothesis through empirical experiments, measuring proof success rates across different axiom selection strategies. The goal is to determine how much incorporating core axioms improves theorem proving performance.
-
-
-% DELETE the following line for your own thesis - it causes trouble!
-\lstMakeShortInline[style=code,style=inline,language={[LaTeX]tex},moretexcs={chapter}]|
-
-
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-% !!! Your action is needed here !!!
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%
-% Replace with a detailed account of what other people have already
-% researched concerning your thesis's theme. Even when (indeed,
-% especially when) there has been only little or even no research by
-% other people, you should explain in detail that this is the case and
-% why it is the case. 
-
 
 \section{Structure of this Work}
 
@@ -450,7 +159,9 @@ Finally, Chapter \ref{chapter-futerwork} explores ideas for future research, sug
 
 Each chapter builds upon the previous ones, providing a structured progression from theoretical background to practical implementation and evaluation.
 
-
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 \chapter{Related Work}
 \label{chapter-relatedwork}
@@ -459,20 +170,17 @@ A significant part of this thesis builds upon the work of Schon \cite{Schon2024}
 
 The findings of Schon's work play a crucial role in this thesis, as a major aspect of the proposed approach involves using semantic embeddings for axiom selection. However, while Schon focuses on direct context-based selection, this thesis investigates the impact of incorporating frequently used axioms into the selection process. The goal is to determine whether combining core axioms with those chosen based on semantic similarity enhances proof success rates.
 
-Beyond Schon’s work, several other studies have contributed to axiom selection and theorem proving. Adimen-SUMO, developed by Álvarez et al. \cite{Alvez2014}, is a reengineered version of the SUMO ontology designed to improve compatibility with first-order theorem provers. The restructuring ensures that axioms are formulated in a way that facilitates inference, reducing ambiguities present in the original SUMO. This ontology serves as a key resource in evaluating theorem provers, including those used in this thesis.
+Beyond Schon's work, several other studies have contributed to axiom selection and theorem proving. Adimen-SUMO, developed by Álvarez et al. \cite{Alvez2014}, is a reengineered version of the SUMO ontology designed to improve compatibility with first-order theorem provers. The restructuring ensures that axioms are formulated in a way that facilitates inference, reducing ambiguities present in the original SUMO. This ontology serves as a key resource in evaluating theorem provers, including those used in this thesis.
 
 Syntactic axiom selection has also been widely explored. Hoder and Voronkov \cite{Hoder2011} introduced SInE, a system that selects axioms based on their syntactic relevance to the conjecture. By iteratively choosing axioms that introduce symbols appearing in the conjecture, SInE reduces the search space, making large knowledge bases more manageable. Similarly, Roederer et al.
 
-Another relevant contribution comes from Álvarez et al. \cite{Alvez2017}, who introduced a framework for systematic white-box testing of first-order logic ontologies. Their work focuses on ensuring logical consistency and eliminating redundant or contradictory axioms. Automated testing techniques from this study provide insights into ontology refinement, which is relevant when evaluating the quality of selected axioms in theorem proving.
+Another relevant contribution comes from Alvez et al. \cite{Alvez2017}, who introduced a framework for systematic white-box testing of first-order logic ontologies. Their work focuses on ensuring logical consistency and eliminating redundant or contradictory axioms. Automated testing techniques from this study provide insights into ontology refinement, which is relevant when evaluating the quality of selected axioms in theorem proving.
 
-In summary, Schon’s research serves as the primary foundation for this thesis, providing a framework for semantic axiom selection that is further extended through the integration of frequently used axioms. Other related studies on syntactic axiom selection, ontology structuring, and logical consistency contribute valuable insights, supporting the refinement of the proposed approach.
-
+In summary, Schon's research serves as the primary foundation for this thesis, providing a framework for semantic axiom selection that is further extended through the integration of frequently used axioms. Other related studies on syntactic axiom selection, ontology structuring, and logical consistency contribute valuable insights, supporting the refinement of the proposed approach.
 
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % !!! Your action is needed here !!!
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%
-% Replace the whole text chapter with the main text of your thesis! 
 
 \chapter{Preliminaries}
 \label{chapter-preliminaries}
@@ -503,7 +211,6 @@ Beyond standard word embeddings, contextual embeddings such as BERT and GPT \cit
 
 In this work, word embeddings are leveraged to determine the semantic similarity between axioms and conjectures. By using pre-trained models like Sentence-BERT (SBERT), it becomes possible to enhance axiom selection in theorem proving, ensuring that the selected axioms are not only structurally relevant but also semantically meaningful.
 
-
 \section{Grammars in Natural and Formal Languages}
 
 Grammars define the structural rules of a language, whether it is a natural language like English or a formal system used in logic. In theorem proving, grammars are essential for structuring logical statements in a way that machines can interpret and manipulate.
@@ -518,7 +225,7 @@ Automated theorem proving aims to determine whether a given conjecture follows l
 
 Theorem provers rely on different proof strategies. Logical inference derives new statements from existing ones using formal rules. Resolution is a proof technique that derives contradictions, commonly used in first-order logic provers. Refutation works by attempting to show that a conjecture holds by deriving a contradiction from its negation.
 
-Prover E is a widely used theorem prover based on the superposition calculus \cite{Schulz2013}. It follows a structured process where input formulas are first converted into conjunctive normal form (CNF). The prover then selects clauses heuristically, applies inference rules such as resolution and superposition to generate new clauses, simplifies redundant ones, and continues searching until either an empty clause is derived, proving the conjecture, or computational resources are exhausted. Understanding these mechanisms is important for optimizing axiom selection.
+Prover E is a widely used theorem prover based on the superposition calculus \cite{Schulz2019}. It follows a structured process where input formulas are first converted into conjunctive normal form (CNF). The prover then selects clauses heuristically, applies inference rules such as resolution and superposition to generate new clauses, simplifies redundant ones, and continues searching until either an empty clause is derived, proving the conjecture, or computational resources are exhausted. Understanding these mechanisms is important for optimizing axiom selection.
 
 \section{Axiom Selection Strategies}
 
@@ -541,10 +248,9 @@ As seen above, word embeddings are a common technique in natural language proces
 \textbf{Definition 5.1 (Cosine similarity of two vectors \cite{Schon2023}).}  
 Let \( \mathbf{u}, \mathbf{v} \in \mathbb{R}^n \) be non-zero vectors. The cosine similarity of \( \mathbf{u} \) and \( \mathbf{v} \) is defined as:
 
-\[
-\text{cos sim}(\mathbf{u}, \mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
-\]
-\\
+\begin{equation}
+    \operatorname{cos\ sim}(\mathbf{u}, \mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
+\end{equation}
 
 Schon \cite{Schon2023} introduces a statistical approach for axiom selection that relies on word embeddings to represent axioms as vectors. The idea is to encode axioms into a continuous vector space where semantically similar axioms are mapped closer together. This is done in a preprocessing step, where each axiom in the knowledge base is transformed into a vector representation using a word embedding model.
 
@@ -562,7 +268,6 @@ Following this idea, the SeVEn approach builds upon vector-based selection by mo
 
 This adaptation allows SeVEn to leverage the richer semantic information captured in sentence embeddings while maintaining the core structure of vector-based selection.
 
-
 \section{Combining Vector-Based and Syntactic Selection}.
 
 To address this issue, hybrid selection strategies combine statistical and syntactic approaches. An example of this is Similarity SInE \cite{Furbach2019WordEmbeddings}, which extends the original SInE selection by allowing not just the least frequent symbol to trigger an axiom but also symbols with a high enough cosine similarity to the trigger. This modification ensures that semantically related axioms can still be included in the selection process.
@@ -577,8 +282,9 @@ Using formal notation, let \( \text{sine}(KB, \{A_1, ..., A_n\}) \) represent th
 
 This formulation allows for flexibility in axiom selection, as different selection strategies can be incorporated depending on the specific needs of the reasoning task.
 
-
-\clearpage
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 \chapter{Experiments}
 \label{chapter-experiments}
@@ -587,11 +293,11 @@ This chapter presents the experimental setup and evaluation of different axiom s
 
 \section{Construction of White-Box Tests}
 
-The methodology for constructing white-box tests follows the approach described by Álvez \cite{Álvez2017}. The tests are designed to assess the logical consistency and inference capabilities of theorem provers by introducing controlled variations in axiom selection.
+The methodology for constructing white-box tests follows the approach described by Alvez \cite{Alvez2017}. The tests are designed to assess the logical consistency and inference capabilities of theorem provers by introducing controlled variations in axiom selection.
 
 In the context of Adimen SUMO, falsity tests are constructed by taking specific statements or conditions and applying negation. These negated statements form the basis for falsity tests, which are essential for evaluating logical proof systems. A theorem prover such as Prover E processes these tests through a method called refutation. The goal of refutation is to show that the original statements are inconsistent or false. This is done by attempting to derive a contradiction from the negated statements. If a contradiction is found, it confirms that the original, non-negated statements cannot all be true at the same time.
 
-\section{Reengineering of Prior Work \cite{Schon2024}}
+\section{Reengineering of Prior Work}
 
 The evaluation of axiom selection techniques includes a reengineering of the results presented in \cite{Schon2024}. The goal is to validate the prior findings and assess the impact of alternative selection methods.
 
@@ -668,7 +374,7 @@ The reengineered results are analyzed to better understand proof complexity and 
 
     \FloatBarrier
 
-    \item The cosine similarity between axioms and conjectures is analyzed to determine whether similarity influences proof success.
+    \item The cosine similarity between axioms and conjectures is analyzed to determine\\ whether similarity influences proof success.
     \begin{figure}[h!]
         \centering
         \includegraphics[width=\textwidth]{cosine_similarity_mini_noAdded_summary.pdf}
@@ -758,8 +464,9 @@ The effect of different theorem prover configurations is analyzed.
     \FloatBarrier
 \end{itemize}
 
-\clearpage
-
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 \chapter{Conclusion}
 \label{chapter-conclusion}
@@ -770,8 +477,6 @@ Conclusion.
 \label{chapter-futerwork}
 
 Future work.
-
-
 
 
 % Normally, the bibliography comes next at this point. Do *not* (try
@@ -848,250 +553,5 @@ Future work.
 %
 %%%
 
-
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-% !!! Your action is needed here !!!
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%
-% Replace following example entries with the ones of your thesis.
-
-\begin{bibtex-entries}
-@inproceedings{Schon2024,
-    author={Jakobs, Oliver and Schon, Claudia},
-    editor={Hotho, Andreas and Rudolph, Sebastian},
-    title={Context-Specific Selection of Commonsense Knowledge Using Large Language Models},
-    booktitle={KI 2024: Advances in Artificial Intelligence},
-    year={2024},
-    publisher={Springer Nature Switzerland},
-    address={Cham},
-    pages={218--231},
-    abstract={In the field of automated reasoning, practical applications often face a significant challenge: knowledge bases are typically too large to be fully processed by theorem provers. To still be able to prove that a given goal follows from a large knowledge base, selection techniques are used to determine the parts of the knowledge base that are relevant to the goal. Traditional selection techniques used for this task are usually syntax-based and often overlook a crucial aspect---the meaning of symbol names and axioms. Especially in commonsense reasoning scenarios, the meaning embedded in the symbol names provides invaluable insights. For example, in a proof task using the symbol name cow, it intuitively makes more sense to select formulae using the symbol name calf than formulae using the symbol name weapon. To address this gap, our paper introduces a selection technique that exploits the capabilities of large language models. This technique focuses on contextually related formulae, closely aligning the selected part of the knowledge base with the context of the goal. The approach is implemented and we present a series of experiments that show promising results.},
-    isbn={978-3-031-70893-0}
-}
-
-@article{Àlvez2014,
-    author = {Àlvez, Javier and Lucio, Paqui and Rigau, German},
-    year = {2014},
-    month = {10},
-    pages = {80-116},
-    title = {Adimen-SUMO: Reengineering an Ontology for First-Order Reasoning},
-    volume = {8},
-    journal = {International Journal on Semantic Web and Information Systems},
-    doi = {10.4018/jswis.2012100105}
-}
-
-@inproceedings{Hoder2011,
-    author={Hoder, Kry{\v{s}}tof and Voronkov, Andrei},
-    editor={Bj{\o}rner, Nikolaj and Sofronie-Stokkermans, Viorica},
-    title={Sine Qua Non for Large Theory Reasoning},
-    booktitle={Automated Deduction -- CADE-23},
-    year={2011},
-    publisher={Springer Berlin Heidelberg},
-    address={Berlin, Heidelberg},
-    pages={299--314"},
-    abstract={One possible way to deal with large theories is to have a good selection method for relevant axioms. This is confirmed by the fact that the largest available first-order knowledge base (the Open CYC) contains over 3 million axioms, while answering queries to it usually requires not more than a few dozen axioms. A method for axiom selection has been proposed by the first author in the Sumo INference Engine (SInE) system. SInE has won the large theory division of CASC in 2008. The method turned out to be so successful that the next two years it was used by the winner as well as by several other competing systems. This paper contains the presentation of the method and describes experiments with it in the theorem prover Vampire.},
-    isbn={978-3-642-22438-6}
-}
-
-@inproceedings{Roederer2009,
-    author={Roederer, Alex and Puzis, Yury and Sutcliffe, Geoff},
-    editor={Schmidt, Renate A.},
-    title={Divvy: An ATP Meta-system Based on Axiom Relevance Ordering},
-    booktitle={Automated Deduction -- CADE-22},
-    year={2009},
-    publisher={Springer Berlin Heidelberg},
-    address={Berlin, Heidelberg},
-    pages={157--162"}
-    abstract={This paper describes two syntactic relevance orderings on the axioms available for proving a given conjecture, and an ATP meta-system that uses the orderings to select axioms to use in proof attempts. The system has been evaluated, and the results show that it is effective.},
-    isbn={978-3-642-02959-2}
-}
-
-@inproceedings{Sutcliffe2007,
-    author={Sutcliffe, Geoff and Puzis, Yury},
-    editor={Pfenning, Frank},
-    title={SRASS - A Semantic Relevance Axiom Selection System},
-    booktitle={Automated Deduction -- CADE-21},
-    year={2007},
-    publisher={Springer Berlin Heidelberg},
-    address={Berlin, Heidelberg},
-    pages={295--310},
-    abstract={This paper describes the design, implementation, and testing of a system for selecting necessary axioms from a large set also containing superfluous axioms, to obtain a proof of a conjecture. The selection is determined by semantics of the axioms and conjecture, ordered heuristically by a syntactic relevance measure. The system is able to solve many problems that cannot be solved alone by the underlying conventional automated reasoning system.},
-    isbn={978-3-540-73595-3}
-}
-
-@article{Álvez2017,
-    author = {Álvez, Javier and Hermo, Montserrat and Lucio, Paqui and Rigau, German},
-    year = {2017},
-    month = {05},
-    pages = {},
-    title = {Automatic White-Box Testing of First-Order Logic Ontologies},
-    volume = {29},
-    journal = {Journal of Logic and Computation},
-    doi = {10.1093/logcom/exz001}
-}
-
-
-@inproceedings{Schulz2019,
-  author    = {Stephan Schulz and Simon Cruanes and Petar Vukmirovi{\'c}},
-  title     = {Faster, Higher, Stronger: {E} 2.3},
-  booktitle = {Proceedings of the 27th International Conference on Automated Deduction (CADE-27)},
-  editor    = {Pascal Fontaine},
-  year      = {2019},
-  number    = {11716},
-  series    = {Lecture Notes in Artificial Intelligence (LNAI)},
-  pages     = {495--507},
-  publisher = {Springer}
-}
-
-
-@article{Miller1991,
-  author    = {George A. Miller and Walter G. Charles},
-  title     = {Contextual Correlates of Semantic Similarity},
-  journal   = {Language and Cognitive Processes},
-  volume    = {6},
-  number    = {1},
-  pages     = {1--28},
-  year      = {1991},
-  publisher = {Routledge},
-  doi       = {10.1080/01690969108406936},
-  url       = {https://doi.org/10.1080/01690969108406936},
-  eprint    = {https://doi.org/10.1080/01690969108406936}
-}
-
-
-@InProceedings{Schon2023,
-  author    = {Claudia Schon},
-  editor    = {Dietmar Seipel and Alexander Steen},
-  title     = {Associative Reasoning for Commonsense Knowledge},
-  booktitle = {KI 2023: Advances in Artificial Intelligence},
-  year      = {2023},
-  publisher = {Springer Nature Switzerland},
-  address   = {Cham},
-  pages     = {170--183},
-  isbn      = {978-3-031-42608-7}
-}
-
-
-@inproceedings{Kiros2015SkipThought,
-  author    = {Ryan Kiros and Yukun Zhu and Ruslan Salakhutdinov and Richard S. Zemel and Raquel Urtasun and Antonio Torralba and Sanja Fidler},
-  title     = {Skip-Thought Vectors},
-  booktitle = {Advances in Neural Information Processing Systems 28: Annual Conference on Neural Information Processing Systems 2015 (NeurIPS)},
-  editor    = {Corinna Cortes and Neil D. Lawrence and Daniel D. Lee and Masashi Sugiyama and Roman Garnett},
-  pages     = {3294--3302},
-  year      = {2015},
-  address   = {Montreal, Quebec, Canada},
-  month     = {December 7-12}
-}
-
-@inproceedings{Furbach2019WordEmbeddings,
-  author    = {Ulrich Furbach and Teresa Kr{\"a}mer and Claudia Schon},
-  editor    = {Pascal Fontaine},
-  title     = {Names Are Not Just Sound and Smoke: Word Embeddings for Axiom Selection},
-  booktitle = {Automated Deduction -- CADE 27},
-  year      = {2019},
-  publisher = {Springer International Publishing},
-  address   = {Cham},
-  pages     = {250--268},
-  abstract  = {First-order theorem proving with large knowledge bases makes it necessary to select those parts of the knowledge base, that are necessary to prove the theorem at hand. We extend syntactic axiom selection procedures like SInE to use semantics of symbol names. For this, not only occurrences of symbol names but also semantically similar names are taken into account. We use a similarity measure based on word embeddings. An evaluation of this similarity based SInE is given using problems from TPTP's CSR problem class and Adimen-SUMO. This evaluation is done with two very different systems, namely the Hyper tableau prover and the saturation based system E.},
-  isbn      = {978-3-030-29436-6},
-  doi       = {10.1007/978-3-030-29436-6_15}
-}
-
-@inproceedings{Bayerkuhnlein2023,
-  author    = {Moritz Bayerkuhnlein},
-  title     = {SUMO Wrestling Winograd Schemas},
-  booktitle = {Proceedings of a University Research Project},
-  year      = {2023},
-  institution = {University of Bamberg},
-  address   = {Bamberg, Germany},
-  url       = {https://www.uni-bamberg.de}
-}
-
-@incollection{Johnson-Laird1989,
-  author    = {P. N. Johnson-Laird},
-  title     = {Mental Models},
-  booktitle = {Foundations of Cognitive Science},
-  editor    = {M. I. Posner},
-  pages     = {469--499},
-  publisher = {The MIT Press},
-  year      = {1989}
-}
-
-@inproceedings{Levesque2012,
-  author    = {Hector Levesque and Ernest Davis and Leora Morgenstern},
-  title     = {The Winograd Schema Challenge},
-  booktitle = {Thirteenth International Conference on the Principles of Knowledge Representation and Reasoning},
-  year      = {2012}
-}
-
-@inproceedings{Mikolov2013,
-  author    = {Tom{\'a}s Mikolov and Kai Chen and Greg Corrado and Jeffrey Dean},
-  title     = {Distributed Representations of Words and Phrases and Their Compositionality},
-  booktitle = {Advances in Neural Information Processing Systems 26 (NeurIPS)},
-  editor    = {Christopher J. C. Burges and Leon Bottou and Max Welling and Zoubin Ghahramani and Kilian Q. Weinberger},
-  year      = {2013},
-  pages     = {3111--3119},
-  url       = {https://proceedings.neurips.cc/paper/2013/hash/9aa42b31882ec039965f3c4923ce901b-Abstract.html}
-}
-
-@article{Bojanowski2017,
-  author    = {Piotr Bojanowski and Edouard Grave and Armand Joulin and Tomas Mikolov},
-  title     = {Enriching Word Vectors with Subword Information},
-  journal   = {Transactions of the Association for Computational Linguistics},
-  volume    = {5},
-  year      = {2017},
-  pages     = {135--146},
-  doi       = {10.1162/TACL_A_00051},
-  url       = {https://doi.org/10.1162/tacl_a_00051}
-}
-
-@inproceedings{Pennington2014,
-  author    = {Jeffrey Pennington and Richard Socher and Christopher Manning},
-  title     = {GloVe: Global Vectors for Word Representation},
-  booktitle = {Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  editor    = {Alessandro Moschitti and Bo Pang and Walter Daelemans},
-  year      = {2014},
-  address   = {Doha, Qatar},
-  publisher = {Association for Computational Linguistics},
-  pages     = {1532--1543},
-  doi       = {10.3115/v1/D14-1162},
-  url       = {https://aclanthology.org/D14-1162}
-}
-
-@inproceedings{Devlin2019,
-  author    = {Jacob Devlin and Ming{-}Wei Chang and Kenton Lee and Kristina Toutanova},
-  title     = {BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding},
-  booktitle = {Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, {NAACL-HLT} 2019},
-  pages     = {4171--4186},
-  year      = {2019},
-  publisher = {Association for Computational Linguistics},
-  doi       = {10.18653/v1/N19-1423},
-  url       = {https://aclanthology.org/N19-1423/}
-}
-
-@inproceedings{Niles2001,
-  author    = {Ian Niles and Adam Pease},
-  title     = {Towards a Standard Upper Ontology},
-  booktitle = {Proceedings of the International Conference on Formal Ontology in Information Systems ({FOIS} 2001)},
-  pages     = {2--9},
-  year      = {2001},
-  publisher = {ACM},
-  doi       = {10.1145/505168.505170},
-  url       = {https://doi.org/10.1145/505168.505170}
-}
-
-
-
-
-
-
-\end{bibtex-entries}
-
-
-% If you need to have an appendix (I advise against it), insert it
-% here using, first, \appendix and then \chapter and then,
-% possibly, \section. 
-%
-% \appendix
 
 \end{document}
