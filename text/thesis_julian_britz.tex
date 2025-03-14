@@ -71,7 +71,7 @@
   % The 'verfasst' gets two arguments. Change the first to {an der}
   % for clinics, as in 'Verfasst = {an der}{Medizinischen Klinik I}'
   %
-  Logo-Dateiname        = {uzl-thesis-logo-itcs.pdf},
+  Logo-Dateiname        = {uzl-thesis-logo-uzl.pdf},
   Verfasst              = {am}{Institut für Software Engineering und Programming Languages},
   %
   % The titles:
@@ -151,7 +151,7 @@
   % table of contents.
   %
   Acknowledgements      = {
-    Ackbowledgements
+    Acknowledgements
   },
   % Bibliography style: Choose between
   % 
@@ -164,7 +164,7 @@
   % Either will load biblatex and setup the citation methods and the
   % bibliography styles correctly. You should not mess with them.
   % 
-  Alphabetische Bibliographie,
+    Alphabetische Bibliographie,
   % Alternatively:
   % Numerische Bibliographie
 }
@@ -342,81 +342,81 @@
 \chapter{Introduction}
 \label{chapter-introduction}
 
-Automated theorem proving is a fundamental technique in formal logic and artificial intelligence. It enables the validation of logical statements based on a given set of axioms and inference rules. This thesis investigates whether incorporating frequently used axioms, referred to as core axioms, into a subset of the Adimen SUMO grammar improves proof success rates. The selected subset is determined by combining syntactic and semantic criteria to ensure both structural and conceptual relevance.
+Automated theorem proving is a fundamental technique in formal logic and artificial intelligence. 
+It enables the validation of logical statements based on a given set of axioms and inference rules. 
+This thesis investigates whether incorporating frequently used axioms, referred to as core axioms, into a subset of the Adimen SUMO grammar improves proof success rates. 
+The selected subset is determined by combining syntactic and semantic criteria to ensure both structural and conceptual relevance.
 
 \section{Problem Statement}
+Given a formal logical grammar, such as Adimen SUMO, and a conjecture \( C \), the objective is to identify a subset of axioms that maximizes the probability of proving \( C \). The process involves:
 \begin{itemize}
-    \item Given a formal logical grammar, such as Adimen SUMO, and a conjecture \( C \), the objective is to identify a subset of axioms that maximizes the probability of proving \( C \).
-    \item Axioms are initially selected based on syntactic and semantic similarity measures, forming a set denoted as \( \mathcal{A}_{\text{rel}} \).
-    \item The hypothesis is that adding frequently used axioms, denoted as \( \mathcal{A}_{\text{core}} \), improves proof success.
+    \item Selecting axioms based on syntactic and semantic similarity, forming a set denoted as \( \mathcal{A}_{\text{rel}} \).
+    \item Testing whether adding frequently used axioms, \( \mathcal{A}_{\text{core}} \), improves proof success.
 \end{itemize}
 
-\section{Entanglement Between Natural Language and Logical Grammar}
-\begin{itemize}
-    \item The relationship between natural language and formal logic is not a direct mapping but rather an entanglement, where both influence each other:
-    \begin{equation}
-        \mathcal{L}_{\text{NL}} \bowtie \mathcal{L}_{\text{logic}}
-    \end{equation}
-    \item Adimen SUMO, which is partially derived from WordNet, reflects structured knowledge originating from natural language.
-    \item Logical structures often mirror patterns found in natural language, even though natural language remains ambiguous and context-dependent.
-    \item Language models such as SBERT capture semantic relationships, supporting the idea that formal logical expressions exhibit deep structural similarities with natural language.
-\end{itemize}
+Even though there is no direct mapping between natural and logical language, we assume, that there is an entanglement between them: \\
+\begin{equation}
+    \mathcal{L}_{\text{NL}} \bowtie \mathcal{L}_{\text{logic}}
+\end{equation}
 
-\section{Necessity of Adding Core Axioms}
-\begin{itemize}
-    \item Semantic similarity alone is insufficient for finding proofs, as logical reasoning requires structured inference steps that cannot be captured by embeddings alone.
-    \item Theorem provers rely on axioms that establish intermediate logical connections, which are crucial for the proof search process.
-\end{itemize}
-
-\section{Operation of Theorem Prover E}
-The importance of intermediate axioms becomes evident when analyzing the inference mechanisms of the E theorem prover, which employs a given-clause algorithm:
+Arguments for this assertion are that logical langugage is human made and therefore inevitably connected to human and consequently natural language.
+Also grammers like Adimen SUMO are partially derived by lexical-semantic networks that capture relationships between words of natural language.
+Making use of this entanglement the selection process of theorem proovers can be optimized by reducing the number of relevant axioms.
+Theorem prover E follows a refutational proof procedure using the superposition calculus. The proof search is based on a modified given-clause algorithm, consisting of several key steps:
 
 \begin{enumerate}
-    \item Preprocessing: Converts input formulas into conjunctive normal form (CNF) and applies structural simplifications.
-    \item Clause Selection: Uses heuristics to prioritize clauses based on factors such as term complexity and length.
-    \item Inference Application: Performs superposition, paramodulation, and resolution to generate new clauses that contribute to the proof.
-    \item Simplification: Eliminates redundant clauses through rewriting, subsumption, and redundancy elimination.
-    \item Proof Search Termination: Stops either when an empty clause is derived, indicating proof completion, or when computational resources are exhausted.
-\end{enumerate}
-
-Relying only on semantic closeness is inadequate because:
-\begin{itemize}
-    \item Inference-based proofs require logical chaining. The prover does not simply retrieve related axioms but constructs sequential inference chains to derive contradictions or confirm validity.
-    \item Clause selection is not solely based on semantic relevance. The prover applies heuristics that prioritize structural properties, meaning that semantically relevant axioms may not always contribute effectively to the proof.
-\end{itemize}
-
-Core axioms provide essential inference steps that enhance proof discovery and completion.
-
-\section{Formal Hypothesis}
-\begin{itemize}
-    \item Definitions:
+    \item Initialization: The input problem is converted into clausal normal form (CNF) and divided into two sets: unprocessed clauses \( U \) and processed clauses \( P \).
+    \item Clause Selection: A clause \( g \) is selected from \( U \) based on heuristics, referred to as the given clause, and is then simplified against \( P \).
+    \item Simplification: The given clause undergoes forward simplification using processed clauses. This step removes redundant literals, applies rewriting rules, and ensures that terms are arranged in a canonical order.
+    \item Inference: The prover applies the superposition calculus, combining \( g \) with clauses in \( P \) to generate new clauses. These new clauses are simplified and added to \( U \) if they are neither trivial nor redundant.
+    \item Saturation or Termination: The process stops when:
     \begin{itemize}
-        \item \( \mathcal{A} \): The set of all axioms in Adimen SUMO.
-        \item \( C \): A conjecture to be proven.
-        \item \( d: \mathcal{A} \times C \to \mathbb{R}^+ \): A similarity function measuring syntactic and semantic closeness.
-        \item \( \mathcal{A}_{\text{rel}} \): The subset of \( k \) nearest axioms to \( C \):
-        \begin{equation}
-            \mathcal{A}_{\text{rel}} = \{ A \in \mathcal{A} \mid A \text{ is among the } k \text{ closest axioms to } C \text{ w.r.t. } d \}
-        \end{equation}
-        \item \( \mathcal{A}_{\text{core}} \): A set of frequently used axioms in previous proofs.
-        \item \( \mathcal{A}_{\text{enh}} = \mathcal{A}_{\text{rel}} \cup \mathcal{A}_{\text{core}} \): The enhanced axiom set.
-        \item \( P(T, \mathcal{A}', C) \): A function that returns true if theorem prover \( T \) finds a proof of \( C \) using \( \mathcal{A}' \), otherwise false.
+        \item The empty clause \( \bot \) is derived, confirming the proof.
+        \item The clause set is saturated, meaning no further inferences can be made.
+        \item A predefined resource limit, such as time or memory, is reached.
     \end{itemize}
-    \item Hypothesis:
+\end{enumerate}
+\cite{Schulz2019}
+
+Axioms play a crucial role in simplification. While the prover cannot arbitrarily discard axioms, as they form the foundation of logical reasoning, they are essential for clause rewriting and subsumption.
+
+
+\section{Hypothesis}
+
+To test whether adding frequently used axioms improves proof success, we define the key elements of the problem:
+
+\begin{itemize}
+    \item \( \mathcal{A} \) represents the full set of axioms available in Adimen SUMO.
+    \item \( C \) is the conjecture we want to prove.
+    \item \( d \) is a function that measures how similar an axiom is to the conjecture, based on both syntax and meaning.
+    \item \( \mathcal{A}_{\text{rel}} \) is the set of \( k \) axioms that are most similar to the conjecture according to \( d \):
     \begin{equation}
-        \forall C \in \mathcal{C}, \quad \Pr(P(T, \mathcal{A}_{\text{enh}}, C) = \text{True}) > \Pr(P(T, \mathcal{A}_{\text{rel}}, C) = \text{True})
+        \mathcal{A}_{\text{rel}} = \{ A \in \mathcal{A} \mid A \text{ is among the } k \text{ closest axioms to } C \text{ w.r.t. } d \}
     \end{equation}
-    \item This suggests that the probability of proving \( C \) increases when \( \mathcal{A}_{\text{core}} \) is included.
+    \item \( \mathcal{A}_{\text{core}} \) is a collection of axioms that have been used frequently in past proofs.
+    \item The enhanced axiom set, \( \mathcal{A}_{\text{enh}} \), is created by combining the most similar axioms with the frequently used ones:
+    \begin{equation}
+        \mathcal{A}_{\text{enh}} = \mathcal{A}_{\text{rel}} \cup \mathcal{A}_{\text{core}}
+    \end{equation}
+    \item \( P(T, \mathcal{A}', C) \) is a function that checks if the theorem prover \( T \) is able to prove \( C \) using a given set of axioms \( \mathcal{A}' \). If the proof is successful, the function returns true; otherwise, it returns false.
 \end{itemize}
+
+The hypothesis we test is:
+
+\begin{equation}
+    \forall C \in \mathcal{C}, \quad \Pr(P(T, \mathcal{A}_{\text{enh}}, C) = \text{True}) > \Pr(P(T, \mathcal{A}_{\text{rel}}, C) = \text{True})
+\end{equation}
+
+In other words, the likelihood of proving a conjecture is higher when frequently used axioms are included along with the most similar ones.
+
 
 \section{Justification and Implications}
-\begin{itemize}
-    \item Since Adimen SUMO’s grammar is intertwined with natural language structures, selecting axioms based on semantic embeddings, such as SBERT, captures implicit logical dependencies.
-    \item Frequently used axioms function as structural anchors within this entanglement, improving proof discovery.
-    \item The theorem prover benefits from both the nearest axioms and the core axioms, leading to a higher overall proof success rate.
-\end{itemize}
 
-This thesis aims to validate this hypothesis through empirical experiments, evaluating proof success rates across different axiom selection strategies and assessing the effectiveness of incorporating core axioms.
+Adimen SUMO's grammar is closely connected to natural language structures. 
+This means that selecting axioms based on semantic embeddings, such as SBERT, helps capture underlying logical dependencies that might not be immediately apparent. Frequently used axioms act as structural anchors within this system, making it easier for the theorem prover to navigate the proof search space and discover relevant inference steps.
+By combining the most relevant axioms with those that have been frequently used in past proofs, the theorem prover benefits from both semantic alignment and structural consistency. This increases the overall proof success rate, as the prover has access to axioms that not only appear relevant but have also proven useful in previous reasoning tasks.
+
+This thesis tests this hypothesis through empirical experiments, measuring proof success rates across different axiom selection strategies. The goal is to determine how much incorporating core axioms improves theorem proving performance.
 
 
 % DELETE the following line for your own thesis - it causes trouble!
@@ -435,101 +435,38 @@ This thesis aims to validate this hypothesis through empirical experiments, eval
 
 
 \section{Structure of this Work}
-% In a German thesis write: \section{Aufbau dieser Arbeit}
 
-This thesis is organized into several chapters, each addressing key aspects of the research question and methodology. Below is an overview of the structure:
+This thesis is structured into several chapters, each addressing different aspects of the research problem and methodology. It begins with an overview of existing research, followed by the theoretical foundations, the proposed approach, experimental evaluations, and concluding discussions.
 
-\begin{itemize}
+Chapter \ref{chapter-relatedwork} provides a review of related work. It covers previous research on theorem proving and axiom selection techniques, as well as how semantic similarity has been applied in logical reasoning.
 
-    \item \textbf{Chapter \ref{chapter-relatedwork}: Related Work}  
-    \begin{itemize}
-        \item Reviews existing research on theorem proving and axiom selection techniques.
-        \item Discusses previous applications of semantic similarity in logical reasoning.
-    \end{itemize}
+Chapter \ref{chapter-preliminaries} introduces fundamental concepts necessary to understand the core of this research. It discusses topics such as common sense reasoning, word embeddings, and theorem proving. Additionally, it explains the role of formal grammars and axiom selection in automated reasoning.
 
-    \item \textbf{Chapter \ref{chapter-preliminaries}: Preliminaries}  
-    \begin{itemize}
-        \item Presents fundamental concepts such as common sense reasoning, word embeddings, and theorem proving.
-        \item Explains the role of formal grammars and axiom selection in automated reasoning.
-    \end{itemize}
+Chapter \ref{chapter-experiments} focuses on the experimental setup and evaluation. It outlines the benchmark datasets, describes the evaluation metrics, and presents the results of different axiom selection strategies. The impact of incorporating core axioms into theorem proving is analyzed based on empirical findings.
 
-    \item \textbf{Chapter \ref{chapter-methodology}: Methodology}  
-    \begin{itemize}
-        \item Details the proposed method for improving theorem proving success through core axiom integration.
-        \item Describes the dataset, theorem prover configurations, and selection strategies.
-    \end{itemize}
+Chapter \ref{chapter-conclusion} summarizes the main contributions of this work and highlights key insights gained from the experiments. It also discusses potential future directions and remaining challenges in axiom selection and automated reasoning.
 
-    \item \textbf{Chapter \ref{chapter-experiments}: Experiments}  
-    \begin{itemize}
-        \item Presents the experimental setup, including benchmark datasets and evaluation metrics.
-        \item Reports on empirical findings comparing different axiom selection strategies.
-        \item Analyzes the impact of core axioms on proof success rates.
-    \end{itemize}
+Finally, Chapter \ref{chapter-futerwork} explores ideas for future research, suggesting possible extensions and refinements to the proposed approach.
 
-    \item \textbf{Chapter \ref{chapter-conclusion}: Conclusion}  
-    \begin{itemize}
-        \item Recaps the research contributions and key insights.
-        \item Discusses potential future directions and open challenges.
-    \end{itemize}
+Each chapter builds upon the previous ones, providing a structured progression from theoretical background to practical implementation and evaluation.
 
-    \item \textbf{Chapter \ref{chapter-futerwork}: Future Work}  
-    \begin{itemize}
-        \item Future Work
-    \end{itemize}    
-\end{itemize}
 
 
 \chapter{Related Work}
 \label{chapter-relatedwork}
-% In a German thesis write: \section{Verwandte Arbeiten}
 
-The selection of relevant axioms for automated theorem proving has been extensively studied, particularly in the context of large knowledge bases. Previous research has explored both syntactic and semantic approaches to determining axiom relevance. This section provides an overview of key contributions in this area.
+A significant part of this thesis builds upon the work of Schon \cite{Schon2024}, which explores context-specific axiom selection using large language models. Traditional axiom selection methods primarily rely on syntactic properties, often ignoring the meaning embedded in symbol names. Schon proposes an alternative approach by leveraging large language models to determine relevant axioms based on contextual similarity. This method aligns axiom selection with the goal’s context, improving performance in commonsense reasoning tasks. Experiments show that this approach outperforms purely syntactic selection methods, demonstrating the potential of semantic similarity for guiding theorem provers.
 
-\begin{itemize}
-    \item Context-specific axiom selection using large language models \cite{Schon2024}
-    \begin{itemize}
-        \item Traditional axiom selection techniques rely on syntactic properties and often do not account for the meaning embedded in symbol names.
-        \item Large language models provide an alternative approach by leveraging contextual similarity to determine relevant axioms.
-        \item This method aligns axiom selection with the context of the goal, leading to improved performance in commonsense reasoning tasks.
-        \item Experimental results indicate that selection methods based on large language models outperform purely syntax-driven approaches.
-    \end{itemize}
-    
-    \item Adimen-SUMO: A reengineered ontology for first-order reasoning \cite{Alvez2014}
-    \begin{itemize}
-        \item Adimen-SUMO is a modified version of the SUMO ontology, adapted to enhance compatibility with first-order automated theorem provers.
-        \item The reengineering process ensures that axioms are structured in a way that facilitates inference, avoiding ambiguities present in the original SUMO.
-        \item This ontology is widely used in evaluating theorem provers within the domain of commonsense reasoning.
-    \end{itemize}
-    
-    \item SInE: A syntactic approach to large theory reasoning \cite{Hoder2011}
-    \begin{itemize}
-        \item The Sumo INference Engine (SInE) is a widely used system for axiom selection in large theories.
-        \item It operates by iteratively selecting axioms that introduce symbols appearing in the conjecture, prioritizing those that contribute most to the proof process.
-        \item The approach significantly reduces the search space, making large knowledge bases such as OpenCYC more manageable for theorem provers.
-        \item SInE has been successfully applied in theorem proving competitions and has influenced subsequent axiom selection methods.
-    \end{itemize}
-    
-    \item Divvy: A meta-system for axiom relevance ordering \cite{Roederer2009}
-    \begin{itemize}
-        \item The Divvy system introduces two syntactic relevance orderings for axioms in automated theorem proving.
-        \item These orderings are used to prioritize axioms, allowing for more efficient proof attempts.
-        \item Experimental evaluations demonstrate that this method effectively reduces proof complexity and enhances theorem prover performance.
-    \end{itemize}
-    
-    \item SRASS: A semantic relevance axiom selection system \cite{Sutcliffe2007}
-    \begin{itemize}
-        \item Unlike syntactic approaches, SRASS selects axioms based on their semantic relevance to the conjecture.
-        \item The system employs a heuristic ordering mechanism that combines both semantic and syntactic relevance.
-        \item This method has been shown to reduce the number of required axioms while maintaining proof completeness.
-    \end{itemize}
-    
-    \item Automatic white-box testing of first-order logic ontologies \cite{Alvez2017}
-    \begin{itemize}
-        \item This work introduces a framework for systematically testing first-order logic ontologies.
-        \item The approach ensures that ontologies maintain logical consistency and do not contain redundant or contradictory axioms.
-        \item By applying automated testing techniques, the system improves the robustness and reliability of formal ontologies used in theorem proving.
-    \end{itemize}
-\end{itemize}
+The findings of Schon's work play a crucial role in this thesis, as a major aspect of the proposed approach involves using semantic embeddings for axiom selection. However, while Schon focuses on direct context-based selection, this thesis investigates the impact of incorporating frequently used axioms into the selection process. The goal is to determine whether combining core axioms with those chosen based on semantic similarity enhances proof success rates.
+
+Beyond Schon’s work, several other studies have contributed to axiom selection and theorem proving. Adimen-SUMO, developed by Álvarez et al. \cite{Alvez2014}, is a reengineered version of the SUMO ontology designed to improve compatibility with first-order theorem provers. The restructuring ensures that axioms are formulated in a way that facilitates inference, reducing ambiguities present in the original SUMO. This ontology serves as a key resource in evaluating theorem provers, including those used in this thesis.
+
+Syntactic axiom selection has also been widely explored. Hoder and Voronkov \cite{Hoder2011} introduced SInE, a system that selects axioms based on their syntactic relevance to the conjecture. By iteratively choosing axioms that introduce symbols appearing in the conjecture, SInE reduces the search space, making large knowledge bases more manageable. Similarly, Roederer et al.
+
+Another relevant contribution comes from Álvarez et al. \cite{Alvez2017}, who introduced a framework for systematic white-box testing of first-order logic ontologies. Their work focuses on ensuring logical consistency and eliminating redundant or contradictory axioms. Automated testing techniques from this study provide insights into ontology refinement, which is relevant when evaluating the quality of selected axioms in theorem proving.
+
+In summary, Schon’s research serves as the primary foundation for this thesis, providing a framework for semantic axiom selection that is further extended through the integration of frequently used axioms. Other related studies on syntactic axiom selection, ontology structuring, and logical consistency contribute valuable insights, supporting the refinement of the proposed approach.
+
 
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % !!! Your action is needed here !!!
@@ -540,122 +477,106 @@ The selection of relevant axioms for automated theorem proving has been extensiv
 \chapter{Preliminaries}
 \label{chapter-preliminaries}
 
-This chapter presents the fundamental concepts and methodologies relevant to this thesis. The focus is on common sense reasoning, word embeddings, formal grammars, theorem provers, and axiom selection strategies, all of which are essential for understanding the following chapters.
+This chapter introduces fundamental concepts relevant to this work. It covers common sense reasoning, word embeddings, formal grammars, automated theorem proving, and axiom selection strategies. These topics form the theoretical foundation for the experiments and analyses presented in later chapters.
 
 \section{Common Sense Reasoning}
 
-Common sense reasoning is a fundamental component of human cognition. It enables reasoning about everyday situations, allowing individuals to infer unstated knowledge, resolve ambiguities, and generalize from incomplete information. Automated reasoning systems attempt to replicate this ability to improve inference and decision-making.
+Common sense reasoning is an essential part of human cognition, allowing individuals to understand everyday situations, infer unstated knowledge, and make reasonable decisions even when information is incomplete. Automated reasoning systems attempt to replicate this ability to improve inference and decision-making.
 
-\subsection{Definition and Scope}
-Common sense reasoning refers to the ability to infer implicit knowledge and derive reasonable conclusions from real-world scenarios. It involves:
-\begin{itemize}
-    \item Recognizing unstated premises in logical arguments.
-    \item Understanding cause-effect relationships in structured and unstructured data.
-    \item Applying heuristics to solve problems under uncertainty.
-\end{itemize}
+Common sense reasoning involves recognizing unstated premises in logical arguments, understanding cause-effect relationships, and applying heuristics to solve problems under uncertainty. It plays a key role in artificial intelligence, particularly in natural language understanding, where context is crucial for interpreting meaning, and in automated reasoning, where structured logical frameworks help infer conclusions from available premises. Applications in law, medicine, and finance further highlight the importance of integrating knowledge-based reasoning for interpretability and reliability. Despite advancements in AI, deep learning models struggle with incorporating structured and generalizable knowledge, making common sense reasoning an ongoing challenge.
 
-\subsection{Applications in Artificial Intelligence and Theorem Proving}
-Common sense reasoning is applied across various domains of artificial intelligence:
-\begin{itemize}
-    \item Natural language understanding requires contextual awareness to interpret implicit meaning and resolve ambiguity.
-    \item Automated reasoning relies on structured logical frameworks to infer conclusions from available premises.
-    \item Decision support systems in fields such as law, medicine, and finance integrate knowledge-based reasoning to enhance interpretability and reliability.
-\end{itemize}
+Interpreting a sentence often involves more than just processing its words—it requires incorporating background knowledge to make sense of implicit information. Take, for example, the Winograd Schema involving John and Billy viewing a stage \cite{Levesque2012}. While the sentence itself is simple, understanding it correctly depends on a series of assumptions that humans naturally make when constructing a mental model of the situation \cite{Bayerkuhnlein2023}.
 
-Despite significant progress in AI, particularly in deep learning, existing models struggle with integrating structured, generalizable knowledge representations, making common sense reasoning a persistent challenge.
+A stage is something meant to be viewed. In a typical setting, viewers remain stationary, and obstructions can block their line of sight. Humans are physical entities, meaning they cannot see through solid objects. Both John and Billy are human names, so the sentence suggests a scene where one person is obstructing the other’s view. The interpretation of who is blocking whom depends on the additional context provided by the sentence, but the reasoning process remains the same: we piece together knowledge about how the world works to arrive at a coherent understanding.
+
+These intuitive assumptions form the foundation of common sense reasoning. The process aligns with the theory of mental models, which suggests that humans construct internal representations of a scenario to evaluate possible interpretations \cite{JohnsonLaird1989}. In the case of ambiguous pronouns, this internal model helps determine which assignment makes the most logical sense. This ability to build structured mental representations is what allows humans to effortlessly resolve ambiguities that challenge AI systems.
 
 \section{Word Embeddings}
 
-Word embeddings are numerical representations of words that capture semantic relationships within a continuous vector space. They are widely used in natural language processing to model meaning and improve text-based inference.
+Word embeddings represent words as numerical vectors in a continuous space, capturing semantic relationships based on their contextual usage. Unlike traditional representations such as one-hot encoding, embeddings enable words with similar meanings to be positioned closer together in the vector space, allowing models to generalize across linguistic variations. 
 
-\subsection{Concept and Motivation}
-Traditional representations such as one-hot encoding are sparse and fail to capture relationships between words. Word embeddings mitigate this limitation by mapping words into dense vector spaces, where similar words appear closer together.
+Different techniques have been developed to generate word embeddings, each with unique properties and advantages. Word2Vec \cite{Mikolov2013} is one of the foundational models, introducing two architectures: Continuous Bag of Words (CBOW) and Skip-gram. CBOW predicts a word based on its surrounding context, while Skip-gram does the inverse, predicting context words given a target word. This approach efficiently captures both syntactic and semantic relationships. FastText \cite{Bojanowski2017} extends Word2Vec by incorporating subword information, representing words as bags of character n-grams. This allows it to handle rare words and out-of-vocabulary terms better than standard word-based models. GloVe \cite{Pennington2014}, in contrast, constructs embeddings by factorizing a word co-occurrence matrix, capturing both local and global semantic information.
 
-\subsection{Types of Word Embeddings}
-Several models have been developed to learn word representations:
-\begin{itemize}
-    \item Word2Vec \cite{Mikolov2013} uses a shallow neural network to learn word relationships via the Continuous Bag of Words (CBOW) and Skip-gram models.
-    \item GloVe \cite{Pennington2014} constructs embeddings based on word co-occurrence statistics in a given corpus.
-    \item FastText \cite{Bojanowski2017} extends Word2Vec by incorporating subword information, improving handling of rare and out-of-vocabulary words.
-    \item Contextual embeddings such as BERT and GPT \cite{Devlin2019} adapt word representations based on surrounding context, improving semantic disambiguation.
-\end{itemize}
+The effectiveness of word embeddings depends on several factors, including the size of the context window, the type of training data, and the inclusion of subword information.
 
-\subsection{Application in This Work}
-Word embeddings are used in this thesis to measure semantic similarity between axioms and conjectures. By leveraging pre-trained embeddings such as Sentence-BERT (SBERT), the selection of axioms can be optimized to improve theorem proving success rates.
+Beyond standard word embeddings, contextual embeddings such as BERT and GPT \cite{Devlin2019} further refine representation by considering the full sentence structure, allowing word meanings to dynamically change based on context. This advancement is particularly relevant in cases where words have multiple meanings depending on their use in different sentences.
+
+In this work, word embeddings are leveraged to determine the semantic similarity between axioms and conjectures. By using pre-trained models like Sentence-BERT (SBERT), it becomes possible to enhance axiom selection in theorem proving, ensuring that the selected axioms are not only structurally relevant but also semantically meaningful.
+
 
 \section{Grammars in Natural and Formal Languages}
 
-A grammar defines the structural rules governing a language, whether natural or formal. In theorem proving, grammars serve as a foundation for representing logical statements in a structured and interpretable format.
+Grammars define the structural rules of a language, whether it is a natural language like English or a formal system used in logic. In theorem proving, grammars are essential for structuring logical statements in a way that machines can interpret and manipulate.
 
-\subsection{Types of Grammars}
-\begin{itemize}
-    \item Context-free grammars (CFGs) define syntactic structures in both natural language parsing and programming languages.
-    \item First-order logic (FOL) grammars formalize logical expressions using predicates, functions, and quantifiers.
-    \item Ontology-based grammars, such as SUMO (Suggested Upper Merged Ontology) \cite{Niles2001}, integrate linguistic and logical structures to improve knowledge representation.
-\end{itemize}
+Different types of grammars serve various purposes. Context-free grammars (CFGs) define syntactic structures in natural language processing and programming languages. First-order logic (FOL) grammars represent logical expressions using predicates, functions, and quantifiers. Ontology-based grammars, such as SUMO (Suggested Upper Merged Ontology) \cite{Niles2001}, combine linguistic and logical structures to improve knowledge representation.
 
-\subsection{Relevance to Automated Reasoning}
-Formal grammars play a crucial role in automated theorem proving:
-\begin{itemize}
-    \item They ensure logical consistency in axioms and conjectures.
-    \item They enable automated systems to parse and manipulate logical expressions systematically.
-    \item They facilitate knowledge representation in formal ontologies such as SUMO and Adimen-SUMO.
-\end{itemize}
+Grammars are crucial in theorem proving because they enforce logical consistency, allow automated systems to process logical expressions systematically, and provide a structured representation of knowledge in formal systems like SUMO and Adimen-SUMO.
 
 \section{Automated Theorem Proving}
 
-Automated theorem proving is a key component of formal logic and artificial intelligence, aiming to determine whether a given conjecture follows from a predefined set of axioms.
+Automated theorem proving aims to determine whether a given conjecture follows logically from a set of axioms. It is a key component of formal logic and artificial intelligence.
 
-\subsection{Fundamental Concepts}
-\begin{itemize}
-    \item Logical inference consists of deriving new statements from existing ones using formal inference rules.
-    \item Resolution is a proof technique based on deriving contradictions, commonly used in first-order logic theorem provers.
-    \item Refutation aims to demonstrate that a conjecture holds by attempting to derive a contradiction from its negation.
-\end{itemize}
+Theorem provers rely on different proof strategies. Logical inference derives new statements from existing ones using formal rules. Resolution is a proof technique that derives contradictions, commonly used in first-order logic provers. Refutation works by attempting to show that a conjecture holds by deriving a contradiction from its negation.
 
-\subsection{Prover E: A Resolution-Based Theorem Prover}
-Prover E is a widely used automated theorem prover based on the superposition calculus \cite{Schulz2013}. The system follows a structured process:
-
-\begin{enumerate}
-    \item Preprocessing converts input formulas into conjunctive normal form (CNF).
-    \item Clause selection applies heuristics to prioritize clauses based on complexity and term structure.
-    \item Inference rules such as resolution, paramodulation, and superposition generate new clauses that contribute to the proof.
-    \item Simplification techniques eliminate redundant clauses through rewriting, subsumption, and redundancy elimination.
-    \item Proof search continues until an empty clause is derived, indicating proof completion, or until computational resources are exhausted.
-\end{enumerate}
-
-Understanding the internal mechanisms of Prover E is crucial for optimizing axiom selection strategies.
+Prover E is a widely used theorem prover based on the superposition calculus \cite{Schulz2013}. It follows a structured process where input formulas are first converted into conjunctive normal form (CNF). The prover then selects clauses heuristically, applies inference rules such as resolution and superposition to generate new clauses, simplifies redundant ones, and continues searching until either an empty clause is derived, proving the conjecture, or computational resources are exhausted. Understanding these mechanisms is important for optimizing axiom selection.
 
 \section{Axiom Selection Strategies}
 
-Axiom selection is a critical challenge in automated reasoning, as theorem provers often struggle with large search spaces. The selection process determines which axioms are included in the proof search, influencing both efficiency and success rates.
+Theorem provers often struggle with large search spaces, making axiom selection a critical challenge. The process of selecting axioms influences proof efficiency and success rates.
 
-\subsection{Syntactic Approaches}
-\begin{itemize}
-    \item SInE (Sumo INference Engine) \cite{Hoder2011} selects axioms that introduce symbols relevant to the conjecture, reducing the search space.
-    \item Divvy \cite{Roederer2009} ranks axioms based on their syntactic relevance, improving proof efficiency.
-\end{itemize}
+\section{Syntax-Based Selection: SInE}
 
-\subsection{Semantic Approaches}
-\begin{itemize}
-    \item SRASS \cite{Sutcliffe2007} selects axioms based on their semantic relevance to the conjecture, integrating meaning-based selection criteria.
-    \item Axiom selection using large language models \cite{Schon2024} aligns selected axioms with the context of the conjecture, improving commonsense reasoning in automated theorem proving.
-\end{itemize}
+The SInE selection strategy \cite{Hoder2011} is a trigger-based approach designed to efficiently select axioms in automated theorem proving. Instead of selecting axioms based on fixed rules, it dynamically determines relevance using a trigger relation. This relation ensures that an axiom is only selected if at least one of its symbols appears less frequently than or as frequently as all other symbols in the axiom. This prevents highly common symbols from triggering every axiom they appear in, reducing unnecessary selections.
 
-\subsection{Hybrid Approaches}
-\begin{itemize}
-    \item Combining syntactic and semantic techniques balances structural relevance with meaning-based similarity.
-    \item The inclusion of frequently used axioms improves proof success by providing additional structural support to the inference process.
-\end{itemize}
+The selection process starts by identifying symbols that appear in the conjecture to be proven. These symbols are considered directly triggered. If a triggered symbol appears in an axiom and satisfies the trigger relation, the axiom is selected, and its other symbols become triggered in the next selection step. This process continues recursively up to a defined depth \( k \), ensuring that only the most relevant axioms are included.
 
-\section{Summary}
-This chapter introduced key concepts including common sense reasoning, word embeddings, formal grammars, theorem proving, and axiom selection. These foundations provide the theoretical basis for the experimental work presented in later chapters, where different axiom selection strategies are evaluated in the context of automated theorem proving.
+One limitation of this approach arises when an axiom contains symbols with nearly equal occurrence counts. In such cases, only the least frequent symbol can trigger the axiom, potentially excluding useful axioms. To address this, a benevolence parameter \( b \) is introduced, allowing symbols that occur up to \( b \) times more frequently than the least common symbol to also act as triggers. This adjustment provides more flexibility in axiom selection.
 
-\clearpage
+\section{Vector-Based Selection}
 
-\chapter{Methodology}
-\label{chapter-methodology}
-Methodology.
+Syntax-based selection methods like SInE do not consider the meaning of symbol names, which can lead to the loss of useful information. This is particularly problematic in commonsense reasoning, where symbol names often carry semantic meaning that could improve selection. To address this, vector-based selection methods leverage word embeddings to quantify the semantic similarity between axioms and the goal.
+
+As seen above, word embeddings are a common technique in natural language processing, based on the distributional hypothesis \cite{Miller1991}. This hypothesis states that words appearing in similar contexts tend to have similar meanings. By training neural networks on large text corpora, words are mapped into a continuous vector space, where their geometric relationships capture semantic similarity. Cosine similarity is commonly used to measure the closeness of two word vectors, with values ranging from -1 (completely dissimilar) to 1 (identical).
+\\
+\textbf{Definition 5.1 (Cosine similarity of two vectors \cite{Schon2023}).}  
+Let \( \mathbf{u}, \mathbf{v} \in \mathbb{R}^n \) be non-zero vectors. The cosine similarity of \( \mathbf{u} \) and \( \mathbf{v} \) is defined as:
+
+\[
+\text{cos sim}(\mathbf{u}, \mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
+\]
+\\
+
+Schon \cite{Schon2023} introduces a statistical approach for axiom selection that relies on word embeddings to represent axioms as vectors. The idea is to encode axioms into a continuous vector space where semantically similar axioms are mapped closer together. This is done in a preprocessing step, where each axiom in the knowledge base is transformed into a vector representation using a word embedding model.
+
+When selecting axioms for a given goal \( G \), the goal is vectorized in the same way as the axioms in the knowledge base. The selection process then identifies the \( n \) axioms whose vector representations are most similar to that of \( G \). The similarity between vectors is measured using cosine similarity, which quantifies how closely two vectors align regardless of their magnitude.
+
+Formally, given a knowledge base \( KB \), a goal \( G \), and a vectorization function \( f \) that maps axioms to \( \mathbb{R}^n \), the vector-based selection process selects the \( n \) axioms in \( KB \) that have the highest cosine similarity to \( G \). The selected axioms form a subset of \( KB \) where no other axiom outside this subset has a higher similarity to \( G \) than the least similar axiom within the selected set.
+
+This approach ensures that axioms most relevant to the goal, based on their semantic similarity, are prioritized during the selection process.
+
+\section{SeVEn: Sentence-Based Vector Encoding}
+
+Sentence embeddings function similarly to word embeddings, as they are also generated by training neural networks on large text corpora. However, while word embeddings focus on individual words, sentence embeddings capture the meaning of entire sentences or even full documents \cite{Kiros2015SkipThought}. This ability makes them particularly useful for encoding more complex relationships between axioms.
+
+Following this idea, the SeVEn approach builds upon vector-based selection by modifying how axioms are represented. Instead of encoding individual symbol names, each axiom is first translated into a sentence that captures its semantic meaning. This sentence is then encoded into a vector using a sentence embedding model. The overall process remains similar to standard vector-based selection, but the vectorization method is adapted to work at the sentence level. Given a knowledge base \( KB \), where each axiom \( A \) is transformed into a sentence \( S \) using a function \( t \), the sentence embedding function \( f \) then maps \( S \) into a vector representation \( v_S(A) \). The full sentence-based vector representation of the knowledge base is denoted as \( V_S(KB) \), where each axiom is now represented as a sentence embedding.
+
+This adaptation allows SeVEn to leverage the richer semantic information captured in sentence embeddings while maintaining the core structure of vector-based selection.
+
+
+\section{Combining Vector-Based and Syntactic Selection}.
+
+To address this issue, hybrid selection strategies combine statistical and syntactic approaches. An example of this is Similarity SInE \cite{Furbach2019WordEmbeddings}, which extends the original SInE selection by allowing not just the least frequent symbol to trigger an axiom but also symbols with a high enough cosine similarity to the trigger. This modification ensures that semantically related axioms can still be included in the selection process.
+
+Building on this idea, \cite{Schon2023} introduced a hybrid approach that integrates SeVEn with the syntactic selection method of SInE. The process starts by expanding the goal with axioms selected through SeVEn. Then, SInE is applied to this extended set of conjectures, selecting additional axioms based on its trigger-based mechanism. 
+
+Using formal notation, let \( \text{sine}(KB, \{A_1, ..., A_n\}) \) represent the axioms selected by SInE for a set of conjectures, and let \( \text{seven}(KB, G) \) denote the axioms selected by SeVEn for a goal \( G \). The combined selection strategy is then defined as:
+
+\begin{equation}
+    \text{union\_select}(KB, G) = \text{sine}(KB, G \cup \text{seven}(KB, G))
+\end{equation}
+
+This formulation allows for flexibility in axiom selection, as different selection strategies can be incorporated depending on the specific needs of the reasoning task.
+
 
 \clearpage
 
@@ -668,13 +589,7 @@ This chapter presents the experimental setup and evaluation of different axiom s
 
 The methodology for constructing white-box tests follows the approach described by Álvez \cite{Álvez2017}. The tests are designed to assess the logical consistency and inference capabilities of theorem provers by introducing controlled variations in axiom selection.
 
-\begin{itemize}
-    \item In the context of Adimen SUMO, falsity tests are created by taking specific statements or conditions and applying negation.
-    \item The negated statements serve as the foundation for falsity tests, which play a crucial role in evaluating logical proof systems.
-    \item A theorem prover such as Prover E executes a process known as refutation.
-    \item Through refutation, the prover attempts to demonstrate the inconsistency or falsehood of the original statements.
-    \item This is achieved by attempting to derive a contradiction from the negated statements, thereby indicating that the original (non-negated) statements cannot all be true simultaneously.
-\end{itemize}
+In the context of Adimen SUMO, falsity tests are constructed by taking specific statements or conditions and applying negation. These negated statements form the basis for falsity tests, which are essential for evaluating logical proof systems. A theorem prover such as Prover E processes these tests through a method called refutation. The goal of refutation is to show that the original statements are inconsistent or false. This is done by attempting to derive a contradiction from the negated statements. If a contradiction is found, it confirms that the original, non-negated statements cannot all be true at the same time.
 
 \section{Reengineering of Prior Work \cite{Schon2024}}
 
@@ -870,19 +785,6 @@ Future work.
 % concepts as necessary. However, there are situations where a
 % glossary may be helpful.
 
-
-
-
-
-
-
-
-
-
-
-|$$|
-
-
 %%%
 % 
 % Bibliographies
@@ -954,91 +856,236 @@ Future work.
 % Replace following example entries with the ones of your thesis.
 
 \begin{bibtex-entries}
-
-@InProceedings{Schon2024,
-  author="Jakobs, Oliver
-  and Schon, Claudia",
-  editor="Hotho, Andreas
-  and Rudolph, Sebastian",
-  title="Context-Specific Selection of Commonsense Knowledge Using Large Language Models",
-  booktitle="KI 2024: Advances in Artificial Intelligence",
-  year="2024",
-  publisher="Springer Nature Switzerland",
-  address="Cham",
-  pages="218--231",
-  abstract="In the field of automated reasoning, practical applications often face a significant challenge: knowledge bases are typically too large to be fully processed by theorem provers. To still be able to prove that a given goal follows from a large knowledge base, selection techniques are used to determine the parts of the knowledge base that are relevant to the goal. Traditional selection techniques used for this task are usually syntax-based and often overlook a crucial aspect---the meaning of symbol names and axioms. Especially in commonsense reasoning scenarios, the meaning embedded in the symbol names provides invaluable insights. For example, in a proof task using the symbol name cow, it intuitively makes more sense to select formulae using the symbol name calf than formulae using the symbol name weapon. To address this gap, our paper introduces a selection technique that exploits the capabilities of large language models. This technique focuses on contextually related formulae, closely aligning the selected part of the knowledge base with the context of the goal. The approach is implemented and we present a series of experiments that show promising results.",
-  isbn="978-3-031-70893-0"
+@inproceedings{Schon2024,
+    author={Jakobs, Oliver and Schon, Claudia},
+    editor={Hotho, Andreas and Rudolph, Sebastian},
+    title={Context-Specific Selection of Commonsense Knowledge Using Large Language Models},
+    booktitle={KI 2024: Advances in Artificial Intelligence},
+    year={2024},
+    publisher={Springer Nature Switzerland},
+    address={Cham},
+    pages={218--231},
+    abstract={In the field of automated reasoning, practical applications often face a significant challenge: knowledge bases are typically too large to be fully processed by theorem provers. To still be able to prove that a given goal follows from a large knowledge base, selection techniques are used to determine the parts of the knowledge base that are relevant to the goal. Traditional selection techniques used for this task are usually syntax-based and often overlook a crucial aspect---the meaning of symbol names and axioms. Especially in commonsense reasoning scenarios, the meaning embedded in the symbol names provides invaluable insights. For example, in a proof task using the symbol name cow, it intuitively makes more sense to select formulae using the symbol name calf than formulae using the symbol name weapon. To address this gap, our paper introduces a selection technique that exploits the capabilities of large language models. This technique focuses on contextually related formulae, closely aligning the selected part of the knowledge base with the context of the goal. The approach is implemented and we present a series of experiments that show promising results.},
+    isbn={978-3-031-70893-0}
 }
 
 @article{Àlvez2014,
-  author = {Àlvez, Javier and Lucio, Paqui and Rigau, German},
-  year = {2014},
-  month = {10},
-  pages = {80-116},
-  title = {Adimen-SUMO: Reengineering an Ontology for First-Order Reasoning},
-  volume = {8},
-  journal = {International Journal on Semantic Web and Information Systems},
-  doi = {10.4018/jswis.2012100105}
+    author = {Àlvez, Javier and Lucio, Paqui and Rigau, German},
+    year = {2014},
+    month = {10},
+    pages = {80-116},
+    title = {Adimen-SUMO: Reengineering an Ontology for First-Order Reasoning},
+    volume = {8},
+    journal = {International Journal on Semantic Web and Information Systems},
+    doi = {10.4018/jswis.2012100105}
 }
 
-@InProceedings{Hoder2011,
-  author="Hoder, Kry{\v{s}}tof
-  and Voronkov, Andrei",
-  editor="Bj{\o}rner, Nikolaj
-  and Sofronie-Stokkermans, Viorica",
-  title="Sine Qua Non for Large Theory Reasoning",
-  booktitle="Automated Deduction -- CADE-23",
-  year="2011",
-  publisher="Springer Berlin Heidelberg",
-  address="Berlin, Heidelberg",
-  pages="299--314",
-  abstract="One possible way to deal with large theories is to have a good selection method for relevant axioms. This is confirmed by the fact that the largest available first-order knowledge base (the Open CYC) contains over 3 million axioms, while answering queries to it usually requires not more than a few dozen axioms. A method for axiom selection has been proposed by the first author in the Sumo INference Engine (SInE) system. SInE has won the large theory division of CASC in 2008. The method turned out to be so successful that the next two years it was used by the winner as well as by several other competing systems. This paper contains the presentation of the method and describes experiments with it in the theorem prover Vampire.",
-  isbn="978-3-642-22438-6"
+@inproceedings{Hoder2011,
+    author={Hoder, Kry{\v{s}}tof and Voronkov, Andrei},
+    editor={Bj{\o}rner, Nikolaj and Sofronie-Stokkermans, Viorica},
+    title={Sine Qua Non for Large Theory Reasoning},
+    booktitle={Automated Deduction -- CADE-23},
+    year={2011},
+    publisher={Springer Berlin Heidelberg},
+    address={Berlin, Heidelberg},
+    pages={299--314"},
+    abstract={One possible way to deal with large theories is to have a good selection method for relevant axioms. This is confirmed by the fact that the largest available first-order knowledge base (the Open CYC) contains over 3 million axioms, while answering queries to it usually requires not more than a few dozen axioms. A method for axiom selection has been proposed by the first author in the Sumo INference Engine (SInE) system. SInE has won the large theory division of CASC in 2008. The method turned out to be so successful that the next two years it was used by the winner as well as by several other competing systems. This paper contains the presentation of the method and describes experiments with it in the theorem prover Vampire.},
+    isbn={978-3-642-22438-6}
 }
 
-@InProceedings{Roederer2009,
-  author="Roederer, Alex
-  and Puzis, Yury
-  and Sutcliffe, Geoff",
-  editor="Schmidt, Renate A.",
-  title="Divvy: An ATP Meta-system Based on Axiom Relevance Ordering",
-  booktitle="Automated Deduction -- CADE-22",
-  year="2009",
-  publisher="Springer Berlin Heidelberg",
-  address="Berlin, Heidelberg",
-  pages="157--162",
-  abstract="This paper describes two syntactic relevance orderings on the axioms available for proving a given conjecture, and an ATP meta-system that uses the orderings to select axioms to use in proof attempts. The system has been evaluated, and the results show that it is effective.",
-  isbn="978-3-642-02959-2"
+@inproceedings{Roederer2009,
+    author={Roederer, Alex and Puzis, Yury and Sutcliffe, Geoff},
+    editor={Schmidt, Renate A.},
+    title={Divvy: An ATP Meta-system Based on Axiom Relevance Ordering},
+    booktitle={Automated Deduction -- CADE-22},
+    year={2009},
+    publisher={Springer Berlin Heidelberg},
+    address={Berlin, Heidelberg},
+    pages={157--162"}
+    abstract={This paper describes two syntactic relevance orderings on the axioms available for proving a given conjecture, and an ATP meta-system that uses the orderings to select axioms to use in proof attempts. The system has been evaluated, and the results show that it is effective.},
+    isbn={978-3-642-02959-2}
 }
 
-@InProceedings{Sutcliffe2007,
-  author="Sutcliffe, Geoff
-  and Puzis, Yury",
-  editor="Pfenning, Frank",
-  title="SRASS - A Semantic Relevance Axiom Selection System",
-  booktitle="Automated Deduction -- CADE-21",
-  year="2007",
-  publisher="Springer Berlin Heidelberg",
-  address="Berlin, Heidelberg",
-  pages="295--310",
-  abstract="This paper describes the design, implementation, and testing of a system for selecting necessary axioms from a large set also containing superfluous axioms, to obtain a proof of a conjecture. The selection is determined by semantics of the axioms and conjecture, ordered heuristically by a syntactic relevance measure. The system is able to solve many problems that cannot be solved alone by the underlying conventional automated reasoning system.",
-  isbn="978-3-540-73595-3"
+@inproceedings{Sutcliffe2007,
+    author={Sutcliffe, Geoff and Puzis, Yury},
+    editor={Pfenning, Frank},
+    title={SRASS - A Semantic Relevance Axiom Selection System},
+    booktitle={Automated Deduction -- CADE-21},
+    year={2007},
+    publisher={Springer Berlin Heidelberg},
+    address={Berlin, Heidelberg},
+    pages={295--310},
+    abstract={This paper describes the design, implementation, and testing of a system for selecting necessary axioms from a large set also containing superfluous axioms, to obtain a proof of a conjecture. The selection is determined by semantics of the axioms and conjecture, ordered heuristically by a syntactic relevance measure. The system is able to solve many problems that cannot be solved alone by the underlying conventional automated reasoning system.},
+    isbn={978-3-540-73595-3}
 }
 
 @article{Álvez2017,
-  author = {Álvez, Javier and Hermo, Montserrat and Lucio, Paqui and Rigau, German},
-  year = {2017},
-  month = {05},
-  pages = {},
-  title = {Automatic White-Box Testing of First-Order Logic Ontologies},
-  volume = {29},
-  journal = {Journal of Logic and Computation},
-  doi = {10.1093/logcom/exz001}
+    author = {Álvez, Javier and Hermo, Montserrat and Lucio, Paqui and Rigau, German},
+    year = {2017},
+    month = {05},
+    pages = {},
+    title = {Automatic White-Box Testing of First-Order Logic Ontologies},
+    volume = {29},
+    journal = {Journal of Logic and Computation},
+    doi = {10.1093/logcom/exz001}
 }
 
 
-\end{bibtex-entries}
+@inproceedings{Schulz2019,
+  author    = {Stephan Schulz and Simon Cruanes and Petar Vukmirovi{\'c}},
+  title     = {Faster, Higher, Stronger: {E} 2.3},
+  booktitle = {Proceedings of the 27th International Conference on Automated Deduction (CADE-27)},
+  editor    = {Pascal Fontaine},
+  year      = {2019},
+  number    = {11716},
+  series    = {Lecture Notes in Artificial Intelligence (LNAI)},
+  pages     = {495--507},
+  publisher = {Springer}
+}
 
+
+@article{Miller1991,
+  author    = {George A. Miller and Walter G. Charles},
+  title     = {Contextual Correlates of Semantic Similarity},
+  journal   = {Language and Cognitive Processes},
+  volume    = {6},
+  number    = {1},
+  pages     = {1--28},
+  year      = {1991},
+  publisher = {Routledge},
+  doi       = {10.1080/01690969108406936},
+  url       = {https://doi.org/10.1080/01690969108406936},
+  eprint    = {https://doi.org/10.1080/01690969108406936}
+}
+
+
+@InProceedings{Schon2023,
+  author    = {Claudia Schon},
+  editor    = {Dietmar Seipel and Alexander Steen},
+  title     = {Associative Reasoning for Commonsense Knowledge},
+  booktitle = {KI 2023: Advances in Artificial Intelligence},
+  year      = {2023},
+  publisher = {Springer Nature Switzerland},
+  address   = {Cham},
+  pages     = {170--183},
+  isbn      = {978-3-031-42608-7}
+}
+
+
+@inproceedings{Kiros2015SkipThought,
+  author    = {Ryan Kiros and Yukun Zhu and Ruslan Salakhutdinov and Richard S. Zemel and Raquel Urtasun and Antonio Torralba and Sanja Fidler},
+  title     = {Skip-Thought Vectors},
+  booktitle = {Advances in Neural Information Processing Systems 28: Annual Conference on Neural Information Processing Systems 2015 (NeurIPS)},
+  editor    = {Corinna Cortes and Neil D. Lawrence and Daniel D. Lee and Masashi Sugiyama and Roman Garnett},
+  pages     = {3294--3302},
+  year      = {2015},
+  address   = {Montreal, Quebec, Canada},
+  month     = {December 7-12}
+}
+
+@inproceedings{Furbach2019WordEmbeddings,
+  author    = {Ulrich Furbach and Teresa Kr{\"a}mer and Claudia Schon},
+  editor    = {Pascal Fontaine},
+  title     = {Names Are Not Just Sound and Smoke: Word Embeddings for Axiom Selection},
+  booktitle = {Automated Deduction -- CADE 27},
+  year      = {2019},
+  publisher = {Springer International Publishing},
+  address   = {Cham},
+  pages     = {250--268},
+  abstract  = {First-order theorem proving with large knowledge bases makes it necessary to select those parts of the knowledge base, that are necessary to prove the theorem at hand. We extend syntactic axiom selection procedures like SInE to use semantics of symbol names. For this, not only occurrences of symbol names but also semantically similar names are taken into account. We use a similarity measure based on word embeddings. An evaluation of this similarity based SInE is given using problems from TPTP's CSR problem class and Adimen-SUMO. This evaluation is done with two very different systems, namely the Hyper tableau prover and the saturation based system E.},
+  isbn      = {978-3-030-29436-6},
+  doi       = {10.1007/978-3-030-29436-6_15}
+}
+
+@inproceedings{Bayerkuhnlein2023,
+  author    = {Moritz Bayerkuhnlein},
+  title     = {SUMO Wrestling Winograd Schemas},
+  booktitle = {Proceedings of a University Research Project},
+  year      = {2023},
+  institution = {University of Bamberg},
+  address   = {Bamberg, Germany},
+  url       = {https://www.uni-bamberg.de}
+}
+
+@incollection{Johnson-Laird1989,
+  author    = {P. N. Johnson-Laird},
+  title     = {Mental Models},
+  booktitle = {Foundations of Cognitive Science},
+  editor    = {M. I. Posner},
+  pages     = {469--499},
+  publisher = {The MIT Press},
+  year      = {1989}
+}
+
+@inproceedings{Levesque2012,
+  author    = {Hector Levesque and Ernest Davis and Leora Morgenstern},
+  title     = {The Winograd Schema Challenge},
+  booktitle = {Thirteenth International Conference on the Principles of Knowledge Representation and Reasoning},
+  year      = {2012}
+}
+
+@inproceedings{Mikolov2013,
+  author    = {Tom{\'a}s Mikolov and Kai Chen and Greg Corrado and Jeffrey Dean},
+  title     = {Distributed Representations of Words and Phrases and Their Compositionality},
+  booktitle = {Advances in Neural Information Processing Systems 26 (NeurIPS)},
+  editor    = {Christopher J. C. Burges and Leon Bottou and Max Welling and Zoubin Ghahramani and Kilian Q. Weinberger},
+  year      = {2013},
+  pages     = {3111--3119},
+  url       = {https://proceedings.neurips.cc/paper/2013/hash/9aa42b31882ec039965f3c4923ce901b-Abstract.html}
+}
+
+@article{Bojanowski2017,
+  author    = {Piotr Bojanowski and Edouard Grave and Armand Joulin and Tomas Mikolov},
+  title     = {Enriching Word Vectors with Subword Information},
+  journal   = {Transactions of the Association for Computational Linguistics},
+  volume    = {5},
+  year      = {2017},
+  pages     = {135--146},
+  doi       = {10.1162/TACL_A_00051},
+  url       = {https://doi.org/10.1162/tacl_a_00051}
+}
+
+@inproceedings{Pennington2014,
+  author    = {Jeffrey Pennington and Richard Socher and Christopher Manning},
+  title     = {GloVe: Global Vectors for Word Representation},
+  booktitle = {Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  editor    = {Alessandro Moschitti and Bo Pang and Walter Daelemans},
+  year      = {2014},
+  address   = {Doha, Qatar},
+  publisher = {Association for Computational Linguistics},
+  pages     = {1532--1543},
+  doi       = {10.3115/v1/D14-1162},
+  url       = {https://aclanthology.org/D14-1162}
+}
+
+@inproceedings{Devlin2019,
+  author    = {Jacob Devlin and Ming{-}Wei Chang and Kenton Lee and Kristina Toutanova},
+  title     = {BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding},
+  booktitle = {Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, {NAACL-HLT} 2019},
+  pages     = {4171--4186},
+  year      = {2019},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/N19-1423},
+  url       = {https://aclanthology.org/N19-1423/}
+}
+
+@inproceedings{Niles2001,
+  author    = {Ian Niles and Adam Pease},
+  title     = {Towards a Standard Upper Ontology},
+  booktitle = {Proceedings of the International Conference on Formal Ontology in Information Systems ({FOIS} 2001)},
+  pages     = {2--9},
+  year      = {2001},
+  publisher = {ACM},
+  doi       = {10.1145/505168.505170},
+  url       = {https://doi.org/10.1145/505168.505170}
+}
+
+
+
+
+
+
+\end{bibtex-entries}
 
 
 % If you need to have an appendix (I advise against it), insert it
@@ -1046,30 +1093,5 @@ Future work.
 % possibly, \section. 
 %
 % \appendix
-%
-% \chapter{Technical Appendix}
-%
-% \section{Experimental Parameters} % possibly
-%
-% Again, I advise against using an appendix.
-
 
 \end{document}
-
-%  LocalWords:  LaTeX tex moretexcs Lübeck pdf uzl lualatex bibtex th
-%  LocalWords:  TechReport Kernighan Lamport's Tantau's Tantau cls kZ
-%  LocalWords:  Mustermann emacs oldschool pdflatex texmf utf biber
-%  LocalWords:  biblatex Alphabetische Bibliographie Numerische VIIa
-%  LocalWords:  varioref german Einleitung Beiträge dieser Arbeit xml
-%  LocalWords:  Ergebnisse Verwandte Arbeiten Aufbau nucleotide VIIc
-%  LocalWords:  ensembl amino phylogenetic Alexa Siri decrypt versa
-%  LocalWords:  cryptographic pre nondeterministic deterministically
-%  LocalWords:  Beutelspacher Untersuchungen zum genetischen sep llcc
-%  LocalWords:  Beispiel tikz jpg png Alegrya Kasimir Malewitsch PGF
-%  LocalWords:  Lamport Institut für Theoretische Informatik zu url
-%  LocalWords:  Universität Springer DowneyF Downey Parameterized doi
-%  LocalWords:  BibLaTeX Kime Philipp urldate Mittelbach hyperref Lua
-%  LocalWords:  Rahtz Oberdiek Heiko Braams Bezos López fontspec Das
-%  LocalWords:  Arseneau amsmath ist Tipps und zur Formulierung
-%  LocalWords:  mathematischer Gedanken Mathematik Studienanfänger
-%  LocalWords:  Albrecht Vieweg Teubner Verlag
