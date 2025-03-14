@@ -166,11 +166,11 @@ Each chapter builds upon the previous ones, providing a structured progression f
 \chapter{Related Work}
 \label{chapter-relatedwork}
 
-A significant part of this thesis builds upon the work of Schon \cite{Schon2024}, which explores context-specific axiom selection using large language models. Traditional axiom selection methods primarily rely on syntactic properties, often ignoring the meaning embedded in symbol names. Schon proposes an alternative approach by leveraging large language models to determine relevant axioms based on contextual similarity. This method aligns axiom selection with the goal’s context, improving performance in commonsense reasoning tasks. Experiments show that this approach outperforms purely syntactic selection methods, demonstrating the potential of semantic similarity for guiding theorem provers.
+A significant part of this thesis builds upon the work of Schon et al. \cite{Schon2024}, which explores context-specific axiom selection using large language models. Traditional axiom selection methods primarily rely on syntactic properties, often ignoring the meaning embedded in symbol names. Schon proposes an alternative approach by leveraging large language models to determine relevant axioms based on contextual similarity. This method aligns axiom selection with the goal's context, improving performance in commonsense reasoning tasks. Experiments show that this approach outperforms purely syntactic selection methods, demonstrating the potential of semantic similarity for guiding theorem provers.
 
 The findings of Schon's work play a crucial role in this thesis, as a major aspect of the proposed approach involves using semantic embeddings for axiom selection. However, while Schon focuses on direct context-based selection, this thesis investigates the impact of incorporating frequently used axioms into the selection process. The goal is to determine whether combining core axioms with those chosen based on semantic similarity enhances proof success rates.
 
-Beyond Schon's work, several other studies have contributed to axiom selection and theorem proving. Adimen-SUMO, developed by Álvarez et al. \cite{Alvez2014}, is a reengineered version of the SUMO ontology designed to improve compatibility with first-order theorem provers. The restructuring ensures that axioms are formulated in a way that facilitates inference, reducing ambiguities present in the original SUMO. This ontology serves as a key resource in evaluating theorem provers, including those used in this thesis.
+Beyond Schon's work, several other studies have contributed to axiom selection and theorem proving. Adimen-SUMO, developed by Alvez et al. \cite{Alvez2014}, is a reengineered version of the SUMO ontology designed to improve compatibility with first-order theorem provers. The restructuring ensures that axioms are formulated in a way that facilitates inference, reducing ambiguities present in the original SUMO. This ontology serves as a key resource in evaluating theorem provers, including those used in this thesis.
 
 Syntactic axiom selection has also been widely explored. Hoder and Voronkov \cite{Hoder2011} introduced SInE, a system that selects axioms based on their syntactic relevance to the conjecture. By iteratively choosing axioms that introduce symbols appearing in the conjecture, SInE reduces the search space, making large knowledge bases more manageable. Similarly, Roederer et al.
 
@@ -244,13 +244,13 @@ One limitation of this approach arises when an axiom contains symbols with nearl
 Syntax-based selection methods like SInE do not consider the meaning of symbol names, which can lead to the loss of useful information. This is particularly problematic in commonsense reasoning, where symbol names often carry semantic meaning that could improve selection. To address this, vector-based selection methods leverage word embeddings to quantify the semantic similarity between axioms and the goal.
 
 As seen above, word embeddings are a common technique in natural language processing, based on the distributional hypothesis \cite{Miller1991}. This hypothesis states that words appearing in similar contexts tend to have similar meanings. By training neural networks on large text corpora, words are mapped into a continuous vector space, where their geometric relationships capture semantic similarity. Cosine similarity is commonly used to measure the closeness of two word vectors, with values ranging from -1 (completely dissimilar) to 1 (identical).
-\\
-\textbf{Definition 5.1 (Cosine similarity of two vectors \cite{Schon2023}).}  
-Let \( \mathbf{u}, \mathbf{v} \in \mathbb{R}^n \) be non-zero vectors. The cosine similarity of \( \mathbf{u} \) and \( \mathbf{v} \) is defined as:
 
-\begin{equation}
-    \operatorname{cos\ sim}(\mathbf{u}, \mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
-\end{equation}
+\begin{definition}
+    Let \( u, v \in \mathbb{R}^n \) be non-zero vectors. The cosine similarity of \( u \) and \( v \) is defined as:
+    \begin{equation}
+        \operatorname{cos\ sim}(u, v) = \frac{u \cdot v}{\|u\| \|v\|}
+    \end{equation}
+\end{definition}
 
 Schon \cite{Schon2023} introduces a statistical approach for axiom selection that relies on word embeddings to represent axioms as vectors. The idea is to encode axioms into a continuous vector space where semantically similar axioms are mapped closer together. This is done in a preprocessing step, where each axiom in the knowledge base is transformed into a vector representation using a word embedding model.
 
@@ -276,9 +276,11 @@ Building on this idea, \cite{Schon2023} introduced a hybrid approach that integr
 
 Using formal notation, let \( \text{sine}(KB, \{A_1, ..., A_n\}) \) represent the axioms selected by SInE for a set of conjectures, and let \( \text{seven}(KB, G) \) denote the axioms selected by SeVEn for a goal \( G \). The combined selection strategy is then defined as:
 
-\begin{equation}
-    \text{union\_select}(KB, G) = \text{sine}(KB, G \cup \text{seven}(KB, G))
-\end{equation}
+\begin{definition}
+    \begin{equation}
+        \text{union\_select}(KB, G) = \text{sine}(KB, G \cup \text{seven}(KB, G))
+    \end{equation}
+\end{definition}
 
 This formulation allows for flexibility in axiom selection, as different selection strategies can be incorporated depending on the specific needs of the reasoning task.
 
