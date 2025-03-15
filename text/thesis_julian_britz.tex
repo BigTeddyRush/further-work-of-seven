@@ -1,6 +1,17 @@
 \documentclass[english,version-2020-11]{uzl-thesis}
 \usepackage{placeins}
 \usepackage{microtype}
+\usepackage{tikz}
+
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3.5cm, minimum height=1cm, text centered, draw=black]
+\tikzstyle{process} = [rectangle, minimum width=3.5cm, minimum height=1cm, text centered, draw=black]
+\tikzstyle{optional} = [diamond, dashed, minimum width=3cm, minimum height=1cm, text centered, draw=black, aspect=2]
+\tikzstyle{data} = [rectangle, minimum width=3.5cm, minimum height=1cm, text centered, draw=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{dashedarrow} = [thick, dashed,->,>=stealth]
+\tikzstyle{line} = [thick] % Normal line without arrow
 
 
 %%%
@@ -217,7 +228,25 @@ Grammars define the structural rules of a language, whether it is a natural lang
 
 Different types of grammars serve various purposes. Context-free grammars (CFGs) define syntactic structures in natural language processing and programming languages. First-order logic (FOL) grammars represent logical expressions using predicates, functions, and quantifiers. Ontology-based grammars, such as SUMO (Suggested Upper Merged Ontology) \cite{Niles2001}, combine linguistic and logical structures to improve knowledge representation.
 
-Grammars are crucial in theorem proving because they enforce logical consistency, allow automated systems to process logical expressions systematically, and provide a structured representation of knowledge in formal systems like SUMO and Adimen-SUMO.
+Grammars are crucial in theorem proving because they enforce logical consistency, allow automated systems to process logical expressions systematically, and provide a structured representation of knowledge in formal systems like SUMO and Adimen-SUMO. Adimen-SUMO is written in Thousands of Problems for Theorem Provers (TPTP) Syntax, a standardized language designed for expressing logical problems in automated reasoning \cite{Alvez2014}. TPTP, originally developed to facilitate the benchmarking and comparison of theorem provers, provides a well-defined structure for first-order logic expressions, ensuring compatibility across different proving systems. By using TPTP, Adimen-SUMO maintains a formal and machine-readable representation of axioms, allowing theorem provers to efficiently process and reason over its logical content.
+
+In TPTP syntax, axioms are typically expressed in First-Order Form (FOF), which represents first-order logic statements in a structured and readable format. The FOF format explicitly defines logical components such as axioms, conjectures, and definitions, ensuring clarity in automated reasoning tasks. An example of an axiom in Adimen-SUMO written in FOF syntax is:
+
+
+\begin{Pseudocode}[morekeywords = {add, create}, deletekeywords={to}, numbers=left,
+    caption = {Axiom example Adimen-SUMO}]
+    fof(predefinitionsA7, axiom,
+        (![X]: 
+            (
+                p__d__subclass(X, X)
+            )
+        )
+    ).
+\end{Pseudocode}
+
+
+
+This axiom states that for all entities \( X \), \( X \) is always a subclass of itself. In natural language, this expresses the reflexive property of the subclass relation, meaning that every class is considered a subclass of itself. This kind of axiom is fundamental in ontology-based reasoning, as it helps maintain consistency within hierarchical structures.
 
 \section{Automated Theorem Proving}
 
@@ -225,7 +254,33 @@ Automated theorem proving aims to determine whether a given conjecture follows l
 
 Theorem provers rely on different proof strategies. Logical inference derives new statements from existing ones using formal rules. Resolution is a proof technique that derives contradictions, commonly used in first-order logic provers. Refutation works by attempting to show that a conjecture holds by deriving a contradiction from its negation.
 
-Prover E is a widely used theorem prover based on the superposition calculus \cite{Schulz2019}. It follows a structured process where input formulas are first converted into conjunctive normal form (CNF). The prover then selects clauses heuristically, applies inference rules such as resolution and superposition to generate new clauses, simplifies redundant ones, and continues searching until either an empty clause is derived, proving the conjecture, or computational resources are exhausted. Understanding these mechanisms is important for optimizing axiom selection.
+Prover E is a widely used theorem prover based on the superposition calculus \cite{Schulz2019}. Another prominent theorem prover is Vampire, a first-order logic prover known for its efficient implementation of resolution and superposition techniques \cite{Riazanov2002}. Vampire applies a range of strategies, including term indexing and subsumption algorithms, to optimize proof search. 
+
+
+\begin{figure}[ht]
+    \begin{tikzpicture}[node distance=2.5cm]
+        % Nodes
+        \node (start) [startstop] {Automated Theorem Proving};
+        \node (ontology) [data, below left=1cm and 0.5cm of start] {Ontology};
+        \node (conjecture) [data, below right=1cm and 0.5cm of start] {Conjecture};
+        \node (axioms) [optional, below=1cm of ontology] {Delimitation};
+        \node (theorem) [process, below=3.5cm of start] {Theorem Prover};
+        \node (mode) [optional, below=1cm of theorem] {Mode};
+        \node (result) [startstop, below=1cm of mode] {Result};
+    
+        % Connections
+        \draw [line] (start) -- (ontology);
+        \draw [line] (start) -- (conjecture);
+        \draw [dashedarrow] (ontology) -- (axioms);
+        \draw [dashedarrow] (axioms) -- (theorem);
+        \draw [arrow] (conjecture) -- (theorem);
+        \draw [dashedarrow] (theorem) -- (mode);
+        \draw [dashedarrow] (mode) -- (result);
+    \end{tikzpicture}
+    \caption {Automated Theorem Proving}
+    \label{fig:automatedTheoremProving}
+\end{figure}
+
 
 \section{Axiom Selection Strategies}
 
@@ -299,122 +354,192 @@ The methodology for constructing white-box tests follows the approach described 
 
 In the context of Adimen SUMO, falsity tests are constructed by taking specific statements or conditions and applying negation. These negated statements form the basis for falsity tests, which are essential for evaluating logical proof systems. A theorem prover such as Prover E processes these tests through a method called refutation. The goal of refutation is to show that the original statements are inconsistent or false. This is done by attempting to derive a contradiction from the negated statements. If a contradiction is found, it confirms that the original, non-negated statements cannot all be true at the same time.
 
+An example of a white-box falsity test in Adimen-SUMO is the following:
+
+\begin{Pseudocode}[morekeywords = {add, create}, deletekeywords={to}, numbers=left,
+    caption = {WhiteboxTruthTest example}]
+    fof( whiteBoxTruthTest2824, conjecture,
+        (?[MORPH]: 
+            (
+                ~ (
+                    p__d__instance(MORPH,c__Morpheme)
+                )
+            )
+        )
+    ).
+\end{Pseudocode}
+
+
+The expression states that there exists at least one entity, represented by the variable \( MORPH \), for which the predicate \( p\_\_d\_\_instance(MORPH, c\_\_Morpheme) \) does not hold. In simpler terms, it asserts that at least one entity is not an instance of the class "Morpheme."
+
+By negating the statement that all instances belong to the class "Morpheme," this test challenges the theorem prover to derive a contradiction if the ontology implies that every entity must belong to this class. If a contradiction is found, it confirms that the original classification of "Morpheme" is inconsistent, helping to assess the reasoning capabilities of the prover.
+
 \section{Reengineering of Prior Work}
 
-The evaluation of axiom selection techniques includes a reengineering of the results presented in \cite{Schon2024}. The goal is to validate the prior findings and assess the impact of alternative selection methods.
+\section{Reengineering of Axiom Selection Results}
+
+To evaluate different axiom selection techniques, this work reengineers the results presented in \cite{Schon2024}. The primary goal is to validate previous findings while assessing the impact of alternative selection methods. The evaluation compares three selection approaches: syntactic selection using SInE, semantic selection based on vector embeddings, and a hybrid union approach combining both methods.
+
+Each method is tested under the same conditions using a randomly selected subset of 1,000 white-box truth tests from Adimen-SUMO. The theorem prover E is used with a fixed configuration, ensuring consistent input formatting and a time limit of 15 seconds per proof attempt:
+
+\begin{Pseudocode}[morekeywords = {add, create}, deletekeywords={to}, numbers=left,
+    caption = {Prover E configuration}]
+    eprover --tstp-format --soft-cpu-limit=15
+\end{Pseudocode}
+
+For syntactic selection, the SInE strategy is applied with a benevolence parameter of 3 and a recursion depth of 2. In contrast to prior work, the number of selected axioms in the semantic analysis is increased to 1,500, which is three times higher than the previous maximum. This adjustment is made to align the number of selected axioms with the average output of the SInE strategy, ensuring comparability between the syntactic and semantic runs.
+
+The hybrid union approach, which combines vector-based and syntactic selection, is configured as follows:
 
 \begin{itemize}
-    \item The prover results are categorized into:
-    \begin{itemize}
-        \item Timeout: Cases where the prover exhausted computational resources without finding a proof.
-        \item Proof found: Cases where the prover successfully derived a proof.
-        \item Gave up: Cases where the prover terminated without reaching a conclusion.
-    \end{itemize}
-
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{standard_mode_noAdded_output.pdf}
-        \caption{Reengineering of results from \cite{Schon2024}}
-        \label{fig:reengineering}
-    \end{figure}
-
-    \FloatBarrier
-
-    \item Theorem prover performance is evaluated based on:
-    \begin{itemize}
-        \item A high percentage of test cases resulted in timeouts or unsuccessful proof attempts, illustrating the difficulty of proving conjectures without additional axioms.
-        \item The success rate for proof discovery remained low, suggesting that the standard mode lacks sufficient knowledge for effective inference.
-        \item The dataset incorporates multiple axiom selection techniques, including syntactic, semantic-based, and union-based selection.
-    \end{itemize}
-
-    \item The distribution of results shows:
-    \begin{itemize}
-        \item The prover executed 977 test cases, applying each axiom selection approach independently.
-        \item The number of successfully proven conjectures was relatively low, reinforcing the importance of improved axiom selection techniques.
-        \item Some conjectures had no successful proofs, highlighting weaknesses in current selection strategies.
-    \end{itemize}
-
-    \item Implications for further research:
-    \begin{itemize}
-        \item The findings suggest that semantic similarity alone is insufficient for effective axiom selection.
-        \item Further experiments should explore whether the integration of core axioms leads to improved proof success rates.
-        \item Analyzing the relationship between axiom complexity and proof success may provide additional insights into theorem proving behavior.
-    \end{itemize}
+    \item The sentence embedding model used is the pre-trained all-MiniLM-L6-v2 from SentenceTransformer, featuring 384 dimensions and a model size of 80MB. It has been trained on a large dataset of over 1 billion training pairs and is optimized for diverse NLP tasks \cite{Reimers2019, Sentencetransformers2019}.
+    \item The number of closest axioms \( n \) selected for each goal \( G \) is set to 160.
+    \item The SInE parameters remain the same as in the syntactic selection: benevolence = 3, recursion depth = 2.
 \end{itemize}
 
-\clearpage
+Since the union approach applies the SInE strategy to a broader set of initial axioms than the purely syntactic selection, the final number of selected axioms is also higher, averaging around 1,800. This increase reflects the integration of both semantic and syntactic relevance in axiom selection, aiming to enhance the theorem prover’s ability to find proofs efficiently.
+
+The prover results are categorized into:
+\begin{itemize}
+    \item \textit{Timeout:} Instances where the automated prover exceeded the allocated computational resources without deriving a proof.
+    \item \textit{Proof Found:} Instances where the prover successfully established a proof within the given constraints.
+    \item \textit{Gave Up:} Instances where the prover terminated prematurely without reaching a conclusive result.
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{standard_mode_noAdded_output.pdf}
+    \caption{Reengineering of results from \cite{Schon2024}}
+    \label{fig:reengineering}
+\end{figure}
+
+The results in \ref{fig:reengineering} correspond to the prior investigations. While a purely syntactic and purely semantic approach can only find few proofs in the given time, the combination can achieve better results.
+A significant portion of test cases resulted in timeouts or failed proof attempts. But also for the combination the overall success rate remained low.
+The findings suggest that relying solely on semantic similarity in combination with a syntactical selection precedure is not sufficient for effective axiom selection. Future experiments should investigate whether incorporating frequently used core axioms can enhance proof success rates. Additionally, exploring the relationship between axiom complexity and proof outcomes may offer deeper insights into theorem proving behavior, ultimately leading to more refined selection strategies.
+
 
 \section{Analysis of Reengineering}
 
-The reengineered results are analyzed to better understand proof complexity and selection effectiveness.
+To get an indication and possibly recognize patterns for which conjectures the prover could find proofs, the results of the previous union run are examined. To understand the factors affecting the success of proof search in theorem proving, several characteristics of the conjectures are examined. Specifically, the influence of the number of variables, the presence of logical operators, and the overall character count in a conjecture are analyzed. These elements contribute to the complexity of the search space and potentially impact the likelihood of finding a proof.
 
+Since each variable expands the number of possible substitutions and inferences the prover must consider, a higher number of variables generally results in a larger search space. It is expected that conjectures with fewer variables are easier to prove, as the prover has to evaluate fewer possible cases.
+
+First-order logic relies on specific symbols as logical operators, each contributing to the structural complexity of a conjecture. The most relevant symbols include:
 \begin{itemize}
-    \item The mean variable count in proofs is examined.
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{variable_count_noauto.pdf}
-        \caption{Variable count in proofs}
-        \label{fig:variable_count}
-    \end{figure}
-    \FloatBarrier
-
-    \item The count of special symbols in proofs is analyzed.
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{signs_count_noauto.pdf}
-        \caption{Special character count}
-        \label{fig:count_signs}
-    \end{figure}
-
-    \item The character count across all test cases is examined.
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{character_count_noauto.pdf}
-        \caption{Character count distribution}
-        \label{fig:character_count}
-    \end{figure}
-
-    \FloatBarrier
-
-    \item The cosine similarity between axioms and conjectures is analyzed to determine\\ whether similarity influences proof success.
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{cosine_similarity_mini_noAdded_summary.pdf}
-        \caption{Cosine similarity distribution}
-        \label{fig:cosine_similarity}
-    \end{figure}
-    \FloatBarrier
-
-    The results suggest that provable conjectures often have lower axiom similarity. This indicates that proving a conjecture may require bridging different concepts rather than simply refining closely related axioms.
+    \item \texttt{|} (disjunction) – represents logical OR.
+    \item \texttt{\$} (conjunction) – represents logical AND.
+    \item \texttt{?} (variable indicator) – denotes the existence of a variable.
+    \item \texttt{!} (universal quantifier) – states that a property holds for all instances of a variable.
+    \item \texttt{\~{}} (negation) – expresses logical NOT.
 \end{itemize}
+A higher occurrence of these symbols increases the structural complexity of a conjecture. More complex logical expressions require additional inference steps, making it more challenging for the theorem prover to find a proof. Therefore, it is expected that conjectures with fewer logical operators are more likely to be proven within a limited time.
 
-\clearpage
+Lastly, the overall character count of a conjecture is analyzed as a general measure of complexity. Longer conjectures tend to introduce more structural elements, increasing the reasoning effort required by the prover. By examining how the length of a conjecture correlates with proof success rates, it is possible to determine whether shorter conjectures are indeed easier to prove.
 
-\section{Integration of Core Axioms}
+The following presents the results of these analyses, comparing proof success rates based on these complexity factors. The implications of these findings are then discussed in detail, highlighting how different structural properties influence theorem proving performance.
 
-The integration of core axioms into the selection process is evaluated.
 
-\begin{itemize}
-    \item The results of theorem proving with core axioms are examined.
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{standard_mode_output.pdf}
-        \caption{Summary of prover results with core axioms}
-        \label{fig:prover_results_with_core_axioms}
-    \end{figure}
-    \FloatBarrier
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{combined_graphs.pdf}
+    \caption{Analysis of Reengineering}
+    \label{fig:analysis_reeingieering}
+\end{figure}
+\FloatBarrier
 
-    \item Cosine similarity is compared across different selection methods.
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{cosine_similarity_mini_summary.pdf}
-        \caption{Cosine similarity comparison}
-        \label{fig:prover_results_standard}
-    \end{figure}
-    \FloatBarrier
-\end{itemize}
+The results confirm that all examined factors influence the success rate of theorem proving as expected. Conjectures with fewer variables consistently yielded higher proof success rates, supporting the assumption that an increase in the number of variables expands the search space, making proof discovery more challenging.
 
-\clearpage
+Similarly, the impact of logical operators aligns with expectations. Conjectures containing a higher number of disjunctions, conjunctions, quantifiers, and negations were significantly harder to prove.
+
+The general character count of a conjecture also showed a correlation with proof success. Conjectures with a lower character count were proven more frequently, reinforcing the idea that shorter conjectures introduce fewer structural elements that could complicate reasoning. While character count alone is not a direct measure of complexity, it serves as a useful indicator of the structural and syntactic complexity of a logical statement.
+
+Next to analyze how the cosin similarity of the 160 chosen axioms differs between those proofs, for which a proof could be found and those not.
+
+Next, the cosine similarity of the 160 selected axioms is analyzed to compare cases where a proof was successfully found to those where no proof could be derived. This evaluation aims to determine whether higher semantic similarity between the selected axioms and the conjecture correlates with a higher proof success rate.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{cosine_similarity_mini_noAdded_summary.pdf}
+    \caption{Cosine similarity distribution}
+    \label{fig:cosine_similarity}
+\end{figure}
+\FloatBarrier
+
+Unexpectedly, the average cosine similarity between the conjecture and the 160 nearest axioms is slightly lower in cases where a proof was found compared to those where no proof was derived. This suggests that an excessively high cosine similarity may restrict the search space too much, making the selection of axioms overly specific and limiting the prover's ability to construct a valid proof. This indicates that proving a conjecture may require bridging different concepts rather than simply refining closely related axioms.
+
+
+\section{Expanding Axiom Selection Beyond Semantic and Syntactic Methods}
+
+As previously observed, the pure combination of syntactic and semantic selection methods does not cover a sufficiently broad range of proofs. The results show that conjectures without a successful proof tend to have a higher cosine similarity to their 160 nearest axioms. This suggests that relying solely on semantic and syntactic similarity is not enough. A too-specific selection of axioms can lead to missing essential axioms, ultimately preventing the prover from finding a proof.
+
+Since theorem provers, as described in \ref{chapter-introduction}, rely on simplification steps using available axioms, it becomes evident that additional axioms enabling these simplifications are required. Without such axioms, the prover lacks the necessary transformation rules to progress toward a proof.
+
+To identify the core axioms, Prover E was executed in auto mode across all 8,010 white-box truth tests. In this mode, the prover automatically determines the optimal SInE parameters and applies a search heuristic best suited for each conjecture. After running all tests, the 25 axioms that appeared most frequently in successful proofs were selected as core axioms.
+
+\begin{Pseudocode}[morekeywords = {add, create}, deletekeywords={to}, numbers=left,
+    caption = {Prover E configuration}]
+    eprover --auto --tstp-format --soft-cpu-limit=15
+\end{Pseudocode}
+
+
+The choice of these axioms is based on their practical relevance in proof construction. Since they are consistently used in successful proofs, they likely provide essential logical connections and simplifications that improve the theorem prover's efficiency.
+
+An example of a core axiom from Adimen-SUMO that facilitates inference is:
+
+
+\begin{Pseudocode}[morekeywords = {add, create}, deletekeywords={to}, numbers=left, caption = {Example core axiom}]
+    fof( mergeA594, axiom,
+        (![REL]: 
+            (
+                (
+                    p__d__instance(REL,c__BinaryRelation)
+                )
+                =>
+                (
+                    (
+                        p__d__instance(REL,c__IrreflexiveRelation)
+                    )
+                    <=>
+                    (
+                        (![INST]: 
+                            (
+                                ~ (
+                                    p__d__holds3(REL,INST,INST)
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    ).
+\end{Pseudocode}
+
+
+This axiom defines the irreflexive property of certain binary relations. It states that if a relation REL is classified as a binary relation, then it is an irreflexive relation if and only if there exists no instance INST for which REL holds between INST and itself. In simpler terms, this means that for a relation to be irreflexive, it must never relate an entity to itself.
+
+Such an axiom is fundamental in reasoning about relational structures, as many logical proofs rely on distinguishing between reflexive and irreflexive relations. Without it, the prover may struggle to validate properties of relations that are essential for defining hierarchical and ordering constraints. Including these core axioms in the selection process ensures that theorem proving is not only driven by semantic and syntactic similarity but also by foundational logical principles necessary for accurate inference.
+
+To increase the likelihood of selecting relevant core axioms without significantly expanding their number, a SInE strategy was applied to the 25 core axioms with a benevolence value of 1 and a recursion depth of 1. The axioms selected through this process were then combined with those obtained from the union-based selection method, ensuring that both frequently used and structurally relevant axioms were included. Applying this on the same 1.000 WhiteboxTruthTests as before, 286 proofs could be found.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{standard_mode_output.pdf}
+    \caption{Summary of prover results with core axioms}
+    \label{fig:prover_results_with_core_axioms}
+\end{figure}
+\FloatBarrier
+
+The union run successfully found 123 proofs. After adding the core axioms, the number of proofs increased by 163, resulting in a total of 286 proofs. A closer analysis showed that all 123 proofs from the union run were a subset of the proofs found when core axioms were included. 
+
+\begin{equation}
+    P_{\text{union}} \subseteq P_{\text{core}} \cup P_{\text{union}}
+\end{equation}
+where \( P_{\text{union}} \) represents the set of proofs found in the union run and \( P_{\text{core}} \) represents the set of proofs found after adding core axioms.
+
+
+This suggests that adding core axioms plays a crucial role in enabling the prover to find proofs that would otherwise remain undiscovered.
+
 
 \section{Comparison of Large Language Models}
 
@@ -440,7 +565,6 @@ The performance of different large language models in axiom selection is assesse
     \FloatBarrier
 \end{itemize}
 
-\clearpage
 
 \section{Evaluation of Theorem Prover Configurations}
 
