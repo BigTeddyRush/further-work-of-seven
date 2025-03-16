@@ -2,6 +2,9 @@
 \usepackage{placeins}
 \usepackage{microtype}
 \usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{caption} % Package for captions
+\usepackage{subcaption} % Package for subfigures
 
 \usetikzlibrary{shapes.geometric, arrows}
 
@@ -215,6 +218,21 @@ These intuitive assumptions form the foundation of common sense reasoning. The p
 Word embeddings represent words as numerical vectors in a continuous space, capturing semantic relationships based on their contextual usage. Unlike traditional representations such as one-hot encoding, embeddings enable words with similar meanings to be positioned closer together in the vector space, allowing models to generalize across linguistic variations. 
 
 Different techniques have been developed to generate word embeddings, each with unique properties and advantages. Word2Vec \cite{Mikolov2013} is one of the foundational models, introducing two architectures: Continuous Bag of Words (CBOW) and Skip-gram. CBOW predicts a word based on its surrounding context, while Skip-gram does the inverse, predicting context words given a target word. This approach efficiently captures both syntactic and semantic relationships. FastText \cite{Bojanowski2017} extends Word2Vec by incorporating subword information, representing words as bags of character n-grams. This allows it to handle rare words and out-of-vocabulary terms better than standard word-based models. GloVe \cite{Pennington2014}, in contrast, constructs embeddings by factorizing a word co-occurrence matrix, capturing both local and global semantic information.
+
+\begin{figure}[h]
+    \centering
+    \begin{subcaptionblock}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{cbow.png}
+        \caption{CBOW Model}
+    \end{subcaptionblock}
+    \hfill
+    \begin{subcaptionblock}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{skip_gram.png}
+        \caption{Skip-Gram Model}
+    \end{subcaptionblock}
+    \caption{Comparison of CBOW and Skip-Gram Models}
+\end{figure}
+
 
 The effectiveness of word embeddings depends on several factors, including the size of the context window, the type of training data, and the inclusion of subword information.
 
@@ -540,55 +558,149 @@ where \( P_{\text{union}} \) represents the set of proofs found in the union run
 
 This suggests that adding core axioms plays a crucial role in enabling the prover to find proofs that would otherwise remain undiscovered.
 
+\section{Time analysis}
+\section{Impact of Search Space Limitation on Proof Time}
+
+To determine whether restricting the search space influences the time required for Prover E to find a proof, the time taken in different configurations is analyzed. The evaluation compares three scenarios: standard mode, union mode, and union mode with added core axioms.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{time_to_find_proof.pdf}
+    \caption{Time required for Prover E to find a proof}
+    \label{fig:time_different_mode_1}
+\end{figure}        
+\FloatBarrier
+
+The results show that limiting the search space significantly improves proof discovery speed. In union mode, where axioms are pre-selected using syntactic and semantic strategies, the prover operates more efficiently by focusing on a smaller yet relevant subset of axioms. However, when core axioms are added, the search space expands slightly, leading to a marginal increase in proof time. Despite this, the overall performance remains better than in the standard mode, indicating that reducing unnecessary axioms outweighs the added complexity introduced by core axioms.
+
+To further examine the effect of search space limitation, the time required to find proofs common to different configurations is compared. The following figure presents the average time taken by the first method listed to find the same proofs that were already identified by the second.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{time_to_find_common_proof.pdf}
+    \caption{Average time required to find common proofs}
+    \label{fig:time_different_mode}
+\end{figure}        
+\FloatBarrier
+
+The trend remains consistent—limiting the search space leads to faster proof discovery. When axioms are pre-selected, Prover E spends less time exploring irrelevant information, allowing it to reach conclusions more efficiently. These results further support the importance of a well-structured selection process in optimizing theorem proving performance.
+
 
 \section{Comparison of Large Language Models}
 
-The performance of different large language models in axiom selection is assessed.
+As previously observed, adding frequently used axioms to the set selected by the union process significantly increases the number of proofs that Prover E can find. The selection process relies on word embeddings to determine semantic similarities between axioms and conjectures. In the initial setup, a model embedding into 384 dimensions was used. To assess whether the number of dimensions and the size of the model impact proof discovery, the same procedure is repeated using a different model, all-mpnet-base-v2.
 
-\begin{itemize}
-    \item The results of theorem proving with different models are analyzed.
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{different_mode_output.pdf}
-        \caption{Summary of prover results with different models}
-        \label{fig:results_different_models}
-    \end{figure}        
-    \FloatBarrier
+The two models differ in several key aspects, including sequence length, embedding dimensions, and overall model size. The following table provides a comparison:
 
-    \item The cosine similarity of selected axioms is compared.
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{cosine_similarity_mpnet_summary.pdf}
-        \caption{Cosine similarity in different models}
-        \label{fig:cosine_similarity_mpnet}
-    \end{figure}
-    \FloatBarrier
-\end{itemize}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lcc}
+        \hline
+        & \textbf{all-mpnet-base-v2} & \textbf{all-MiniLM-L6-v2} \\
+        \hline
+        Max Sequence Length & 384 & 256 \\
+        Embedding Dimensions & 768 & 384 \\
+        Model Size & 420MB & 80MB \\
+        Training Data & 1B+ training pairs & 1B+ training pairs \\
+        \hline
+    \end{tabular}
+    \caption{Comparison of embedding models used in axiom selection.}
+    \label{tab:model_comparison}
+\end{table}
+
+The difference of the two models can be seen by the mean sinus similarity of the sample whiteboxtruth tests to all axioms in the Adimen Sumo Ontology.
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lcc}
+        \hline
+        & \textbf{all-mpnet-base-v2} & \textbf{all-MiniLM-L6-v2} \\
+        \hline
+        Mean cosine similarity & 0.23 & 0.18 \\
+        \hline
+    \end{tabular}
+    \caption{Mean cosine similarity of test-sample to ontology}
+    \label{tab:model_comparison}
+\end{table}
+
+The all-mpnet-base-v2 model exhibits a significantly higher mean cosine similarity between the sample test conjectures and all axioms in Adimen-SUMO. As previously observed, a high cosine similarity can restrict the search space for the prover, making it necessary to include core axioms to improve proof success. To examine this effect, the prover was run in union mode using the all-mpnet-base-v2 model and again in union mode with the addition of the previously identified core axioms.
+
+The results of theorem proving with different models are presented in the following figure:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{different_mode_output.pdf}
+    \caption{Summary of prover results with different models}
+    \label{fig:results_different_models}
+\end{figure}        
+\FloatBarrier
+
+The increased cosine similarity resulted in fewer proofs being found in union mode. The all-mpnet-base-v2 model produced only 97 proofs in the union run, compared to 123 proofs found using the smaller model. Similarly, the number of proofs in the union run with added core axioms was lower than in the corresponding run with the smaller model. Despite this, adding core axioms still led to an increase of 154 additional proofs, reinforcing their importance in theorem proving.
+
+The results suggest that while the larger model provides more accurate embeddings, its higher semantic precision appears to require a broader or more refined selection of axioms to perform as effectively as the smaller model. This indicates that adjustments in axiom selection strategies may be necessary when using higher-dimensional embeddings to ensure optimal prover performance.
 
 
 \section{Evaluation of Theorem Prover Configurations}
 
-The effect of different theorem prover configurations is analyzed.
+Up to this point, all runs have been conducted using Prover E's standard mode without any specific configurations. To determine whether adding core axioms remains beneficial when the prover operates under specialized settings, two different modes of Prover E will be examined.
 
-\begin{itemize}
-    \item The performance of Satauto mode is examined.
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{satauto_mode_output.pdf}
-        \caption{Summary of prover results in Satauto mode}
-        \label{fig:prover_results_satauto}
-    \end{figure}
-    \FloatBarrier
+Prover E offers specialized modes that automatically adjust search parameters based on the characteristics of the given problem. One such mode, \textit{--satauto}, dynamically configures various settings, including literal selection strategies, clause evaluation heuristics, and term ordering, to optimize proof search. This mode adapts to the problem structure, aiming to improve efficiency without requiring manual parameter tuning.
 
-    \item The effect of auto mode, which uses SInE and search heuristics, is assessed.
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=\textwidth]{auto_mode_output.pdf}
-        \caption{Summary of prover results in Auto mode}
-        \label{fig:prover_results_auto}
-    \end{figure}
-    \FloatBarrier
-\end{itemize}
+\begin{definition}
+    \textit{--satauto mode}: Choose literal selection strategy, clause evalua-
+    tion heuristic, term ordering and other search
+    parameters automagically, based on problem fea-
+    tures \cite{schulz2019eprover}.
+\end{definition}
+
+Another specialized mode offered by Prover E is \textit{--auto} mode, which builds upon the functionalities of satauto by incorporating heuristic pruning. In addition to automatically selecting search parameters, this mode applies an instance of the SInE algorithm to manage large specifications more efficiently. While this can improve performance by reducing the search space, it also introduces the possibility of incompleteness, meaning that some proofs may not be found even if they exist.
+
+\begin{definition}
+    \textit{--auto mode}: As --satauto, but add heuristic specification
+    pruning using one of several instantiation of the
+    SInE algorithm for large specifications.
+    This makes the prover potentially incomplete \cite{schulz2019eprover}.
+\end{definition}
+The impact of different selection strategies on theorem proving performance is evaluated by comparing Prover E's satauto mode under three conditions: running on the full ontology without pre-selection, using union mode to pre-slice the search space, and applying union mode with the addition of core axioms. The results are summarized in the following figure:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{satauto_mode_output.pdf}
+    \caption{Summary of prover results in Satauto mode}
+    \label{fig:prover_results_satauto}
+\end{figure}
+\FloatBarrier
+
+With 310 proofs found, it is evident that automatic selection strategies for literal selection, clause evaluation, and term ordering significantly impact the prover's performance. However, reducing the search space using a combination of syntactic and semantic selection further improves the results. In union mode with added core axioms, the prover successfully found 509 out of 1,000 proofs, marking the first case where more proofs were found than not, reinforcing the effectiveness of this approach.
+
+The same evaluation is then performed in auto mode, where Prover E additionally applies a SInE strategy for heuristic pruning.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{auto_mode_output.pdf}
+    \caption{Summary of prover results in Auto mode}
+    \label{fig:prover_results_auto}
+\end{figure}
+\FloatBarrier
+
+The results are comparable to those in satauto mode. Since the search space was pre-sliced before execution, the additional heuristic slicing in auto mode does not significantly alter performance.
+
+Overall, restricting the search space through a combined syntactic and semantic selection process, supplemented by core axioms, consistently improves the prover’s performance. These results highlight the importance of carefully structuring axiom selection to balance relevance and efficiency in theorem proving.
+
+\section{Different prover}
+To evaluate whether the proposed adjustments are effective across different theorem provers, the same process is applied using the Vampire prover. By default, Vampire runs in an optimized mode that automatically selects the best configuration, making it comparable to the auto mode in Prover E. As before, the prover is tested in three scenarios: running on the full ontology without pre-selection, using union mode, and applying union mode with added core axioms.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{vampire_mode_output.pdf}
+    \caption{Summary of prover Vampire}
+    \label{fig:prover_results_vampire}
+\end{figure}
+\FloatBarrier
+
+Similar to Prover E in satauto and auto mode, Vampire successfully finds a large number of proofs in its default configuration. However, the results show the same trend as before—both union mode and union mode with core axioms further improve performance. This confirms that the approach is not specific to Prover E but generalizes well across different theorem provers.
+ 
 
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % !!! Your action is needed here !!!
@@ -596,13 +708,30 @@ The effect of different theorem prover configurations is analyzed.
 
 \chapter{Conclusion}
 \label{chapter-conclusion}
-Conclusion.
+This thesis examined the impact of incorporating frequently used axioms, referred to as core axioms, into the axiom selection process of automated theorem provers. The hypothesis was that adding these axioms, which appear frequently in successful proofs, would improve proof success rates by providing necessary inference steps. To evaluate this, a combination of syntactic and semantic axiom selection strategies was explored, and the results were analyzed across different configurations and theorem provers.
+
+The experiments showed that purely semantic and syntactic selection strategies are insufficient for maximizing proof success. While semantic embeddings allow for meaningful axiom selection, the results indicated that an overly strict focus on similarity can restrict the prover’s search space too much, limiting proof discovery. The syntactic approach, although effective in reducing the search space, also showed limitations when used alone. The integration of both methods in a union-based approach improved performance, but adding core axioms led to the most significant increase in proofs found.
+
+The evaluation confirmed that theorem provers benefit from structured axiom selection, especially when core axioms are included. In standard mode, Prover E found 123 proofs using union-based selection, while the addition of core axioms increased this number to 286. Similar trends were observed across different prover settings, including satauto and auto modes, as well as in the Vampire prover. In all cases, restricting the search space through a combination of selection strategies enhanced proof success while maintaining efficiency.
+
+Another key finding was the relationship between search space limitation and proof time. The results showed that selecting relevant axioms reduced the time needed to find proofs. However, adding core axioms slightly increased proof time due to the expanded search space, though the overall efficiency gain from improved proof success outweighed this effect.
+
+An additional comparison was conducted using different embedding models to assess whether model size and embedding dimensionality influence theorem proving performance. The all-mpnet-base-v2 model produced embeddings with higher cosine similarity between conjectures and axioms than the all-MiniLM-L6-v2 model. However, the increased similarity resulted in fewer proofs being found, reinforcing the observation that a balance between similarity and search space flexibility is needed. 
+
+The findings demonstrate that effective axiom selection is critical in automated theorem proving. The combination of syntactic filtering, semantic embeddings, and frequently used core axioms provides a well-structured selection process that enhances proof discovery. These results suggest that theorem proving can be further optimized by refining axiom selection methods, balancing search space reduction with the need for inference-enabling axioms.
+
 \clearpage
 
 \chapter{Future work}
 \label{chapter-futerwork}
 
-Future work.
+While the current approach demonstrates the effectiveness of combining syntactic and semantic selection with core axioms, several aspects of the configuration could be further optimized. One key area for improvement is analyzing the impact of different parameter settings, such as the number of closest axioms \( n \) and the specific SInE parameters used. Adjusting these values dynamically based on the complexity of the conjecture or the structure of the selected axioms could lead to further performance gains.
+
+Another promising direction is the dynamic selection of core axioms. The current method identifies frequently used axioms across multiple proofs, but this selection remains static. A more adaptive approach could refine core axioms on a per-conjecture basis, ensuring that the most relevant axioms are always included. This could involve techniques such as iterative refinement or heuristic weighting based on past proof success.
+
+Exploring these areas could lead to a more flexible and efficient selection strategy, further improving theorem proving performance while maintaining a balanced search space.
+
+
 
 
 % Normally, the bibliography comes next at this point. Do *not* (try
