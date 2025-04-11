@@ -253,7 +253,7 @@ This axiom states that for all entities \( X \), \( X \) is always a subclass of
 Word embeddings represent words as numerical vectors in a continuous space, capturing semantic relationships based on their contextual usage. Unlike traditional representations such as one-hot encoding, embeddings enable words with similar meanings to be positioned closer together in the vector space. This makes it possible for models to generalize across linguistic variations and draw inferences from meaning-based relationships.
 Words are considered semantically similar when they appear in similar contexts. However, closeness in the embedding space does not imply pure synonymy, rather, it reflects a broader notion of relatedness grounded in context. This means that embeddings capture not only similarity but also functional and associative relationships between words, since words used in similar contexts often share some underlying conceptual or syntactic role.
 
-One of the well-known demonstrations of this structure is the analogy example: the vector operation \textit{man - woman + queen} results in a vector that is close to \textit{king}. This shows that embeddings can model more than just pairwise similarity—they encode directional relationships that reflect conceptual patterns, allowing analogical reasoning over word vectors. These kinds of regularities are what make embeddings so powerful for downstream tasks like axiom selection, where relational structure matters.
+One of the well-known demonstrations of this structure is the analogy example: the vector operation \textit{man - woman + queen} results in a vector that is close to \textit{king}. This shows that embeddings can model more than just pairwise similarity—they encode directional relationships that reflect conceptual patterns, allowing analogical reasoning over word vectors. These kinds of regularities are what make embeddings so powerful for downstream tasks like axiom selection, where relational structure matters. \cite{Mikolov2013}
 
 \begin{figure}[h!]
     \centering
@@ -294,36 +294,12 @@ Theorem provers rely on different proof strategies. Logical inference derives ne
 
 Prover E is a widely used theorem prover based on the superposition calculus \cite{Schulz2019}. Another prominent theorem prover is Vampire \cite{Riazanov2002}.
 
-
-\begin{figure}[ht]
-    \begin{tikzpicture}[node distance=2.5cm]
-        % Nodes
-        \node (start) [startstop] {Automated Theorem Proving};
-        \node (ontology) [data, below left=1cm and 0.5cm of start] {Ontology};
-        \node (conjecture) [data, below right=1cm and 0.5cm of start] {Conjecture};
-        \node (axioms) [optional, below=1cm of ontology] {Delimitation};
-        \node (theorem) [process, below=3.5cm of start] {Theorem Prover};
-        \node (mode) [optional, below=1cm of theorem] {Mode};
-        \node (result) [startstop, below=1cm of mode] {Result};
-    
-        % Connections
-        \draw [line] (start) -- (ontology);
-        \draw [line] (start) -- (conjecture);
-        \draw [dashedarrow] (ontology) -- (axioms);
-        \draw [dashedarrow] (axioms) -- (theorem);
-        \draw [arrow] (conjecture) -- (theorem);
-        \draw [dashedarrow] (theorem) -- (mode);
-        \draw [dashedarrow] (mode) -- (result);
-    \end{tikzpicture}
-    \caption {Automated Theorem Proving}
-    \label{fig:automatedTheoremProving}
-\end{figure}
-\FloatBarrier
-
-
 \section{Axiom Selection Strategies}
 
-Theorem provers often struggle with large search spaces, making axiom selection a critical challenge. The process of selecting axioms influences proof efficiency and success rates.
+First-order logic is undecidable in general, meaning that there exists no algorithm that can determine the provability of every possible statement within finite time. However, automated theorem provers attempt to approximate this task using heuristics and efficient search strategies. When applied to large or complex knowledge bases, the size of the search space quickly becomes intractable, often making exhaustive proof attempts computationally infeasible.
+
+This makes axiom selection a critical component of the proving process. By reducing the number of axioms considered during proof search, the prover is guided more efficiently toward relevant inference steps, improving both performance and the overall proof success rate.
+
 
 \section{Syntax-Based Selection: SInE}
 
@@ -337,22 +313,29 @@ One limitation of this approach arises when an axiom contains symbols with nearl
 
 Syntax-based selection methods like SInE do not consider the meaning of symbol names, which can lead to the loss of useful information. This is particularly problematic in commonsense reasoning, where symbol names often carry semantic meaning that could improve selection. To address this, vector-based selection methods leverage word embeddings to quantify the semantic similarity between axioms and the goal.
 
-As seen above, word embeddings are a common technique in natural language processing, based on the distributional hypothesis \cite{Miller1991}. This hypothesis states that words appearing in similar contexts tend to have similar meanings. By training neural networks on large text corpora, words are mapped into a continuous vector space, where their geometric relationships capture semantic similarity. Cosine similarity is commonly used to measure the closeness of two word vectors, with values ranging from -1 (completely dissimilar) to 1 (identical).
+As seen above, word embeddings are a common technique in natural language processing, based on the distributional hypothesis \cite{Miller1991}. This hypothesis states that words appearing in similar contexts tend to have similar meanings. By training neural networks on large text corpora, words are mapped into a continuous vector space, where their geometric positions capture semantic relationships. Cosine similarity is commonly used to measure the closeness of two word vectors, with values ranging from -1 (completely dissimilar) to 1 (identical).
+
+ANMERKUNG VON PROF. DR. WOLTER UNKLAR BEZÜGLICH \( \mathbb{u}^t \)  
+-> tbd  
 
 \begin{definition}
     Let \( u, v \in \mathbb{R}^n \) be non-zero vectors. The cosine similarity of \( u \) and \( v \) is defined as:
     \begin{equation}
-        \operatorname{cosine\ similarity}(u, v) = \frac{u \cdot v}{\|u\| \|v\|}
+        \operatorname{cosine\ similarity}(u, v) = \frac{u \cdot v}{\|u\| \cdot \|v\|}
     \end{equation}
 \end{definition}
 
-Schon \cite{Schon2023} introduces a statistical approach for axiom selection that relies on word embeddings to represent axioms as vectors. The idea is to encode axioms into a continuous vector space where semantically similar axioms are mapped closer together. This is done in a preprocessing step, where each axiom in the knowledge base is transformed into a vector representation using a word embedding model.
+Schon \cite{Schon2023} introduces a statistical approach for axiom selection that relies on word embeddings to represent axioms as vectors. The idea is to encode axioms into a continuous vector space where axioms that occur in similar contexts — and thus share semantic or structural relationships — are mapped closer together. This is done in a preprocessing step, where each axiom in the knowledge base is transformed into a vector representation using a word embedding model.
 
 When selecting axioms for a given conjecture \( C \), the goal is vectorized in the same way as the axioms in the knowledge base. The selection process then identifies the \( k \) axioms whose vector representations are most similar to that of \( C \). The similarity between vectors is measured using cosine similarity, which quantifies how closely two vectors align regardless of their magnitude.
 
 Formally, given a knowledge base \( KB \), a conjecture \( C \), and a vectorization function \( f \) that maps axioms to \( \mathbb{R}^n \), the vector-based selection process selects the \( k \) axioms in \( KB \) that have the highest cosine similarity to \( C \). The selected axioms form a subset of \( KB \) where no other axiom outside this subset has a higher similarity to \( C \) than the least similar axiom within the selected set.
 
-This approach ensures that axioms most relevant to the goal, based on their semantic similarity, are prioritized during the selection process.
+This approach is based on the assumption that prioritizing axioms with high semantic similarity to the goal should lead to more relevant selections and, in turn, increase the likelihood of finding a successful proof.
+
+ANMERKUNG ZUM KOMMETAR VON PROF. DR. WOLTER:  
+Die Abgrenzung liegt darin, dass dieser Abschnitt vorstellt, dass man auch ganze Sätze in den Vektorraum einbetten kann, um somit ganze Axiome einbetten zu können. Der Abschnitt baut thematisch natürlich auf dem Kapitel Word Embedding auf - fügt sich m.E. allerdings hier in die Reihe nach Sytax-Based Selection und Vector-Based Selection gut ein, da dies auch dem Step-by-Step vorgehen in der Arbeit von Claudia Schon entspricht. Zudem liefert der Abschnitt den Übergang zur sehr wichtigen Beschreibung des Vorgehens bei der Kombination aus SInE und SeVEn.  
+-> tbd  
 
 \section{SeVEn: Sentence-Based Vector Encoding}
 
@@ -383,7 +366,12 @@ This formulation allows for flexibility in axiom selection, as different selecti
 \chapter{Experiments}
 \label{chapter-experiments}
 
-This chapter presents the experimental setup and evaluation of different axiom selection strategies in the context of automated theorem proving. The experiments focus on WhiteBox testing, reengineering of prior work, comparative analysis of selection methods, and performance assessments across different theorem provers.
+This chapter presents the experimental setup and evaluation of different axiom selection strategies in the context of automated theorem proving. The work is situated at the intersection of semantic similarity-based selection and structural optimization of axiom sets, aiming to improve proof success rates in large ontologies like Adimen-SUMO.
+
+The experiments address two main objectives. First, they reengineer and validate the results of Claudia Schon's work \cite{Schon2024}, which proposed a semantic selection method using sentence embeddings for commonsense reasoning. This serves as a baseline and ensures the reproducibility and correctness of prior claims. Second, the experiments test the central hypothesis of this thesis: that proof success improves when axioms frequently used in past proofs—referred to as core axioms—are systematically added to a set of semantically and syntactically relevant axioms.
+
+The evaluation is structured as follows: WhiteBox tests are used to assess logical consistency and inference capabilities; different selection strategies are compared in terms of proof coverage and time performance; and multiple theorem provers are tested to examine the generalizability of the approach. Together, these experiments aim to verify the stated hypothesis and provide a broader classification of the strengths and limitations of current axiom selection techniques.
+
 
 \section{Construction of WhiteBox Tests}
 
@@ -415,10 +403,10 @@ By negating the statement that all instances belong to the class "Morpheme," thi
 
 To evaluate different axiom selection techniques, this work reengineers the results presented in \cite{Schon2024}. The primary goal is to validate previous findings while assessing the impact of alternative selection methods. The evaluation compares three selection approaches: syntactic selection using SInE, semantic selection based on SeVEn, and a hybrid \textit{union} approach combining both methods.
 
-Each method is tested under the same conditions using a randomly selected subset of 1,000 WhiteBoxTruth tests from Adimen-SUMO. The theorem prover E is used with a fixed configuration, ensuring consistent input formatting and a time limit of 15 seconds per proof attempt:
+Each method is tested under the same conditions using a randomly selected subset of 1,000 WhiteBoxTruth tests from Adimen-SUMO. Theorem prover E is used with a fixed configuration, ensuring consistent input formatting and a time limit of 15 seconds per proof attempt:
 
 \begin{Pseudocode}[morekeywords = {add, create}, deletekeywords={to}, numbers=left,
-    caption = {Prover E configuration}]
+    caption = {Command to run Prover E}]
     eprover --tstp-format --soft-cpu-limit=15
 \end{Pseudocode}
 
@@ -427,7 +415,7 @@ For syntactic selection, the SInE strategy is applied with a benevolence paramet
 The hybrid approach, which combines vector-based SeVEn and syntactic selection, is configured as follows:
 
 \begin{itemize}
-    \item The sentence embedding model used is the pre-trained all-MiniLM-L6-v2 from SentenceTransformer, featuring 384 dimensions and a model size of 80MB. It has been trained on a large dataset of over 1 billion training pairs and is optimized for diverse NLP tasks \cite{Reimers2019, Sentencetransformers2019}.
+    \item The sentence embedding model used is the pre-trained all-MiniLM-L6-v2 from SentenceTransformer, featuring 384 dimensions and a model size of 80MB. It was trained by Reimers et al. on a large dataset of over 1 billion training pairs and is optimized for diverse NLP tasks \cite{Reimers2019, Sentencetransformers2019}.
     \item The number of closest axioms \( k \) selected for each conjecture \( C \) is set to 160.
     \item The SInE parameters remain the same as in the syntactic selection: benevolence = 3, recursion depth = 2.
 \end{itemize}
@@ -443,13 +431,16 @@ The prover results are categorized into:
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth]{standard_mode_noAdded_output.pdf}
-    \caption{Reengineering of results from \cite{Schon2024}}
+    \includegraphics[width=\textwidth]{comparison_output.pdf}
+    \caption{Validation for and results of \cite{Schon2024}}
     \label{fig:reengineering}
 \end{figure}
 
+\subsection{Interpretation of the Results}
+
 The results in \ref{fig:reengineering} correspond to the prior investigations. While a purely syntactic and purely semantic approach can only find few proofs in the given time, the combination can achieve better results.
-A significant portion of test cases resulted in timeouts or failed proof attempts. But also for the combination the overall success rate remained low.
+These results support the validity of the semantic selection method proposed by \cite{Schon2024}, confirming that the approach can be reproduced and leads to comparable outcomes.
+Nevertheless, a significant portion of test cases resulted in timeouts or failed proof attempts. But also for the combination the overall success rate remained low.
 The findings suggest that relying solely on semantic similarity in combination with a syntactical selection precedure is not sufficient for effective axiom selection. Future experiments should investigate whether incorporating frequently used core axioms can enhance proof success rates. Additionally, exploring the relationship between axiom complexity and proof outcomes may offer deeper insights into theorem proving behavior, ultimately leading to more refined selection strategies.
 
 
