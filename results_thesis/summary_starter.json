@@ -4,7 +4,7 @@
     "ProverResult.PROOF_FOUND": 20,
     "ProverResult.GAVE_UP": 3
   },
-  "semantic_1500": {
+  "semantic": {
     "ProverResult.TIME_OUT": 977,
     "ProverResult.PROOF_FOUND": 23,
     "ProverResult.GAVE_UP": 0
@@ -14,7 +14,7 @@
     "ProverResult.PROOF_FOUND": 123,
     "ProverResult.GAVE_UP": 0
   },
-  "union_withAddedAxiom": {
+  "enhanced-union": {
     "ProverResult.TIME_OUT": 714,
     "ProverResult.PROOF_FOUND": 286,
     "ProverResult.GAVE_UP": 0

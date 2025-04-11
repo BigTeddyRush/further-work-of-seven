@@ -450,15 +450,19 @@ To get an indication and possibly recognize patterns for which conjectures the p
 
 Since each variable expands the number of possible substitutions and inferences the prover must consider, a higher number of variables generally results in a larger search space. It is expected that conjectures with fewer variables are easier to prove, as the prover has to evaluate fewer possible cases.
 
-First-order logic relies on specific symbols as logical operators, each contributing to the structural complexity of a conjecture. The most relevant symbols include:
+First-order logic relies on specific symbols as logical operators, each contributing to the structural complexity of a conjecture. The most relevant symbols and there frequency over all 1.000 WhiteboxTruthTests include:
 \begin{itemize}
-    \item \texttt{|} (disjunction) – represents logical OR.
-    \item \texttt{\&} (conjunction) – represents logical AND.
-    \item \texttt{?} (variable indicator) – denotes the existence of a variable.
-    \item \texttt{!} (universal quantifier) – states that a property holds for all instances of a variable.
-    \item \texttt{\~{}} (negation) – expresses logical NOT.
+    \item \texttt{|} (disjunction) : 341
+    \item \texttt{\&} (conjunction) : 1.224
+    \item \texttt{?} (variable indicator) : 1.029
+    \item \texttt{!} (universal quantifier) : 90
+    \item \texttt{\~{}} (negation) : 798
 \end{itemize}
-A higher occurrence of these symbols increases the structural complexity of a conjecture. More complex logical expressions require additional inference steps, making it more challenging for the theorem prover to find a proof. Therefore, it is expected that conjectures with fewer logical operators are more likely to be proven within a limited time.
+
+These numbers show that conjunctions and variable indicators occur most frequently, indicating that many conjectures consist of multiple connected clauses and variable bindings. Negations also appear prominently, which suggests that many statements are formulated as refutations or logical contradictions—typical in automated reasoning setups. Disjunctions and universal quantifiers are less common in comparison.
+
+
+A higher occurrence of these symbols increases the structural complexity of a conjecturecit \cite{Dantsin2001}. More complex logical expressions require additional inference steps, making it more challenging for the theorem prover to find a proof. Therefore, it is expected that conjectures with fewer logical operators are more likely to be proven within a limited time.
 
 Lastly, the overall character count of a conjecture is analyzed as a general measure of complexity. Longer conjectures tend to introduce more structural elements, increasing the reasoning effort required by the prover. By examining how the length of a conjecture correlates with proof success rates, it is possible to determine whether shorter conjectures are indeed easier to prove.
 
@@ -473,6 +477,7 @@ The following presents the results of these analyses, comparing proof success ra
 \end{figure}
 \FloatBarrier
 
+The average number of variables in conjectures where proofs are found is 1.38, clearly below the overall average of 1.91. Similarly, the count of special characters such as \texttt{|}, \texttt{\&}, \texttt{?}, \texttt{!}, and \texttt{\textasciitilde} stands at 4.33, compared to the overall mean of 3.5. The average character count in successful proofs is 137.43, slightly lower than the global average of 148.49.
 The results confirm that all examined factors influence the success rate of theorem proving as expected. Conjectures with fewer variables consistently yielded higher proof success rates, supporting the assumption that an increase in the number of variables expands the search space, making proof discovery more challenging.
 
 Similarly, the impact of logical operators aligns with expectations. Conjectures containing a higher number of disjunctions, conjunctions, quantifiers, and negations were significantly harder to prove.
@@ -489,16 +494,18 @@ Next, the cosine similarity of the 160 selected axioms is analyzed to compare ca
 \end{figure}
 \FloatBarrier
 
-Unexpectedly, the average cosine similarity between the conjecture and the 160 nearest axioms is slightly lower in cases where a proof was found compared to those where no proof was derived. This suggests that an excessively high cosine similarity may restrict the search space too much, making the selection of axioms overly specific and limiting the prover's ability to construct a valid proof. This indicates that proving a conjecture may require bridging different concepts rather than simply refining closely related axioms.
+The average cosine similarity in cases where a proof was found is 0.41, while it is slightly higher—0.47—when no proof was found. The minimum and maximum similarity values follow a similar trend, with successful proofs ranging from 0.23 to 0.62, and unsuccessful ones from 0.25 to 0.69. The red dashed line represents the average cosine similarity of a conjecture to all axioms in Adimen-SUMO, which is 0.18.
+
+The average cosine similarity between the conjecture and the 160 nearest axioms is slightly lower in cases where a proof was found compared to those where no proof was derived. This suggests that an excessively high cosine similarity may restrict the search space too much, making the selection of axioms overly specific and limiting the prover's ability to construct a valid proof. This indicates that proving a conjecture may require bridging different concepts rather than simply refining closely related axioms.
 
 
 \section{Expanding Axiom Selection Beyond Semantic and Syntactic Methods}
 
-As previously observed, the pure combination of syntactic and semantic selection methods does not cover a sufficiently broad range of proofs. The results show that conjectures without a successful proof tend to have a higher cosine similarity to their 160 nearest axioms. This suggests that relying solely on semantic and syntactic similarity is not enough. A too-specific selection of axioms can lead to missing essential axioms, ultimately preventing the prover from finding a proof.
+As previously observed, the pure combination of syntactic and semantic selection methods does not cover a sufficiently broad range of proofs. The results show that conjectures without a successful proof tend to have a higher cosine similarity to their 160 nearest axioms. This suggests that relying solely on semantic and syntactic similarity is not enough. A oberly-specific selection of axioms can lead to missing essential axioms, ultimately preventing the prover from finding a proof.
 
 Since theorem provers, as described in \ref{chapter-introduction}, rely on simplification steps using available axioms, it becomes evident that additional axioms enabling these simplifications are required. Without such axioms, the prover lacks the necessary transformation rules to progress toward a proof.
 
-To identify the core axioms, Prover E was executed in auto mode across all 8,010 WhiteBoxTruth tests. In this mode, the prover automatically determines the optimal SInE parameters and applies a search heuristic best suited for each conjecture. After running all tests, the 25 axioms that appeared most frequently in successful proofs were selected as core axioms.
+To identify core axioms, Prover E was executed in auto mode across all 8,010 WhiteBoxTruth tests. In this mode, the prover automatically determines the optimal SInE parameters and applies a search heuristic best suited for each conjecture. After running all tests, the 25 axioms that appeared most frequently in successful proofs were selected as core axioms.
 
 \begin{Pseudocode}[morekeywords = {add, create}, deletekeywords={to}, numbers=left,
     caption = {Prover E configuration}]
@@ -544,7 +551,7 @@ This axiom defines the irreflexive property of certain binary relations. It stat
 
 Such an axiom is fundamental in reasoning about relational structures, as many logical proofs rely on distinguishing between reflexive and irreflexive relations. Without it, the prover may struggle to validate properties of relations that are essential for defining hierarchical and ordering constraints. Including these core axioms in the selection process ensures that theorem proving is not only driven by semantic and syntactic similarity but also by foundational logical principles necessary for accurate inference.
 
-To increase the likelihood of selecting relevant core axioms without significantly expanding their number, a SInE strategy was applied to the 25 core axioms with a benevolence value of 1 and a recursion depth of 1. The axioms selected through this process were then combined with those obtained from the \textit{union}-based selection method, ensuring that both frequently used and structurally relevant axioms were included. Applying this on the same 1.000 WhiteboxTruthTests as before, 286 proofs could be found.
+To increase the likelihood of selecting relevant core axioms without significantly expanding their number, a SInE strategy was applied to the 25 core axioms with a benevolence value of 1 and a recursion depth of 1. The axioms selected through this process were then combined with those obtained from the \textit{union}-based selection method, ensuring that both frequently used and structurally relevant axioms were included. Applying this on the same 1.000 WhiteboxTruthTests as before, 286 proofs could be found in the \textit{enhanced-union} run.
 
 \begin{figure}[h!]
     \centering
@@ -563,33 +570,6 @@ where \( P_{\text{union}} \) represents the set of proofs found in the \textit{u
 
 
 This suggests that adding core axioms plays a crucial role in enabling the prover to find proofs that would otherwise remain undiscovered.
-
-\section{Time analysis}
-\section{Impact of Search Space Limitation on Proof Time}
-
-To determine whether restricting the search space influences the time required for Prover E to find a proof, the time taken in different configurations is analyzed. The evaluation compares three scenarios: \textit{standard} mode, \textit{union} mode, and \textit{enhanced} mode. For the remainder of this work, this will be called \textit{enhanced} mode.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{time_to_find_proof.pdf}
-    \caption{Time required for Prover E to find a proof}
-    \label{fig:time_different_mode_1}
-\end{figure}        
-\FloatBarrier
-
-The results show that limiting the search space significantly improves proof discovery speed. In \textit{union} mode, the prover operates more efficiently by focusing on a smaller yet relevant subset of axioms. However, when core axioms are added, the search space expands slightly, leading to a marginal increase in proof time. Despite this, the overall performance remains better than in the \textit{standard} mode, indicating that reducing unnecessary axioms outweighs the added complexity introduced by core axioms.
-
-To further examine the effect of search space limitation, the time required to find proofs common to different configurations is compared. The following figure presents the average time taken by the first method listed to find the same proofs that were already identified by the second.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{time_to_find_common_proof.pdf}
-    \caption{Average time required to find common proofs}
-    \label{fig:time_different_mode}
-\end{figure}        
-\FloatBarrier
-
-The trend remains consistent—limiting the search space leads to faster proof discovery. When axioms are pre-selected, Prover E spends less time exploring irrelevant information, allowing it to reach conclusions more efficiently. These results further support the importance of a well-structured selection process in optimizing theorem proving performance.
 
 
 \section{Comparison of Large Language Models}
@@ -640,7 +620,7 @@ The all-mpnet-base-v2 model exhibits a significantly higher mean cosine similari
 \end{figure}        
 \FloatBarrier
 
-The increased cosine similarity resulted in fewer proofs being found in \textit{union} mode. The all-mpnet-base-v2 model produced only 97 proofs in the \textit{union} run, compared to 123 proofs found using the smaller model. Similarly, the number of proofs in the \textit{enhanced} run was lower than in the corresponding run with the smaller model. Despite this, adding core axioms still led to an increase of 154 additional proofs, reinforcing their importance in theorem proving.
+The increased cosine similarity resulted in fewer proofs being found in \textit{union} mode. The all-mpnet-base-v2 model produced only 97 proofs in the \textit{union} run, compared to 123 proofs found using the smaller model. Similarly, the number of proofs in the \textit{enhanced-union} run was lower than in the corresponding run with the smaller model. Despite this, adding core axioms still led to an increase of 154 additional proofs, reinforcing their importance in theorem proving.
 
 The results suggest that while the larger model provides more accurate embeddings, its higher semantic precision appears to require a broader or more refined selection of axioms to perform as effectively as the smaller model. This indicates that adjustments in axiom selection strategies may be necessary when using higher-dimensional embeddings to ensure optimal prover performance.
 
@@ -666,7 +646,7 @@ Prover E offers specialized modes that automatically adjust search parameters ba
 \end{definition}
 
 
-The impact of different selection strategies on theorem proving performance is evaluated by comparing Prover E's \textit{--satauto} mode under three conditions: running on the full ontology without pre-selection, using \textit{union} mode to pre-slice the search space, and applying \textit{enhanced} mode. The results are summarized in the following figure:
+The impact of different selection strategies on theorem proving performance is evaluated by comparing Prover E's \textit{--satauto} mode under three conditions: running on the full ontology without pre-selection, using \textit{union} mode to pre-slice the search space, and applying \textit{-union} mode. The results are summarized in the following figure:
 
 \begin{figure}[h!]
     \centering
@@ -676,7 +656,7 @@ The impact of different selection strategies on theorem proving performance is e
 \end{figure}
 \FloatBarrier
 
-With 310 proofs found, it is evident that automatic selection strategies for literal selection, clause evaluation, and term ordering significantly impact the prover's performance. However, reducing the search space using a combination of syntactic and semantic selection further improves the results. In \textit{enhanced} mode, the prover successfully found 509 out of 1,000 proofs, marking the first case where more proofs were found than not.
+With 310 proofs found, it is evident that automatic selection strategies for literal selection, clause evaluation, and term ordering significantly impact the prover's performance. However, reducing the search space using a combination of syntactic and semantic selection further improves the results. In \textit{enhanced-union} mode, the prover successfully found 509 out of 1,000 proofs, marking the first case where more proofs were found than not.
 
 The same evaluation is then performed in \textit{--auto} mode, where Prover E additionally applies optionally a SInE.
 
@@ -692,8 +672,35 @@ The results are comparable to those in \textit{--satauto} mode. Since the search
 
 Overall, restricting the search space through a combined syntactic and semantic selection process, supplemented by core axioms, consistently improves the prover’s performance. These results highlight the importance of carefully structuring axiom selection to balance relevance and efficiency in theorem proving.
 
+\section{Impact of Search Space Limitation on Proof Time}
+
+To determine whether restricting the search space influences the time required for Prover E to find a proof, the time taken in different configurations is analyzed. The evaluation compares three scenarios: \textit{standard} mode, \textit{union} mode, and \textit{enhanced-union} mode, while Prover E is in all szenarios run in \textit{--auto} mode.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{time_to_find_proof.pdf}
+    \caption{Time required for Prover E to find a proof}
+    \label{fig:time_different_mode_1}
+\end{figure}        
+\FloatBarrier
+
+The results show that limiting the search space significantly improves proof discovery speed. In \textit{union} mode, the prover operates more efficiently by focusing on a smaller yet relevant subset of axioms. However, when core axioms are added, the search space expands slightly, leading to a marginal increase in proof time. Despite this, the overall performance remains better than in the \textit{standard} mode, indicating that reducing unnecessary axioms outweighs the added complexity introduced by core axioms.
+
+To further examine the effect of search space limitation, the time required to find proofs common to different configurations is compared. The following figure presents the average time taken by the first method listed to find the same proofs that were already identified by the second.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{time_to_find_common_proof.pdf}
+    \caption{Average time required to find common proofs}
+    \label{fig:time_different_mode}
+\end{figure}        
+\FloatBarrier
+
+The trend remains consistent—limiting the search space leads to faster proof discovery. When axioms are pre-selected, Prover E spends less time exploring irrelevant information, allowing it to reach conclusions more efficiently. These results further support the importance of a well-structured selection process in optimizing theorem proving performance.
+
+
 \section{Different prover}
-To evaluate whether the proposed adjustments are effective across different theorem provers, the same process is applied using the Vampire prover. By default, Vampire runs in an optimized mode that automatically selects the best configuration, making it comparable to the auto mode in Prover E. As before, the prover is tested in three scenarios: running on the full ontology without pre-selection, using \textit{union} mode, and applying \textit{enhanced} mode.
+To evaluate whether the proposed adjustments are effective across different theorem provers, the same process is applied using the Vampire prover. By default, Vampire runs in an optimized mode that automatically selects the best configuration, making it comparable to the auto mode in Prover E. As before, the prover is tested in three scenarios: running on the full ontology without pre-selection, using \textit{union} mode, and applying \textit{enhanced-union} mode.
 
 \begin{figure}[h!]
     \centering
@@ -703,7 +710,7 @@ To evaluate whether the proposed adjustments are effective across different theo
 \end{figure}
 \FloatBarrier
 
-Similar to Prover E in \text{--satauto} and \textit{--auto} mode, Vampire successfully finds a large number of proofs in its default configuration. However, the results show the same trend as before—both \textit{union} mode and \textit{enhanced} mode further improve performance.
+Similar to Prover E in \text{--satauto} and \textit{--auto} mode, Vampire successfully finds a large number of proofs in its default configuration. However, the results show the same trend as before—both \textit{union} mode and \textit{enhanced-union} mode further improve performance.
  
 
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -720,7 +727,7 @@ The evaluation confirmed that theorem provers benefit from structured axiom sele
 
 Another key finding was the relationship between search space limitation and proof time. The results showed that selecting relevant axioms reduced the time needed to find proofs. However, adding core axioms slightly increased proof time due to the expanded search space, though the overall efficiency gain from improved proof success outweighed this effect.
 
-An additional comparison was conducted using different embedding models to assess whether model size and embedding dimensionality influence theorem proving performance. The all-mpnet-base-v2 model produced embeddings with higher cosine similarity between conjectures and axioms than the all-MiniLM-L6-v2 model. However, the increased similarity resulted in fewer proofs being found, reinforcing the observation that a balance between similarity and search space flexibility is needed. 
+An additional comparison was conducted using different embedding models to assess whether model size and embedding dimensionality influence theorem proving performance. The all-mpnet-base-v2 (mpnet) model produced embeddings with higher cosine similarity between conjectures and axioms than the all-MiniLM-L6-v2 model (mini). However, the increased similarity resulted in fewer proofs being found, reinforcing the observation that a balance between similarity and search space flexibility is needed. 
 
 The findings demonstrate that effective axiom selection is critical in automated theorem proving. The combination of syntactic filtering, semantic embeddings, and frequently used core axioms provides a well-structured selection process that enhances proof discovery. These results suggest that theorem proving can be further optimized by refining axiom selection methods, balancing search space reduction with the need for inference-enabling axioms.
 
