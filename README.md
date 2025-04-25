@@ -1,33 +1,9 @@
-# SeVEn (Sentence-Based Vector Encoding)
+# Branch: `semantic-selection`
 
-## Translating Axioms
+This branch presents the results of running Prover E using only **semantic axiom selection**.
 
-To translate the Axioms provided in './adimen.sumo.tstp' run the translator script with:
-    > python ./src/translator.py
+The configuration isolates the semantic selection strategy to evaluate its individual impact on proof discovery and performance, without any syntactic selection or additional core axioms.
 
-The resulting translation of Adimen-SUMO is placed in './translations.json'.
-The mapping of predicate and function symbols used in the translation is provided in './src/symbols.py'.
+These results serve as a baseline for understanding the role of semantic guidance in comparison to other strategies, such as syntactic selection or combined approaches found in the `enhanced-mode` branch.
 
-## Encoding Axioms
-
-To translate the Axioms provided in './adimen.sumo.tstp' run:
-    > python ./src/seven.py
-
-The encoded axioms are placed in './axioms.pt'.
-
-## Example Problem
-
-A small example to illustrate how SeVEn works can be seen by running: 
-    > python ./src/example.py
-
-## Evaluation
-
-To evalute SeVEn as discussed in the paper, execute:
-    > python ./src/translator.py [--select=<?>]
-
-The results of this evaluation are placed in the './results/' directory. Additionally 
-
-When evaluating for the first time we need to select some problems on which we can test the selection strategy. To select these candidates use the optional argument '--select=?' and specify the number of problems when running the script. 
-This may take a while so only do this once.
-
-To run this script the [E Theorem Prover](http://wwwlehre.dhbw-stuttgart.de/~sschulz/E/E.html) needs to be installed.
+Feel free to browse the data, and reach out if you have any questions or would like further details on the setup.
