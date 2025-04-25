@@ -1,3 +1,16 @@
+# About This Repository
+
+This repository builds upon the work of Prof. Claudia Schon and the SeVEn project, which can be found at [https://gitlab.rlp.net](https://gitlab.rlp.net).
+
+The base repository by Prof. Schon is located on the main page of the GitLab project. This repository extends that work with several modifications, organized across different branches.
+
+Please note that legacy branches have been preserved with the prefix `old_` to indicate earlier development stages or experimental directions.
+
+Feel free to explore the various branches for specific features, experiments, or configurations.
+
+
+---------------
+
 # SeVEn (Sentence-Based Vector Encoding)
 
 ## Translating Axioms

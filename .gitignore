@@ -42,3 +42,14 @@ selection/**
 
 .venv/
 .venv_2/
+
+*.xml
+
+.DS_Store
+
+E/*
+E.tar
+
+AdimenSUMO2.6/
+
+goals/
