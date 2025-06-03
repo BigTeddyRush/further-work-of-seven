@@ -56,13 +56,15 @@
   % and in English. 
   %
   Abstract              = {
-    This thesis investigates whether combining semantic similarity with syntactic selection and frequently used axioms can improve the success rate of automated theorem proving in large ontologies like Adimen-SUMO. While previous work has shown that semantic information can support context-sensitive axiom selection, their effectiveness remains limited when used in isolation. To improve this, this work extends such approaches.
+    This thesis evaluates whether the success rate of automatic theorem proving in ontologies, such as Adimen-SUMO, can be improved by restricting the search space of relevant axioms based on semantic and syntactic criteria. Furthermore, the influence of a targeted introduction of certain axioms on the process is investigated.
+    While previous work has shown that semantic information can support the context-sensitive selection of axioms, its effectiveness remains limited. This work therefore extends these approaches with the aim of increasing the success rate of automatic theorem proving.
 
     To evaluate this idea, a series of experiments was conducted using Prover E across different configurations, axiom selection strategies and embedding models. It was also investigated whether the configuration leads to similar results with the Prover Vampire. The experiments show that combining semantic and syntactic filtering already improves performance, but the most significant gains are achieved by additionally incorporating frequently used axioms.
 
   },
   Zusammenfassung       = {
-    Diese Thesis untersucht, ob die Kombination von semantischer Ähnlichkeit mit syntaktischer Auswahl und häufig verwendeten Axiomen die Erfolgsrate des automatischen Theorembeweises in großen Ontologien wie Adimen-SUMO verbessern kann. Während frühere Arbeiten gezeigt haben, dass semantische Informationen die kontextsensitive Auswahl von Axiomen unterstützen können, bleibt ihre Effektivität bei isolierter Anwendung begrenzt. Um dies zu verbessern, erweitert diese Arbeit solche Ansätze.
+    Diese Thesis evaluiert, ob die Erfolgsrate des automatischen Theorembeweises in Ontologien, wie Adimen-SUMO, durch eine Bergrenzung des Suchraums der relevanten Axiome auf Basis semantischer und syntaktischer Kriterien verbessert werden kann. Darüber hinaus wird untersucht, welchen Einfluss ein gezieltes Einbringen von bestimmten Axiome auf den Prozess hat.
+    Während frühere Arbeiten gezeigt haben, dass semantische Informationen die kontextsensitive Auswahl von Axiomen unterstützen können, bleibt ihre Effektivität begrenzt. Diese Arbeit erweitert daher diese Ansätze mit dem Ziel, die Erfolgsrate des automatischen Theorembeweises zu erhöhen.
 
     Um diese Idee zu evaluieren, wurde eine Reihe von Experimenten mit Prover E in verschiedenen Konfigurationen, Axiomenauswahlstrategien und Einbettungsmodellen durchgeführt. Es wurde auch untersucht, ob die Konfiguration zu ähnlichen Ergebnissen mit dem Prover Vampire führt. Die Experimente zeigen, dass die Kombination von semantischer und syntaktischer Filterung die Leistung zwar verbessert, aber die größten Gewinne durch die zusätzliche Einbeziehung von häufig verwendeten Axiomen erzielt werden.
 
@@ -95,7 +97,7 @@ Adimen-SUMO is a first-order logic (FOL) reengineering of the Suggested Upper Me
 Adimen-SUMO’s grammar is closely connected to natural language structures. This means that selecting axioms based on semantic embeddings, which are vector representations of entire sentences capturing their semantic meaning, helps capture underlying logical dependencies that might not be immediately apparent.
 
 A significant part of this thesis builds upon the work of Jakobs and Schon, which explores context-specific axiom selection using large language models \cite{Schon2024}. Traditional axiom selection methods primarily rely on syntactic properties, often ignoring the meaning embedded in symbol names. Jakobs and Schon proposes an alternative approach by leveraging large language models to determine relevant axioms based on contextual similarity. This method aligns axiom selection with the goal's context, improving performance in commonsense reasoning tasks. Experiments show that this approach outperforms purely syntactic selection methods, demonstrating the potential of semantic similarity for guiding theorem provers.
-
+\newpage
 The following thesis investigates whether incorporating frequently used axioms, referred to as core axioms, into a subset of the Adimen-SUMO ontology improves proof success rates. The selected subset is determined by combining syntactic and semantic criteria to ensure both structural and conceptual relevance.
 
 \section{Problem Statement}
@@ -115,7 +117,7 @@ where \( \mathcal{L}_{\text{NL}} \) stands for the language of natural language 
 Arguments for this assertion are that logical langugage is human made and therefore inevitably connected to human and consequently natural language.
 Also ontologies like Adimen-SUMO are partially derived by lexical-semantic networks that capture relationships between words of natural language.
 Making use of this entanglement the selection process of theorem proovers can be optimized by reducing the number of relevant axioms.
-Theorem prover E follows a refutational proof procedure using the superposition calculus \cite{Schulz2019}. The proof search is based on a modified given-clause algorithm, consisting of several key steps:
+To effectively leverage the selected axiom subsets during the proof process, an automated theorem prover is required. In this context, theorem prover E follows a refutational proof procedure using the superposition calculus \cite{Schulz2019}. The proof search is based on a modified given-clause algorithm, consisting of several key steps:
 
 \begin{enumerate}
     \item Initialization: The input problem is converted into clausal normal form (CNF) and divided into two sets: unprocessed clauses \( U \) and processed clauses \( P \).
@@ -139,13 +141,15 @@ Before evaluating the effect of frequently used axioms on proof success, the mai
 
 The set of axioms available in Adimen-SUMO is denoted as \( \mathcal{A} \), while \( C \) represents the conjecture to be proven.
 
+The methodological foundation of this work builds on the analysis and validation of prior research, particularly the approach proposed by Jakobs and Schon \cite{Schon2024}. Their work serves as a starting point for examining the interplay between axiom selection and proof success. Based on insights gained from their findings, a series of experiments is designed and conducted to evaluate and enhance axiom selection strategies in automated reasoning.
+
 To refine the axiom selection process, a two-step approach is applied. First, a set \( \mathcal{A}_{\text{rel}} \) is constructed by selecting the \( k \)  axioms, that are most similar to the conjecture according to \( d \):
 
 \begin{equation}
     \mathcal{A}_{\text{rel}} = \{ A \in \mathcal{A} \mid A \text{ is among the } k \text{ closest axioms to } C \text{ w.r.t. } d \}
 \end{equation}
 
-In this context, similarity refers to the semantic relatedness between an axiom and the conjecture. This is captured using vector representations of logical expressions. The closeness between axioms is measured using cosine similarity, which quantifies how aligned two vectors are in their direction. A more detailed explanation of this approach follows later in the thesis.
+In this context, similarity \( d \) refers to the semantic relatedness between an axiom and the conjecture. This is captured using vector representations of logical expressions. The closeness between axioms is measured using cosine similarity, which quantifies how aligned two vectors are in their direction. A more detailed explanation of this approach follows later in the thesis.
 To further filter and prioritize structurally relevant axioms, a syntactic selection strategy is applied to \( \mathcal{A}_{\text{rel}} \). The resulting set, \( \mathcal{A}_{\text{union}} \), forms an optimized selection that maintains both semantic closeness and logical relevance.
 
 Beyond similarity-based and structural selection, a second set \( \mathcal{A}_{\text{core}} \) is constructed from axioms that have been frequently used in past proofs. These axioms act as fundamental inference steps that theorem provers repeatedly rely on.
@@ -160,7 +164,7 @@ The function \( P(T, \mathcal{A}', C) \) determins whether a theorem prover \( T
 
 \section{Hypothesis}
 
-The hypothesis tested in this thesis is that including frequently used axioms improves the success rate of theorem proving. These axioms are assumed to provide general-purpose inference steps that are useful across many proof tasks. In combination with those selected by syntactic and semantic criteria, they could help the prover resolve gaps that similarity-based methods alone might miss.
+The hypothesis tested in this thesis consists of two parts. First, the findings of Jakobs and Schon regarding axiom selection based on semantic similarity and syntactic relevance are validated \cite{Schon2024}. This serves as a foundation for the second part, which introduces an extension to their approach: the inclusion of frequently used axioms. These axioms are assumed to represent general-purpose inference steps that prove useful across a wide range of proof tasks. When combined with axioms selected through semantic and syntactic criteria, they are expected to enhance the prover’s ability to close inference gaps that may not be bridged by similarity-based methods alone.
 
 Formally, this is expressed as:
 
@@ -217,7 +221,9 @@ This chapter introduces fundamental concepts relevant to this work. It covers co
 
 Common sense reasoning is an essential part of human cognition, allowing individuals to understand everyday situations, infer unstated knowledge and make reasonable decisions even when information is incomplete. Automated reasoning systems attempt to replicate this ability to improve inference and decision-making.
 
-Common sense reasoning involves recognizing unstated premises in logical arguments, understanding cause-effect relationships and applying heuristics to solve problems under uncertainty. It plays a key role in artificial intelligence (AI), particularly in natural language understanding, where context is crucial for interpreting meaning and in automated reasoning, where structured logical frameworks help infer conclusions from available premises. Modern applications further highlight the importance of integrating knowledge-based reasoning for interpretability and reliability. Despite advancements in AI, these models struggle with incorporating structured and generalizable knowledge, making common sense reasoning an ongoing challenge.
+Common sense reasoning involves recognizing unstated premises in logical arguments, understanding cause-effect relationships and applying heuristics to solve problems under uncertainty. It plays a key role in artificial intelligence (AI), particularly in natural language understanding (NLU), where context is crucial for interpreting meaning and in automated reasoning, where structured logical frameworks help infer conclusions from available premises. Modern applications further highlight the importance of integrating knowledge-based reasoning for interpretability and reliability. Despite advancements in AI, these models struggle with incorporating structured and generalizable knowledge, making common sense reasoning an ongoing challenge.
+
+In the context of this thesis, common sense reasoning is understood in a more restricted and operationalizable way. Specifically, it refers to the kind of general knowledge that has been explicitly encoded within the SUMO ontology and its formalization in Adimen-SUMO. While this does not capture the full breadth of human common sense, it provides a structured and logically coherent foundation from which reasoning systems can draw. This constrained definition allows for reproducible experiments and formal evaluation within the scope of automated theorem proving.
 
 Interpreting a sentence often involves more than just processing its words, it requires incorporating background knowledge to make sense of implicit information. The Winograd Schema, for example, involving John and Billy viewing a stage \cite{Levesque2012}. 
 "John could'nt see the stage with Billy in front of him because he is so short".
@@ -227,7 +233,7 @@ These intuitive assumptions form the foundation of common sense reasoning. The p
 
 \section{Grammars in Natural and Formal Languages}
 
-Understanding language through logic-based approaches often involves representing meaning in a structured and interpretable way. In this context, grammars and lexicons provide the foundation for mapping natural language expressions into formal representations. A lexicon connects linguistic elements, such as words or phrases, to their logical counterparts, while grammars define how these elements can be combined to form valid expressions. This interplay between lexicon and grammar is central to logic-based natural language understanding (NLU), where the goal is to derive logical forms from language that can be used for reasoning.
+Understanding language through logic-based approaches often involves representing meaning in a structured and interpretable way. In this context, grammars and lexicons provide the foundation for mapping natural language expressions into formal representations. A lexicon connects linguistic elements, such as words or phrases, to their logical counterparts, while grammars define how these elements can be combined to form valid expressions. This interplay between lexicon and grammar is central to logic-based NLU, where the goal is to derive logical forms from language that can be used for reasoning.
 
 Grammars define the structural rules of a language, whether it is a natural language like English or a formal system used in logic. In theorem proving, grammars are essential for structuring logical statements in a way that machines can interpret and manipulate.
 
@@ -236,8 +242,6 @@ Different types of grammars serve various purposes. Context-free grammars (CFGs)
 Grammars are crucial in theorem proving because they enforce logical consistency, allow automated systems to process logical expressions systematically and provide a structured representation of knowledge in formal systems. Adimen-SUMO is written in TPTP Syntax, a standardized language designed for expressing logical problems in automated reasoning \cite{Alvez2014}. TPTP, originally developed to facilitate the benchmarking and comparison of theorem provers, provides a well-defined structure for first-order logic expressions, ensuring compatibility across different proving systems. By using TPTP, Adimen-SUMO maintains a formal and machine-readable representation of axioms, allowing theorem provers to efficiently process and reason over its logical content.
 
 In TPTP syntax, axioms are typically expressed in first-order form (FOF), which represents first-order logic statements in a structured and readable format. The FOF format explicitly defines logical components such as axioms, conjectures and definitions, ensuring clarity in automated reasoning tasks. 
-
-\newpage
 
 An example of an axiom in Adimen-SUMO written in FOF syntax is:
 
@@ -301,11 +305,9 @@ Theorem provers rely on different proof strategies. Logical inference derives ne
 Prover E is a widely used theorem prover based on the superposition calculus \cite{Schulz2019}. Another prominent theorem prover is Vampire \cite{Riazanov2002}.
 
 \section{Axiom Selection Strategies}
+First-order logic is undecidable in general, meaning that there exists no algorithm that can determine the provability of every possible statement within finite time. Nevertheless, automated theorem provers attempt to approximate this task using heuristics and efficient search strategies. When applied to large or complex knowledge bases, the size of the search space increases rapidly—often exponentially—making exhaustive proof attempts computationally infeasible in practice.
 
-First-order logic is undecidable in general, meaning that there exists no algorithm that can determine the provability of every possible statement within finite time. Nevertheless, automated theorem provers attempt to approximate this task using heuristics and efficient search strategies. When applied to large or complex knowledge bases, the size of the search space quickly becomes intractable, often making exhaustive proof attempts computationally infeasible.
-
-This makes axiom selection a critical component of the proving process. By reducing the number of axioms considered during proof search, the prover is guided more efficiently toward relevant inference steps, improving both performance and the overall proof success rate.
-
+This makes axiom selection a critical component of the proving process. Besides the theoretical limits of decidability, the runtime complexity associated with larger axiom sets plays a major role. By reducing the number of axioms considered during proof search, the prover is guided more efficiently toward relevant inference steps. This not only improves runtime performance but also increases the overall proof success rate by narrowing the search space to the most promising regions.
 
 \subsection{Syntax-Based Selection: SInE}
 
@@ -328,7 +330,9 @@ As seen above, word embeddings are a common technique in natural language proces
     \end{equation}
 \end{definition}
 
-Schon introduces a statistical approach for axiom selection that relies on word embeddings to represent axioms as vectors \cite{Schon2023}. The idea is to encode axioms into a continuous vector space where axioms that occur in similar contexts, and thus share semantic or structural relationships, are mapped closer together. This is done in a preprocessing step, where each axiom in the knowledge base is transformed into a vector representation using a word embedding model.
+Schon introduces a statistical approach for axiom selection that relies on word embeddings to represent axioms as vectors \cite{Schon2023}. The idea is to encode axioms into a continuous vector space where axioms that occur in similar contexts and thus share semantic or structural relationships, are mapped closer together. This is done in a preprocessing step, where each axiom in the knowledge base is transformed into a vector representation using a word embedding model.
+
+This method is particularly applicable in the context of ontologies like SUMO, where many predicate and constant names are derived from or linked to natural language terms. SUMO includes lexical connections—partially inherited from resources like WordNet—which enables the interpretation of logical symbols in terms of their natural language counterparts. As a result, word embedding models trained on natural language corpora can be used to approximate the semantic content of axioms.
 
 When selecting axioms for a given conjecture \( C \), the goal is vectorized in the same way as the axioms in the knowledge base. The selection process then identifies the \( k \) axioms whose vector representations are most similar to that of \( C \). The similarity between vectors is measured using cosine similarity, which quantifies how closely two vectors align regardless of their magnitude.
 
@@ -366,20 +370,40 @@ This formulation allows for flexibility in axiom selection, as different selecti
 \chapter{Experiments}
 \label{chapter-experiments}
 
-This chapter presents the experimental setup and evaluation of different axiom selection strategies in the context of automated theorem proving. The work is situated at the intersection of semantic similarity-based selection and structural optimization of axiom sets, aiming to improve proof success rates in large ontologies like Adimen-SUMO.
+This chapter presents the experimental setup and evaluation of different axiom selection strategies in the context of automated theorem proving\footnote{The code is available in the following git repository: \url{https://github.com/BigTeddyRush/further-work-of-seven}}. The work is situated at the intersection of semantic similarity-based selection and structural optimization of axiom sets, aiming to improve proof success rates in large ontologies like Adimen-SUMO.
 
 The experiments address two main objectives. First, they reengineer and validate the results of Jakobs and Schon \cite{Schon2024}. This serves as a baseline and ensures the reproducibility and correctness of prior claims. Second, the experiments test the central hypothesis of this thesis, that proof success improves when axioms frequently used in past proofs are added to a set of semantically and syntactically relevant axioms.
 
 The evaluation is structured as follows: WhiteBox tests are used to assess logical consistency and inference capabilities; different selection strategies are compared in terms of proof coverage and time performance; and multiple theorem provers are tested to examine the generalizability of the approach. Together, these experiments aim to verify the stated hypothesis and provide a broader classification of the strengths and limitations of current axiom selection techniques.
 
+To guide the design and interpretation of the following experiments, it is helpful to outline the main parameters and variables explored in this chapter. The evaluation systematically varies the following aspects:
+
+\begin{description}
+    \item[Axiom selection strategy:] Three different strategies are compared:
+    \begin{itemize}
+        \item \textit{Standard:} Full ontology baseline without any pre-selection
+        \item \textit{Union:} Combined semantic and syntactic selection approach
+        \item \textit{Enhanced-Union:} Extension of the \textit{union} method, enriched with frequently used axioms
+    \end{itemize}
+    
+    \item[Embedding model:] Different word embedding models are used to encode axioms and conjectures. These vary in size, embedding dimensionality and semantic resolution. The impact of model choice on axiom selection and overall proof success is analyzed.
+
+    \item[Theorem prover configuration:] Prover E is evaluated under multiple configurations, including \texttt{--auto}, \texttt{--satauto} and default mode, to explore how internal heuristics interact with external axiom selection.
+
+    \item[Prover type:] In addition to Prover E, the Vampire prover is tested to evaluate the generalizability of the proposed methods across different reasoning engines.
+
+    \item[Proof metrics:] The evaluation is based on two primary performance metrics:
+    \begin{itemize}
+        \item \textit{Proof success rate:} The number of conjectures for which a proof is found
+        \item \textit{Proof time:} The time required to successfully derive a proof
+    \end{itemize}
+\end{description}
 
 \section{Construction of WhiteBox Tests}
 
 The methodology for constructing WhiteBox tests follows the approach described by Alvez et al. \cite{Alvez2017}. The tests are designed to assess the logical consistency and inference capabilities of theorem provers by introducing controlled variations in axiom selection.
 
 In the context of Adimen-SUMO, truth tests are constructed as logical conjectures that should be provable based on the ontology's axioms. These tests are essential for evaluating the consistency and reasoning capabilities of automated theorem provers. By verifying that the expected logical consequences can be derived, truth tests help assess the completeness and correctness of the knowledge representation. 
-
-\newpage
 
 An example of a WhiteBoxTruth test in Adimen-SUMO is the following:
 
@@ -719,7 +743,7 @@ The results confirm the previously observed trend that both \textit{union} and \
 
 \section{Summary and Interpretation}
 
-The experiments presented in this chapter systematically evaluated various axiom selection strategies with the aim of improving proof success rates in ontologies like Adimen-SUMO. In doing so, two central goals were addressed.
+The experiments presented in this chapter systematically evaluated various axiom selection strategies with the aim of improving proof success rates in ontologies like Adimen-SUMO. In doing so, two central goals were addressed:
 
 First, the results of Jakobs and Schon's previous work were successfully reproduced and validated. The reengineering confirmed that semantic selection based on sentence embeddings captures meaningful relationships and can serve as a solid foundation for axiom selection. It also became evident that semantic similarity alone, even when combined with a syntactic method such as SInE, is not sufficient to achieve high proof coverage. This validates the need to go beyond similarity-based methods.
 
@@ -729,8 +753,25 @@ Across different theorem prover configurations and even when switching to Vampir
 
 In addition, the experiments showed that limiting the search space not only increases proof success but also reduces the time required to find proofs. Particularly in \textit{union} mode, Prover E worked significantly faster and more efficiently and the addition of core axioms only marginally increased proof time while delivering significantly more results.
 
-Overall, the findings demonstrate that targeted axiom selection, combining semantic relevance, syntactic structure and historical proof frequency can significantly improve both the success rate and the efficiency of automated theorem proving.
+\subsection*{Methodological note on statistical analysis}
 
+No formal statistical significance analysis was conducted in this work. This is primarily because the experiments are tied to a specific ontology (Adimen-SUMO). As a result, standard statistical inference would not provide additional insight in this context. Nonetheless, care was taken to ensure that observed effects were consistently replicated across multiple settings and provers. The intention is not to claim generalizability beyond the tested framework, but to demonstrate that within this controlled environment, the proposed selection strategy yields meaningful and repeatable improvements.
+
+\subsection*{Key findings}
+
+\begin{itemize}
+    \item We were able to replicate and validate the axiom selection strategy proposed by Jakobs and Schon. This confirms that semantic similarity, operationalized via sentence embeddings, is an effective but incomplete basis for axiom selection
+    
+    \item By identifying and adding frequently used axioms across successful past proofs, we could significantly improve proof coverage without introducing redundancy or performance loss. These core axioms act as general-purpose inference steps
+    
+    \item Through systematic variation of theorem prover settings and embedding models, we showed that the proposed selection strategy generalizes across technical configurations and is not limited to a single setup
+    
+    \item The comparison between Vampire and E Prover demonstrates that the relative improvements follow similar patterns across provers. This correlation supports the claim that the selection strategy captures relevant logical structure, rather than exploiting prover-specific behavior
+    
+    \item Reducing the axiom search space has a clear effect on runtime. Pre-selecting relevant axioms accelerates the proof search while increasing its effectiveness—highlighting the dual benefit of intelligent selection
+    
+    \item While the absolute results are bound to the structure and content of Adimen-SUMO, the observed trends suggest that combining semantic, syntactic and statistical information can be a promising approach in other formal knowledge domains as well
+\end{itemize}
 
 
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
